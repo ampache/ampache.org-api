@@ -1,0 +1,16 @@
+# Updating ampache.org/api
+
+Site generated from wiki files using [Gatsby](https://www.gatsbyjs.org/) and [gatsby-gitbook-starter](https://github.com/hasura/gatsby-gitbook-starter)
+
+## Requirements
+
+npm/node
+
+## How to
+
+* Clone into folder
+* run ```npm install``` / ```npm update```
+* make changes to content/, etc.
+* build ```npm run-script build```
+* copy the /public folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
+* commit to this repo and ampache.github.io after any changes
