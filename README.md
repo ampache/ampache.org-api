@@ -8,6 +8,7 @@ npm/node
 
 ## How to
 
+* Install Gatsby ```sudo npm install -g gatsby-cli```
 * Clone into folder
 * run ```npm install``` / ```npm update```
 * make changes to content/, etc.
