@@ -52,5 +52,19 @@ For now I've just written down a few rules that i will be following:
             }
         ],
 ```
+
+### Remove spaces from advanced_search rule names. (Backwards compatible with old names)
+
+These rules have been changed to make sure everything has no spaces.
+The backward compatible names will be removed in Ampache 5.0.0
+
+* 'has image' => 'has_image'
+* 'image height' => 'image_height'
+* 'image width' => 'image_width'
+* 'filename' => 'file' (Video search)
+
+### TODO
+
 * Python3-ampache will produce example files for all methods exactly as received to help identify methods that don't enforce these rules.
-  * update the wiki with links to the examples instead of a massive wall of text [<https://github.com/ampache/python3-ampache/tree/master/docs>]
+  * update the wiki with links to the examples instead of a massive wall of text [<https://github.com/ampache/python3-ampache/tree/master/docs>] 
+
