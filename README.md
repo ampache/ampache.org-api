@@ -1,4 +1,4 @@
-# Updating ampache.org/api
+# Updating ampache.org-api
 
 Site generated from wiki files using:
 
@@ -7,14 +7,14 @@ Site generated from wiki files using:
 
 ## Requirements
 
-npm/node
+* npm/node
+* Gatsby ```sudo npm install -g gatsby-cli```
 
 ## How to
 
-* Install Gatsby ```sudo npm install -g gatsby-cli```
-* Clone into folder
-* run ```npm install``` / ```npm update```
-* make changes to content/, etc.
-* build ```npm run-script build```
-* copy the /public folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
-* commit to this repo and ampache.github.io after any changes
+* Clone this repo
+* Run ```npm install``` / ```npm update```
+* Make changes to content/, etc.
+* Build ```npm run-script build```
+* Copy the /public folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
+* Commit to this repo and ampache.github.io after changes
