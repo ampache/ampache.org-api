@@ -6,7 +6,7 @@ metaDescription: "API documentation"
 
 **Compatible Versions:** _>= 350001_
 
-Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](/api-acl). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
+Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](api-acl). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues?state=closed). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
 
 ## Sending Handshake Request
@@ -83,21 +83,22 @@ Optionally, you can also provide geolocation information `&geo_latitude=$latitud
 If your authenticated User and IP match a row in the Access List the following will be returned.
 
 For XML
+
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
-	<auth><%AUTHENTICATION TOKEN%></auth>
-	<api><%APIVERSION%></api>
-	<session_expire><![CDATA[2019-12-03T09:36:46+10:00]]></session_expire>
-	<update><![CDATA[2019-11-26T16:35:05+10:00]]></update>
-	<add><![CDATA[2019-12-03T06:42:55+10:00]]></add>
-	<clean><![CDATA[2019-12-03T06:41:02+10:00]]></clean>
-	<songs><![CDATA[268302]]></songs>
-	<albums><![CDATA[25686]]></albums>
-	<artists><![CDATA[11055]]></artists>
-	<playlists><![CDATA[20]]></playlists>
-	<videos><![CDATA[0]]></videos>
-	<catalogs><![CDATA[4]]></catalogs>
+    <auth><%AUTHENTICATION TOKEN%></auth>
+    <api><%APIVERSION%></api>
+    <session_expire><![CDATA[2019-12-03T09:36:46+10:00]]></session_expire>
+    <update><![CDATA[2019-11-26T16:35:05+10:00]]></update>
+    <add><![CDATA[2019-12-03T06:42:55+10:00]]></add>
+    <clean><![CDATA[2019-12-03T06:41:02+10:00]]></clean>
+    <songs><![CDATA[268302]]></songs>
+    <albums><![CDATA[25686]]></albums>
+    <artists><![CDATA[11055]]></artists>
+    <playlists><![CDATA[20]]></playlists>
+    <videos><![CDATA[0]]></videos>
+    <catalogs><![CDATA[4]]></catalogs>
 </root>
 ```
 
@@ -105,7 +106,7 @@ All future interactions with the Ampache API must include the `AUTHENTICATION_TO
 
 ## Errors
 
-All errors will be returned as an XML document as specified in the [XML API Error Document](/api-errors). When possible the text part of the message will be translated into the users configured language.
+All errors will be returned as an XML document as specified in the [XML API Error Document](api-errors). When possible the text part of the message will be translated into the users configured language.
 
 ## Methods
 
@@ -212,13 +213,15 @@ For the purpose of this example the Ampache host is 'localhost' and the path to 
 ### Requesting all genres whose name starts with Rock
 
 XML
-```
+
+```XML
 http://localhost/ampache/server/xml.server.php?action=tags&auth=1234567890123456789012345678901&filter=Rock
 ```
 
 ### Requesting all song titles, with an offset of 5000
 
 XML
-```
+
+```XML
 http://localhost/ampache/server/xml.server.php?action=songs&auth=12345678901234567890123456789012&offset=5000
 ```

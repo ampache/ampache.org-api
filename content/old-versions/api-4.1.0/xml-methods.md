@@ -53,9 +53,7 @@ Destroy a session using the auth parameter.
 |------|------|-----------|-------:|
 |'auth'|string|(Session ID) returns version information and extends the session if passed|NO     |
 
-
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/goodbye.xml)
-
 
 ## url_to_song
 
@@ -97,11 +95,9 @@ ARTIST
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20(artists).xml)
 
-
 ALBUM
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20(albums).xml)
-
 
 PLAYLIST
 
@@ -192,7 +188,7 @@ Select the type of search based on the type of data you are searching for. (song
 
 Select your operator (integer only!) based on the type or your selected search
 
-|rule_1_operator|Text / Tags / Metadata          |Numeric / user_numeric                       |Date     |Boolean, Numeric, Subsearch / Days|        
+|rule_1_operator|Text / Tags / Metadata          |Numeric / user_numeric                       |Date     |Boolean, Numeric, Subsearch / Days|
 |:-------------:|-------------------------------|---------------------------------------------|---------|----------------------------------|
 |0              |contains                       |is greater than or equal to / has loved      |before   |is true / before (x) days ago     |
 |1              |does not contain               |is less than or equal to / has rated 5 stars |after    |is false / after (x) days ago     |
@@ -221,10 +217,10 @@ Currently there is not a simple way to identify what metadata types you have sav
 
 |rule_1_operator | Metadata |
 |--| -- |
-|0 |contains | 
+|0 |contains |
 |1 |does not contain |
 |2 |starts with |
-|3 |ends with | 
+|3 |ends with |
 |4 |is |
 |5 |is not |
 |6 |sounds like (Text Only) |
@@ -239,6 +235,7 @@ Currently there is not a simple way to identify what metadata types you have sav
 |15|is less than |
 
 To search a mixed type like metadata you must search using 4 rules.
+
 * Search rule 1 for band containing 'Prodigy', Search Rule 2 for bbm > 120
   * rule name (e.g. rule_1['metadata'], rule_2['metadata'])
   * rule operator (e.g. rule_1_operator[0], rule_2_operator[12])
@@ -382,48 +379,6 @@ This returns the songs of a specified album
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/album_songs.xml)
 
-## licenses
-
-* MINIMUM_API_VERSION=420000
-
-This returns the licenses based on the specified filter
-@param array $input
-
-|Input   |Type|Description|Optional|
-|--------|----|-----------|-------:|
-|'filter'|    |Value is Alpha Match for returned results, may be more than one letter/number|YES     |
-|'exact' |boolean|if true filter is exact rather then fuzzy|YES     |
-|'offset'|    |           |YES     |
-|'limit' |    |           |YES     |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/licenses.xml)
-
-## license
-
-* MINIMUM_API_VERSION=420000
-
-This returns a single license based on UID
-@param array $input
-
-|Input   |Type|Description|Optional|
-|--------|----|-----------|-------:|
-|'filter'|    |UID of license, returns license XML|NO      |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/license.xml)
-
-## license_songs
-
-* MINIMUM_API_VERSION=420000
-
-This returns a list of songs based on the filter ID
-@param array $input
-
-|Input   |Type|Description|Optional|
-|--------|----|-----------|-------:|
-|'filter'|    |UID of license, returns song XML|NO      |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/license_songs.xml)
-
 ## tags
 
 * MINIMUM_API_VERSION=380001
@@ -544,7 +499,6 @@ This returns playlists based on the specified filter
 |'update' |set_filter|ISO 8601 Date Format assumed filter method is newer then specified date, however [START]/[END] can be specified to receive only results updated between two dates|YES     |
 |'offset'|    |           |YES     |
 |'limit' |    |           |YES     |
-
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlists.xml)
 
@@ -734,7 +688,6 @@ Takes the file id with optional description and expires parameters.
 |'type'  |string|object_type|NO|
 |'description'|string|description (will be filled for you if empty)|YES|
 |'expires'|integer|days to keep active|YES|
-
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/share_create.xml)
 
