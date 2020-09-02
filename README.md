@@ -1,6 +1,9 @@
 # Updating ampache.org/api
 
-Site generated from wiki files using [Gatsby](https://www.gatsbyjs.org/) and [gatsby-gitbook-starter](https://github.com/hasura/gatsby-gitbook-starter)
+Site generated from wiki files using:
+
+* [Gatsby](https://www.gatsbyjs.org/)
+* [gatsby-gitbook-starter](https://github.com/hasura/gatsby-gitbook-starter)
 
 ## Requirements
 
