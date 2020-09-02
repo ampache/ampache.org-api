@@ -8,6 +8,7 @@ metaDescription: "API documentation"
 
 * 4.2.0-release
 * 4.2.1-release
+* 4.2.2-release
 
 Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](ACL). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
@@ -86,25 +87,27 @@ Optionally, you can also provide geolocation information `&geo_latitude=$latitud
 If your authenticated User and IP match a row in the Access List the following will be returned.
 
 For XML
+
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
-	<auth><%AUTHENTICATION TOKEN%></auth>
-	<api><%APIVERSION%></api>
-	<session_expire><![CDATA[2019-12-03T09:36:46+10:00]]></session_expire>
-	<update><![CDATA[2019-11-26T16:35:05+10:00]]></update>
-	<add><![CDATA[2019-12-03T06:42:55+10:00]]></add>
-	<clean><![CDATA[2019-12-03T06:41:02+10:00]]></clean>
-	<songs><![CDATA[268302]]></songs>
-	<albums><![CDATA[25686]]></albums>
-	<artists><![CDATA[11055]]></artists>
-	<playlists><![CDATA[20]]></playlists>
-	<videos><![CDATA[0]]></videos>
-	<catalogs><![CDATA[4]]></catalogs>
+    <auth><%AUTHENTICATION TOKEN%></auth>
+    <api><%APIVERSION%></api>
+    <session_expire><![CDATA[2019-12-03T09:36:46+10:00]]></session_expire>
+    <update><![CDATA[2019-11-26T16:35:05+10:00]]></update>
+    <add><![CDATA[2019-12-03T06:42:55+10:00]]></add>
+    <clean><![CDATA[2019-12-03T06:41:02+10:00]]></clean>
+    <songs><![CDATA[268302]]></songs>
+    <albums><![CDATA[25686]]></albums>
+    <artists><![CDATA[11055]]></artists>
+    <playlists><![CDATA[20]]></playlists>
+    <videos><![CDATA[0]]></videos>
+    <catalogs><![CDATA[4]]></catalogs>
 </root>
 ```
 
 For JSON
+
 ```JSON
 {
     "auth": "%AUTHENTICATION TOKEN%",
@@ -230,11 +233,13 @@ For the purpose of this example the Ampache host is 'localhost' and the path to 
 ### Requesting all genres whose name starts with Rock
 
 XML
+
 ```XML
 http://localhost/ampache/server/xml.server.php?action=tags&auth=1234567890123456789012345678901&filter=Rock
 ```
 
 JSON
+
 ```JSON
 http://localhost/ampache/server/json.server.php?action=tags&auth=1234567890123456789012345678901&filter=Rock
 ```
@@ -242,11 +247,13 @@ http://localhost/ampache/server/json.server.php?action=tags&auth=123456789012345
 ### Requesting all song titles, with an offset of 5000
 
 XML
+
 ```XML
 http://localhost/ampache/server/xml.server.php?action=songs&auth=12345678901234567890123456789012&offset=5000
 ```
 
 JSON
+
 ```JSON
 http://localhost/ampache/server/json.server.php?action=songs&auth=12345678901234567890123456789012&offset=5000
 ```
