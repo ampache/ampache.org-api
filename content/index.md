@@ -1,6 +1,6 @@
 ---
-title: "Ampache API"
-metaTitle: "Ampache API"
+title: "Ampache API 4.2.2"
+metaTitle: "Ampache API 4.2.2"
 metaDescription: "API documentation"
 ---
 
@@ -135,8 +135,8 @@ You can also pass it `limit=none` to overcome the `limit` limitation and return 
 
 For more in depth information regarding the different api servers you can view the following documentation pages.
 
-* [XML Documentation (4.2.1)](/api-xml-methods)
-* [JSON Documentation (4.2.1)](/api-json-methods)
+* [XML Documentation (4.2.2)](/api-xml-methods)
+* [JSON Documentation (4.2.2)](/api-json-methods)
 
 ### Non-Data Methods
 

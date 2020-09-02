@@ -4,43 +4,52 @@ metaTitle: "Standards"
 metaDescription: "API documentation"
 ---
 
-Here I will be documenting standards that all Ampache API's should follow.
+Here are some basic standards that all Ampache API's should follow.
 
 There will be inconsistencies between the current API's and we will be working on merging to a clear set of standards.
 
 ## Rules regarding objects and data
 
-For now I've just written down a few rules that i will be following:
+For now, here are a few basic rules that the API should follow:
 
 * ID is a string for all objects.
 * Everything that has an ID should include this in the response.
 * All other integers are cast to int
 * Same thing for doubles
 * null and empty values may be returned. (for example XML will always return an object but it may not have any value)
-* total_count in the XML API is depreciated but not to be removed until API 5.
+
+### total_count in the XML API is depreciated but not to be removed until API 5.0.0
+
+XML can count objects the same was as a JSON array [<https://www.php.net/manual/en/simplexmlelement.count.php>]
+
 ```XML
 <total_count>5</total_count>
 ```
-  * XML can count objects the same was as a JSON array [<https://www.php.net/manual/en/simplexmlelement.count.php>]
 
 ### Genre in songs is depreciated and will be removed in API 5.
+
+The debate between genre/tag is going to need to be resolved but for now the duplication in the API will be removed.
 
 ```XML
 <genre><![CDATA[Metal]]></genre>
 <genre><![CDATA[Hard Rock]]></genre>
 ```
+
+```JSON
         "genre": [
             "Metal",
             "Hard Rock"
         ]
+```
 
 ### Use tag instead of genre, tag provides a genre ID as well as the name. 
 
-```xml
+```XML
 <tag id="20" count="1" ><![CDATA[Metal]]></tag>
 <tag id="37" count="1" ><![CDATA[Hard Rock]]></tag>
 ```
-```json
+
+```JSON
         "tag": [
             {
                 "id": "4",
