@@ -500,6 +500,7 @@ Create a public url that can be used by anyone to stream media.
 Takes the file id with optional description and expires parameters.
 
 @param array $input
+
 |Input   |Type|Description|Optional|
 |--------|----|-----------|-------:|
 |'filter'|    |UID of object you are sharing| NO      |
@@ -517,6 +518,7 @@ Update the description and/or expiration date for an existing share.
 Takes the share id to update with optional description and expires parameters.
 
 @param array $input
+
 |Input   |Type|Description|Optional|
 |--------|----|-----------|-------:|
 |'filter'|string|Alpha-numeric search term| NO      |
