@@ -536,6 +536,7 @@ Takes the share id to update with optional description and expires parameters.
 Delete an existing share.
 
 @param array $input
+
 |Input   |Type|Description|Optional|
 |--------|----|-----------|-------:|
 |'filter'|    |UID of Share to delete|NO      |
