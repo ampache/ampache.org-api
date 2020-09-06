@@ -55,7 +55,7 @@ const MaxWidth = styled('div')`
 `;
 
 const LeftSideBarWidth = styled('div')`
-  width: 200px;
+  min-width: 200px;
 `;
 
 const RightSideBarWidth = styled('div')`
