@@ -26,7 +26,7 @@ XML can count objects the same was as a JSON array [<https://www.php.net/manual/
 <total_count>5</total_count>
 ```
 
-### Genre in songs is depreciated and will be removed in API 5.
+### Genre in songs is depreciated and will be removed in API 5.0.0
 
 The debate between genre/tag is going to need to be resolved but for now the duplication in the API will be removed.
 
@@ -42,7 +42,7 @@ The debate between genre/tag is going to need to be resolved but for now the dup
         ]
 ```
 
-### Use tag instead of genre, tag provides a genre ID as well as the name. 
+### Use tag instead of genre, tag provides a genre ID as well as the name
 
 ```XML
 <tag id="20" count="1" ><![CDATA[Metal]]></tag>
@@ -75,5 +75,4 @@ The backward compatible names will be removed in Ampache 5.0.0
 ### TODO
 
 * Python3-ampache will produce example files for all methods exactly as received to help identify methods that don't enforce these rules.
-  * update the wiki with links to the examples instead of a massive wall of text [<https://github.com/ampache/python3-ampache/tree/master/docs>] 
-
+  * update the wiki with links to the examples instead of a massive wall of text [<https://github.com/ampache/python3-ampache/tree/master/docs>]

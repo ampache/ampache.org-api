@@ -33,7 +33,7 @@ This can be called without being authenticated, it is useful for determining if 
 
 |Input |Type  |Description|Optional|
 |------|------|-----------|-------:|
-|'auth'|string|(Session ID) destroys the session if it exists|YES      |
+|'auth'|string|(Session ID) returns version information and extends the session if passed|YES      |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/ping.json)
 
@@ -45,7 +45,7 @@ Destroy a session using the auth parameter.
 
 |Input |Type  |Description|Optional|
 |------|------|-----------|-------:|
-|'auth'|string|(Session ID) returns version information and extends the session if passed|NO     |
+|'auth'|string|(Session ID) destroys the session if it exists|NO     |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/goodbye.json)
 

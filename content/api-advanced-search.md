@@ -144,4 +144,3 @@ To search a mixed type like metadata you must search using 4 rules.
 |random  | (integer) 0,1 (random order of results; default to 0)                   |
 |offset  | (integer)                                                               |
 |limit'  | (integer)                                                               |
-

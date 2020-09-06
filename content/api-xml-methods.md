@@ -33,7 +33,7 @@ This can be called without being authenticated, it is useful for determining if 
 
 |Input |Type  |Description|Optional|
 |------|------|-----------|-------:|
-|'auth'|string|(Session ID) destroys the session if it exists|YES      |
+|'auth'|string|(Session ID) returns version information and extends the session if passed|YES      |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/ping.xml)
 
@@ -45,7 +45,7 @@ Destroy a session using the auth parameter.
 
 |Input |Type  |Description|Optional|
 |------|------|-----------|-------:|
-|'auth'|string|(Session ID) returns version information and extends the session if passed|NO     |
+|'auth'|string|(Session ID) destroys the session if it exists|NO     |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/goodbye.xml)
 
@@ -1136,7 +1136,7 @@ This is for controlling democratic play
 |'action'|string|           |NO      |
 
 ```XML
-TBC
+ TBC
 ```
 
 All XML Documents that have a ```<tag>``` element may have 0 or more tag elements associated with them. Each tag element has an attribute "count" that indicates the number of people who have specified this tag.
