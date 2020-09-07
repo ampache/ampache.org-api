@@ -26,31 +26,19 @@ XML can count objects the same was as a JSON array [<https://www.php.net/manual/
 <total_count>5</total_count>
 ```
 
-### Genre in songs is depreciated and will be removed in API 5.0.0
+### Tag is being renamed into Genre
 
-The debate between genre/tag is going to need to be resolved but for now the duplication in the API will be removed.
+Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable.
+
+### Genre will provide a genre ID as well as the name
 
 ```XML
-<genre><![CDATA[Metal]]></genre>
-<genre><![CDATA[Hard Rock]]></genre>
+<genre id="20" count="1" ><![CDATA[Metal]]></tag>
+<genre id="37" count="1" ><![CDATA[Hard Rock]]></tag>
 ```
 
 ```JSON
         "genre": [
-            "Metal",
-            "Hard Rock"
-        ]
-```
-
-### Use tag instead of genre, tag provides a genre ID as well as the name
-
-```XML
-<tag id="20" count="1" ><![CDATA[Metal]]></tag>
-<tag id="37" count="1" ><![CDATA[Hard Rock]]></tag>
-```
-
-```JSON
-        "tag": [
             {
                 "id": "4",
                 "name": "Electronic"
