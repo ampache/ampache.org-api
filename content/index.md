@@ -9,13 +9,20 @@ metaDescription: "API documentation"
 * 4.2.0-release
 * 4.2.1-release
 * 4.2.2-release
+* Ampache develop
 
-Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](api-acls). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
-If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
+Ampache Provides an API for pulling out it's meta data in the form of XML and JSON documents. This was originally created for use 
+by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data.
+Access to the API is controlled by the Internal [Access Control Lists](http://ampache.org/api/api-acls). The KEY defined in the
+ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 
+results for performance reasons. To get additional results pass offset as an additional parameter.
+
+If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D).
+All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
 
 ## Sending Handshake Request
 
-Multiple authentication methods are available, described in the next sections.
+Multiple authentication methods are available, described in the following sections.
 
 ### User / Password
 
@@ -41,7 +48,8 @@ http://localhost/ampache/server/xml.server.php?action=handshake&auth=PASSPHRASE&
 
 ### Api Key
 
-The key that must be passed to Ampache is the API Key generated for a specific user (none by default, only the administrator can generate one). Then call the following URL (localhost/ampache is the location of your Ampache installation):
+The key that must be passed to Ampache is the API Key generated for a specific user (none by default, only the administrator can generate one).
+Then call the following URL (localhost/ampache is the location of your Ampache installation):
 
 ```Text
 http://localhost/ampache/server/xml.server.php?action=handshake&auth=API_KEY&version=350001
@@ -135,8 +143,8 @@ You can also pass it `limit=none` to overcome the `limit` limitation and return 
 
 For more in depth information regarding the different api servers you can view the following documentation pages.
 
-* [XML Documentation (4.2.2)](/api-xml-methods)
-* [JSON Documentation (4.2.2)](/api-json-methods)
+* [XML Documentation (4.2.2)](http://ampache.org/api/api-xml-methods)
+* [JSON Documentation (4.2.2)](http://ampache.org/api/api-json-methods)
 
 ### Non-Data Methods
 
@@ -164,7 +172,7 @@ For more in depth information regarding the different api servers you can view t
 * tag_songs
 * songs
 * song
-* [advanced_search](api-advanced-search)
+* [advanced_search](http://ampache.org/api/api-advanced-search)
 * stats
 * playlists
 * playlist

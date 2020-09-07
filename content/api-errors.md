@@ -38,3 +38,4 @@ All error codes are accompanied by a string value for the error and derived from
   * This is a fatal error, the ACL on the Ampache server prevents access from the current source IP Address.
 * **405**
   * This is a fatal error, the service requested a method that the API does not implement.
+  
