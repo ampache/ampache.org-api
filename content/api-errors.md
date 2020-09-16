@@ -28,13 +28,19 @@ All errors are returned in the form of an XML/JSON Document however the string e
 
 All error codes are accompanied by a string value for the error and derived from the [HTTP/1.1 Status Codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 
-* **501**
-  * This is a fatal error, the Ampache server you have requested does not currently have access control enabled. The API is disabled.
-* **400**
-  * Used when you have specified a valid method but something about the input is incorrect / invalid. See Error message for details, but do not re-attempt the exact same request.
-* **401**
-  * This is a temporary error, this means no valid session was passed or the handshake failed. This should be an indication for services to attempt another handshake
-* **403**
-  * This is a fatal error, the ACL on the Ampache server prevents access from the current source IP Address.
+* **501** Access Control not Enabled
+  * The API is disabled. Enable 'access_control' in your config
+* **400** Bad Request
+  * Used when you have specified a valid method but something about the input is incorrect, invalid or missing
+  * You can check the error message for details, but do not re-attempt the exact same request
+* **401** Received Invalid Handshake
+  * This is a temporary error, this means no valid session was passed or the handshake failed
+* **403** Access Denied
+  * The requested method is not available
+  * You can check the error message for details about which feature is disabled
+* **404** Not Found
+  * The API could not find the requested object
 * **405**
-  * This is a fatal error, the service requested a method that the API does not implement.
+  * This is a fatal error, the service requested a method that the API does not implement
+* **412** Failed Access Check
+  * Access denied to the requested object or function for this user
