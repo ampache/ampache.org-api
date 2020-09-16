@@ -1,6 +1,6 @@
 ---
-title: "Ampache API"
-metaTitle: "Ampache API"
+title: "API 4.2"
+metaTitle: "API 4.2"
 metaDescription: "API documentation"
 ---
 
@@ -9,49 +9,9 @@ metaDescription: "API documentation"
 * 4.2.0-release
 * 4.2.1-release
 * 4.2.2-release
-* Ampache develop
 
-**Archived Version Documentation**
-
-[API 4.2 Documentation](http://ampache.org/api/versions/api-4.2)
-
-[API 4.1 Documentation](http://ampache.org/api/versions/api-4.1)
-
-
-Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://ampache.org/api/http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](http://ampache.org/api/api-acls). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
+Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](api-acls). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
-
-## Changes in Ampache Develop
-
-The next version of Ampache has a lot of breaking changes compared to the 4.x.x API, current changes are listed here and in the changelog.
-
-### Added
-
-* Api::localplay added new options to 'command' ('pause', 'add', 'volume_up', 'volume_down', 'volume_mute', 'delete_all', 'skip')
-* Api::localplay added parameters:
-  * 'oid' (integer) object_id to add //optional
-  * 'type' (string) Default: 'Song' ('Song', 'Video', 'Podcast_Episode', 'Channel', 'Broadcast', 'Democratic', 'Live_Stream') //optional
-  * 'clear' (integer) 0|1 clear the current playlist on add //optional
-* API::playlist_edit added new parameter 'sort': (0,1) sort the playlist by 'Artist, Album, Song' //optional
-* Api::indexes added parameter 'include': (0,1) include song details with playlists (XML has this by default)
-* Api::users (id and username of the site users)
-
-### Changed
-
-* All API code that used 'Tag' now references 'Genre' instead
-* Renamed functions (Backcompatible string replacement until 5.0.0):
-  * tags => genres
-  * tag => genre
-  * tag_artists => genre_artists
-  * tag_albums => genre_albums
-  * tag_songs => genre_songs
-* Don't allow duplicate podcast feeds
-* Extend democratic cooldown past 255 and show an error when out of range
-* Api::shares filter is optional
-
-### Deprecated
-
-* Api::indexes will stop including playlist track and id in xml by default in Ampache 5.0.0
 
 ## Sending Handshake Request
 
@@ -175,8 +135,8 @@ You can also pass it `limit=none` to overcome the `limit` limitation and return 
 
 For more in depth information regarding the different api servers you can view the following documentation pages.
 
-* [XML Documentation (4.2.1)](http://ampache.org/api/api-xml-methods)
-* [JSON Documentation (4.2.1)](http://ampache.org/api/api-json-methods)
+* [XML Documentation (4.2)](/api-xml-methods)
+* [JSON Documentation (4.2)](/api-json-methods)
 
 ### Non-Data Methods
 
@@ -204,7 +164,7 @@ For more in depth information regarding the different api servers you can view t
 * tag_songs
 * songs
 * song
-* [advanced_search](http://ampache.org/api/api-advanced-search)
+* [advanced_search](api-advanced-search)
 * stats
 * playlists
 * playlist

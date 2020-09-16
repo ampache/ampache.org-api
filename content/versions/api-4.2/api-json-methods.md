@@ -1,6 +1,6 @@
 ---
-title: "JSON Methods"
-metaTitle: "JSON Methods"
+title: "JSON 4.2"
+metaTitle: "JSON 4.2"
 metaDescription: "API documentation"
 ---
 
@@ -24,7 +24,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 | 'timestamp' | integer | UNIXTIME() (Timestamp used in seed of password hash. Required if login/password authentication) |      YES |
 | 'version'   | string  | $version (API Version that the application understands)                                         |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/handshake.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/handshake.json)
 
 ## ping
 
@@ -35,7 +35,7 @@ This can be called without being authenticated, it is useful for determining if 
 |--------|--------|----------------------------------------------------------------------------|---------:|
 | 'auth' | string | (Session ID) returns version information and extends the session if passed |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/ping.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/ping.json)
 
 ## goodbye
 
@@ -47,7 +47,7 @@ Destroy a session using the auth parameter.
 |--------|--------|------------------------------------------------|---------:|
 | 'auth' | string | (Session ID) destroys the session if it exists |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/goodbye.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/goodbye.json)
 
 ## url_to_song
 
@@ -58,7 +58,7 @@ This takes a url and returns the song object in question
 |-------|--------|----------------------------------------------------------------|---------:|
 | 'url' | string | Full Ampache URL from server, translates back into a song JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/url_to_song.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/url_to_song.json)
 
 ## Data Methods
 
@@ -79,19 +79,19 @@ This takes a collection of inputs and returns ID + name for the object type
 
 SONGS
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(song\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/get_indexes%20\(song\).json)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(artist\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/get_indexes%20\(artist\).json)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(album\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/get_indexes%20\(album\).json)
 
 PLAYLIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(playlist\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/get_indexes%20\(playlist\).json)
 
 ## advanced_search
 
@@ -111,40 +111,31 @@ You can pass multiple rules as well as joins to create in depth search results
 Rules must be sent in groups of 3 using an int (starting from 1) to designate which rules are combined.
 Use operator ('and', 'or') to choose whether to join or separate each rule when searching.
 
-Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page for details about creating searches.
+Refer to the [Advanced Search](api-advanced-search) page for details about creating searches.
 
 @param array $input
 
-| Input    | Type    | Description                                                                           | Optional |
-|----------|---------|---------------------------------------------------------------------------------------|---------:|
-| operator | string  | 'and','or' (whether to match one rule or all)                                         |       NO |
-| rules    | array   | [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]] |       NO |
-| type     | string  | 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'                       |       NO |
-| random   | boolean | 0, 1 (random order of results; default to 0)                                          |      YES |
-| offset   | integer |                                                                                       |      YES |
-| limit'   | integer |                                                                                       |      YES |
-
-**NOTE** the rules part can be confusing but essentially you can include as many 'arrays' of rules as you want.
-Just add 1 to the rule value to create a new group of rules.
-
-* Mandatory Rule Values
-  * rule_1
-  * rule_1_operator
-  * rule_1_input
-* Optional (Metadata searches **only**)
-  * rule_1_subtype
+    INPUTS
+    * ampache_url = (string)
+    * ampache_API = (string)
+    * operator = (string) 'and', 'or' (whether to match one rule or all)
+    * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
+    * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
+    * random = (integer) 0, 1 (random order of results; default to 0)
+    * offset = (integer)
+    * limit' = (integer)
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/advanced_search%20\(song\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/advanced_search%20\(song\).json)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/advanced_search%20\(artist\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/advanced_search%20\(artist\).json)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/advanced_search%20\(album\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/advanced_search%20\(album\).json)
 
 ## artists
 
@@ -152,29 +143,29 @@ This takes a collection of inputs and returns artist objects.
 
 @param array $input
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset'  | integer    |                                                                               |      YES |
-| 'limit'   | integer    |                                                                               |      YES |
-| 'include' | string     | 'albums', 'songs' and will include JSON nested in the artist JSON             |      YES |
+| Input     | Type       | Description                                                                         | Optional |
+|-----------|------------|-------------------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number       |      YES |
+| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                                    |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date             |      YES |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date          |      YES |
+| 'offset'  | integer    |                                                                                     |      YES |
+| 'limit'   | integer    |                                                                                     |      YES |
+| 'include' | string     | 'albums', 'songs' and will include the corresponding JSON nested in the artist JSON |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artists.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/artists.json)
 
 ## artist
 
 This returns a single artist based on the UID of said artist
 @param array $input
 
-| Input     | Type   | Description                                                                         | Optional |
-|-----------|--------|-------------------------------------------------------------------------------------|---------:|
-| 'filter'  | string | UID of Artist, returns artist JSON                                                  |       NO |
-| 'include' | string | 'albums', 'songs' and will include the corresponding JSON nested in the artist JSON |      YES |
+| Input     | Type   | Description                                                       | Optional |
+|-----------|--------|-------------------------------------------------------------------|---------:|
+| 'filter'  | string | UID of Artist, returns artist JSON                                |       NO |
+| 'include' | string | 'albums', 'songs' will include the JSON nested in the artist JSON |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artist.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/artist.json)
 
 ## artist_albums
 
@@ -187,7 +178,7 @@ This returns the albums of an artist
 | 'offset' | integer |                                   |      YES |
 | 'limit'  | integer |                                   |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artist_albums.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/artist_albums.json)
 
 ## artist_songs
 
@@ -200,36 +191,36 @@ This returns the songs of the specified artist
 | 'offset' | integer |                                  |      YES |
 | 'limit'  | integer |                                  |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artist_songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/artist_songs.json)
 
 ## albums
 
 This returns albums based on the provided search filters
 @param array $input
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset'  | integer    |                                                                               |      YES |
-| 'limit'   | integer    |                                                                               |      YES |
-| 'include' | string     | 'albums', 'songs' will include nested in the album JSON                       |      YES |
+| Input     | Type       | Description                                                                    | Optional |
+|-----------|------------|--------------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number  |      YES |
+| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                               |       NO |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date        |      YES |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date     |      YES |
+| 'offset'  | integer    |                                                                                |      YES |
+| 'limit'   | integer    |                                                                                |      YES |
+| 'include' | string     | 'albums', 'songs' will include the corresponding JSON nested in the album JSON |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/albums.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/albums.json)
 
 ## album
 
 This returns a single album based on the UID provided
 @param array $input
 
-| Input     | Type   | Description                                                          | Optional |
-|-----------|--------|----------------------------------------------------------------------|---------:|
-| 'filter'  | string | UID of Album, returns album JSON                                     |       NO |
-| 'include' | string | 'songs' will include the corresponding JSON nested in the album JSON |      YES |
+| Input     | Type   | Description                                                              | Optional |
+|-----------|--------|--------------------------------------------------------------------------|---------:|
+| 'filter'  | string | UID of Album, returns album JSON                                         |       NO |
+| 'include' | string | 'songs' and will include the corresponding JSON nested in the album JSON |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/album.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/album.json)
 
 ## album_songs
 
@@ -242,7 +233,7 @@ This returns the songs of a specified album
 | 'offset' | integer |                                 |      YES |
 | 'limit'  | integer |                                 |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/album_songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/album_songs.json)
 
 ## tags
 
@@ -256,7 +247,7 @@ This returns the tags (Genres) based on the specified filter
 | 'offset' | integer |                                                                               |      YES |
 | 'limit'  | integer |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/tags.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/tags.json)
 
 ## tag
 
@@ -267,7 +258,7 @@ This returns a single tag based on UID
 |----------|--------|------------------------------|---------:|
 | 'filter' | string | UID of tag, returns tag JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/tag.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/tag.json)
 
 ## tag_artists
 
@@ -280,7 +271,7 @@ This returns the artists associated with the tag in question as defined by the U
 | 'offset' | integer |                                 |      YES |
 | 'limit'  | integer |                                 |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/tag_artists.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/tag_artists.json)
 
 ## tag_albums
 
@@ -293,7 +284,7 @@ This returns the albums associated with the tag in question
 | 'offset' | integer |                                |      YES |
 | 'limit'  | integer |                                |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/tag_albums.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/tag_albums.json)
 
 ## tag_songs
 
@@ -306,7 +297,7 @@ returns the songs for this tag
 | 'offset' | integer |                               |      YES |
 | 'limit'  | integer |                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/tag_songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/tag_songs.json)
 
 ## songs
 
@@ -316,13 +307,13 @@ Returns songs based on the specified filter
 | Input    | Type       | Description                                                                   | Optional |
 |----------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
 | 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
 | 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
+| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
 | 'offset' | integer    |                                                                               |      YES |
 | 'limit'  | integer    |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/songs.json)
 
 ## song
 
@@ -333,7 +324,7 @@ returns a single song
 |----------|--------|--------------------------------|---------:|
 | 'filter' | string | UID of Song, returns song JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/song.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/song.json)
 
 ## playlists
 
@@ -349,7 +340,7 @@ This returns playlists based on the specified filter
 | 'offset' | integer    |                                                                               |      YES |
 | 'limit'  | integer    |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlists.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlists.json)
 
 ## playlist
 
@@ -360,7 +351,7 @@ This returns a single playlist
 |----------|--------|----------------------------------------|---------:|
 | 'filter' | string | UID of playlist, returns playlist JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist.json)
 
 ## playlist_songs
 
@@ -373,7 +364,7 @@ This returns the songs for a playlist
 | 'offset' | integer |                                    |      YES |
 | 'limit'  | integer |                                    |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_songs.json)
 
 ## playlist_create
 
@@ -385,7 +376,7 @@ This create a new playlist and return it
 | 'name' | string | Playlist name                     |       NO |
 | 'type' | string | Playlist type 'public', 'private' |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_create.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_create.json)
 
 ## playlist_edit
 
@@ -401,7 +392,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 | 'items'  | string | comma-separated song_id's (replace existing items with a new object_id) |      YES |
 | 'tracks' | string | comma-separated playlisttrack numbers matched to items in order         |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_edit.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_edit.json)
 
 ## playlist_delete
 
@@ -412,7 +403,7 @@ This deletes a playlist
 |----------|--------|-----------------|---------:|
 | 'filter' | string | UID of Playlist |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_delete.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_delete.json)
 
 ## playlist_add_song
 
@@ -421,11 +412,11 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 
 | Input    | Type    | Description                                               | Optional |
 |----------|---------|-----------------------------------------------------------|---------:|
-| 'filter' | string  | UID of Playlist                                           |       NO |
-| 'song'   | string  | UID of song to add to playlist                            |       NO |
+| 'filter' | integer | UID of Playlist                                           |       NO |
+| 'song'   | integer | UID of song to add to playlist                            |       NO |
 | 'check'  | boolean | 0, 1 Whether to check and ignore duplicates (default = 0) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_add_song.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_add_song.json)
 
 ## playlist_remove_song
 
@@ -439,7 +430,7 @@ Previous versions required 'track' instead of 'song'.
 | 'song'   | string  | UID of song to remove from playlist  |      YES |
 | 'track'  | integer | Track number to remove from playlist |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_remove_song.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_remove_song.json)
 
 ## playlist_generate
 
@@ -456,22 +447,22 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 | 'filter' | string  | string LIKE matched to song title                                |      YES |
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
-| 'flag'   | boolean | get flagged songs only 0, 1 (default = 0)                        |      YES |
+| 'flag'   | integer | get flagged songs only 0, 1 (default = 0)                        |      YES |
 | 'format' | string  | 'song', 'index','id' (default = 'song')                          |      YES |
 | 'offset' | integer |                                                                  |      YES |
 | 'limit'  | integer |                                                                  |      YES |
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_generate%20\(song\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_generate%20\(song\).json)
 
 INDEX
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_generate%20\(index\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_generate%20\(index\).json)
 
 ID
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_generate%20\(id\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/playlist_generate%20\(id\).json)
 
 ## shares
 
@@ -487,7 +478,7 @@ This searches the shares and returns... shares
 | 'offset' | integer |                                               |      YES |
 | 'limit'  | integer |                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/shares.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/shares.json)
 
 ## share
 
@@ -500,7 +491,7 @@ Return shares by UID
 |----------|--------|---------------------------------|---------:|
 | 'filter' | string | UID of Share, returns song JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/share.json)
 
 ## share_create
 
@@ -518,7 +509,7 @@ Takes the file id with optional description and expires parameters.
 | 'description' | string  | description (will be filled for you if empty) |      YES |
 | 'expires'     | integer | days to keep active                           |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_create.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/share_create.json)
 
 ## share_edit
 
@@ -529,15 +520,15 @@ Takes the share id to update with optional description and expires parameters.
 
 @param array $input
 
-| Input         | Type    | Description                  | Optional |
-|---------------|---------|------------------------------|---------:|
-| 'filter'      | string  | Alpha-numeric search term    |       NO |
-| 'stream'      | boolean | 0, 1                         |      YES |
-| 'download'    | boolean | 0, 1                         |      YES |
-| 'expires'     | integer | number of days before expiry |      YES |
-| 'description' | string  | update description           |      YES |
+| Input         | Type    | Description                        | Optional |
+|---------------|---------|------------------------------------|---------:|
+| 'filter'      | string  | Alpha-numeric search term          |       NO |
+| 'stream'      | boolean | 0, 1                               |      YES |
+| 'download'    | boolean | 0, 1                               |      YES |
+| 'expires'     | integer | number of whole days before expiry |      YES |
+| 'description' | string  | update description                 |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_edit.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/share_edit.json)
 
 ## share_delete
 
@@ -546,12 +537,11 @@ Takes the share id to update with optional description and expires parameters.
 Delete an existing share.
 
 @param array $input
-
 | Input    | Type   | Description            | Optional |
 |----------|--------|------------------------|---------:|
 | 'filter' | string | UID of Share to delete |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_delete.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/share_delete.json)
 
 ## get_similar
 
@@ -567,7 +557,7 @@ Return similar artist id's or similar song ids compared to the input filter
 | 'offset' | integer |                      |      YES |
 | 'limit'  | integer |                      |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_similar.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/get_similar.json)
 
 ## search_songs
 
@@ -580,7 +570,7 @@ This searches the songs and returns... songs
 | 'offset' | integer |                                                                                            |      YES |
 | 'limit'  | integer |                                                                                            |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/search_songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/search_songs.json)
 
 ## videos
 
@@ -594,7 +584,7 @@ This returns video objects!
 | 'offset' | integer |                                                                               |      YES |
 | 'limit'  | integer |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/videos.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/videos.json)
 
 ## video
 
@@ -605,7 +595,7 @@ This returns a single video
 |----------|--------|----------------------------------|---------:|
 | 'filter' | string | UID of video, returns video JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/video.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/video.json)
 
 ## podcasts
 
@@ -621,7 +611,7 @@ Get information about podcasts
 | 'limit'   | integer |                                               |      YES |
 | 'include' | string  | 'episodes' (include episodes in the response) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcasts.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/podcasts.json)
 
 ## podcast
 
@@ -635,7 +625,7 @@ Get the podcast from it's id.
 | 'filter'  | string |                                               |       NO |
 | 'include' | string | 'episodes' (include episodes in the response) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/podcast.json)
 
 ## podcast_create
 
@@ -650,7 +640,7 @@ Takes the url and catalog parameters.
 | 'url'     | string | rss url for podcast |       NO |
 | 'catalog' | string | podcast catalog     |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_create.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/podcast_create.json)
 
 ## podcast_edit
 
@@ -670,7 +660,7 @@ Takes the podcast id to update with optional description and expires parameters.
 | 'generator'   | string |                           |      YES |
 | 'copyright'   | string |                           |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_edit.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/podcast_edit.json)
 
 ## podcast_delete
 
@@ -683,7 +673,7 @@ Delete an existing podcast.
 |----------|--------|--------------------------|---------:|
 | 'filter' | string | UID of podcast to delete |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_delete.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/podcast_delete.json)
 
 ## podcast_episodes
 
@@ -698,7 +688,7 @@ This returns the episodes for a podcast
 | 'offset' | integer |                |      YES |
 | 'limit'  | integer |                |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_episodes.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/podcast_episodes.json)
 
 ## podcast_episode
 
@@ -711,7 +701,7 @@ Get the podcast_episode from it's id.
 |----------|--------|---------------------------|---------:|
 | 'filter' | string | podcast_episode ID number |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_episode.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/podcast_episode.json)
 
 ## podcast_episode_delete
 
@@ -724,13 +714,14 @@ Delete an existing podcast_episode.
 |----------|--------|----------------------------------|---------:|
 | 'filter' | string | UID of podcast_episode to delete |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_episode_delete.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/podcast_episode_delete.json)
 
 ## stats
 
 Get some items based on some simple search types and filters.
 This method has partial backwards compatibility with older api versions but should be updated to follow the current input values.
 (Changed in 400001 'filter' added)
+
 @param array $input
 
 | Input      | Type    | Description                                                                 | Optional |
@@ -744,35 +735,26 @@ This method has partial backwards compatibility with older api versions but shou
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/stats%20\(song\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/stats%20\(song\).json)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/stats%20\(artist\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/stats%20\(artist\).json)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/stats%20\(album\).json)
-
-## users
-
-* **NEW** in develop
-
-Get ids and usernames for your site
-@param array $input
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/users.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/stats%20\(album\).json)
 
 ## user
 
 This get an user public information
 @param array $input
 
-| Input      | Type   | Description                         | Optional |
-|------------|--------|-------------------------------------|---------:|
-| 'username' | string | Username of the user to get details |       NO |
+| Input      | Type   | Description                             | Optional |
+|------------|--------|-----------------------------------------|---------:|
+| 'username' | string | Username of the user to get details for |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/user.json)
 
 ## user_create
 
@@ -787,7 +769,7 @@ Create a new user. (Requires the username, password and email.)
 | 'fullname' | string  |                            |      YES |
 | 'disable'  | boolean | 0, 1                       |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_create.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/user_create.json)
 
 ## user_update
 
@@ -806,7 +788,7 @@ Update an existing user.
 | 'disable'    | boolean | 0, 1                       |      YES |
 | 'maxbitrate' | string  |                            |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_update.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/user_update.json)
 
 ## user_delete
 
@@ -817,7 +799,7 @@ Delete an existing user.
 |------------|--------|-------------|---------:|
 | 'username' | string |             |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_update.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/user_update.json)
 
 ## licenses
 
@@ -830,12 +812,12 @@ This returns licenses based on the specified filter
 |----------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
 | 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format assumed filter method is newer then specified date       |      YES |
+| 'update' | set_filter | ISO 8601 Date Format assumed filter method is newer then specified date       |      YES |
 | 'offset' | integer    |                                                                               |      YES |
 | 'limit'  | integer    |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/licenses.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/licenses.json)
 
 ## license
 
@@ -848,7 +830,7 @@ This returns a single license
 |----------|--------|--------------------------------------|---------:|
 | 'filter' | string | UID of license, returns license JSON |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/license.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/license.json)
 
 ## license_songs
 
@@ -863,29 +845,29 @@ This returns the songs for a license
 | 'offset' | integer |                                   |      YES |
 | 'limit'  | integer |                                   |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/license_songs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/license_songs.json)
 
 ## followers
 
 This get an user followers
 @param array $input
 
-| Input      | Type   | Description                                | Optional |
-|------------|--------|--------------------------------------------|---------:|
-| 'username' | string | Username of the user to get followers list |       NO |
+| Input      | Type   | Description                                        | Optional |
+|------------|--------|----------------------------------------------------|---------:|
+| 'username' | string | Username of the user for who to get followers list |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/followers.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/followers.json)
 
 ## following
 
 This get the user list followed by an user
 @param array $input
 
-| Input      | Type   | Description                                | Optional |
-|------------|--------|--------------------------------------------|---------:|
-| 'username' | string | Username of the user to get following list |       NO |
+| Input      | Type   | Description                                         | Optional |
+|------------|--------|-----------------------------------------------------|---------:|
+| 'username' | string | (Username of the user for who to get following list |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/following.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/following.json)
 
 ## toggle_follow
 
@@ -896,19 +878,19 @@ This follow/unfollow an user
 |------------|--------|-----------------------------------------|---------:|
 | 'username' | string | Username of the user to follow/unfollow |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/toggle_follow.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/toggle_follow.json)
 
 ## last_shouts
 
 This get the latest posted shouts
 @param array $input
 
-| Input      | Type    | Description          | Optional |
-|------------|---------|----------------------|---------:|
-| 'username' | string  | Username of the user |      YES |
-| 'limit'    | integer |                      |      YES |
+| Input      | Type    | Description                                       | Optional |
+|------------|---------|---------------------------------------------------|---------:|
+| 'username' | string  | Username of the user for who to get latest shouts |      YES |
+| 'limit'    | integer |                                                   |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/last_shouts.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/last_shouts.json)
 
 ## rate
 
@@ -918,10 +900,10 @@ This rates a library item
 | Input    | Type    | Description                                   | Optional |
 |----------|---------|-----------------------------------------------|---------:|
 | 'type'   | string  | library item type, album, artist, song, video |       NO |
-| 'id'     | integer | library item id                               |       NO |
-| 'rating' | string  | rating between 0-5                            |       NO |
+| 'id'     | string  | library item id                               |       NO |
+| 'rating' | integer | rating between 0-5                            |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/rate.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/rate.json)
 
 ## flag
 
@@ -937,7 +919,7 @@ This flags a library item as a favorite
 | 'id'   | integer | $object_id                         |       NO |
 | 'flag' | boolean | 0, 1                               |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/flag.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/flag.json)
 
 ## record_play
 
@@ -950,7 +932,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 | 'user'   | integer | $user_id    |       NO |
 | 'client' | string  | $agent      |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/record_play.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/record_play.json)
 
 ## scrobble
 
@@ -968,7 +950,7 @@ Search for a song using text info and then record a play if found. This allows o
 | 'date'       | integer | UNIXTIME()   |      YES |
 | 'client'     | string  | $agent       |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/scrobble.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/scrobble.json)
 
 ## catalogs
 
@@ -981,7 +963,7 @@ This searches the catalogs and returns... catalogs
 |----------|--------|------------------------------------------------------------------|---------:|
 | 'filter' | string | Catalog type music, clip, tvshow, movie, personal_video, podcast |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalogs.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/catalogs.json)
 
 ## catalog
 
@@ -994,7 +976,7 @@ Return catalog by UID
 |----------|--------|----------------|---------:|
 | 'filter' | string | UID of Catalog |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/catalog.json)
 
 ## catalog_action
 
@@ -1006,7 +988,7 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | 'add_to_catalog', 'clean_catalog' |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog_action%20\(clean_catalog\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/catalog_action%20\(clean_catalog\).json)
 
 ## catalog_file
 
@@ -1024,7 +1006,7 @@ Make sure you remember to urlencode those file names!
 | 'task'    | string  | 'add','clean','verify','remove' |       NO |
 | 'catalog' | integer | $catalog_id                     |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog_file.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/catalog_file.json)
 
 ## timeline
 
@@ -1037,7 +1019,7 @@ This get an user timeline
 | 'limit'    | integer |                                                   |      YES |
 | 'since'    | integer | UNIXTIME()                                        |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/timeline.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/timeline.json)
 
 ## friends_timeline
 
@@ -1049,7 +1031,7 @@ This get current user friends timeline
 | 'limit' | integer |             |      YES |
 | 'since' | integer | UNIXTIME()  |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/friends_timeline.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/friends_timeline.json)
 
 ## update_from_tags
 
@@ -1061,7 +1043,7 @@ Update a single album, artist, song from the tag data
 | 'type' | string  | 'artist', 'album', 'song'       |       NO |
 | 'id'   | integer | $artist_id, $album_id, $song_id |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_from_tags.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/update_from_tags.json)
 
 ## update_artist_info
 
@@ -1073,7 +1055,7 @@ Make sure lastfm_API_key is set in your configuration file
 |-------|---------|-------------|---------:|
 | 'id'  | integer | $artist_id  |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_artist_info.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/update_artist_info.json)
 
 ## update_art
 
@@ -1087,7 +1069,7 @@ Doesn't overwrite existing art by default.
 | 'type'      | string  | 'song', 'podcast' |       NO |
 | 'overwrite' | boolean | 0, 1              |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_art.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/update_art.json)
 
 ## update_podcast
 
@@ -1098,7 +1080,7 @@ Sync and download new podcast episodes
 |-------|---------|-------------|---------:|
 | 'id'  | integer | $object_id  |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_podcast.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/update_podcast.json)
 
 ## Binary Data Methods
 
@@ -1139,9 +1121,9 @@ Get an art image.
 This is for controlling localplay
 @param array $input
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/localplay.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/localplay.json)
 
-[Example (status)](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/localplay%20\(status\).json)
+[Example (status)](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/localplay%20\(status\).json)
 
 ## democratic
 
@@ -1162,4 +1144,4 @@ This is for controlling democratic play (Songs only)
 | 'oid'    | integer | UID of Song object           |       NO |
 | 'method' | string  | vote, devote, playlist, play |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/democratic%20\(play\).json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/json-responses/democratic%20\(play\).json)
