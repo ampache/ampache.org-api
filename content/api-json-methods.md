@@ -335,6 +335,19 @@ returns a single song
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/song.json)
 
+## song_delete
+
+* **NEW** in Develop
+
+Delete an existing song. (if you are allowed to)
+@param array $input
+
+| Input    | Type   | Description           | Optional |
+|----------|--------|-----------------------|---------:|
+| 'filter' | string | UID of song to delete |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/song_delete.json)
+
 ## playlists
 
 This returns playlists based on the specified filter

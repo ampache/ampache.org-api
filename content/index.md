@@ -213,6 +213,7 @@ For more in depth information regarding the different api servers you can view t
 * tag_songs
 * songs
 * song
+* song_delete
 * [advanced_search](http://ampache.org/api/api-advanced-search)
 * stats
 * playlists
