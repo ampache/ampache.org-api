@@ -20,6 +20,7 @@ All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.or
 * 4.2.0-release
 * 4.2.1-release
 * 4.2.2-release
+* 4.2.3-release
 * Ampache develop
 
 **Archived Version Documentation**
