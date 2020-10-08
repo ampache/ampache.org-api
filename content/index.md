@@ -36,6 +36,8 @@ Note that API 4.1 docs cover all previous versions.
 
 The next version of Ampache has a lot of breaking changes compared to the 4.x.x API, current changes are listed here and in the changelog.
 
+All API code that used 'Tag' now references 'Genre' instead
+
 ### Added
 
 * Api::localplay added new options to 'command' ('pause', 'add', 'volume_up', 'volume_down', 'volume_mute', 'delete_all', 'skip')
@@ -45,7 +47,17 @@ The next version of Ampache has a lot of breaking changes compared to the 4.x.x 
   * 'clear' (integer) 0|1 clear the current playlist on add //optional
 * API::playlist_edit added new parameter 'sort': (0,1) sort the playlist by 'Artist, Album, Song' //optional
 * Api::indexes added parameter 'include': (0,1) include song details with playlists (XML has this by default)
-* Api::users (id and username of the site users)
+* NEW API functions
+  * Api::users (ID and Username of the site users)
+  * Api::song_delete (Delete files when you are allowed to)
+  * Api::user_preferences (Get your user preferences)
+  * Api::user_preference (Get your preference by name)
+  * Api::system_update (Check Ampache for updates and run the update if there is one.)
+  * Api::system_preferences (Preferences for the system user)
+  * Api::system_preference (Get a system preference by name)
+* New error codes
+  * 404 Not Found (The API could not find the requested object)
+  * 412 Failed Access Check (The user does note have access to this object, method, feature.)
 
 ### Changed
 
@@ -58,10 +70,17 @@ The next version of Ampache has a lot of breaking changes compared to the 4.x.x 
   * tag_songs => genre_songs
 * Don't allow duplicate podcast feeds
 * Api::shares filter is optional
+* Make filter optional in genre_artists, genre_albums, genre_songs (Used as a general catch all method like genres)
 
 ### Deprecated
 
 * Api::indexes will stop including playlist track and id in xml by default in Ampache 5.0.0
+
+### Fixed
+
+* Api::podcast_edit wasn't able to edit a podcast...
+* Setting a limit of 'none' would slice away all the results
+* Api::democratic was using action from localplay in the return responses
 
 ## Sending Handshake Request
 
@@ -196,7 +215,7 @@ For more in depth information regarding the different api servers you can view t
 * url_to_song
 * check_parameter
 * message
-* system_update **develop**
+* system_update **(develop only)**
 
 ### Data Methods
 
@@ -213,11 +232,11 @@ For more in depth information regarding the different api servers you can view t
 * tag_artists
 * tag_albums
 * tag_songs
-* genres **develop**
-* genre **develop**
-* genre_artists **develop**
-* genre_albums **develop**
-* genre_songs **develop**
+* genres **(develop only)**
+* genre **(develop only)**
+* genre_artists **(develop only)**
+* genre_albums **(develop only)**
+* genre_songs **(develop only)**
 * songs
 * song
 * song_delete
@@ -233,7 +252,7 @@ For more in depth information regarding the different api servers you can view t
 * playlist_remove_song
 * playlist_generate
 * search_songs
-* song_delete **develop**
+* song_delete **(develop only)**
 * videos
 * video
 * shares
@@ -256,13 +275,13 @@ For more in depth information regarding the different api servers you can view t
 * licenses
 * license
 * license_songs
-* users **develop**
+* users **(develop only)**
 * user
 * user_create
 * user_update
 * user_delete
-* user_preferences **develop**
-* user_preference **develop**
+* user_preferences **(develop only)**
+* user_preference **(develop only)**
 * stream
 * download
 * get_art
@@ -281,8 +300,8 @@ For more in depth information regarding the different api servers you can view t
 * update_artist_info
 * update_art
 * update_podcast
-* system_preferences **develop**
-* system_preference **develop**
+* system_preferences **(develop only)**
+* system_preference **(develop only)**
 
 ### Control Methods
 
