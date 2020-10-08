@@ -196,6 +196,7 @@ For more in depth information regarding the different api servers you can view t
 * url_to_song
 * check_parameter
 * message
+* system_update
 
 ### Data Methods
 
@@ -254,6 +255,8 @@ For more in depth information regarding the different api servers you can view t
 * user_create
 * user_update
 * user_delete
+* user_preferences
+* user_preference
 * stream
 * download
 * get_art
@@ -272,6 +275,8 @@ For more in depth information regarding the different api servers you can view t
 * update_artist_info
 * update_art
 * update_podcast
+* system_preferences
+* system_preference
 
 ### Control Methods
 

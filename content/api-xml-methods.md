@@ -60,6 +60,13 @@ This takes a url and returns the song object in question
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/url_to_song.xml)
 
+## system_update
+
+Check Ampache for updates and run the update if there is one.
+@param array $input
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/system_update.xml)
+
 ## Data Methods
 
 ## get_indexes
@@ -275,7 +282,7 @@ This returns the artists associated with the genre in question as defined by the
 
 | Input    | Type    | Description                      | Optional |
 |----------|---------|----------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns artist XML |       NO |
+| 'filter' | string  | UID of genre, returns artist XML |      YES |
 | 'offset' | integer |                                  |      YES |
 | 'limit'  | integer |                                  |      YES |
 
@@ -288,7 +295,7 @@ This returns the albums associated with the genre in question
 
 | Input    | Type    | Description                     | Optional |
 |----------|---------|---------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns album XML |       NO |
+| 'filter' | string  | UID of genre, returns album XML |      YES |
 | 'offset' | integer |                                 |      YES |
 | 'limit'  | integer |                                 |      YES |
 
@@ -301,7 +308,7 @@ returns the songs for this genre
 
 | Input    | Type    | Description                    | Optional |
 |----------|---------|--------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns song XML |       NO |
+| 'filter' | string  | UID of genre, returns song XML |      YES |
 | 'offset' | integer |                                |      YES |
 | 'limit'  | integer |                                |      YES |
 
@@ -831,6 +838,24 @@ Delete an existing user.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_delete.xml)
 
+## user_preferences
+
+Get your user preferences
+@param array $input
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_preferences.xml)
+
+## user_preference
+
+Get your user preference by name
+@param array $input
+
+| Input    | Type   | Description                                       | Optional |
+|----------|--------|---------------------------------------------------|---------:|
+| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_preferences.xml)
+
 ## licenses
 
 * **NEW** in 4.2.0
@@ -1113,6 +1138,24 @@ Sync and download new podcast episodes
 | 'id'  | integer | $object_id  |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_podcast.xml)
+
+## system_preferences
+
+Get your server preferences
+@param array $input
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/system_preferences.xml)
+
+## system_preference
+
+Get your server preference by name
+@param array $input
+
+| Input    | Type   | Description                                       | Optional |
+|----------|--------|---------------------------------------------------|---------:|
+| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/system_preferences.xml)
 
 ## Binary Data Methods
 
