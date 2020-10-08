@@ -62,6 +62,8 @@ This takes a url and returns the song object in question
 
 ## system_update
 
+* **NEW** in develop
+
 Check Ampache for updates and run the update if there is one.
 @param array $input
 
@@ -840,12 +842,16 @@ Delete an existing user.
 
 ## user_preferences
 
+* **NEW** in develop
+
 Get your user preferences
 @param array $input
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_preferences.xml)
 
 ## user_preference
+
+* **NEW** in develop
 
 Get your user preference by name
 @param array $input
@@ -1141,12 +1147,16 @@ Sync and download new podcast episodes
 
 ## system_preferences
 
+* **NEW** in develop
+
 Get your server preferences
 @param array $input
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/system_preferences.xml)
 
 ## system_preference
+
+* **NEW** in develop
 
 Get your server preference by name
 @param array $input

@@ -196,7 +196,7 @@ For more in depth information regarding the different api servers you can view t
 * url_to_song
 * check_parameter
 * message
-* system_update
+* system_update **develop**
 
 ### Data Methods
 
@@ -213,6 +213,11 @@ For more in depth information regarding the different api servers you can view t
 * tag_artists
 * tag_albums
 * tag_songs
+* genres **develop**
+* genre **develop**
+* genre_artists **develop**
+* genre_albums **develop**
+* genre_songs **develop**
 * songs
 * song
 * song_delete
@@ -228,6 +233,7 @@ For more in depth information regarding the different api servers you can view t
 * playlist_remove_song
 * playlist_generate
 * search_songs
+* song_delete **develop**
 * videos
 * video
 * shares
@@ -250,13 +256,13 @@ For more in depth information regarding the different api servers you can view t
 * licenses
 * license
 * license_songs
-* users
+* users **develop**
 * user
 * user_create
 * user_update
 * user_delete
-* user_preferences
-* user_preference
+* user_preferences **develop**
+* user_preference **develop**
 * stream
 * download
 * get_art
@@ -275,8 +281,8 @@ For more in depth information regarding the different api servers you can view t
 * update_artist_info
 * update_art
 * update_podcast
-* system_preferences
-* system_preference
+* system_preferences **develop**
+* system_preference **develop**
 
 ### Control Methods
 
