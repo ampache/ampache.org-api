@@ -1144,6 +1144,28 @@ Sync and download new podcast episodes
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_podcast.json)
 
+## user_preferences
+
+* **NEW** in develop
+
+Get your user preferences
+@param array $input
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preferences.json)
+
+## user_preference
+
+* **NEW** in develop
+
+Get your user preference by name
+@param array $input
+
+| Input    | Type   | Description                                       | Optional |
+|----------|--------|---------------------------------------------------|---------:|
+| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preference.json)
+
 ## system_preferences
 
 * **NEW** in develop
