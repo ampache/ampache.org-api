@@ -56,167 +56,191 @@ To separate Ampache from the http codes it's been decided to prefix our codes wi
 Error 4700: Access Control not Enabled
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <error errorCode="4700">
-        <errorAction><![CDATA[handshake]]</errorAction>
-        <errorType><![CDATA[system]]</errorType>
-        <errorMessage><![CDATA[Access Denied]]</errorMessage>
+        <errorAction><![CDATA[handshake]]></errorAction>
+        <errorType><![CDATA[system]]></errorType>
+        <errorMessage><![CDATA[Access Denied]]></errorMessage>
     </error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4700",
-  "errorAction": "handshake,
-  "errorType": "system",
-  "errorMessage": "Access Denied"
+{
+    "error": {
+        "errorCode": "4700",
+        "errorAction": "handshake",
+        "errorType": "system",
+        "errorMessage": "Access Denied"
+    }
 }
 ```
 
 Error 4701: Received Invalid Handshake
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <error errorCode="4701">
-        <errorAction><![CDATA[get_indexes]]</errorAction>
-        <errorType><![CDATA[account]]</errorType>
-        <errorMessage><![CDATA[143f3b598c279ddee55266ee455687fd]]</errorMessage>
-    </error>
+	<error errorCode="4701">
+		<errorAction><![CDATA[playlist_create]]></errorAction>
+		<errorType><![CDATA[account]]></errorType>
+		<errorMessage><![CDATA[Session Expired]]></errorMessage>
+	</error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4701",
-  "errorAction": "get_indexes",
-  "errorType": "account",
-  "errorMessage": "143f3b598c279ddee55266ee455687fd"
+{
+    "error": {
+        "errorCode": "4701",
+        "errorAction": "playlist_create",
+        "errorType": "account",
+        "errorMessage": "Session Expired"
+    }
 }
 ```
 
 Error 4703: Missing Feature
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <error errorCode="4703">
-        <errorAction><![CDATA[podcasts]]</errorAction>
-        <errorType><![CDATA[system]]</errorType>
-        <errorMessage><![CDATA[Enable: podcast]]</errorMessage>
+        <errorAction><![CDATA[podcasts]]></errorAction>
+        <errorType><![CDATA[system]]></errorType>
+        <errorMessage><![CDATA[Enable: podcast]]></errorMessage>
     </error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4703",
-  "errorAction": "podcasts",
-  "errorType": "system",
-  "errorMessage": "Enable: podcast"
+{
+    "error": {
+        "errorCode": "4703",
+        "errorAction": "podcasts",
+        "errorType": "system",
+        "errorMessage": "Enable: podcast"
+    }
 }
 ```
 
 Error 4704: Not Found
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <error errorCode="4704">
-        <errorAction><![CDATA[scrobble]]</errorAction>
-        <errorType><![CDATA[song]]</errorType>
-        <errorMessage><![CDATA[Not Found: My Song that doesn't exist]]</errorMessage>
-    </error>
+	<error errorCode="4704">
+		<errorAction><![CDATA[scrobble]]></errorAction>
+		<errorType><![CDATA[song]]></errorType>
+		<errorMessage><![CDATA[Not Found]]></errorMessage>
+	</error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4704",
-  "errorAction": "scrobble",
-  "errorType": "song",
-  "errorMessage": "Not Found: My Song that doesn't exist"
+{
+    "error": {
+        "errorCode": "4704",
+        "errorAction": "scrobble",
+        "errorType": "song",
+        "errorMessage": "Not Found"
+    }
 }
 ```
 
 Error 4705: Missing Method
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <error errorCode="4705">
-        <errorAction><![CDATA[delete_everything]]</errorAction>
-        <errorType><![CDATA[system]]</errorType>
-        <errorMessage><![CDATA[Invalid Request]]</errorMessage>
-    </error>
+	<error errorCode="4705">
+		<errorAction><![CDATA[plafgfylist_create]]></errorAction>
+		<errorType><![CDATA[system]]></errorType>
+		<errorMessage><![CDATA[Invalid Request]]></errorMessage>
+	</error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4705",
-  "errorAction": "delete_everything",
-  "errorType": "system",
-  "errorMessage": "Invalid Request"
+{
+    "error": {
+        "errorCode": "4705",
+        "errorAction": "plafgfylist_create",
+        "errorType": "system",
+        "errorMessage": "Invalid Request"
+    }
 }
 ```
 
 Error 4706: Depreciated Method
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <error errorCode="4706">
-        <errorAction><![CDATA[tag_songs]]</errorAction>
-        <errorType><![CDATA[system]]</errorType>
-        <errorMessage><![CDATA[Depreciated: tag_songs]]</errorMessage>
-    </error>
+	<error errorCode="4706">
+		<errorAction><![CDATA[tag_songs]]></errorAction>
+		<errorType><![CDATA[removed]]></errorType>
+		<errorMessage><![CDATA[Depreciated]]></errorMessage>
+	</error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4706",
-  "errorAction": "tag_songs",
-  "errorType": "system",
-  "errorMessage": "Depreciated: tag_songs"
+{
+    "error": {
+        "errorCode": "4706",
+        "errorAction": "tag_songs",
+        "errorType": "removed",
+        "errorMessage": "Depreciated"
+    }
 }
 ```
 
 Error 4710: Bad Request
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <error errorCode="4710">
-        <errorAction><![CDATA[record_play]]</errorAction>
-        <errorType><![CDATA[id]]</errorType>
-        <errorMessage><![CDATA[Not Found: 10384]]</errorMessage>
-    </error>
+	<error errorCode="4710">
+		<errorAction><![CDATA[playlist_create]]></errorAction>
+		<errorType><![CDATA[system]]></errorType>
+		<errorMessage><![CDATA[Bad Request: name]]></errorMessage>
+	</error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4710",
-  "errorAction": "record_play",
-  "errorType": "id",
-  "errorMessage": "Not Found: 10384"
+{
+    "error": {
+        "errorCode": "4710",
+        "errorAction": "playlist_create",
+        "errorType": "system",
+        "errorMessage": "Bad Request: name"
+    }
 }
 ```
 
 Error 4742: Failed Access Check
 
 ```XML
+<?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <error errorCode="4742">
-        <errorAction><![CDATA[playlist_delete]]</errorAction>
-        <errorType><![CDATA[account]]</errorType>
-        <errorMessage><![CDATA[Require: 100]]</errorMessage>
-    </error>
+	<error errorCode="4710">
+		<errorAction><![CDATA[playlist_delete]]></errorAction>
+		<errorType><![CDATA[account]]></errorType>
+		<errorMessage><![CDATA[Require: 100]]></errorMessage>
+	</error>
 </root>
 ```
 
 ```JSON
-"error": {
-  "errorCode": "4742",
-  "errorAction": "playlist_delete",
-  "errorType": "account",
-  "errorMessage": "Require: 100"
+{
+    "error": {
+        "errorCode": "4742",
+        "errorAction": "playlist_delete",
+        "errorType": "account",
+        "errorMessage": "Require: 100"
+    }
 }
 ```
