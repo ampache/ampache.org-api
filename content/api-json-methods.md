@@ -1188,6 +1188,54 @@ Get your server preference by name
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_preferences.json)
 
+## preference_add
+
+* **NEW** in develop
+
+Add a new preference to your server
+@param array $input
+
+| Input         | Type    | Description                                                                      | Optional |
+|---------------|---------|----------------------------------------------------------------------------------|---------:|
+| 'filter'      | string  | Preference name e.g ('notify_email', 'ajax_load')                                |       NO |
+| 'type'        | string  | 'boolean', 'integer', 'string', 'special'                                        |       NO |
+| 'default'     | mixed   | string or integer default value                                                  |       NO |
+| 'category'    | string  | 'interface', 'internal', 'options', 'playlist', 'plugins', 'streaming', 'system' |       NO |
+| 'description' | string  |                                                                                  |      YES |
+| 'subcategory' | string  |                                                                                  |      YES |
+| 'level'       | integer | access level required to change the value (default 100)                          |      YES |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_add.json)
+
+## preference_edit
+
+* **NEW** in develop
+
+Edit a preference value and apply to all users if allowed
+@param array $input
+     * filter = (string) Preference name e.g ('notify_email', 'ajax_load')
+     * value  = (string|integer) Preference value
+     * all    = (boolean) apply to all users //optional
+
+| Input    | Type   | Description                                       | Optional |
+|----------|--------|---------------------------------------------------|---------:|
+| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_edit.json)
+
+## preference_delete
+
+* **NEW** in develop
+
+Delete a non-system preference by name
+@param array $input
+
+| Input    | Type   | Description                                       | Optional |
+|----------|--------|---------------------------------------------------|---------:|
+| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_delete.json)
+
 ## Binary Data Methods
 
 ## stream
