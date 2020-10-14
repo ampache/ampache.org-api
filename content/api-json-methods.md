@@ -841,28 +841,6 @@ Delete an existing user.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_update.json)
 
-## user_preferences
-
-* **NEW** in develop
-
-Get your user preferences
-@param array $input
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preferences.json)
-
-## user_preference
-
-* **NEW** in develop
-
-Get your user preference by name
-@param array $input
-
-| Input    | Type   | Description                                       | Optional |
-|----------|--------|---------------------------------------------------|---------:|
-| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preferences.json)
-
 ## licenses
 
 * **NEW** in 4.2.0
@@ -1188,7 +1166,7 @@ Get your server preference by name
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_preferences.json)
 
-## preference_add
+## preference_create
 
 * **NEW** in develop
 
@@ -1205,7 +1183,7 @@ Add a new preference to your server
 | 'subcategory' | string  |                                                                                  |      YES |
 | 'level'       | integer | access level required to change the value (default 100)                          |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_add.json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_create.json)
 
 ## preference_edit
 

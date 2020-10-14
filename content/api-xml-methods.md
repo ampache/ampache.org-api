@@ -840,28 +840,6 @@ Delete an existing user.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_delete.xml)
 
-## user_preferences
-
-* **NEW** in develop
-
-Get your user preferences
-@param array $input
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_preferences.xml)
-
-## user_preference
-
-* **NEW** in develop
-
-Get your user preference by name
-@param array $input
-
-| Input    | Type   | Description                                       | Optional |
-|----------|--------|---------------------------------------------------|---------:|
-| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_preferences.xml)
-
 ## licenses
 
 * **NEW** in 4.2.0
@@ -1189,7 +1167,7 @@ Get your server preference by name
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/system_preferences.xml)
 
-## preference_add
+## preference_create
 
 * **NEW** in develop
 
@@ -1206,7 +1184,7 @@ Add a new preference to your server
 | 'subcategory' | string  |                                                                                  |      YES |
 | 'level'       | integer | access level required to change the value (default 100)                          |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/preference_add.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/preference_create.xml)
 
 ## preference_edit
 
