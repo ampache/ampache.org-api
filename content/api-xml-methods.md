@@ -191,13 +191,6 @@ PODCAST
 
 ### advanced_search
 
-#### Changes to text searches
-
-* 'is not' has been added shifting values down the list.
-  0=contains, 1=does not contain, 2=starts with, 3=ends with
-  4=is, 5=is not, 6=sounds like, 7=does not sound like
-* rule_1['name'] is depreciated. Instead of rule_1['name'] use rule_1['title'] (I have put a temp workaround into the search rules to alleviate this change for any existing apps)
-
 #### Using advanced_search
 
 Perform an advanced search given passed rules. This works in a similar way to the web/UI search pages.
@@ -220,14 +213,16 @@ Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page 
 
 @throws ```<error>```
 
-| Input    | Type    | Description                                                                           | Optional |
-|----------|---------|---------------------------------------------------------------------------------------|---------:|
-| operator | string  | 'and','or' (whether to match one rule or all)                                         |       NO |
-| rules    | array   | [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]] |       NO |
-| type     | string  | 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'                       |       NO |
-| random   | boolean | 0, 1 (random order of results; default to 0)                                          |      YES |
-| offset   | integer |                                                                                       |      YES |
-| limit'   | integer |                                                                                       |      YES |
+| Input    | Type    | Description                                   | Optional |
+|----------|---------|--------------- -------------------------------|---------:|
+| operator | string  | 'and','or' (whether to match one rule or all) |       NO |
+| rule_*   | array   | [rule_1,rule_1_operator,rule_1_input],        |       NO |
+| rule_*   | array   | [rule_2,rule_2_operator,rule_2_input], [etc]] |      YES |
+| type     | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
+|          |         | 'label', 'user', 'video'                      |          |
+| random   | boolean | 0, 1 (random order of results; default to 0)  |      YES |
+| offset   | integer |                                               |      YES |
+| limit'   | integer |                                               |      YES |
 
 **NOTE** the rules part can be confusing but essentially you can include as many 'arrays' of rules as you want.
 Just add 1 to the rule value to create a new group of rules.
