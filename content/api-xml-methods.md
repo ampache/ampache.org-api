@@ -15,6 +15,7 @@ Remember that Binary data methods will not return xml; just the file/data you ha
 This is the function that handles verifying a new handshake Takes a timestamp, auth key, and username.
 
 @param array $input
+
 @return
 ```
 <root>
@@ -32,6 +33,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
     <catalogs>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -53,6 +55,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
 @param array $input
+
 @return
 ```
 <root>
@@ -62,6 +65,7 @@ This can be called without being authenticated, it is useful for determining if 
     <compatible>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -82,12 +86,14 @@ This can be called without being authenticated, it is useful for determining if 
 Destroy a session using the auth parameter.
 
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -105,12 +111,14 @@ Destroy a session using the auth parameter.
 
 This takes a url and returns the song object in question
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -130,12 +138,14 @@ This takes a url and returns the song object in question
 
 Check Ampache for updates and run the update if there is one.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -152,12 +162,14 @@ Check Ampache for updates and run the update if there is one.
 This takes a collection of inputs and returns ID + name for the object type
 
 @param array $input
+
 @return
 ```
 <root>
     <song>|<album>|<artist>|<playlist>|<podcast>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -215,12 +227,14 @@ Use operator ('and', 'or') to choose whether to join or separate each rule when 
 Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page for details about creating searches.
 
 @param array $input
+
 @return
 ```
 <root>
     <song>|<album>|<artist>|<playlist>|<label>|<user>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -264,12 +278,14 @@ ALBUM
 This takes a collection of inputs and returns artist objects.
 
 @param array $input
+
 @return
 ```
 <root>
     <artist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -293,12 +309,14 @@ This takes a collection of inputs and returns artist objects.
 
 This returns a single artist based on the UID of said artist
 @param array $input
+
 @return
 ```
 <root>
     <artist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -317,12 +335,14 @@ This returns a single artist based on the UID of said artist
 
 This returns the albums of an artist
 @param array $input
+
 @return
 ```
 <root>
     <album>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -343,12 +363,14 @@ This returns the albums of an artist
 
 This returns the songs of the specified artist
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -369,12 +391,14 @@ This returns the songs of the specified artist
 
 This returns albums based on the provided search filters
 @param array $input
+
 @return
 ```
 <root>
     <album>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -398,12 +422,14 @@ This returns albums based on the provided search filters
 
 This returns a single album based on the UID provided
 @param array $input
+
 @return
 ```
 <root>
     <album>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -423,12 +449,14 @@ This returns a single album based on the UID provided
 
 This returns the songs of a specified album
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -449,12 +477,14 @@ This returns the songs of a specified album
 
 This returns the genres (Tags) based on the specified filter
 @param array $input
+
 @return
 ```
 <root>
     <genre>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -476,12 +506,14 @@ This returns the genres (Tags) based on the specified filter
 
 This returns a single genre based on UID
 @param array $input
+
 @return
 ```
 <root>
     <genre>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -500,12 +532,14 @@ This returns a single genre based on UID
 
 This returns the artists associated with the genre in question as defined by the UID
 @param array $input
+
 @return
 ```
 <root>
     <artist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -526,12 +560,14 @@ This returns the artists associated with the genre in question as defined by the
 
 This returns the albums associated with the genre in question
 @param array $input
+
 @return
 ```
 <root>
     <album>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -552,12 +588,14 @@ This returns the albums associated with the genre in question
 
 returns the songs for this genre
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -578,12 +616,14 @@ returns the songs for this genre
 
 Returns songs based on the specified filter
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -606,12 +646,14 @@ Returns songs based on the specified filter
 
 returns a single song
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -632,12 +674,14 @@ returns a single song
 
 Delete an existing song. (if you are allowed to)
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -656,12 +700,14 @@ Delete an existing song. (if you are allowed to)
 
 This returns playlists based on the specified filter
 @param array $input
+
 @return
 ```
 <root>
     <playlist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -684,12 +730,14 @@ This returns playlists based on the specified filter
 
 This returns a single playlist
 @param array $input
+
 @return
 ```
 <root>
     <playlist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -708,12 +756,14 @@ This returns a single playlist
 
 This returns the songs for a playlist
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -734,12 +784,14 @@ This returns the songs for a playlist
 
 This create a new playlist and return it
 @param array $input
+
 @return
 ```
 <root>
     <playlist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -760,12 +812,14 @@ This create a new playlist and return it
 This modifies name and type of a playlist
 Previously name and type were mandatory while filter wasn't. this has been reversed.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -787,12 +841,14 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 
 This deletes a playlist
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -810,12 +866,14 @@ This deletes a playlist
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -836,12 +894,14 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 This remove a song from a playlist.
 Previous versions required 'track' instead of 'song'.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -865,12 +925,14 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 'unplayed' added in 400002 for searching unplayed tracks
 
 @param array $input
+
 @return
 ```
 <root>
     <song>|<index>|<id>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -907,12 +969,14 @@ ID
 
 This searches the shares and returns... shares
 @param array $input
+
 @return
 ```
 <root>
     <share>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -935,12 +999,14 @@ This searches the shares and returns... shares
 
 Return shares by UID
 @param array $input
+
 @return
 ```
 <root>
     <share>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -962,12 +1028,14 @@ Create a public url that can be used by anyone to stream media.
 Takes the file id with optional description and expires parameters.
 
 @param array $input
+
 @return
 ```
 <root>
     <share>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -992,12 +1060,14 @@ Update the description and/or expiration date for an existing share.
 Takes the share id to update with optional description and expires parameters.
 
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1022,12 +1092,14 @@ Takes the share id to update with optional description and expires parameters.
 Delete an existing share.
 
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1047,12 +1119,14 @@ Delete an existing share.
 
 Return similar artist id's or similar song ids compared to the input filter
 @param array $input
+
 @return
 ```
 <root>
     <song>|<artist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1073,12 +1147,14 @@ Return similar artist id's or similar song ids compared to the input filter
 
 This searches the songs and returns... songs
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1098,12 +1174,14 @@ This searches the songs and returns... songs
 
 This returns video objects!
 @param array $input
+
 @return
 ```
 <root>
     <video>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1124,12 +1202,14 @@ This returns video objects!
 
 This returns a single video
 @param array $input
+
 @return
 ```
 <root>
     <video>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1149,12 +1229,14 @@ Get some items based on some simple search types and filters.
 This method has partial backwards compatibility with older api versions but should be updated to follow the current input values.
 (Changed in 400001 'filter' added)
 @param array $input
+
 @return
 ```
 <root>
     <song>|<album>|<artist>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1189,12 +1271,14 @@ ALBUM
 
 Get information about podcasts
 @param array $input
+
 @return
 ```
 <root>
     <podcast>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1217,12 +1301,14 @@ Get information about podcasts
 
 Get the podcast from it's id.
 @param array $input
+
 @return
 ```
 <root>
     <podcast>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1244,12 +1330,14 @@ Get the podcast from it's id.
 Create a podcast that can be used by anyone to stream media.
 Takes the url and catalog parameters.
 @param array $input
+
 @return
 ```
 <root>
     <podcast>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1271,12 +1359,14 @@ Takes the url and catalog parameters.
 Update the description and/or expiration date for an existing podcast.
 Takes the podcast id to update with optional description and expires parameters.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1302,12 +1392,14 @@ Takes the podcast id to update with optional description and expires parameters.
 
 Delete an existing podcast.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1342,12 +1434,14 @@ This returns the episodes for a podcast
 
 Get the podcast_episode from it's id.
 @param array $input
+
 @return
 ```
 <root>
     <podcast_episode>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1367,12 +1461,14 @@ Get the podcast_episode from it's id.
 
 Delete an existing podcast_episode.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1392,12 +1488,14 @@ Delete an existing podcast_episode.
 
 Get ids and usernames for your site
 @param array $input
+
 @return
 ```
 <root>
     <user>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1411,12 +1509,14 @@ Get ids and usernames for your site
 
 This get an user public information
 @param array $input
+
 @return
 ```
 <root>
     <user>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1434,12 +1534,14 @@ This get an user public information
 
 Create a new user. (Requires the username, password and email.)
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1480,12 +1582,14 @@ Update an existing user.
 
 Delete an existing user.
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1505,12 +1609,14 @@ Delete an existing user.
 
 This returns licenses based on the specified filter
 @param array $input
+
 @return
 ```
 <root>
     <license>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1535,12 +1641,14 @@ This returns licenses based on the specified filter
 
 This returns a single license
 @param array $input
+
 @return
 ```
 <root>
     <license>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1573,12 +1681,14 @@ This returns the songs for a license
 
 This get an user followers
 @param array $input
+
 @return
 ```
 <root>
     <song>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1596,12 +1706,14 @@ This get an user followers
 
 This get the user list followed by an user
 @param array $input
+
 @return
 ```
 <root>
     <user>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1619,12 +1731,14 @@ This get the user list followed by an user
 
 This follow/unfollow an user
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1642,12 +1756,14 @@ This follow/unfollow an user
 
 This get the latest posted shouts
 @param array $input
+
 @return
 ```
 <root>
     <shout>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1666,12 +1782,14 @@ This get the latest posted shouts
 
 This rates a library item
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1694,12 +1812,14 @@ This flags a library item as a favorite
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1719,12 +1839,14 @@ This flags a library item as a favorite
 
 Take a song_id and update the object_count and user_activity table with a play. This allows other sources to record play history to ampache
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1744,12 +1866,14 @@ Take a song_id and update the object_count and user_activity table with a play. 
 
 Search for a song using text info and then record a play if found. This allows other sources to record play history to ampache
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1776,12 +1900,14 @@ Search for a song using text info and then record a play if found. This allows o
 
 This searches the catalogs and returns... catalogs
 @param array $input
+
 @return
 ```
 <root>
     <catalog>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1801,12 +1927,14 @@ This searches the catalogs and returns... catalogs
 
 Return catalog by UID
 @param array $input
+
 @return
 ```
 <root>
     <catalog>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1824,12 +1952,14 @@ Return catalog by UID
 
 Kick off a catalog update or clean for the selected catalog
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1855,12 +1985,14 @@ Single file versions of catalog add, clean, verify and remove (delete)
 Make sure you remember to urlencode those file names!
 
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1880,12 +2012,14 @@ Make sure you remember to urlencode those file names!
 
 This get an user timeline
 @param array $input
+
 @return
 ```
 <root>
     <activity>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1905,12 +2039,14 @@ This get an user timeline
 
 This get current user friends timeline
 @param array $input
+
 @return
 ```
 <root>
     <activity>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1929,12 +2065,14 @@ This get current user friends timeline
 
 Update a single album, artist, song from the tag data
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1954,12 +2092,14 @@ Update a single album, artist, song from the tag data
 Update artist information and fetch similar artists from last.fm
 Make sure lastfm_API_key is set in your configuration file
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -1978,6 +2118,7 @@ Make sure lastfm_API_key is set in your configuration file
 Updates a single album, artist, song running the gather_art process
 Doesn't overwrite existing art by default.
 @param array $input
+
 @return
 ```
 <root>
@@ -1985,6 +2126,7 @@ Doesn't overwrite existing art by default.
     <art>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -2004,12 +2146,14 @@ Doesn't overwrite existing art by default.
 
 Sync and download new podcast episodes
 @param array $input
+
 @return
 ```
 <root>
     <success>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -2029,6 +2173,7 @@ Sync and download new podcast episodes
 
 Get your user preferences
 @param array $input
+
 @return
 ```
 <root>
@@ -2036,6 +2181,7 @@ Get your user preferences
         <pref>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -2051,6 +2197,7 @@ Get your user preferences
 
 Get your user preference by name
 @param array $input
+
 @return
 ```
 <root>
@@ -2058,6 +2205,7 @@ Get your user preference by name
         <pref>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -2077,6 +2225,7 @@ Get your user preference by name
 
 Get your server preferences
 @param array $input
+
 @return
 ```
 <root>
@@ -2084,6 +2233,7 @@ Get your server preferences
         <pref>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -2099,6 +2249,7 @@ Get your server preferences
 
 Get your server preference by name
 @param array $input
+
 @return
 ```
 <root>
@@ -2106,6 +2257,7 @@ Get your server preference by name
         <pref>
 </root>
 ```
+
 @throws
 ```
 <root>
@@ -2205,6 +2357,7 @@ Get an art image.
 
 This is for controlling localplay
 @param array $input
+
 @return
 ```
 <root>
@@ -2212,6 +2365,7 @@ This is for controlling localplay
         <command>
 </root>
 ```
+
 @throws
 ```
 <root>
