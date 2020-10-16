@@ -37,12 +37,13 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 @throws ```<error>```
 
-| Input       | Type    | Description                                                                                     | Optional |
-|-------------|---------|-------------------------------------------------------------------------------------------------|---------:|
-| 'auth'      | string  | $passphrase (Timestamp . Password SHA hash) OR (API Key)                                        |       NO |
-| 'user'      | string  | $username (Required if login/password authentication)                                           |      YES |
-| 'timestamp' | integer | UNIXTIME() (Timestamp used in seed of password hash. Required if login/password authentication) |      YES |
-| 'version'   | string  | $version (API Version that the application understands)                                         |      YES |
+| Input       | Type    | Description                                              | Optional |
+|-------------|---------|----------------------------------------------------------|---------:|
+| 'auth'      | string  | $passphrase (Timestamp . Password SHA hash) OR (API Key) |       NO |
+| 'user'      | string  | $username (Required if login/password authentication)    |      YES |
+| 'timestamp' | integer | UNIXTIME() The timestamp used in seed of password hash   |      YES |
+|             |         | (Required if login/password authentication)              |          |
+| 'version'   | string  | $version (API Version that the application understands)  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/handshake.xml)
 
@@ -159,15 +160,17 @@ This takes a collection of inputs and returns ID + name for the object type
 
 @throws ```<error>```
 
-| Input     | Type       | Description                                                                | Optional |
-|-----------|------------|----------------------------------------------------------------------------|---------:|
-| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                           |       NO |
-| 'filter'  | string     |                                                                            |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date    |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date |      YES |
-| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast if available      |      YES |
-| 'offset'  | integer    |                                                                            |      YES |
-| 'limit'   | integer    |                                                                            |      YES |
+| Input     | Type       | Description                                                              | Optional |
+|-----------|------------|--------------------------------------------------------------------------|---------:|
+| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                         |       NO |
+| 'filter'  | string     |                                                                          |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast if available    |      YES |
+| 'offset'  | integer    |                                                                          |      YES |
+| 'limit'   | integer    |                                                                          |      YES |
 
 SONGS
 
@@ -262,15 +265,17 @@ This takes a collection of inputs and returns artist objects.
 
 @throws ```<error>```
 
-| Input     | Type       | Description                                                                       | Optional |
-|-----------|------------|-----------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number     |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                                  |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date           |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date        |      YES |
-| 'offset'  | integer    |                                                                                   |      YES |
-| 'limit'   | integer    |                                                                                   |      YES |
-| 'include' | string     | 'albums', 'songs' and will include the corresponding XML nested in the artist XML |      YES |
+| Input     | Type       | Description                                                              | Optional |
+|-----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                                      |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset'  | integer    |                                                                          |      YES |
+| 'limit'   | integer    |                                                                          |      YES |
+| 'include' | string     | 'albums', 'songs' and will include the corresponding XML                 |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artists.xml)
 
@@ -289,10 +294,10 @@ This returns a single artist based on the UID of said artist
 
 @throws ```<error>```
 
-| Input     | Type   | Description                                                                       | Optional |
-|-----------|--------|-----------------------------------------------------------------------------------|---------:|
-| 'filter'  | string | UID of Artist, returns artist XML                                                 |       NO |
-| 'include' | string | 'albums', 'songs' and will include the corresponding XML nested in the artist XML |      YES |
+| Input     | Type   | Description                                              | Optional |
+|-----------|--------|----------------------------------------------------------|---------:|
+| 'filter'  | string | UID of Artist, returns artist XML                        |       NO |
+| 'include' | string | 'albums', 'songs' and will include the corresponding XML |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artist.xml)
 
@@ -357,15 +362,17 @@ This returns albums based on the provided search filters
 
 @throws ```<error>```
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset'  | integer    |                                                                               |      YES |
-| 'limit'   | integer    |                                                                               |      YES |
-| 'include' | string     | 'albums', 'songs' will include the corresponding XML nested in the album XML  |      YES |
+| Input     | Type       | Description                                                              | Optional |
+|-----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                                      |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset'  | integer    |                                                                          |      YES |
+| 'limit'   | integer    |                                                                          |      YES |
+| 'include' | string     | 'albums', 'songs' will include the corresponding XML                     |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/albums.xml)
 
@@ -384,10 +391,10 @@ This returns a single album based on the UID provided
 
 @throws ```<error>```
 
-| Input     | Type   | Description                                                        | Optional |
-|-----------|--------|--------------------------------------------------------------------|---------:|
-| 'filter'  | string | UID of Album, returns album XML                                    |       NO |
-| 'include' | string | 'songs' will include the corresponding XML nested in the album XML |      YES |
+| Input     | Type   | Description                                | Optional |
+|-----------|--------|--------------------------------------------|---------:|
+| 'filter'  | string | UID of Album, returns album XML            |       NO |
+| 'include' | string | 'songs' will include the corresponding XML |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/album.xml)
 
@@ -429,12 +436,12 @@ This returns the genres (Tags) based on the specified filter
 
 @throws ```<error>```
 
-| Input    | Type    | Description                                                                   | Optional |
-|----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
-| 'offset' | integer |                                                                               |      YES |
-| 'limit'  | integer |                                                                               |      YES |
+| Input    | Type    | Description                                              | Optional |
+|----------|---------|----------------------------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string                      |      YES |
+| 'exact'  | boolean | 0,1 if true filter is exact (=) rather than fuzzy (LIKE) |      YES |
+| 'offset' | integer |                                                          |      YES |
+| 'limit'  | integer |                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/genres.xml)
 
@@ -543,14 +550,16 @@ Returns songs based on the specified filter
 
 @throws ```<error>```
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset' | integer    |                                                                               |      YES |
-| 'limit'  | integer    |                                                                               |      YES |
+| Input    | Type       | Description                                                              | Optional |
+|----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                      |       NO |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset' | integer    |                                                                          |      YES |
+| 'limit'  | integer    |                                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/songs.xml)
 
@@ -613,14 +622,16 @@ This returns playlists based on the specified filter
 
 @throws ```<error>```
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset' | integer    |                                                                               |      YES |
-| 'limit'  | integer    |                                                                               |      YES |
+| Input    | Type       | Description                                                              | Optional |
+|----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                      |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset' | integer    |                                                                          |      YES |
+| 'limit'  | integer    |                                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlists.xml)
 
@@ -843,12 +854,12 @@ This searches the shares and returns... shares
 
 @throws ```<error>```
 
-| Input    | Type    | Description                                                                               | Optional |
-|----------|---------|-------------------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for Song Title, Artist Name, Album Name, Genre Name returns song XML |      YES |
-| 'exact'  | boolean | 0, 1 boolean to match the exact filter string                                             |      YES |
-| 'offset' | integer |                                                                                           |      YES |
-| 'limit'  | integer |                                                                                           |      YES |
+| Input    | Type    | Description                                   | Optional |
+|----------|---------|-----------------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string           |      YES |
+| 'exact'  | boolean | 0, 1 boolean to match the exact filter string |      YES |
+| 'offset' | integer |                                               |      YES |
+| 'limit'  | integer |                                               |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/shares.xml)
 
@@ -997,11 +1008,11 @@ This searches the songs and returns... songs
 
 @throws ```<error>```
 
-| Input    | Type    | Description                                     | Optional |
-|----------|---------|-------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for Name returns share XML |       NO |
-| 'offset' | integer |                                                 |      YES |
-| 'limit'  | integer |                                                 |      YES |
+| Input    | Type    | Description                         | Optional |
+|----------|---------|-------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string |       NO |
+| 'offset' | integer |                                     |      YES |
+| 'limit'  | integer |                                     |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/search_songs.xml)
 
@@ -1020,12 +1031,12 @@ This returns video objects!
 
 @throws ```<error>```
 
-| Input    | Type    | Description                                                                   | Optional |
-|----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
-| 'offset' | integer |                                                                               |      YES |
-| 'limit'  | integer |                                                                               |      YES |
+| Input    | Type    | Description                                              | Optional |
+|----------|---------|----------------------------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string                      |       NO |
+| 'exact'  | boolean | 0,1 if true filter is exact (=) rather than fuzzy (LIKE) |      YES |
+| 'offset' | integer |                                                          |      YES |
+| 'limit'  | integer |                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/videos.xml)
 
@@ -1400,14 +1411,12 @@ This returns licenses based on the specified filter
 
 @throws ```<error>```
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset' | integer    |                                                                               |      YES |
-| 'limit'  | integer    |                                                                               |      YES |
+| Input    | Type       | Description                                              | Optional |
+|----------|------------|----------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                      |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE) |      YES |
+| 'offset' | integer    |                                                          |      YES |
+| 'limit'  | integer    |                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/licenses.xml)
 
@@ -1653,7 +1662,7 @@ This searches the catalogs and returns... catalogs
 
 | Input    | Type   | Description                        | Optional |
 |----------|--------|------------------------------------|---------:|
-| 'filter' | string | Catalog type: music, clip, tvshow, |      YES | 
+| 'filter' | string | Catalog type: music, clip, tvshow, |      YES |
 |          |        | movie, personal_video, podcast     |          |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalogs.xml)

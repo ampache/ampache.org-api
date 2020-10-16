@@ -37,12 +37,13 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 @throws ```"error"```
 
-| Input       | Type    | Description                                                                                     | Optional |
-|-------------|---------|-------------------------------------------------------------------------------------------------|---------:|
-| 'auth'      | string  | $passphrase (Timestamp . Password SHA hash) OR (API Key)                                        |       NO |
-| 'user'      | string  | $username (Required if login/password authentication)                                           |      YES |
-| 'timestamp' | integer | UNIXTIME() (Timestamp used in seed of password hash. Required if login/password authentication) |      YES |
-| 'version'   | string  | $version (API Version that the application understands)                                         |      YES |
+| Input       | Type    | Description                                              | Optional |
+|-------------|---------|----------------------------------------------------------|---------:|
+| 'auth'      | string  | $passphrase (Timestamp . Password SHA hash) OR (API Key) |       NO |
+| 'user'      | string  | $username (Required if login/password authentication)    |      YES |
+| 'timestamp' | integer | UNIXTIME() The timestamp used in seed of password hash   |      YES |
+|             |         | (Required if login/password authentication)              |          |
+| 'version'   | string  | $version (API Version that the application understands)  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/handshake.json)
 
@@ -170,8 +171,10 @@ This takes a collection of inputs and returns ID + name for the object type
 |-----------|------------|----------------------------------------------------------------------------|---------:|
 | 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                           |       NO |
 | 'filter'  | string     |                                                                            |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date    |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                          |      YES |
+|           |            | Find objects with an 'add' date that is newer then specified date          |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                          |      YES |
+|           |            | Find objects with an 'update' time that is newer than the specified date   |          |
 | 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast if available      |      YES |
 | 'offset'  | integer    |                                                                            |      YES |
 | 'limit'   | integer    |                                                                            |      YES |
@@ -269,15 +272,17 @@ This takes a collection of inputs and returns artist objects.
 "error": {}
 ```
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset'  | integer    |                                                                               |      YES |
-| 'limit'   | integer    |                                                                               |      YES |
-| 'include' | string     | 'albums', 'songs' and will include JSON nested in the artist JSON             |      YES |
+| Input     | Type       | Description                                                              | Optional |
+|-----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                                      |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset'  | integer    |                                                                          |      YES |
+| 'limit'   | integer    |                                                                          |      YES |
+| 'include' | string     | 'albums', 'songs' and will include JSON nested in the artist JSON        |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artists.json)
 
@@ -372,15 +377,17 @@ This returns albums based on the provided search filters
 "error": {}
 ```
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset'  | integer    |                                                                               |      YES |
-| 'limit'   | integer    |                                                                               |      YES |
-| 'include' | string     | 'albums', 'songs' will include nested in the album JSON                       |      YES |
+| Input     | Type       | Description                                                              | Optional |
+|-----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                                      |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|           |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset'  | integer    |                                                                          |      YES |
+| 'limit'   | integer    |                                                                          |      YES |
+| 'include' | string     | 'albums', 'songs' will include nested in the album JSON                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/albums.json)
 
@@ -450,12 +457,12 @@ This returns the genres (Tags) based on the specified filter
 "error": {}
 ```
 
-| Input    | Type    | Description                                                                   | Optional |
-|----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
-| 'offset' | integer |                                                                               |      YES |
-| 'limit'  | integer |                                                                               |      YES |
+| Input    | Type    | Description                                              | Optional |
+|----------|---------|----------------------------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string                      |      YES |
+| 'exact'  | boolean | 0,1 if true filter is exact (=) rather than fuzzy (LIKE) |      YES |
+| 'offset' | integer |                                                          |      YES |
+| 'limit'  | integer |                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/genres.json)
 
@@ -574,14 +581,16 @@ Returns songs based on the specified filter
 "error": {}
 ```
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset' | integer    |                                                                               |      YES |
-| 'limit'  | integer    |                                                                               |      YES |
+| Input    | Type       | Description                                                              | Optional |
+|----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                      |       NO |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset' | integer    |                                                                          |      YES |
+| 'limit'  | integer    |                                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/songs.json)
 
@@ -650,14 +659,16 @@ This returns playlists based on the specified filter
 "error": {}
 ```
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset' | integer    |                                                                               |      YES |
-| 'limit'  | integer    |                                                                               |      YES |
+| Input    | Type       | Description                                                              | Optional |
+|----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                      |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset' | integer    |                                                                          |      YES |
+| 'limit'  | integer    |                                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlists.json)
 
@@ -855,7 +866,6 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 "error": {}
 ```
 
-
 | Input    | Type    | Description                                                      | Optional |
 |----------|---------|------------------------------------------------------------------|---------:|
 | 'mode'   | string  | 'recent', 'forgotten', 'unplayed', 'random' (default = 'random') |      YES |
@@ -900,7 +910,7 @@ This searches the shares and returns... shares
 
 | Input    | Type    | Description                                   | Optional |
 |----------|---------|-----------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for Share Title          |      YES |
+| 'filter' | string  | Filter results to match this string           |      YES |
 | 'exact'  | boolean | 0, 1 boolean to match the exact filter string |      YES |
 | 'offset' | integer |                                               |      YES |
 | 'limit'  | integer |                                               |      YES |
@@ -1065,11 +1075,11 @@ This searches the songs and returns... songs
 "error": {}
 ```
 
-| Input    | Type    | Description                                                                                | Optional |
-|----------|---------|--------------------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for Song Title, Artist Name, Album Name, Genre Name returns song JSON |       NO |
-| 'offset' | integer |                                                                                            |      YES |
-| 'limit'  | integer |                                                                                            |      YES |
+| Input    | Type    | Description                         | Optional |
+|----------|---------|-------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string |       NO |
+| 'offset' | integer |                                     |      YES |
+| 'limit'  | integer |                                     |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/search_songs.json)
 
@@ -1090,12 +1100,12 @@ This returns video objects!
 "error": {}
 ```
 
-| Input    | Type    | Description                                                                   | Optional |
-|----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
-| 'offset' | integer |                                                                               |      YES |
-| 'limit'  | integer |                                                                               |      YES |
+| Input    | Type    | Description                                              | Optional |
+|----------|---------|----------------------------------------------------------|---------:|
+| 'filter' | string  | Filter results to match this string                      |       NO |
+| 'exact'  | boolean | 0,1 if true filter is exact (=) rather than fuzzy (LIKE) |      YES |
+| 'offset' | integer |                                                          |      YES |
+| 'limit'  | integer |                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/videos.json)
 
@@ -1520,14 +1530,16 @@ This returns licenses based on the specified filter
 "error": {}
 ```
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
-| 'offset' | integer    |                                                                               |      YES |
-| 'limit'  | integer    |                                                                               |      YES |
+| Input    | Type       | Description                                                              | Optional |
+|----------|------------|--------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                      |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'add' date that is newer then specified date        |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
+|          |            | Find objects with an 'update' time that is newer than the specified date |          |
+| 'offset' | integer    |                                                                          |      YES |
+| 'limit'  | integer    |                                                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/licenses.json)
 
@@ -1783,7 +1795,7 @@ This searches the catalogs and returns... catalogs
 
 | Input    | Type   | Description                        | Optional |
 |----------|--------|------------------------------------|---------:|
-| 'filter' | string | Catalog type: music, clip, tvshow, |      YES | 
+| 'filter' | string | Catalog type: music, clip, tvshow, |      YES |
 |          |        | movie, personal_video, podcast     |          |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalogs.json)
