@@ -167,17 +167,17 @@ This takes a collection of inputs and returns ID + name for the object type
 "error": {}
 ```
 
-| Input     | Type       | Description                                                                | Optional |
-|-----------|------------|----------------------------------------------------------------------------|---------:|
-| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                           |       NO |
-| 'filter'  | string     |                                                                            |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                          |      YES |
-|           |            | Find objects with an 'add' date that is newer then specified date          |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                          |      YES |
-|           |            | Find objects with an 'update' time that is newer than the specified date   |          |
-| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast if available      |      YES |
-| 'offset'  | integer    |                                                                            |      YES |
-| 'limit'   | integer    |                                                                            |      YES |
+| Input     | Type       | Description                                                      | Optional |
+|-----------|------------|------------------------------------------------------------------|---------:|
+| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                 |       NO |
+| 'filter'  | string     |                                                                  |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'update' time newer than the specified date |          |
+| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast         |      YES |
+| 'offset'  | integer    |                                                                  |      YES |
+| 'limit'   | integer    |                                                                  |      YES |
 
 SONGS
 
@@ -272,17 +272,17 @@ This takes a collection of inputs and returns artist objects.
 "error": {}
 ```
 
-| Input     | Type       | Description                                                              | Optional |
-|-----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Filter results to match this string                                      |      YES |
-| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset'  | integer    |                                                                          |      YES |
-| 'limit'   | integer    |                                                                          |      YES |
-| 'include' | string     | 'albums', 'songs' and will include JSON nested in the artist JSON        |      YES |
+| Input     | Type       | Description                                                       | Optional |
+|-----------|------------|-------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                               |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)          |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                 |      YES |
+|           |            | Find objects with an 'add' date newer than the specified date     |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                 |      YES |
+|           |            | Find objects with an 'update' time newer than the specified date  |          |
+| 'offset'  | integer    |                                                                   |      YES |
+| 'limit'   | integer    |                                                                   |      YES |
+| 'include' | string     | 'albums', 'songs' and will include JSON nested in the artist JSON |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artists.json)
 
@@ -377,17 +377,17 @@ This returns albums based on the provided search filters
 "error": {}
 ```
 
-| Input     | Type       | Description                                                              | Optional |
-|-----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Filter results to match this string                                      |      YES |
-| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset'  | integer    |                                                                          |      YES |
-| 'limit'   | integer    |                                                                          |      YES |
-| 'include' | string     | 'albums', 'songs' will include nested in the album JSON                  |      YES |
+| Input     | Type       | Description                                                      | Optional |
+|-----------|------------|------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                              |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |       NO |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset'  | integer    |                                                                  |      YES |
+| 'limit'   | integer    |                                                                  |      YES |
+| 'include' | string     | 'albums', 'songs' will include nested in the album JSON          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/albums.json)
 
@@ -581,16 +581,16 @@ Returns songs based on the specified filter
 "error": {}
 ```
 
-| Input    | Type       | Description                                                              | Optional |
-|----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Filter results to match this string                                      |       NO |
-| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset' | integer    |                                                                          |      YES |
-| 'limit'  | integer    |                                                                          |      YES |
+| Input    | Type       | Description                                                      | Optional |
+|----------|------------|------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                              |       NO |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |       NO |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset' | integer    |                                                                  |      YES |
+| 'limit'  | integer    |                                                                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/songs.json)
 
@@ -659,16 +659,16 @@ This returns playlists based on the specified filter
 "error": {}
 ```
 
-| Input    | Type       | Description                                                              | Optional |
-|----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Filter results to match this string                                      |      YES |
-| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset' | integer    |                                                                          |      YES |
-| 'limit'  | integer    |                                                                          |      YES |
+| Input    | Type       | Description                                                      | Optional |
+|----------|------------|------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                              |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset' | integer    |                                                                  |      YES |
+| 'limit'  | integer    |                                                                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlists.json)
 
@@ -1530,16 +1530,16 @@ This returns licenses based on the specified filter
 "error": {}
 ```
 
-| Input    | Type       | Description                                                              | Optional |
-|----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Filter results to match this string                                      |      YES |
-| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset' | integer    |                                                                          |      YES |
-| 'limit'  | integer    |                                                                          |      YES |
+| Input    | Type       | Description                                                      | Optional |
+|----------|------------|------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                              |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset' | integer    |                                                                  |      YES |
+| 'limit'  | integer    |                                                                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/licenses.json)
 

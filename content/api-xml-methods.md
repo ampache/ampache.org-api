@@ -160,17 +160,17 @@ This takes a collection of inputs and returns ID + name for the object type
 
 @throws ```<error>```
 
-| Input     | Type       | Description                                                              | Optional |
-|-----------|------------|--------------------------------------------------------------------------|---------:|
-| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                         |       NO |
-| 'filter'  | string     |                                                                          |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast if available    |      YES |
-| 'offset'  | integer    |                                                                          |      YES |
-| 'limit'   | integer    |                                                                          |      YES |
+| Input     | Type       | Description                                                      | Optional |
+|-----------|------------|------------------------------------------------------------------|---------:|
+| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                 |       NO |
+| 'filter'  | string     |                                                                  |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'update' time newer than the specified date |          |
+| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast         |      YES |
+| 'offset'  | integer    |                                                                  |      YES |
+| 'limit'   | integer    |                                                                  |      YES |
 
 SONGS
 
@@ -265,17 +265,17 @@ This takes a collection of inputs and returns artist objects.
 
 @throws ```<error>```
 
-| Input     | Type       | Description                                                              | Optional |
-|-----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Filter results to match this string                                      |      YES |
-| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset'  | integer    |                                                                          |      YES |
-| 'limit'   | integer    |                                                                          |      YES |
-| 'include' | string     | 'albums', 'songs' and will include the corresponding XML                 |      YES |
+| Input     | Type       | Description                                                      | Optional |
+|-----------|------------|------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                              |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset'  | integer    |                                                                  |      YES |
+| 'limit'   | integer    |                                                                  |      YES |
+| 'include' | string     | 'albums', 'songs' and will include the corresponding XML         |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artists.xml)
 
@@ -362,17 +362,17 @@ This returns albums based on the provided search filters
 
 @throws ```<error>```
 
-| Input     | Type       | Description                                                              | Optional |
-|-----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Filter results to match this string                                      |      YES |
-| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|           |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset'  | integer    |                                                                          |      YES |
-| 'limit'   | integer    |                                                                          |      YES |
-| 'include' | string     | 'albums', 'songs' will include the corresponding XML                     |      YES |
+| Input     | Type       | Description                                                      | Optional |
+|-----------|------------|------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Filter results to match this string                              |      YES |
+| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |       NO |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|           |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset'  | integer    |                                                                  |      YES |
+| 'limit'   | integer    |                                                                  |      YES |
+| 'include' | string     | 'albums', 'songs' will include the corresponding XML             |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/albums.xml)
 
@@ -447,7 +447,9 @@ This returns the genres (Tags) based on the specified filter
 
 ### genre
 
-This returns a single genre based on UID
+This returns a single genre based on UID.
+All XML Documents that have a ```<genre>``` element may have 0 or more genre elements associated with them.
+Each genre element has an attribute "count" that indicates the number of people who have specified this genre.
 @param array $input
 
 @return
@@ -550,16 +552,16 @@ Returns songs based on the specified filter
 
 @throws ```<error>```
 
-| Input    | Type       | Description                                                              | Optional |
-|----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Filter results to match this string                                      |       NO |
-| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |       NO |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset' | integer    |                                                                          |      YES |
-| 'limit'  | integer    |                                                                          |      YES |
+| Input    | Type       | Description                                                      | Optional |
+|----------|------------|------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                              |       NO |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |       NO |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset' | integer    |                                                                  |      YES |
+| 'limit'  | integer    |                                                                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/songs.xml)
 
@@ -622,16 +624,16 @@ This returns playlists based on the specified filter
 
 @throws ```<error>```
 
-| Input    | Type       | Description                                                              | Optional |
-|----------|------------|--------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Filter results to match this string                                      |      YES |
-| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)                 |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'add' date that is newer then specified date        |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                        |      YES |
-|          |            | Find objects with an 'update' time that is newer than the specified date |          |
-| 'offset' | integer    |                                                                          |      YES |
-| 'limit'  | integer    |                                                                          |      YES |
+| Input    | Type       | Description                                                      | Optional |
+|----------|------------|------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                              |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset' | integer    |                                                                  |      YES |
+| 'limit'  | integer    |                                                                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlists.xml)
 
@@ -2096,122 +2098,3 @@ This is for controlling democratic play (Songs only)
 | 'method' | string  | vote, devote, playlist, play |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/democratic%20\(play\).xml)
-
-All XML Documents that have a ```<genre>``` element may have 0 or more genre elements associated with them. Each genre element has an attribute "count" that indicates the number of people who have specified this genre.
-
-Artists XML Document. ID's are Ampache's unique Identifier for the artist.
-
-```XML
-<root>
-<artist id="12039">
-        <name>Metallica</name>
-        <albums># of Albums</albums>
-        <songs># of Songs</songs>
-        <genre id="2481" count="2">Rock & Roll</genre>
-        <genre id="2482" count="1">Rock</genre>
-        <genre id="2483" count="1">Roll</genre>
-        <preciserating>3</preciserating>
-        <rating>2.9</rating>
-</artist>
-<artist id="129348">
-        <name>AC/DC</name>
-        <albums># of Albums</albums>
-        <songs># of Songs</songs>
-        <genre id="2481" count="2">Rock & Roll</genre>
-        <genre id="2482" count="2">Rock</genre>
-        <genre id="2483" count="1">Roll</genre>
-        <preciserating>3</preciserating>
-        <rating>2.9</rating>
-</artist>
-</root>
-```
-
-Album XML Document. ID's are Ampache's unique identifier for the album and artist associated.
-
-```XML
-<root>
-<album id="2910">
-        <name>Back in Black</name>
-        <artist id="129348">AC/DC</artist>
-        <year>1984</year>
-        <tracks>12</tracks>
-        <disk>1</disk>
-        <genre id="2481" count="2">Rock & Roll</genre>
-        <genre id="2482" count="1">Rock</genre>
-        <genre id="2483" count="1">Roll</genre>
-        <art>http://localhost/image.php?id=129348</art>
-        <preciserating>3</preciserating>
-        <rating>2.9</rating>
-</album>
-</root>
-```
-
-Single Song XML document, includes references to its parent objects.
-
-```XML
-<root>
-<song id="3180">
-        <title>Hells Bells</title>
-        <artist id="129348">AC/DC</artist>
-        <album id="2910">Back in Black</album>
-        <genre id="2481" count="3">Rock & Roll</genre>
-        <genre id="2482" count="1">Rock</genre>
-        <genre id="2483" count="1">Roll</genre>
-        <track>4</track>
-        <time>234</time>
-        <url>http://localhost/play/index.php?oid=123908...</url>
-        <size>Song Filesize in Bytes</size>
-        <art>http://localhost/image.php?id=129348</art>
-        <preciserating>3</preciserating>
-        <rating>2.9</rating>
-</song>
-</root>
-```
-
-genre XML Document, includes counts for it's child objects
-
-```XML
-<root>
-<genre id="2481">
-        <name>Rock & Roll</name>
-        <albums>84</albums>
-        <artists>29</artists>
-        <songs>239</songs>
-        <video>13</video>
-        <playlist>2</playlist>
-        <stream>6</stream>
-</genre>
-</root>
-```
-
-Playlist XML Document, includes counts for it's child objects
-
-```XML
-<root>
-<playlist id="1234">
-        <name>The Good Stuff</name>
-        <owner>Karl Vollmer</owner>
-        <items>50</items>
-        <genre id="2481" count="2">Rock & Roll</genre>
-        <genre id="2482" count="2">Rock</genre>
-        <genre id="2483" count="1">Roll</genre>
-        <type>Public</type>
-</playlist>
-</root>
-```
-
-Video XML Document -- Attention UIDs for video elements are non-unique against song.id
-
-```XML
-<root>
-<video id="1234">
-          <title>Futurama Bender's Big Score</title>
-          <mime>video/avi</mime>
-          <resolution>720x288</resolution>
-          <size>Video Filesize in Bytes</size>
-          <genre id="12131" count="3">Futurama</genre>
-          <genre id="32411" count="1">Movie</genre>
-          <url>http://localhost/play/index.php?oid=123908...</url>
-</video>
-</root>
-```
