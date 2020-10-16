@@ -17,7 +17,8 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <auth>
     <api>
@@ -52,7 +53,8 @@ This can be called without being authenticated, it is useful for determining if 
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <session_expire>
     <server>
@@ -62,7 +64,8 @@ This can be called without being authenticated, it is useful for determining if 
 ```
 
 @throws
-```
+
+```XML
 <root>
     <server>
     <version>
@@ -83,7 +86,8 @@ Destroy a session using the auth parameter.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -103,7 +107,8 @@ This takes a url and returns the song object in question
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
@@ -125,7 +130,8 @@ Check Ampache for updates and run the update if there is one.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -144,7 +150,8 @@ This takes a collection of inputs and returns ID + name for the object type
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>|<album>|<artist>|<playlist>|<podcast>
 </root>
@@ -204,7 +211,8 @@ Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page 
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>|<album>|<artist>|<playlist>|<label>|<user>
 </root>
@@ -250,7 +258,8 @@ This takes a collection of inputs and returns artist objects.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <artist>
 </root>
@@ -276,7 +285,8 @@ This returns a single artist based on the UID of said artist
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <artist>
 </root>
@@ -297,14 +307,14 @@ This returns the albums of an artist
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <album>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                      | Optional |
 |----------|---------|----------------------------------|---------:|
@@ -320,14 +330,14 @@ This returns the songs of the specified artist
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                     | Optional |
 |----------|---------|---------------------------------|---------:|
@@ -343,7 +353,8 @@ This returns albums based on the provided search filters
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <album>
 </root>
@@ -369,14 +380,14 @@ This returns a single album based on the UID provided
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <album>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input     | Type   | Description                                                        | Optional |
 |-----------|--------|--------------------------------------------------------------------|---------:|
@@ -391,14 +402,14 @@ This returns the songs of a specified album
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                    | Optional |
 |----------|---------|--------------------------------|---------:|
@@ -414,14 +425,14 @@ This returns the genres (Tags) based on the specified filter
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <genre>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                                                                   | Optional |
 |----------|---------|-------------------------------------------------------------------------------|---------:|
@@ -438,14 +449,14 @@ This returns a single genre based on UID
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <genre>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type   | Description                     | Optional |
 |----------|--------|---------------------------------|---------:|
@@ -459,14 +470,14 @@ This returns the artists associated with the genre in question as defined by the
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <artist>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                      | Optional |
 |----------|---------|----------------------------------|---------:|
@@ -482,14 +493,14 @@ This returns the albums associated with the genre in question
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <album>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                     | Optional |
 |----------|---------|---------------------------------|---------:|
@@ -505,14 +516,14 @@ returns the songs for this genre
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                    | Optional |
 |----------|---------|--------------------------------|---------:|
@@ -528,7 +539,8 @@ Returns songs based on the specified filter
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
@@ -553,14 +565,14 @@ returns a single song
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type   | Description                   | Optional |
 |----------|--------|-------------------------------|---------:|
@@ -576,14 +588,14 @@ Delete an existing song. (if you are allowed to)
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type   | Description           | Optional |
 |----------|--------|-----------------------|---------:|
@@ -597,7 +609,8 @@ This returns playlists based on the specified filter
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <playlist>
 </root>
@@ -622,14 +635,14 @@ This returns a single playlist
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <playlist>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type   | Description                           | Optional |
 |----------|--------|---------------------------------------|---------:|
@@ -643,14 +656,14 @@ This returns the songs for a playlist
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input    | Type    | Description                       | Optional |
 |----------|---------|-----------------------------------|---------:|
@@ -666,14 +679,14 @@ This create a new playlist and return it
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <playlist>
 </root>
 ```
 
 @throws ```<error>```
-
 
 | Input  | Type   | Description                       | Optional |
 |--------|--------|-----------------------------------|---------:|
@@ -689,7 +702,8 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -713,7 +727,8 @@ This deletes a playlist
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -733,7 +748,8 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -756,7 +772,8 @@ Previous versions required 'track' instead of 'song'.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -782,7 +799,8 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>|<index>|<id>
 </root>
@@ -821,7 +839,8 @@ This searches the shares and returns... shares
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <share>
 </root>
@@ -846,7 +865,8 @@ Return shares by UID
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <share>
 </root>
@@ -870,7 +890,8 @@ Takes the file id with optional description and expires parameters.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <share>
 </root>
@@ -897,7 +918,8 @@ Takes the share id to update with optional description and expires parameters.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -924,7 +946,8 @@ Delete an existing share.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -946,7 +969,8 @@ Return similar artist id's or similar song ids compared to the input filter
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>|<artist>
 </root>
@@ -969,7 +993,8 @@ This searches the songs and returns... songs
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
@@ -991,7 +1016,8 @@ This returns video objects!
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <video>
 </root>
@@ -1014,7 +1040,8 @@ This returns a single video
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <video>
 </root>
@@ -1036,7 +1063,8 @@ This method has partial backwards compatibility with older api versions but shou
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>|<album>|<artist>
 </root>
@@ -1073,7 +1101,8 @@ Get information about podcasts
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <podcast>
 </root>
@@ -1098,7 +1127,8 @@ Get the podcast from it's id.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <podcast>
 </root>
@@ -1122,7 +1152,8 @@ Takes the url and catalog parameters.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <podcast>
 </root>
@@ -1146,7 +1177,8 @@ Takes the podcast id to update with optional description and expires parameters.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1174,7 +1206,8 @@ Delete an existing podcast.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1211,7 +1244,8 @@ Get the podcast_episode from it's id.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <podcast_episode>
 </root>
@@ -1233,7 +1267,8 @@ Delete an existing podcast_episode.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1255,7 +1290,8 @@ Get ids and usernames for your site
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <user>
 </root>
@@ -1271,7 +1307,8 @@ This get an user public information
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <user>
 </root>
@@ -1291,7 +1328,8 @@ Create a new user. (Requires the username, password and email.)
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1334,7 +1372,8 @@ Delete an existing user.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1356,7 +1395,8 @@ This returns licenses based on the specified filter
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <license>
 </root>
@@ -1383,7 +1423,8 @@ This returns a single license
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <license>
 </root>
@@ -1418,7 +1459,8 @@ This get an user followers
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <song>
 </root>
@@ -1438,7 +1480,8 @@ This get the user list followed by an user
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <user>
 </root>
@@ -1458,7 +1501,8 @@ This follow/unfollow an user
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1478,7 +1522,8 @@ This get the latest posted shouts
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <shout>
 </root>
@@ -1499,7 +1544,8 @@ This rates a library item
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1524,7 +1570,8 @@ This flags a library item as a favorite
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1546,7 +1593,8 @@ Take a song_id and update the object_count and user_activity table with a play. 
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1568,7 +1616,8 @@ Search for a song using text info and then record a play if found. This allows o
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1597,7 +1646,8 @@ This searches the catalogs and returns... catalogs
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <catalog>
 </root>
@@ -1619,7 +1669,8 @@ Return catalog by UID
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <catalog>
 </root>
@@ -1639,7 +1690,8 @@ Kick off a catalog update or clean for the selected catalog
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1667,7 +1719,8 @@ Make sure you remember to urlencode those file names!
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1689,7 +1742,8 @@ This get an user timeline
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <activity>
 </root>
@@ -1711,7 +1765,8 @@ This get current user friends timeline
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <activity>
 </root>
@@ -1732,7 +1787,8 @@ Update a single album, artist, song from the tag data
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1754,7 +1810,8 @@ Make sure lastfm_API_key is set in your configuration file
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1775,7 +1832,8 @@ Doesn't overwrite existing art by default.
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
     <art>
@@ -1798,7 +1856,8 @@ Sync and download new podcast episodes
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <success>
 </root>
@@ -1820,7 +1879,8 @@ Get your user preferences
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <preferences>
         <pref>
@@ -1839,7 +1899,8 @@ Get your user preference by name
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <preferences>
         <pref>
@@ -1862,7 +1923,8 @@ Get your server preferences
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <preferences>
         <pref>
@@ -1881,7 +1943,8 @@ Get your server preference by name
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <preferences>
         <pref>
@@ -1921,13 +1984,12 @@ Add a new preference to your server
 
 Edit a preference value and apply to all users if allowed
 @param array $input
-     * filter = (string) Preference name e.g ('notify_email', 'ajax_load')
-     * value  = (string|integer) Preference value
-     * all    = (boolean) apply to all users //optional
 
-| Input    | Type   | Description                                       | Optional |
-|----------|--------|---------------------------------------------------|---------:|
-| 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+| Input    | Type    | Description                                       | Optional |
+|----------|---------|---------------------------------------------------|---------:|
+| 'filter' | string  | Preference name e.g ('notify_email', 'ajax_load') |       NO |
+| 'value'  | mixed   | (string|integer) Preference value                 |       NO |
+| 'all'    | boolean | 0, 1 apply to all users                           |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/preference_edit.xml)
 
@@ -1984,7 +2046,8 @@ This is for controlling localplay
 @param array $input
 
 @return
-```
+
+```XML
 <root>
     <localplay>
         <command>
