@@ -1072,14 +1072,15 @@ This method has partial backwards compatibility with older api versions but shou
 
 @throws ```<error>```
 
-| Input      | Type    | Description                                                                 | Optional |
-|------------|---------|-----------------------------------------------------------------------------|---------:|
-| 'type'     | string  | 'song', 'album', 'artist'                                                   |       NO |
-| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', 'forgotten', 'flagged', 'random' |       NO |
-| 'user_id'  | integer |                                                                             |      YES |
-| 'username' | string  |                                                                             |      YES |
-| 'offset'   | integer |                                                                             |      YES |
-| 'limit'    | integer |                                                                             |      YES |
+| Input      | Type    | Description                                | Optional |
+|------------|---------|--------------------------------------------|---------:|
+| 'type'     | string  | 'song', 'album', 'artist'                  |       NO |
+| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', |       NO |
+|            |         | 'forgotten', 'flagged', 'random'           |          |
+| 'user_id'  | integer |                                            |      YES |
+| 'username' | string  |                                            |      YES |
+| 'offset'   | integer |                                            |      YES |
+| 'limit'    | integer |                                            |      YES |
 
 SONG
 
@@ -1655,9 +1656,10 @@ This searches the catalogs and returns... catalogs
 
 @throws ```<error>```
 
-| Input    | Type   | Description                                                      | Optional |
-|----------|--------|------------------------------------------------------------------|---------:|
-| 'filter' | string | Catalog type music, clip, tvshow, movie, personal_video, podcast |      YES |
+| Input    | Type   | Description                        | Optional |
+|----------|--------|------------------------------------|---------:|
+| 'filter' | string | Catalog type: music, clip, tvshow, |      YES | 
+|          |        | movie, personal_video, podcast     |          |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalogs.xml)
 
@@ -1966,15 +1968,16 @@ Get your server preference by name
 Add a new preference to your server
 @param array $input
 
-| Input         | Type    | Description                                                                      | Optional |
-|---------------|---------|----------------------------------------------------------------------------------|---------:|
-| 'filter'      | string  | Preference name e.g ('notify_email', 'ajax_load')                                |       NO |
-| 'type'        | string  | 'boolean', 'integer', 'string', 'special'                                        |       NO |
-| 'default'     | mixed   | string or integer default value                                                  |       NO |
-| 'category'    | string  | 'interface', 'internal', 'options', 'playlist', 'plugins', 'streaming', 'system' |       NO |
-| 'description' | string  |                                                                                  |      YES |
-| 'subcategory' | string  |                                                                                  |      YES |
-| 'level'       | integer | access level required to change the value (default 100)                          |      YES |
+| Input         | Type    | Description                                             | Optional |
+|---------------|---------|---------------------------------------------------------|---------:|
+| 'filter'      | string  | Preference name e.g ('notify_email', 'ajax_load')       |       NO |
+| 'type'        | string  | 'boolean', 'integer', 'string', 'special'               |       NO |
+| 'default'     | mixed   | string or integer default value                         |       NO |
+| 'category'    | string  | 'interface', 'internal', 'options', 'playlist',         |       NO |
+|               |         | 'plugins', 'streaming', 'system'                        |          |
+| 'description' | string  |                                                         |      YES |
+| 'subcategory' | string  |                                                         |      YES |
+| 'level'       | integer | access level required to change the value (default 100) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/preference_create.xml)
 
@@ -2055,6 +2058,15 @@ This is for controlling localplay
 ```
 
 @throws ```<error>```
+
+| Input     | Type    | Description                                                  | Optional |
+|-----------|---------|--------------------------------------------------------------|---------:|
+| 'command' | string  | 'next', 'prev', 'stop', 'play', 'pause', 'add', 'volume_up', |       NO |
+|           |         | 'volume_down', 'volume_mute', 'delete_all', 'skip', 'status' |          |
+| 'oid'     | integer | object_id                                                    |      YES |
+| 'type'    | string  | 'Song', 'Video', 'Podcast_Episode', 'Channel',               |      YES |
+|           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
+| 'clear'   | boolean | 0,1 Clear the current playlist before adding                 |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/localplay.xml)
 

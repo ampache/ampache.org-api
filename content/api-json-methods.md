@@ -16,7 +16,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 @param array $input
 
-@return
+@return array
 
 ```JSON
 {
@@ -51,7 +51,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 @param array $input
 
-@return
+@return array
 
 ```JSON
 {
@@ -84,20 +84,16 @@ Destroy a session using the auth parameter.
 
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input  | Type   | Description                                    | Optional |
@@ -111,20 +107,16 @@ Destroy a session using the auth parameter.
 This takes a url and returns the song object in question
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input | Type   | Description                                                    | Optional |
@@ -140,20 +132,16 @@ This takes a url and returns the song object in question
 Check Ampache for updates and run the update if there is one.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_update.json)
@@ -165,20 +153,17 @@ Check Ampache for updates and run the update if there is one.
 This takes a collection of inputs and returns ID + name for the object type
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"|"album"|"artist"|"playlist"|"podcast"
-}
+"song": {}|"album": {}|"artist": {}|"playlist": {}|"podcast": {}
+
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type       | Description                                                                | Optional |
@@ -229,20 +214,16 @@ Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page 
 
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"|"album"|"artist"|"playlist"|"label"|"user"
-}
+"song": {}|"album": {}|"artist": {}|"playlist": {}|"label": {}|"user": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                                                                           | Optional |
@@ -282,20 +263,16 @@ This takes a collection of inputs and returns artist objects.
 
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "artist"
-}
+"artist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type       | Description                                                                   | Optional |
@@ -315,20 +292,16 @@ This takes a collection of inputs and returns artist objects.
 This returns a single artist based on the UID of said artist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "artist"
-}
+"artist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type   | Description                                                                         | Optional |
@@ -343,20 +316,16 @@ This returns a single artist based on the UID of said artist
 This returns the albums of an artist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "album"
-}
+"album": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                       | Optional |
@@ -372,20 +341,16 @@ This returns the albums of an artist
 This returns the songs of the specified artist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                      | Optional |
@@ -401,20 +366,16 @@ This returns the songs of the specified artist
 This returns albums based on the provided search filters
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "album"
-}
+"album": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type       | Description                                                                   | Optional |
@@ -434,20 +395,16 @@ This returns albums based on the provided search filters
 This returns a single album based on the UID provided
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "album"
-}
+"album": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type   | Description                                                          | Optional |
@@ -462,20 +419,16 @@ This returns a single album based on the UID provided
 This returns the songs of a specified album
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                     | Optional |
@@ -491,20 +444,16 @@ This returns the songs of a specified album
 This returns the genres (Tags) based on the specified filter
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "genre"
-}
+"genre": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                                                                   | Optional |
@@ -521,20 +470,16 @@ This returns the genres (Tags) based on the specified filter
 This returns a single genre based on UID
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "genre"
-}
+"genre": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                      | Optional |
@@ -548,20 +493,16 @@ This returns a single genre based on UID
 This returns the artists associated with the genre in question as defined by the UID
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "artist"
-}
+"artist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                       | Optional |
@@ -577,20 +518,16 @@ This returns the artists associated with the genre in question as defined by the
 This returns the albums associated with the genre in question
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "album"
-}
+"album": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                      | Optional |
@@ -606,20 +543,16 @@ This returns the albums associated with the genre in question
 returns the songs for this genre
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                     | Optional |
@@ -635,20 +568,16 @@ returns the songs for this genre
 Returns songs based on the specified filter
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type       | Description                                                                   | Optional |
@@ -667,20 +596,16 @@ Returns songs based on the specified filter
 returns a single song
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                    | Optional |
@@ -696,20 +621,16 @@ returns a single song
 Delete an existing song. (if you are allowed to)
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description           | Optional |
@@ -723,20 +644,16 @@ Delete an existing song. (if you are allowed to)
 This returns playlists based on the specified filter
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "playlist"
-}
+"playlist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type       | Description                                                                   | Optional |
@@ -755,20 +672,16 @@ This returns playlists based on the specified filter
 This returns a single playlist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "playlist"
-}
+"playlist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                            | Optional |
@@ -782,20 +695,16 @@ This returns a single playlist
 This returns the songs for a playlist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                        | Optional |
@@ -811,20 +720,16 @@ This returns the songs for a playlist
 This create a new playlist and return it
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "playlist"
-}
+"playlist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input  | Type   | Description                       | Optional |
@@ -840,20 +745,16 @@ This modifies name and type of a playlist
 Previously name and type were mandatory while filter wasn't. this has been reversed.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                                                             | Optional |
@@ -871,20 +772,16 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 This deletes a playlist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description     | Optional |
@@ -898,20 +795,16 @@ This deletes a playlist
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                                               | Optional |
@@ -928,20 +821,16 @@ This remove a song from a playlist.
 Previous versions required 'track' instead of 'song'.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                          | Optional |
@@ -960,20 +849,16 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 'unplayed' added in 400002 for searching unplayed tracks
 
 @param array $input
-@return
+@return object
 
 ```JSON
-{
-    "song"|"index"|"id"
-}
+"song": {}|"index": {}|"id": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 
@@ -1007,20 +892,16 @@ ID
 This searches the shares and returns... shares
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "share"
-}
+"share": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                                   | Optional |
@@ -1039,20 +920,16 @@ This searches the shares and returns... shares
 Return shares by UID
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "share"
-}
+"share": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                     | Optional |
@@ -1070,20 +947,16 @@ Takes the file id with optional description and expires parameters.
 
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "share"
-}
+"share": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input         | Type    | Description                                   | Optional |
@@ -1104,20 +977,16 @@ Takes the share id to update with optional description and expires parameters.
 
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input         | Type    | Description                  | Optional |
@@ -1138,20 +1007,16 @@ Delete an existing share.
 
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description            | Optional |
@@ -1167,20 +1032,17 @@ Delete an existing share.
 Return similar artist id's or similar song ids compared to the input filter
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"|"artist"
-}
+"song": {}|"artist": {}
+
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description          | Optional |
@@ -1197,20 +1059,16 @@ Return similar artist id's or similar song ids compared to the input filter
 This searches the songs and returns... songs
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"
-}
+"song": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                                                                                | Optional |
@@ -1226,20 +1084,16 @@ This searches the songs and returns... songs
 This returns video objects!
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "video"
-}
+"video": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description                                                                   | Optional |
@@ -1256,20 +1110,16 @@ This returns video objects!
 This returns a single video
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "video"
-}
+"video": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                      | Optional |
@@ -1285,20 +1135,16 @@ This returns a single video
 Get information about podcasts
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "podcast"
-}
+"podcast": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type    | Description                                   | Optional |
@@ -1317,20 +1163,16 @@ Get information about podcasts
 Get the podcast from it's id.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "podcast"
-}
+"podcast": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type   | Description                                   | Optional |
@@ -1348,20 +1190,16 @@ Create a podcast that can be used by anyone to stream media.
 Takes the url and catalog parameters.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "podcast"
-}
+"podcast": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input     | Type   | Description         | Optional |
@@ -1379,20 +1217,16 @@ Update the description and/or expiration date for an existing podcast.
 Takes the podcast id to update with optional description and expires parameters.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input         | Type   | Description               | Optional |
@@ -1414,20 +1248,16 @@ Takes the podcast id to update with optional description and expires parameters.
 Delete an existing podcast.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description              | Optional |
@@ -1443,20 +1273,16 @@ Delete an existing podcast.
 This returns the episodes for a podcast
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "podcast_episode"
-}
+"podcast_episode": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type    | Description    | Optional |
@@ -1474,20 +1300,16 @@ This returns the episodes for a podcast
 Get the podcast_episode from it's id.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "podcast_episode"
-}
+"podcast_episode": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description               | Optional |
@@ -1503,20 +1325,16 @@ Get the podcast_episode from it's id.
 Delete an existing podcast_episode.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input    | Type   | Description                      | Optional |
@@ -1532,30 +1350,27 @@ This method has partial backwards compatibility with older api versions but shou
 (Changed in 400001 'filter' added)
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "song"|"album"|"artist"
-}
+"song": {}|"album": {}|"artist": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
-| Input      | Type    | Description                                                                 | Optional |
-|------------|---------|-----------------------------------------------------------------------------|---------:|
-| 'type'     | string  | 'song', 'album', 'artist'                                                   |       NO |
-| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', 'forgotten', 'flagged', 'random' |       NO |
-| 'user_id'  | integer |                                                                             |      YES |
-| 'username' | string  |                                                                             |      YES |
-| 'offset'   | integer |                                                                             |      YES |
-| 'limit'    | integer |                                                                             |      YES |
+| Input      | Type    | Description                                | Optional |
+|------------|---------|--------------------------------------------|---------:|
+| 'type'     | string  | 'song', 'album', 'artist'                  |       NO |
+| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', |       NO |
+|            |         | 'forgotten', 'flagged', 'random'           |          |
+| 'user_id'  | integer |                                            |      YES |
+| 'username' | string  |                                            |      YES |
+| 'offset'   | integer |                                            |      YES |
+| 'limit'    | integer |                                            |      YES |
 
 SONG
 
@@ -1576,20 +1391,16 @@ ALBUM
 Get ids and usernames for your site
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "user"
-}
+"user": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/users.json)
@@ -1599,20 +1410,16 @@ Get ids and usernames for your site
 This get an user public information
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "user"
-}
+"user": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input      | Type   | Description                         | Optional |
@@ -1626,20 +1433,16 @@ This get an user public information
 Create a new user. (Requires the username, password and email.)
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input      | Type    | Description                | Optional |
@@ -1657,20 +1460,16 @@ Create a new user. (Requires the username, password and email.)
 Update an existing user.
 @param array $input
 
-@return
+@return object
 
 ```JSON
-{
-    "success"
-}
+"success": {}
 ```
 
 @throws
 
 ```JSON
-{
-    "error"
-}
+"error": {}
 ```
 
 | Input        | Type    | Description                | Optional |
@@ -1692,6 +1491,18 @@ Update an existing user.
 Delete an existing user.
 @param array $input
 
+@return object
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input      | Type   | Description | Optional |
 |------------|--------|-------------|---------:|
 | 'username' | string |             |       NO |
@@ -1704,6 +1515,16 @@ Delete an existing user.
 
 This returns licenses based on the specified filter
 @param array $input
+
+```JSON
+"license": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type       | Description                                                                   | Optional |
 |----------|------------|-------------------------------------------------------------------------------|---------:|
@@ -1723,6 +1544,16 @@ This returns licenses based on the specified filter
 This returns a single license
 @param array $input
 
+```JSON
+"license": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input    | Type   | Description                          | Optional |
 |----------|--------|--------------------------------------|---------:|
 | 'filter' | string | UID of license, returns license JSON |       NO |
@@ -1732,6 +1563,16 @@ This returns a single license
 ### license_songs
 
 * **NEW** in 4.2.0
+
+```JSON
+"song": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 This returns the songs for a license
 @param array $input
@@ -1749,6 +1590,16 @@ This returns the songs for a license
 This get an user followers
 @param array $input
 
+```JSON
+"user": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input      | Type   | Description                                | Optional |
 |------------|--------|--------------------------------------------|---------:|
 | 'username' | string | Username of the user to get followers list |       NO |
@@ -1759,6 +1610,16 @@ This get an user followers
 
 This get the user list followed by an user
 @param array $input
+
+```JSON
+"user": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input      | Type   | Description                                | Optional |
 |------------|--------|--------------------------------------------|---------:|
@@ -1771,6 +1632,16 @@ This get the user list followed by an user
 This follow/unfollow an user
 @param array $input
 
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input      | Type   | Description                             | Optional |
 |------------|--------|-----------------------------------------|---------:|
 | 'username' | string | Username of the user to follow/unfollow |       NO |
@@ -1778,6 +1649,16 @@ This follow/unfollow an user
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/toggle_follow.json)
 
 ### last_shouts
+
+```JSON
+"shout": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 This get the latest posted shouts
 @param array $input
@@ -1793,6 +1674,16 @@ This get the latest posted shouts
 
 This rates a library item
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type    | Description                                   | Optional |
 |----------|---------|-----------------------------------------------|---------:|
@@ -1810,6 +1701,16 @@ This flags a library item as a favorite
 * Setting flag to false (0) will remove the flag
 @param array $input
 
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input  | Type    | Description                        | Optional |
 |--------|---------|------------------------------------|---------:|
 | 'type' | string  | 'song', 'album', 'artist', 'video' |       NO |
@@ -1823,6 +1724,16 @@ This flags a library item as a favorite
 Take a song_id and update the object_count and user_activity table with a play. This allows other sources to record play history to ampache
 @param array $input
 
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input    | Type    | Description | Optional |
 |----------|---------|-------------|---------:|
 | 'id'     | integer | $object_id  |       NO |
@@ -1835,6 +1746,16 @@ Take a song_id and update the object_count and user_activity table with a play. 
 
 Search for a song using text info and then record a play if found. This allows other sources to record play history to ampache
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input        | Type    | Description  | Optional |
 |--------------|---------|--------------|---------:|
@@ -1856,9 +1777,20 @@ Search for a song using text info and then record a play if found. This allows o
 This searches the catalogs and returns... catalogs
 @param array $input
 
-| Input    | Type   | Description                                                      | Optional |
-|----------|--------|------------------------------------------------------------------|---------:|
-| 'filter' | string | Catalog type music, clip, tvshow, movie, personal_video, podcast |      YES |
+```JSON
+"catalog": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
+| Input    | Type   | Description                        | Optional |
+|----------|--------|------------------------------------|---------:|
+| 'filter' | string | Catalog type: music, clip, tvshow, |      YES | 
+|          |        | movie, personal_video, podcast     |          |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalogs.json)
 
@@ -1868,6 +1800,16 @@ This searches the catalogs and returns... catalogs
 
 Return catalog by UID
 @param array $input
+
+```JSON
+"catalog": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description    | Optional |
 |----------|--------|----------------|---------:|
@@ -1879,6 +1821,16 @@ Return catalog by UID
 
 Kick off a catalog update or clean for the selected catalog
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input     | Type    | Description                       | Optional |
 |-----------|---------|-----------------------------------|---------:|
@@ -1897,6 +1849,16 @@ Make sure you remember to urlencode those file names!
 
 @param array $input
 
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input     | Type    | Description                     | Optional |
 |-----------|---------|---------------------------------|---------:|
 | 'file'    | string  | FULL path to local file         |       NO |
@@ -1909,6 +1871,16 @@ Make sure you remember to urlencode those file names!
 
 This get an user timeline
 @param array $input
+
+```JSON
+"activity": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input      | Type    | Description                                       | Optional |
 |------------|---------|---------------------------------------------------|---------:|
@@ -1923,6 +1895,16 @@ This get an user timeline
 This get current user friends timeline
 @param array $input
 
+```JSON
+"activity": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 | Input   | Type    | Description | Optional |
 |---------|---------|-------------|---------:|
 | 'limit' | integer |             |      YES |
@@ -1934,6 +1916,16 @@ This get current user friends timeline
 
 Update a single album, artist, song from the tag data
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input  | Type    | Description                     | Optional |
 |--------|---------|---------------------------------|---------:|
@@ -1947,6 +1939,16 @@ Update a single album, artist, song from the tag data
 Update artist information and fetch similar artists from last.fm
 Make sure lastfm_API_key is set in your configuration file
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input | Type    | Description | Optional |
 |-------|---------|-------------|---------:|
@@ -1966,6 +1968,16 @@ Doesn't overwrite existing art by default.
 | 'type'      | string  | 'song', 'podcast' |       NO |
 | 'overwrite' | boolean | 0, 1              |      YES |
 
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_art.json)
 
 ### update_podcast
@@ -1979,12 +1991,32 @@ Sync and download new podcast episodes
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_podcast.json)
 
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 ### user_preferences
 
 * **NEW** in develop
 
 Get your user preferences
 @param array $input
+
+```JSON
+"preference": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preferences.json)
 
@@ -1994,6 +2026,16 @@ Get your user preferences
 
 Get your user preference by name
 @param array $input
+
+```JSON
+"preference": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
@@ -2008,6 +2050,16 @@ Get your user preference by name
 Get your server preferences
 @param array $input
 
+```JSON
+"preference": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_preferences.json)
 
 ### system_preference
@@ -2016,6 +2068,16 @@ Get your server preferences
 
 Get your server preference by name
 @param array $input
+
+```JSON
+"preference": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
@@ -2030,15 +2092,26 @@ Get your server preference by name
 Add a new preference to your server
 @param array $input
 
-| Input         | Type    | Description                                                                      | Optional |
-|---------------|---------|----------------------------------------------------------------------------------|---------:|
-| 'filter'      | string  | Preference name e.g ('notify_email', 'ajax_load')                                |       NO |
-| 'type'        | string  | 'boolean', 'integer', 'string', 'special'                                        |       NO |
-| 'default'     | mixed   | string or integer default value                                                  |       NO |
-| 'category'    | string  | 'interface', 'internal', 'options', 'playlist', 'plugins', 'streaming', 'system' |       NO |
-| 'description' | string  |                                                                                  |      YES |
-| 'subcategory' | string  |                                                                                  |      YES |
-| 'level'       | integer | access level required to change the value (default 100)                          |      YES |
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
+| Input         | Type    | Description                                             | Optional |
+|---------------|---------|---------------------------------------------------------|---------:|
+| 'filter'      | string  | Preference name e.g ('notify_email', 'ajax_load')       |       NO |
+| 'type'        | string  | 'boolean', 'integer', 'string', 'special'               |       NO |
+| 'default'     | mixed   | string or integer default value                         |       NO |
+| 'category'    | string  | 'interface', 'internal', 'options', 'playlist',         |       NO |
+|               |         | 'plugins', 'streaming', 'system'                        |          |
+| 'description' | string  |                                                         |      YES |
+| 'subcategory' | string  |                                                         |      YES |
+| 'level'       | integer | access level required to change the value (default 100) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_create.json)
 
@@ -2048,6 +2121,16 @@ Add a new preference to your server
 
 Edit a preference value and apply to all users if allowed
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
@@ -2063,6 +2146,16 @@ Edit a preference value and apply to all users if allowed
 
 Delete a non-system preference by name
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
@@ -2108,6 +2201,27 @@ Get an art image.
 
 This is for controlling localplay
 @param array $input
+
+@return object
+
+```JSON
+"localplay": { "command": {} }
+```
+
+@throws
+
+```JSON
+"error": {}
+```
+
+| Input     | Type    | Description                                                  | Optional |
+|-----------|---------|--------------------------------------------------------------|---------:|
+| 'command' | string  | 'next', 'prev', 'stop', 'play', 'pause', 'add', 'volume_up', |       NO |
+|           |         | 'volume_down', 'volume_mute', 'delete_all', 'skip', 'status' |          |
+| 'oid'     | integer | object_id                                                    |      YES |
+| 'type'    | string  | 'Song', 'Video', 'Podcast_Episode', 'Channel',               |      YES |
+|           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
+| 'clear'   | boolean | 0,1 Clear the current playlist before adding                 |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/localplay.json)
 
