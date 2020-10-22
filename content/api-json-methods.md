@@ -1157,7 +1157,7 @@ Get information about podcasts
 
 | Input     | Type    | Description                                   | Optional |
 |-----------|---------|-----------------------------------------------|---------:|
-| 'filter'  | string  |                                               |       NO |
+| 'filter'  | string  |                                               |      YES |
 | 'offset'  | integer |                                               |      YES |
 | 'limit'   | integer |                                               |      YES |
 | 'include' | string  | 'episodes' (include episodes in the response) |      YES |
@@ -1594,6 +1594,84 @@ This returns the songs for a license
 | 'limit'  | integer |                                   |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/license_songs.json)
+
+### labels
+
+* **NEW** in develop
+
+This returns labels based on the specified filter
+@param array $input
+
+```JSON
+"label": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
+
+| Input    | Type       | Description                                                      | Optional |
+|----------|------------|------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                              |      YES |
+| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|          |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset' | integer    |                                                                  |      YES |
+| 'limit'  | integer    |                                                                  |      YES |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/labels.json)
+
+### label
+
+* **NEW** in develop
+
+This returns a single label
+@param array $input
+
+```JSON
+"label": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
+
+| Input    | Type   | Description                      | Optional |
+|----------|--------|----------------------------------|---------:|
+| 'filter' | string | UID of label, returns label JSON |       NO |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/label.json)
+
+### label_artists
+
+* **NEW** in develop
+
+```JSON
+"artist": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
+
+This returns the artists for a label
+@param array $input
+
+| Input    | Type    | Description                       | Optional |
+|----------|---------|-----------------------------------|---------:|
+| 'filter' | string  | UID of label, returns artist JSON |       NO |
+| 'offset' | integer |                                   |      YES |
+| 'limit'  | integer |                                   |      YES |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/label_artists.json)
 
 ### followers
 
