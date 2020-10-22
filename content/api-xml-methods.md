@@ -210,7 +210,7 @@ Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page 
 
 ```XML
 <root>
-    <song>|<album>|<artist>|<playlist>|<label>|<user>
+    <song>|<album>|<artist>|<playlist>|<label>|<user>|<video>
 </root>
 ```
 

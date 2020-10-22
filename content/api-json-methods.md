@@ -91,7 +91,7 @@ Destroy a session using the auth parameter.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -114,7 +114,7 @@ This takes a url and returns the song object in question
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -139,7 +139,7 @@ Check Ampache for updates and run the update if there is one.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -161,7 +161,7 @@ This takes a collection of inputs and returns ID + name for the object type
 
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -212,10 +212,10 @@ Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page 
 @return object
 
 ```JSON
-"song": {}|"album": {}|"artist": {}|"playlist": {}|"label": {}|"user": {}
+"song": {}|"album": {}|"artist": {}|"playlist": {}|"label": {}|"user": {}|"video": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -266,7 +266,7 @@ This takes a collection of inputs and returns artist objects.
 "artist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -297,7 +297,7 @@ This returns a single artist based on the UID of said artist
 "artist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -321,7 +321,7 @@ This returns the albums of an artist
 "album": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -346,7 +346,7 @@ This returns the songs of the specified artist
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -371,7 +371,7 @@ This returns albums based on the provided search filters
 "album": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -402,7 +402,7 @@ This returns a single album based on the UID provided
 "album": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -426,7 +426,7 @@ This returns the songs of a specified album
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -451,7 +451,7 @@ This returns the genres (Tags) based on the specified filter
 "genre": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -477,7 +477,7 @@ This returns a single genre based on UID
 "genre": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -500,7 +500,7 @@ This returns the artists associated with the genre in question as defined by the
 "artist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -525,7 +525,7 @@ This returns the albums associated with the genre in question
 "album": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -550,7 +550,7 @@ returns the songs for this genre
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -575,7 +575,7 @@ Returns songs based on the specified filter
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -605,7 +605,7 @@ returns a single song
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -630,7 +630,7 @@ Delete an existing song. (if you are allowed to)
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -653,7 +653,7 @@ This returns playlists based on the specified filter
 "playlist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -683,7 +683,7 @@ This returns a single playlist
 "playlist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -706,7 +706,7 @@ This returns the songs for a playlist
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -731,7 +731,7 @@ This create a new playlist and return it
 "playlist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -756,7 +756,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -783,7 +783,7 @@ This deletes a playlist
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -806,7 +806,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -832,7 +832,7 @@ Previous versions required 'track' instead of 'song'.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -860,7 +860,7 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 "song": {}|"index": {}|"id": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -902,7 +902,7 @@ This searches the shares and returns... shares
 "share": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -930,7 +930,7 @@ Return shares by UID
 "share": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -957,7 +957,7 @@ Takes the file id with optional description and expires parameters.
 "share": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -987,7 +987,7 @@ Takes the share id to update with optional description and expires parameters.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1017,7 +1017,7 @@ Delete an existing share.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1043,7 +1043,7 @@ Return similar artist id's or similar song ids compared to the input filter
 
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1069,7 +1069,7 @@ This searches the songs and returns... songs
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1094,7 +1094,7 @@ This returns video objects!
 "video": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1120,7 +1120,7 @@ This returns a single video
 "video": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1145,7 +1145,7 @@ Get information about podcasts
 "podcast": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1173,7 +1173,7 @@ Get the podcast from it's id.
 "podcast": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1200,7 +1200,7 @@ Takes the url and catalog parameters.
 "podcast": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1227,7 +1227,7 @@ Takes the podcast id to update with optional description and expires parameters.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1258,7 +1258,7 @@ Delete an existing podcast.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1283,7 +1283,7 @@ This returns the episodes for a podcast
 "podcast_episode": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1310,7 +1310,7 @@ Get the podcast_episode from it's id.
 "podcast_episode": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1335,7 +1335,7 @@ Delete an existing podcast_episode.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1360,7 +1360,7 @@ This method has partial backwards compatibility with older api versions but shou
 "song": {}|"album": {}|"artist": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1401,7 +1401,7 @@ Get ids and usernames for your site
 "user": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1420,7 +1420,7 @@ This get an user public information
 "user": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1443,7 +1443,7 @@ Create a new user. (Requires the username, password and email.)
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1470,7 +1470,7 @@ Update an existing user.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1501,7 +1501,7 @@ Delete an existing user.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1524,7 +1524,7 @@ This returns licenses based on the specified filter
 "license": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1554,7 +1554,7 @@ This returns a single license
 "license": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1574,7 +1574,7 @@ This returns a single license
 "song": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1600,7 +1600,7 @@ This get an user followers
 "user": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1621,7 +1621,7 @@ This get the user list followed by an user
 "user": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1642,7 +1642,7 @@ This follow/unfollow an user
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1660,7 +1660,7 @@ This follow/unfollow an user
 "shout": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1685,7 +1685,7 @@ This rates a library item
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1711,7 +1711,7 @@ This flags a library item as a favorite
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1734,7 +1734,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1757,7 +1757,7 @@ Search for a song using text info and then record a play if found. This allows o
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1787,7 +1787,7 @@ This searches the catalogs and returns... catalogs
 "catalog": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1811,7 +1811,7 @@ Return catalog by UID
 "catalog": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1832,7 +1832,7 @@ Kick off a catalog update or clean for the selected catalog
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1859,7 +1859,7 @@ Make sure you remember to urlencode those file names!
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1882,7 +1882,7 @@ This get an user timeline
 "activity": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1905,7 +1905,7 @@ This get current user friends timeline
 "activity": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1927,7 +1927,7 @@ Update a single album, artist, song from the tag data
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1950,7 +1950,7 @@ Make sure lastfm_API_key is set in your configuration file
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -1978,7 +1978,7 @@ Doesn't overwrite existing art by default.
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2001,7 +2001,7 @@ Sync and download new podcast episodes
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2018,7 +2018,7 @@ Get your user preferences
 "preference": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2037,7 +2037,7 @@ Get your user preference by name
 "preference": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2060,7 +2060,7 @@ Get your server preferences
 "preference": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2079,7 +2079,7 @@ Get your server preference by name
 "preference": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2102,7 +2102,7 @@ Add a new preference to your server
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2132,7 +2132,7 @@ Edit a preference value and apply to all users if allowed
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2157,7 +2157,7 @@ Delete a non-system preference by name
 "success": {}
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2214,7 +2214,7 @@ This is for controlling localplay
 "localplay": { "command": {} }
 ```
 
-@throws
+@throws object
 
 ```JSON
 "error": {}
@@ -2237,6 +2237,18 @@ This is for controlling localplay
 
 This is for controlling democratic play (Songs only)
 @param array $input
+
+@return object
+
+```JSON
+"song": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
 
 * ACTION
   * method
