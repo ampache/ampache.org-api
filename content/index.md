@@ -17,10 +17,6 @@ All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.or
 
 **Compatible Versions:**
 
-* 4.2.0-release
-* 4.2.1-release
-* 4.2.2-release
-* 4.2.3-release
 * Ampache develop
 
 **Archived Version Documentation**
@@ -58,6 +54,9 @@ All API code that used 'Tag' now references 'Genre' instead
   * Api::preference_create (Add a new preference to Ampache)
   * Api::preference_edit (Edit a preference value by name; optionally apply to all users)
   * Api::preference_delete (Delete a preference by name)
+  * Api::labels (list your record labels)
+  * Api::label (get a label by id)
+  * Api::label_artists (get all artists attached to that label)
 
 ### Changed
 
@@ -78,6 +77,7 @@ All API code that used 'Tag' now references 'Genre' instead
   * 4706 Depreciated Method
   * 4710 Bad Request
   * 4742 Failed Access Check
+* get_indexes: 'playlist' now requires include=1 for xml calls if you want the tracks
 
 ### Deprecated
 
@@ -88,6 +88,7 @@ All API code that used 'Tag' now references 'Genre' instead
 * Api::podcast_edit wasn't able to edit a podcast...
 * Api::democratic was using action from localplay in the return responses
 * Setting a limit of 'none' would slice away all the results
+* get_indexes for XML didn't include podcast indexes
 
 ## Sending Handshake Request
 
@@ -282,6 +283,9 @@ For more in depth information regarding the different api servers you can view t
 * licenses
 * license
 * license_songs
+* labels **(develop only)**
+* label **(develop only)**
+* label_artists **(develop only)**
 * users **(develop only)**
 * user
 * user_create
