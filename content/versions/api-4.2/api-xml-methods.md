@@ -200,7 +200,7 @@ This returns albums based on the provided search filters
 | Input     | Type       | Description                                                                   | Optional |
 |-----------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
+| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
 | 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
 | 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
 | 'offset'  | integer    |                                                                               |      YES |
@@ -305,8 +305,8 @@ Returns songs based on the specified filter
 
 | Input    | Type       | Description                                                                   | Optional |
 |----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
+| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
+| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
 | 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
 | 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
 | 'offset' | integer    |                                                                               |      YES |
@@ -578,7 +578,7 @@ This returns video objects!
 
 | Input    | Type    | Description                                                                   | Optional |
 |----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
+| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
 | 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
 | 'offset' | integer |                                                                               |      YES |
 | 'limit'  | integer |                                                                               |      YES |
