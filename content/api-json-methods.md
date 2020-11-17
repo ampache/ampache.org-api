@@ -36,7 +36,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 ```
 
 @throws object
-       
+
 ```JSON
 "error": {}
 ```
@@ -173,7 +173,7 @@ This takes a collection of inputs and returns ID + name for the object type
 
 | Input     | Type       | Description                                                      | Optional |
 |-----------|------------|------------------------------------------------------------------|---------:|
-| 'type'    | string     | 'song', 'album', 'artist', 'playlist', 'podcast'                 |       NO |
+| 'type'    | string     | 'song', 'album', 'artist', 'album_artist', 'playlist', 'podcast' |       NO |
 | 'filter'  | string     |                                                                  |      YES |
 | 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
 |           |            | Find objects with an 'add' date newer than the specified date    |          |
@@ -276,17 +276,18 @@ This takes a collection of inputs and returns artist objects.
 "error": {}
 ```
 
-| Input     | Type       | Description                                                       | Optional |
-|-----------|------------|-------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Filter results to match this string                               |      YES |
-| 'exact'   | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)          |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                 |      YES |
-|           |            | Find objects with an 'add' date newer than the specified date     |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                 |      YES |
-|           |            | Find objects with an 'update' time newer than the specified date  |          |
-| 'offset'  | integer    |                                                                   |      YES |
-| 'limit'   | integer    |                                                                   |      YES |
-| 'include' | string     | 'albums', 'songs' and will include JSON nested in the artist JSON |      YES |
+| Input          | Type       | Description                                                      | Optional |
+|----------------|------------|------------------------------------------------------------------|---------:|
+| 'filter'       | string     | Filter results to match this string                              |      YES |
+| 'exact'        | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         |      YES |
+| 'add'          | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|                |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'       | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
+|                |            | Find objects with an 'update' time newer than the specified date |          |
+| 'include'      | string     | 'albums', 'songs' and will include the corresponding JSON        |      YES |
+| 'album_artist' | boolean    | 0,1 if true filter for album artists only                        |      YES |
+| 'offset'       | integer    |                                                                  |      YES |
+| 'limit'        | integer    |                                                                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artists.json)
 
@@ -1353,9 +1354,8 @@ Delete an existing podcast_episode.
 
 ### stats
 
-Get some items based on some simple search types and filters.
-This method has partial backwards compatibility with older api versions but should be updated to follow the current input values.
-(Changed in 400001 'filter' added)
+Get some items based on some simple search types and filters. (Random by default)
+This method HAD partial backwards compatibility with older api versions but it has now been removed
 @param array $input
 
 @return object
@@ -1373,7 +1373,7 @@ This method has partial backwards compatibility with older api versions but shou
 | Input      | Type    | Description                                | Optional |
 |------------|---------|--------------------------------------------|---------:|
 | 'type'     | string  | 'song', 'album', 'artist'                  |       NO |
-| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', |       NO |
+| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', |      YES |
 |            |         | 'forgotten', 'flagged', 'random'           |          |
 | 'user_id'  | integer |                                            |      YES |
 | 'username' | string  |                                            |      YES |
@@ -2259,6 +2259,16 @@ Delete a non-system preference by name
 Get information about bookmarked media this user is allowed to manage.
 @param array $input
 
+```JSON
+"bookmark": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmarks.json)
 
 ### get_bookmark
@@ -2267,6 +2277,16 @@ Get information about bookmarked media this user is allowed to manage.
 
 Get the bookmark from it's object_id and object_type.
 @param array $input
+
+```JSON
+"bookmark": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
@@ -2282,14 +2302,52 @@ Get the bookmark from it's object_id and object_type.
 Create a placeholder for the current media that you can return to later.
 @param array $input
 
+```JSON
+"bookmark": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
+
 | Input      | Type    | Description                                       | Optional |
 |------------|---------|---------------------------------------------------|---------:|
 | 'filter'   | string  | object_id to find                                 |       NO |
 | 'type'     | string  | object_type  ('song', 'video', 'podcast_episode') |       NO |
 | 'position' | integer | current track time in seconds                     |       NO |
 | 'client'   | string  | Agent string. (Default: 'AmpacheAPI')             |      YES |
+| 'date'     | integer | update time (Default: UNIXTIME())                 |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmark_create.json)
+
+### bookmark_edit
+
+* **NEW** in develop
+
+Edit a placeholder for the current media that you can return to later.
+@param array $input
+
+```JSON
+"bookmark": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
+
+| Input      | Type    | Description                                       | Optional |
+|------------|---------|---------------------------------------------------|---------:|
+| 'filter'   | string  | object_id to find                                 |       NO |
+| 'type'     | string  | object_type  ('song', 'video', 'podcast_episode') |       NO |
+| 'position' | integer | current track time in seconds                     |       NO |
+| 'client'   | string  | Agent string. (Default: 'AmpacheAPI')             |      YES |
+| 'date'     | integer | update time (Default: UNIXTIME())                 |      YES |
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmark_edit.json)
 
 ### bookmark_delete
 
@@ -2297,6 +2355,16 @@ Create a placeholder for the current media that you can return to later.
 
 Delete an existing bookmark. (if it exists)
 @param array $input
+
+```JSON
+"success": {}
+```
+
+@throws object
+
+```JSON
+"error": {}
+```
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
