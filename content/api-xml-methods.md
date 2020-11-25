@@ -20,9 +20,8 @@ Binary methods will also return:
 
 This is the function that handles verifying a new handshake Takes a timestamp, auth key, and username.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -41,7 +40,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -61,9 +60,8 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -74,7 +72,7 @@ This can be called without being authenticated, it is useful for determining if 
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root>
@@ -94,9 +92,8 @@ This can be called without being authenticated, it is useful for determining if 
 
 Destroy a session using the auth parameter.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -104,7 +101,7 @@ Destroy a session using the auth parameter.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -119,9 +116,9 @@ Destroy a session using the auth parameter.
 ### url_to_song
 
 This takes a url and returns the song object in question
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -129,7 +126,7 @@ This takes a url and returns the song object in question
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -146,9 +143,9 @@ This takes a url and returns the song object in question
 * **NEW** in develop
 
 Check Ampache for updates and run the update if there is one.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -156,7 +153,7 @@ Check Ampache for updates and run the update if there is one.
 </root>
 ```
 
-@throws
+* throws
 ```XML
 <root>
     <success>
@@ -171,9 +168,8 @@ Check Ampache for updates and run the update if there is one.
 
 This takes a collection of inputs and returns ID + name for the object type
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -181,7 +177,7 @@ This takes a collection of inputs and returns ID + name for the object type
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -231,9 +227,8 @@ Use operator ('and', 'or') to choose whether to join or separate each rule when 
 
 Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page for details about creating searches.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -241,7 +236,7 @@ Refer to the [Advanced Search](http://ampache.org/api/api-advanced-search) page 
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -284,9 +279,8 @@ ALBUM
 
 This takes a collection of inputs and returns artist objects.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -294,7 +288,7 @@ This takes a collection of inputs and returns artist objects.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -318,9 +312,9 @@ This takes a collection of inputs and returns artist objects.
 ### artist
 
 This returns a single artist based on the UID of said artist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -328,7 +322,7 @@ This returns a single artist based on the UID of said artist
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -344,9 +338,9 @@ This returns a single artist based on the UID of said artist
 ### artist_albums
 
 This returns the albums of an artist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -354,7 +348,7 @@ This returns the albums of an artist
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -371,9 +365,9 @@ This returns the albums of an artist
 ### artist_songs
 
 This returns the songs of the specified artist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -381,7 +375,7 @@ This returns the songs of the specified artist
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -398,9 +392,9 @@ This returns the songs of the specified artist
 ### albums
 
 This returns albums based on the provided search filters
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -408,7 +402,7 @@ This returns albums based on the provided search filters
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -431,9 +425,9 @@ This returns albums based on the provided search filters
 ### album
 
 This returns a single album based on the UID provided
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -441,7 +435,7 @@ This returns a single album based on the UID provided
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -457,9 +451,9 @@ This returns a single album based on the UID provided
 ### album_songs
 
 This returns the songs of a specified album
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -467,7 +461,7 @@ This returns the songs of a specified album
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -484,9 +478,9 @@ This returns the songs of a specified album
 ### genres
 
 This returns the genres (Tags) based on the specified filter
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -494,7 +488,7 @@ This returns the genres (Tags) based on the specified filter
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -514,9 +508,9 @@ This returns the genres (Tags) based on the specified filter
 This returns a single genre based on UID.
 All XML Documents that have a ```<genre>``` element may have 0 or more genre elements associated with them.
 Each genre element has an attribute "count" that indicates the number of people who have specified this genre.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -524,7 +518,7 @@ Each genre element has an attribute "count" that indicates the number of people 
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -539,9 +533,9 @@ Each genre element has an attribute "count" that indicates the number of people 
 ### genre_artists
 
 This returns the artists associated with the genre in question as defined by the UID
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -549,7 +543,7 @@ This returns the artists associated with the genre in question as defined by the
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -566,9 +560,9 @@ This returns the artists associated with the genre in question as defined by the
 ### genre_albums
 
 This returns the albums associated with the genre in question
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -576,7 +570,7 @@ This returns the albums associated with the genre in question
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -593,9 +587,9 @@ This returns the albums associated with the genre in question
 ### genre_songs
 
 returns the songs for this genre
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -603,7 +597,7 @@ returns the songs for this genre
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -620,9 +614,9 @@ returns the songs for this genre
 ### songs
 
 Returns songs based on the specified filter
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -630,7 +624,7 @@ Returns songs based on the specified filter
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -652,9 +646,9 @@ Returns songs based on the specified filter
 ### song
 
 returns a single song
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -662,7 +656,7 @@ returns a single song
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -679,17 +673,16 @@ returns a single song
 * **NEW** in Develop
 
 Delete an existing song. (if you are allowed to)
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
     <success>
 </root>
 ```
-
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -704,9 +697,9 @@ Delete an existing song. (if you are allowed to)
 ### playlists
 
 This returns playlists based on the specified filter
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -714,7 +707,7 @@ This returns playlists based on the specified filter
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -736,9 +729,9 @@ This returns playlists based on the specified filter
 ### playlist
 
 This returns a single playlist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -746,7 +739,7 @@ This returns a single playlist
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -761,9 +754,9 @@ This returns a single playlist
 ### playlist_songs
 
 This returns the songs for a playlist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -771,7 +764,7 @@ This returns the songs for a playlist
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -788,9 +781,9 @@ This returns the songs for a playlist
 ### playlist_create
 
 This create a new playlist and return it
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -798,7 +791,7 @@ This create a new playlist and return it
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -815,9 +808,9 @@ This create a new playlist and return it
 
 This modifies name and type of a playlist
 Previously name and type were mandatory while filter wasn't. this has been reversed.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -825,7 +818,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -844,9 +837,9 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 ### playlist_delete
 
 This deletes a playlist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -854,7 +847,7 @@ This deletes a playlist
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -869,9 +862,9 @@ This deletes a playlist
 ### playlist_add_song
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -879,7 +872,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -897,9 +890,9 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 
 This remove a song from a playlist.
 Previous versions required 'track' instead of 'song'.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -907,7 +900,7 @@ Previous versions required 'track' instead of 'song'.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -928,9 +921,8 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 'forgotten' will search for tracks played before 'Popular Threshold' days
 'unplayed' added in 400002 for searching unplayed tracks
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -938,7 +930,7 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -972,9 +964,9 @@ ID
 * **NEW** in 4.2.0
 
 This searches the shares and returns... shares
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -982,7 +974,7 @@ This searches the shares and returns... shares
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1002,9 +994,9 @@ This searches the shares and returns... shares
 * **NEW** in 4.2.0
 
 Return shares by UID
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1012,7 +1004,7 @@ Return shares by UID
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1031,9 +1023,8 @@ Return shares by UID
 Create a public url that can be used by anyone to stream media.
 Takes the file id with optional description and expires parameters.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1041,7 +1032,7 @@ Takes the file id with optional description and expires parameters.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1063,9 +1054,8 @@ Takes the file id with optional description and expires parameters.
 Update the description and/or expiration date for an existing share.
 Takes the share id to update with optional description and expires parameters.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1073,7 +1063,7 @@ Takes the share id to update with optional description and expires parameters.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1095,9 +1085,8 @@ Takes the share id to update with optional description and expires parameters.
 
 Delete an existing share.
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1105,7 +1094,7 @@ Delete an existing share.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1122,9 +1111,9 @@ Delete an existing share.
 * **NEW** in 4.2.0
 
 Return similar artist id's or similar song ids compared to the input filter
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1132,7 +1121,7 @@ Return similar artist id's or similar song ids compared to the input filter
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1150,9 +1139,9 @@ Return similar artist id's or similar song ids compared to the input filter
 ### search_songs
 
 This searches the songs and returns... songs
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1160,7 +1149,7 @@ This searches the songs and returns... songs
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1177,9 +1166,9 @@ This searches the songs and returns... songs
 ### videos
 
 This returns video objects!
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1187,7 +1176,7 @@ This returns video objects!
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1205,9 +1194,9 @@ This returns video objects!
 ### video
 
 This returns a single video
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1215,7 +1204,7 @@ This returns a single video
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1231,9 +1220,9 @@ This returns a single video
 
 Get some items based on some simple search types and filters. (Random by default)
 This method HAD partial backwards compatibility with older api versions but it has now been removed
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1241,7 +1230,7 @@ This method HAD partial backwards compatibility with older api versions but it h
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1274,9 +1263,9 @@ ALBUM
 * **NEW** in 4.2.0
 
 Get information about podcasts
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1284,7 +1273,7 @@ Get information about podcasts
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1304,9 +1293,9 @@ Get information about podcasts
 * **NEW** in 4.2.0
 
 Get the podcast from it's id.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1314,7 +1303,7 @@ Get the podcast from it's id.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1333,9 +1322,9 @@ Get the podcast from it's id.
 
 Create a podcast that can be used by anyone to stream media.
 Takes the url and catalog parameters.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1343,7 +1332,7 @@ Takes the url and catalog parameters.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1362,9 +1351,9 @@ Takes the url and catalog parameters.
 
 Update the description and/or expiration date for an existing podcast.
 Takes the podcast id to update with optional description and expires parameters.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1372,7 +1361,7 @@ Takes the podcast id to update with optional description and expires parameters.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1395,9 +1384,9 @@ Takes the podcast id to update with optional description and expires parameters.
 * **NEW** in 4.2.0
 
 Delete an existing podcast.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1405,7 +1394,7 @@ Delete an existing podcast.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1422,7 +1411,8 @@ Delete an existing podcast.
 * **NEW** in 4.2.0
 
 This returns the episodes for a podcast
-@param array $input
+
+* param array $input
 
 | Input    | Type    | Description    | Optional |
 |----------|---------|----------------|---------:|
@@ -1437,9 +1427,9 @@ This returns the episodes for a podcast
 * **NEW** in 4.2.0
 
 Get the podcast_episode from it's id.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1447,7 +1437,7 @@ Get the podcast_episode from it's id.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1464,9 +1454,9 @@ Get the podcast_episode from it's id.
 * **NEW** in 4.2.0
 
 Delete an existing podcast_episode.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1474,7 +1464,7 @@ Delete an existing podcast_episode.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1491,9 +1481,9 @@ Delete an existing podcast_episode.
 * **NEW** in develop
 
 Get ids and usernames for your site
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1501,7 +1491,7 @@ Get ids and usernames for your site
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1512,9 +1502,9 @@ Get ids and usernames for your site
 ### user
 
 This get an user public information
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1522,7 +1512,7 @@ This get an user public information
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1537,9 +1527,9 @@ This get an user public information
 ### user_create
 
 Create a new user. (Requires the username, password and email.)
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1547,7 +1537,7 @@ Create a new user. (Requires the username, password and email.)
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1557,7 +1547,7 @@ Create a new user. (Requires the username, password and email.)
 |------------|---------|----------------------------|---------:|
 | 'username' | string  | $username                  |       NO |
 | 'password' | string  | hash('sha256', $password)) |       NO |
-| 'email'    | string  | 'user@gmail.com'           |       NO |
+| 'email'    | string  | 'user* gmail.com'           |       NO |
 | 'fullname' | string  |                            |      YES |
 | 'disable'  | boolean | 0, 1                       |      YES |
 
@@ -1566,13 +1556,14 @@ Create a new user. (Requires the username, password and email.)
 ### user_update
 
 Update an existing user.
-@param array $input
+
+* param array $input
 
 | Input        | Type    | Description                | Optional |
 |--------------|---------|----------------------------|---------:|
 | 'username'   | string  | $username                  |       NO |
 | 'password'   | string  | hash('sha256', $password)) |      YES |
-| 'email'      | string  | 'user@gmail.com'           |      YES |
+| 'email'      | string  | 'user* gmail.com'           |      YES |
 | 'fullname'   | string  |                            |      YES |
 | 'website'    | string  |                            |      YES |
 | 'state'      | string  |                            |      YES |
@@ -1585,9 +1576,9 @@ Update an existing user.
 ### user_delete
 
 Delete an existing user.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1595,7 +1586,7 @@ Delete an existing user.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1612,9 +1603,9 @@ Delete an existing user.
 * **NEW** in 4.2.0
 
 This returns licenses based on the specified filter
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1622,7 +1613,7 @@ This returns licenses based on the specified filter
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1642,9 +1633,9 @@ This returns licenses based on the specified filter
 * **NEW** in 4.2.0
 
 This returns a single license
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1652,7 +1643,7 @@ This returns a single license
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1669,9 +1660,9 @@ This returns a single license
 * **NEW** in 4.2.0
 
 This returns the songs for a license
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1679,7 +1670,7 @@ This returns the songs for a license
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1698,9 +1689,9 @@ This returns the songs for a license
 * **NEW** in develop
 
 This returns labels based on the specified filter
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1708,7 +1699,7 @@ This returns labels based on the specified filter
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1728,9 +1719,9 @@ This returns labels based on the specified filter
 * **NEW** in develop
 
 This returns a single label
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1738,7 +1729,7 @@ This returns a single label
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1755,9 +1746,9 @@ This returns a single label
 * **NEW** in develop
 
 This returns the artists for a label
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1765,7 +1756,7 @@ This returns the artists for a label
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1782,9 +1773,9 @@ This returns the artists for a label
 ### followers
 
 This get an user followers
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1792,7 +1783,7 @@ This get an user followers
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1807,9 +1798,9 @@ This get an user followers
 ### following
 
 This get the user list followed by an user
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1817,7 +1808,7 @@ This get the user list followed by an user
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1832,9 +1823,9 @@ This get the user list followed by an user
 ### toggle_follow
 
 This follow/unfollow an user
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1842,7 +1833,7 @@ This follow/unfollow an user
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1857,9 +1848,9 @@ This follow/unfollow an user
 ### last_shouts
 
 This get the latest posted shouts
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1867,7 +1858,7 @@ This get the latest posted shouts
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1883,9 +1874,9 @@ This get the latest posted shouts
 ### rate
 
 This rates a library item
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1893,7 +1884,7 @@ This rates a library item
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1913,9 +1904,9 @@ This flags a library item as a favorite
 
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1923,7 +1914,7 @@ This flags a library item as a favorite
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1940,9 +1931,9 @@ This flags a library item as a favorite
 ### record_play
 
 Take a song_id and update the object_count and user_activity table with a play. This allows other sources to record play history to ampache
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1950,7 +1941,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -1968,9 +1959,9 @@ Take a song_id and update the object_count and user_activity table with a play. 
 ### scrobble
 
 Search for a song using text info and then record a play if found. This allows other sources to record play history to ampache
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -1978,7 +1969,7 @@ Search for a song using text info and then record a play if found. This allows o
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2002,9 +1993,9 @@ Search for a song using text info and then record a play if found. This allows o
 * **NEW** in 4.2.0
 
 This searches the catalogs and returns... catalogs
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2012,7 +2003,7 @@ This searches the catalogs and returns... catalogs
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2030,9 +2021,9 @@ This searches the catalogs and returns... catalogs
 * **NEW** in 4.2.0
 
 Return catalog by UID
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2040,7 +2031,7 @@ Return catalog by UID
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2055,9 +2046,9 @@ Return catalog by UID
 ### catalog_action
 
 Kick off a catalog update or clean for the selected catalog
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2065,7 +2056,7 @@ Kick off a catalog update or clean for the selected catalog
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2088,9 +2079,8 @@ Perform actions on local catalog files.
 Single file versions of catalog add, clean, verify and remove (delete)
 Make sure you remember to urlencode those file names!
 
-@param array $input
-
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2098,7 +2088,7 @@ Make sure you remember to urlencode those file names!
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2115,9 +2105,9 @@ Make sure you remember to urlencode those file names!
 ### timeline
 
 This get an user timeline
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2125,7 +2115,7 @@ This get an user timeline
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2142,9 +2132,9 @@ This get an user timeline
 ### friends_timeline
 
 This get current user friends timeline
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2152,7 +2142,7 @@ This get current user friends timeline
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2168,9 +2158,9 @@ This get current user friends timeline
 ### update_from_tags
 
 Update a single album, artist, song from the tag data
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2178,7 +2168,7 @@ Update a single album, artist, song from the tag data
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2195,9 +2185,9 @@ Update a single album, artist, song from the tag data
 
 Update artist information and fetch similar artists from last.fm
 Make sure lastfm_API_key is set in your configuration file
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2205,7 +2195,7 @@ Make sure lastfm_API_key is set in your configuration file
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2221,9 +2211,9 @@ Make sure lastfm_API_key is set in your configuration file
 
 Updates a single album, artist, song running the gather_art process
 Doesn't overwrite existing art by default.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2232,7 +2222,7 @@ Doesn't overwrite existing art by default.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2249,9 +2239,9 @@ Doesn't overwrite existing art by default.
 ### update_podcast
 
 Sync and download new podcast episodes
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2259,7 +2249,7 @@ Sync and download new podcast episodes
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2276,9 +2266,9 @@ Sync and download new podcast episodes
 * **NEW** in develop
 
 Get your user preferences
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2294,9 +2284,9 @@ Get your user preferences
 * **NEW** in develop
 
 Get your user preference by name
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2305,7 +2295,7 @@ Get your user preference by name
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2322,9 +2312,9 @@ Get your user preference by name
 * **NEW** in develop
 
 Get your server preferences
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2333,7 +2323,7 @@ Get your server preferences
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2346,9 +2336,9 @@ Get your server preferences
 * **NEW** in develop
 
 Get your server preference by name
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2357,7 +2347,7 @@ Get your server preference by name
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2374,7 +2364,8 @@ Get your server preference by name
 * **NEW** in develop
 
 Add a new preference to your server
-@param array $input
+
+* param array $input
 
 | Input         | Type    | Description                                             | Optional |
 |---------------|---------|---------------------------------------------------------|---------:|
@@ -2394,7 +2385,8 @@ Add a new preference to your server
 * **NEW** in develop
 
 Edit a preference value and apply to all users if allowed
-@param array $input
+
+* param array $input
 
 | Input    | Type    | Description                                       | Optional |
 |----------|---------|---------------------------------------------------|---------:|
@@ -2409,7 +2401,8 @@ Edit a preference value and apply to all users if allowed
 * **NEW** in develop
 
 Delete a non-system preference by name
-@param array $input
+
+* param array $input
 
 | Input    | Type   | Description                                       | Optional |
 |----------|--------|---------------------------------------------------|---------:|
@@ -2422,9 +2415,9 @@ Delete a non-system preference by name
 * **NEW** in develop
 
 Get information about bookmarked media this user is allowed to manage.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2432,7 +2425,7 @@ Get information about bookmarked media this user is allowed to manage.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2445,9 +2438,9 @@ Get information about bookmarked media this user is allowed to manage.
 * **NEW** in develop
 
 Get the bookmark from it's object_id and object_type.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2455,7 +2448,7 @@ Get the bookmark from it's object_id and object_type.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2473,9 +2466,9 @@ Get the bookmark from it's object_id and object_type.
 * **NEW** in develop
 
 Create a placeholder for the current media that you can return to later.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2483,7 +2476,7 @@ Create a placeholder for the current media that you can return to later.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2504,9 +2497,9 @@ Create a placeholder for the current media that you can return to later.
 * **NEW** in develop
 
 Edit a placeholder for the current media that you can return to later.
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2514,7 +2507,7 @@ Edit a placeholder for the current media that you can return to later.
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2535,9 +2528,9 @@ Edit a placeholder for the current media that you can return to later.
 * **NEW** in develop
 
 Delete an existing bookmark. (if it exists)
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2545,7 +2538,7 @@ Delete an existing bookmark. (if it exists)
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2566,11 +2559,11 @@ Binary data methods are used for returning raw data to the user such as a image 
 ### stream
 
 Streams a given media file. Takes the file id in parameter with optional max bit rate, file format, time offset, size and estimate content length option.
-@param array $input
-@return file (HTTP 200 OK)
 
-@throws (HTTP 400 Bad Request)
-@throws (HTTP 404 Not Found)
+* param array $input
+* return file (HTTP 200 OK)
+* throws (HTTP 400 Bad Request)
+* throws (HTTP 404 Not Found)
 
 | Input     | Type    | Description                 | Optional |
 |-----------|---------|-----------------------------|---------:|
@@ -2584,11 +2577,11 @@ Streams a given media file. Takes the file id in parameter with optional max bit
 ### download
 
 Downloads a given media file. set format=raw to download the full file
-@param array $input
-@return file (HTTP 200 OK)
 
-@throws (HTTP 400 Bad Request)
-@throws (HTTP 404 Not Found)
+* param array $input
+* return file (HTTP 200 OK)
+* throws (HTTP 400 Bad Request)
+* throws (HTTP 404 Not Found)
 
 | Input    | Type    | Description              | Optional |
 |----------|---------|--------------------------|---------:|
@@ -2599,11 +2592,11 @@ Downloads a given media file. set format=raw to download the full file
 ### get_art
 
 Get an art image.
-@param array $input
-@return image (HTTP 200 OK)
 
-@throws (HTTP 400 Bad Request)
-@throws (HTTP 404 Not Found)
+* param array $input
+* return image (HTTP 200 OK)
+* throws (HTTP 400 Bad Request)
+* throws (HTTP 404 Not Found)
 
 | Input  | Type    | Description                                                | Optional |
 |--------|---------|------------------------------------------------------------|---------:|
@@ -2615,9 +2608,9 @@ Get an art image.
 ### localplay
 
 This is for controlling localplay
-@param array $input
 
-@return
+* param array $input
+* return
 
 ```XML
 <root>
@@ -2626,7 +2619,7 @@ This is for controlling localplay
 </root>
 ```
 
-@throws
+* throws
 
 ```XML
 <root><error></root>
@@ -2648,16 +2641,15 @@ This is for controlling localplay
 ### democratic
 
 This is for controlling democratic play (Songs only)
-@param array $input
 
-* ACTION
-  * method
-    * vote
-      * oid (Unique ID of the element you want to vote on)
-    * devote
-      * oid (Unique ID of the element you want to vote on)
-    * playlist (Returns an array of song items with an additional \<vote>[VOTE COUNT]\</vote> element)
-    * play (Returns the URL for playing democratic play)
+* param array $input
+* return
+
+* throws
+
+```XML
+<root><error></root>
+```
 
 | Input    | Type    | Description                  | Optional |
 |----------|---------|------------------------------|---------:|
@@ -2665,3 +2657,9 @@ This is for controlling democratic play (Songs only)
 | 'method' | string  | vote, devote, playlist, play |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/democratic%20\(play\).xml)
+
+* **Method Descriptions**
+  * vote: +1 vote for the oid
+  * devote: -1 vote for the oid
+  * playlist: Return an array of song items with an additional \<vote>[VOTE COUNT]\</vote> element
+  * play: Returns the URL for playing democratic play

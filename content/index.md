@@ -326,8 +326,11 @@ All Data methods return HTTP 200 responses
 ### Binary Data Methods
 
 All binary methods will not return XML/JSON responses. they will either return the requested file/data or an HTTP error code.
+
 @return (HTTP 200 OK)
+
 @throws (HTTP 400 Bad Request)
+
 @throws (HTTP 404 Not Found)
 
 * stream
