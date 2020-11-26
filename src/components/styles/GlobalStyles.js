@@ -569,7 +569,7 @@ export const baseStyles = injectGlobal`
 
   /* tables.css */
   table {
-    padding: 0;
+    padding-top: 16px;
   }
 
   table tr {
@@ -712,7 +712,7 @@ export const baseStyles = injectGlobal`
   }
 
   .paragraph {
-    margin: 16px 0px 32px;
+    margin: 16px 0px 0px;
     line-height: 1.625;
     max-width: 750px;\
   }
