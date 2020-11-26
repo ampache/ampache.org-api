@@ -955,8 +955,6 @@ This searches the shares and returns... shares
 
 ### share
 
-* (MINIMUM_API_VERSION=420000)
-
 Return shares by UID
 
 | Input    | Type   | Description                     | Optional |
@@ -978,8 +976,6 @@ Return shares by UID
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share.json)
 
 ### share_create
-
-* (MINIMUM_API_VERSION=420000
 
 Create a public url that can be used by anyone to stream media.
 Takes the file id with optional description and expires parameters.
@@ -1007,8 +1003,6 @@ Takes the file id with optional description and expires parameters.
 
 ### share_edit
 
-* (MINIMUM_API_VERSION=420000
-
 Update the description and/or expiration date for an existing share.
 Takes the share id to update with optional description and expires parameters.
 
@@ -1035,8 +1029,6 @@ Takes the share id to update with optional description and expires parameters.
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_edit.json)
 
 ### share_delete
-
-* (MINIMUM_API_VERSION=420000
 
 Delete an existing share.
 
