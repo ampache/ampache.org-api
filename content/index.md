@@ -86,6 +86,7 @@ All API code that used 'Tag' now references 'Genre' instead
 * get_indexes: 'playlist' now requires include=1 for xml calls if you want the tracks
 * stats: Removed back compat from older versions. Only 'type' is mandatory
 * Return empty objects when the request was correct but the results were empty
+* record_play: Require 100 (Admin) permission to record plays for other users
 
 ### Deprecated
 
@@ -348,6 +349,17 @@ All Control methods return HTTP 200 responses
 
 * localplay
 * democratic
+
+## Access Levels
+
+Some methods have a user access level requirement. Access goes from 0-100 and is split into the following types.
+
+* 5: Guest
+* 25: User
+* 50: Content Manager
+* 75: Catalog Manager
+* 100: Admin
+
 
 ## Request URL Examples
 
