@@ -1146,7 +1146,7 @@ This is for controlling democratic play (Songs only)
 
 [Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/xml-responses/democratic%20\(play\).xml)
 
-All XML Documents that have a ```<tag>``` element may have 0 or more tag elements associated with them. Each tag element has an attribute "count" that indicates the number of people who have specified this tag.
+All XML Documents that have a ```<tag></tag>``` element may have 0 or more tag elements associated with them. Each tag element has an attribute "count" that indicates the number of people who have specified this tag.
 
 Artists XML Document. ID's are Ampache's unique Identifier for the artist.
 

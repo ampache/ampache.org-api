@@ -37,6 +37,7 @@ const config = {
       '/versions',
       '/api-4.1',
       '/api-4.2',
+      '/api-4.3',
     ],
     links: [{ text: '', link: '' }, 
 	        { text: '', link: '' }],

@@ -581,7 +581,7 @@ This returns the genres (Tags) based on the specified filter
 ### genre
 
 This returns a single genre based on UID.
-All XML Documents that have a ```<genre>``` element may have 0 or more genre elements associated with them.
+All XML Documents that have a ```<genre></genre>``` element may have 0 or more genre elements associated with them.
 Each genre element has an attribute "count" that indicates the number of people who have specified this genre.
 
 | Input    | Type   | Description                     | Optional |

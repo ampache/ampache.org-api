@@ -1086,7 +1086,7 @@ This is for controlling democratic play
 TBC
 ```
 
-All XML Documents that have a ```<tag>``` element may have 0 or more tag elements associated with them. Each tag element has an attribute "count" that indicates the number of people who have specified this tag.
+All XML Documents that have a ```<tag></tag>``` element may have 0 or more tag elements associated with them. Each tag element has an attribute "count" that indicates the number of people who have specified this tag.
 
 Artists XML Document. ID's are Ampache's unique Identifier for the artist.
 
