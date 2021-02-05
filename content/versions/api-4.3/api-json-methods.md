@@ -71,19 +71,19 @@ This takes a collection of inputs and returns ID + name for the object type
 
 SONGS
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20(song).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20\(song\).json)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20(artist).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20\(artist\).json)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20(album).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20\(album\).json)
 
 PLAYLIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20(playlist).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20\(playlist\).json)
 
 ## advanced_search
 
@@ -103,7 +103,7 @@ You can pass multiple rules as well as joins to create in depth search results
 Rules must be sent in groups of 3 using an int (starting from 1) to designate which rules are combined.
 Use operator ('and'|'or') to choose whether to join or separate each rule when searching.
 
-Refer to the [Advanced Search](API-advanced-search.md) page for details about creating searches.
+Refer to the [Advanced Search](api-4.3/api-advanced-search) page for details about creating searches.
 
 
     INPUTS
@@ -118,15 +118,15 @@ Refer to the [Advanced Search](API-advanced-search.md) page for details about cr
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20(song).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20\(song\).json)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20(artist).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20\(artist\).json)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20(album).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20\(album\).json)
 
 ## artists
 
@@ -471,15 +471,15 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20(song).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20\(song\).json)
 
 INDEX
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20(index).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20\(index\).json)
 
 ID
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20(id).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20\(id\).json)
 
 
 ## shares
@@ -720,15 +720,15 @@ This method has partial backwards compatibility with older api versions but shou
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20(song).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20\(song\).json)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20(artist).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20\(artist\).json)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20(album).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20\(album\).json)
 
 ## user
 
@@ -962,7 +962,7 @@ Kick off a catalog update or clean for the selected catalog
 |'task'   |string |'add_to_catalog', 'clean_catalog'|NO      |
 |'catalog'|integer|$catalog_id                      |NO      |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20(clean_catalog).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(clean_catalog\).json)
 
 ## catalog_file
 

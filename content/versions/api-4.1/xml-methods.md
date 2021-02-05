@@ -89,19 +89,19 @@ This takes a collection of inputs and returns ID + name for the object type
 
 SONGS
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20(songs).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(songs\).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20(artists).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(artists\).xml)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20(albums).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(albums\).xml)
 
 PLAYLIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20(playlists).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(playlists\).xml)
 
 ## advanced_search
 
@@ -257,15 +257,15 @@ To search a mixed type like metadata you must search using 4 rules.
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20(song).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20\(song\).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20(artist).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20\(artist\).xml)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20(album).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20\(album\).xml)
 
 ## artists
 
@@ -635,15 +635,15 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20(song).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20\(song\).xml)
 
 INDEX
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20(index).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20\(index\).xml)
 
 ID
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20(id).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20\(id\).xml)
 
 ## search_songs
 
@@ -710,15 +710,15 @@ This method has partial backwards compatibility with older api versions but shou
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20(song).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20\(song\).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20(artist).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20\(artist\).xml)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20(album).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20\(album\).xml)
 
 ## user
 
@@ -917,9 +917,9 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | 'add_to_catalog', 'clean_catalog' |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20(clean_catalog.xml))
+[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20\(clean_catalog.xml))
 
-[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20(add_to_catalog.xml))
+[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20\(add_to_catalog.xml))
 
 ## timeline
 
