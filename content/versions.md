@@ -1,6 +1,6 @@
 ---
-title: "Releases"
-metaTitle: "Releases"
+title: "Past Releases"
+metaTitle: "Past Releases"
 metaDescription: "API documentation"
 ---
 
