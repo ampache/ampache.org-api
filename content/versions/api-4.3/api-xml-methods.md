@@ -73,21 +73,21 @@ This takes a collection of inputs and returns ID + name for the object type
 
 SONGS
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(songs).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(song).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(artists).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(artist).xml)
 
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(albums).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(album).xml)
 
 
 PLAYLIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(playlists).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20(playlist).xml)
 
 ## advanced_search
 
