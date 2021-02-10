@@ -260,17 +260,18 @@ Data methods require additional information and parameters to return information
 
 This takes a collection of inputs and returns ID + name for the object type
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|----------|
-| 'type'    | string     | 'song', 'album', 'artist', 'album_artist', 'playlist',                        | NO       |
-|           |            | 'podcast', 'podcast_episode', 'live_stream'                                   |          |
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number | YES      |
-|           |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                             | YES      |
-|           |            | Find objects with an 'update' time newer than the specified date              |          |
-| 'include' | boolean    | 0,1 include songs in a playlist or episodes in a podcast                      | YES      |
-| 'offset'  | integer    | Return results starting from this index position                              | YES      |
-| 'limit'   | integer    | Maximum number of results to return                                           | YES      |
+| Input         | Type       | Description                                                                   | Optional |
+|---------------|------------|-------------------------------------------------------------------------------|----------|
+| 'type'        | string     | 'song', 'album', 'artist', 'album_artist', 'playlist',                        | NO       |
+|               |            | 'podcast', 'podcast_episode', 'live_stream'                                   |          |
+| 'filter'      | string     | Value is Alpha Match for returned results, may be more than one letter/number | YES      |
+|               |            | Find objects with an 'add' date newer than the specified date                 |          |
+| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16)                                             | YES      |
+|               |            | Find objects with an 'update' time newer than the specified date              |          |
+| 'include'     | boolean    | 0,1 include songs in a playlist or episodes in a podcast                      | YES      |
+| 'offset'      | integer    | Return results starting from this index position                              | YES      |
+| 'limit'       | integer    | Maximum number of results to return                                           | YES      |
+| 'hide_search' | integer    | 0,1, if true do not include searches/smartlists in the result                 | YES      |
 
 * return
 
@@ -799,16 +800,17 @@ This takes a url and returns the song object in question
 
 This returns playlists based on the specified filter
 
-| Input    | Type       | Description                                                      | Optional |
-|----------|------------|------------------------------------------------------------------|----------|
-| 'filter' | string     | Filter results to match this string                              | YES      |
-| 'exact'  | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         | YES      |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                | YES      |
-|          |            | Find objects with an 'add' date newer than the specified date    |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                | YES      |
-|          |            | Find objects with an 'update' time newer than the specified date |          |
-| 'offset' | integer    | Return results starting from this index position                 | YES      |
-| 'limit'  | integer    | Maximum number of results to return                              | YES      |
+| Input         | Type       | Description                                                      | Optional |
+|---------------|------------|------------------------------------------------------------------|----------|
+| 'filter'      | string     | Filter results to match this string                              | YES      |
+| 'exact'       | boolean    | 0,1 if true filter is exact (=) rather than fuzzy (LIKE)         | YES      |
+| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16)                                | YES      |
+|               |            | Find objects with an 'add' date newer than the specified date    |          |
+| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16)                                | YES      |
+|               |            | Find objects with an 'update' time newer than the specified date |          |
+| 'offset'      | integer    | Return results starting from this index position                 | YES      |
+| 'limit'       | integer    | Maximum number of results to return                              | YES      |
+| 'hide_search' | integer    | 0,1, if true do not include searches/smartlists in the result    | YES      |
 
 * return
 
