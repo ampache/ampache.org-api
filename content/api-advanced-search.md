@@ -13,7 +13,7 @@ Perform an advanced search given passed rules. This works in a similar way to th
 You can pass multiple rules as well as joins to create in depth search results
 
 Rules must be sent in groups of 3 using an int (starting from 1) to designate which rules are combined.
-Use operator ('and'|'or') to choose whether to join or separate each rule when searching.
+Use operator ('and', 'or') to choose whether to join or separate each rule when searching.
 
 * Rule arrays must contain the following:
   * rule name (e.g. rule_1['title'], rule_2['album'])
@@ -153,4 +153,3 @@ To search a mixed type like metadata you must search using 4 rules.
 | random   | boolean | 0, 1 (random order of results; default to 0)  |      YES |
 | offset   | integer |                                               |      YES |
 | limit'   | integer |                                               |      YES |
-
