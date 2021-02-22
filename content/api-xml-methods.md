@@ -324,7 +324,7 @@ Just add 1 to the rule value to create a new group of rules.
 |----------|---------|--------------------------------------------------|----------|
 | operator | string  | 'and','or' (whether to match one rule or all)    | NO       |
 | rule_*   | array   | [rule_1,rule_1_operator,rule_1_input],           | NO       |
-| rule_*   | array   | [rule_2,rule_2_operator,rule_2_input], [etc]]    | YES      |
+| rule_*   | array   | [rule_2,rule_2_operator,rule_2_input], [etc]     | YES      |
 | type     | string  | 'song', 'album', 'artist', 'playlist',           | NO       |
 |          |         | 'label', 'user', 'video'                         |          |
 | random   | boolean | 0, 1 (random order of results; default to 0)     | YES      |
