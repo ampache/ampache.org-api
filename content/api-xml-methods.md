@@ -1,6 +1,6 @@
 ---
-title: "XML Methods"
-metaTitle: "XML Methods"
+title: "XML 5 Methods"
+metaTitle: "XML 5 Methods"
 metaDescription: "API documentation"
 ---
 
@@ -1933,10 +1933,12 @@ This gets the latest posted shouts
 This rates a library item
 
 | Input    | Type    | Description                                   | Optional |
-|----------|---------|-----------------------------------------------|----------|
-| 'type'   | string  | library item type, album, artist, song, video | NO       |
-| 'id'     | string  | library item id                               | NO       |
-| 'rating' | integer | rating between 0-5                            | NO       |
+|----------|---------|-----------------------------------------------|---------:|
+| 'type'   | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
+|          |         | 'podcast', 'podcast_episode', 'video',        |          |
+|          |         | 'tvshow', 'tvshow_season'                     |          |
+| 'id'     | string  | library item id                               |       NO |
+| 'rating' | integer | rating between 0-5                            |       NO |
 
 * return
 
@@ -1961,11 +1963,13 @@ This flags a library item as a favorite
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
 
-| Input  | Type    | Description                        | Optional |
-|--------|---------|------------------------------------|----------|
-| 'type' | string  | 'song', 'album', 'artist', 'video' | NO       |
-| 'id'   | integer | $object_id                         | NO       |
-| 'flag' | boolean | 0, 1                               | NO       |
+| Input  | Type    | Description                            | Optional |
+|--------|---------|----------------------------------------|---------:|
+| 'type' | string  | 'song', 'album', 'artist', 'playlist', |       NO |
+|        |         | 'podcast', 'podcast_episode', 'video', |          |
+|        |         | 'tvshow', 'tvshow_season'              |          |
+| 'id'   | integer | $object_id                             |       NO |
+| 'flag' | boolean | 0, 1                                   |       NO |
 
 * return
 

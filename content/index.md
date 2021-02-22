@@ -1,6 +1,6 @@
 ---
-title: "Ampache API"
-metaTitle: "Ampache API"
+title: "Ampache API 5"
+metaTitle: "Ampache API 5"
 metaDescription: "API documentation"
 ---
 
@@ -18,16 +18,18 @@ All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.or
 
 **Current Stable Release**
 
-The current release is documented under it's own version page.
+The current stable release is documented under it's own version page.
 Refer to the taged versions if you just want to follow the stable releases.
 
 * [Ampache 4.3.0-release](https://github.com/ampache/ampache/releases/tag/4.3.0)
-* [API 4.3 Documentation](http://ampache.org/api/api-4.3)
+* [API 4 Documentation](http://ampache.org/api/api-4)
 
 **Archived Version Documentation**
 
 After each release, a documentation page will be created to allow pruning old features from the current version.
 Note that API 4.1 docs cover all previous versions.
+
+[API 4.3 Documentation](http://ampache.org/api/versions/api-4.3)
 
 [API 4.2 Documentation](http://ampache.org/api/versions/api-4.2)
 

@@ -898,7 +898,9 @@ This rates a library item
 
 | Input    | Type    | Description                                   | Optional |
 |----------|---------|-----------------------------------------------|---------:|
-| 'type'   | string  | library item type, album, artist, song, video |       NO |
+| 'type'   | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
+|          |         | 'podcast', 'podcast_episode', 'video'         |          |
+|          |         | 'tvshow', 'tvshow_season'                     |          |
 | 'id'     | integer | library item id                               |       NO |
 | 'rating' | integer | rating between 0-5                            |       NO |
 
@@ -911,11 +913,13 @@ This flags a library item as a favorite
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
 
-| Input  | Type    | Description                        | Optional |
-|--------|---------|------------------------------------|---------:|
-| 'type' | string  | 'song', 'album', 'artist', 'video' |       NO |
-| 'id'   | integer | $object_id                         |       NO |
-| 'flag' | boolean | 0, 1                               |       NO |
+| Input  | Type    | Description                            | Optional |
+|--------|---------|----------------------------------------|---------:|
+| 'type' | string  | 'song', 'album', 'artist', 'playlist', |       NO |
+|        |         | 'podcast', 'podcast_episode', 'video'  |          |
+|        |         | 'tvshow', 'tvshow_season'              |          |
+| 'id'   | integer | $object_id                             |       NO |
+| 'flag' | boolean | 0, 1                                   |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/flag.json)
 
@@ -1103,15 +1107,33 @@ Downloads a given media file. set format=raw to download the full file
 
 Get an art image.
 
+| Input    | Type    | Description                                                | Optional |
+|----------|---------|------------------------------------------------------------|---------:|
+| 'id'     | integer | $object_id                                                 |       NO |
+| 'type'   | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
+
 ## Control Methods
 
 ## localplay
 
 This is for controlling localplay
 
+| Input     | Type    | Description                                                  | Optional |
+|-----------|---------|--------------------------------------------------------------|----------|
+| 'command' | string  | 'next', 'prev', 'stop', 'play', 'pause', 'add', 'volume_up', | NO       |
+|           |         | 'volume_down', 'volume_mute', 'delete_all', 'skip', 'status' |          |
+| 'oid'     | integer | object_id                                                    | YES      |
+| 'type'    | string  | 'Song', 'Video', 'Podcast_Episode', 'Channel',               | YES      |
+|           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
+| 'clear'   | boolean | 0,1 Clear the current playlist before adding                 | YES      |
+
 ```JSON
 TBC
 ```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/localplay.json)
+
+[Example (status)](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/localplay%20\(status\).json)
 
 ## democratic
 

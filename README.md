@@ -17,4 +17,5 @@ Site generated from wiki files using:
 * Make changes to content/, etc.
 * Build ```npm run-script build```
 * Copy the /public folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
+  * ```cp -rfv ./public/* ../ampache.github.io/api/```
 * Commit to this repo and ampache.github.io after changes
