@@ -1,6 +1,6 @@
 ---
-title: "advanced_search"
-metaTitle: "advanced_search"
+title: "API 5 advanced_search"
+metaTitle: "API 5 advanced_search"
 metaDescription: "API documentation"
 ---
 

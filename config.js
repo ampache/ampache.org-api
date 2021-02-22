@@ -26,11 +26,12 @@ const config = {
     forcedNavOrder: [
       '/', // add trailing slash if enabled above
       '/api-standards',
-      '/api-errors',
-      '/api-acls',
       '/api-xml-methods',
       '/api-json-methods',
       '/api-advanced-search',
+      '/api-errors',
+      '/api-examples',
+      '/api-acls',
       '/api-4',
       '/versions',
     ],

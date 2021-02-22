@@ -1,6 +1,6 @@
 ---
-title: "Ampache API"
-metaTitle: "Ampache API"
+title: "API 5"
+metaTitle: "API 5"
 metaDescription: "API documentation"
 ---
 
