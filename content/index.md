@@ -1,6 +1,6 @@
 ---
-title: "Ampache API 5"
-metaTitle: "Ampache API 5"
+title: "Ampache API"
+metaTitle: "Ampache API"
 metaDescription: "API documentation"
 ---
 
@@ -29,30 +29,17 @@ Refer to the taged versions if you just want to follow the stable releases.
 After each release, a documentation page will be created to allow pruning old features from the current version.
 Note that API 4.1 docs cover all previous versions.
 
-[API 4.3 Documentation](http://ampache.org/api/versions/api-4.3)
+* [API 4.3 Documentation](http://ampache.org/api/versions/api-4.3)
+* [API 4.2 Documentation](http://ampache.org/api/versions/api-4.2)
+* [API 4.1 Documentation](http://ampache.org/api/versions/api-4.1)
 
-[API 4.2 Documentation](http://ampache.org/api/versions/api-4.2)
-
-[API 4.1 Documentation](http://ampache.org/api/versions/api-4.1)
-
-## Changes in Ampache Develop
-
-The next version of Ampache has a lot of breaking changes compared to the 4.x.x API, current changes are listed here and in the changelog.
+## Changelog API develop
 
 All API code that used 'Tag' now references 'Genre' instead
 
 ### Added
 
-* Api::localplay added new options to 'command' ('pause', 'add', 'volume_up', 'volume_down', 'volume_mute', 'delete_all', 'skip')
-* Api::localplay added parameters:
-  * 'oid' (integer) object_id to add //optional
-  * 'type' (string) Default: 'Song' ('Song', 'Video', 'Podcast_Episode', 'Channel', 'Broadcast', 'Democratic', 'Live_Stream') //optional
-  * 'clear' (integer) 0|1 clear the current playlist on add //optional
-* API::playlist_edit added new parameter 'sort': (0,1) sort the playlist by 'Artist, Album, Song' //optional
-* Api::indexes added parameter 'include': (0,1) include song details with playlists
-* Add time to artist and album objects. (total time of all songs in seconds)
 * NEW API functions
-  * Api::users (ID and Username of the site users)
   * Api::song_delete (Delete files when you are allowed to)
   * Api::user_preferences (Get your user preferences)
   * Api::user_preference (Get your preference by name)
@@ -90,21 +77,10 @@ All API code that used 'Tag' now references 'Genre' instead
   * 4706 Depreciated Method
   * 4710 Bad Request
   * 4742 Failed Access Check
-* get_indexes: 'playlist' now requires include=1 for xml calls if you want the tracks
 * stats: Removed back compat from older versions. Only 'type' is mandatory
 * Return empty objects when the request was correct but the results were empty
-* record_play: Require 100 (Admin) permission to record plays for other users
 
-### Deprecated
 
-* Api::get_indexes; stop including playlist track and id in xml by default
-
-### Fixed
-
-* Api::podcast_edit wasn't able to edit a podcast...
-* Api::democratic was using action from localplay in the return responses
-* Setting a limit of 'none' would slice away all the results
-* get_indexes for XML didn't include podcast indexes
 
 ## Sending Handshake Request
 

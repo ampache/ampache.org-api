@@ -1,6 +1,6 @@
 ---
-title: "XML 4"
-metaTitle: "XML 4"
+title: "API 4 XML"
+metaTitle: "API 4 XML"
 metaDescription: "API documentation"
 ---
 

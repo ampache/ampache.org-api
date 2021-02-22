@@ -17,6 +17,71 @@ metaDescription: "API documentation"
 Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](/api-acls). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
 
+## Changelog
+
+### Added
+
+* JSON API now available!
+  * Call xml as normal:
+    * [<http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000>]
+  * Call the JSON server:
+    * [<http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000>]
+  * Example XML and JSON responses available [here](https://github.com/ampache/python3-ampache/tree/master/docs)
+* NEW API functions
+  * get_similar: send artist or song id to get related objects from last.fm
+  * shares: get a list of shares you can access
+  * share: get a share by id
+  * share_create: create a share
+  * share_edit: edit an existing share
+  * share_delete: delete an existing share
+  * podcasts: get a list of podcasts you can access
+  * podcast: get a podcast by id
+  * podcast_episodes: get a list of podcast_episodes you can access
+  * podcast_episode: get a podcast_episode by id
+  * podcast_episode_delete: delete an existing podcast_episode
+  * podcast_create: create a podcast
+  * podcast_edit: edit an existing podcast
+  * podcast_delete: delete an existing podcast
+  * update_podcast: sync and download new episodes
+  * licenses: get a list of licenses you can access
+  * license: get a license by id
+  * catalogs: get all the catalogs
+  * catalog: get a catalog by id
+  * catalog_file: clean, add, verify using the file path (good for scripting)
+* Api::advanced_search added parameter 'random' (0|1) to shuffle your searches
+
+### Changed
+
+* Bump API version to 420000 (4.2.0)
+* All calls that return songs now include ```<playlisttrack>``` which can be used to identify track order.
+* ```<playcount>``` added to objects with a playcount.
+* ```<license>``` added to song objects.
+* Don't gather art when adding songs
+* Added actions to catalog_action. 'verify_catalog' 'gather_art'
+* API function "playlist_edit": added ability to edit playlist items
+  * items  = (string) comma-separated song_id's (replace existing items with a new object_id) //optional
+  * tracks = (string) comma-separated playlisttrack numbers matched to items in order //optional
+* Random albums will get songs for all disks if album_group enabled
+
+* Remove spaces from advanced_search rule names. (Backwards compatible with old names)
+  * 'has image' => 'has_image'
+  * 'image height' => 'image_height'
+  * 'image width' => 'image_width'
+  * 'filename' => 'file' (Video search)
+
+### Deprecated
+
+* API Build number is depreciated (the last 3 digits of the api version)
+  * API 5.0.0 will be released with a string version ("5.0.0-release")
+* Tag in songs is depreciated and will be removed in API 5.0.0.
+  * Use genre instead of tag, genre provides an ID as well as the name.
+
+### Fixed
+
+* Extra text in catalog API calls
+* Don't fail the API calls when the database needs updating
+* Filter in "playlist" and "playlist_songs" fixed
+
 ## Sending Handshake Request
 
 Multiple authentication methods are available, described in the next sections.
