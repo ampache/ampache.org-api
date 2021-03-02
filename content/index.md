@@ -15,8 +15,7 @@ pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D).
 All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
 
-
-**Current Stable Release**
+## Current Stable Release
 
 The current stable release is documented under it's own version page.
 Refer to the taged versions if you just want to follow the stable releases.
@@ -24,7 +23,7 @@ Refer to the taged versions if you just want to follow the stable releases.
 * [Ampache 4.3.0-release](https://github.com/ampache/ampache/releases/tag/4.3.0)
 * [API 4 Documentation](http://ampache.org/api/api-4)
 
-**Archived Version Documentation**
+## Archived Version Documentation
 
 After each release, a documentation page will be created to allow pruning old features from the current version.
 Note that API 4.1 docs cover all previous versions.
@@ -79,8 +78,6 @@ All API code that used 'Tag' now references 'Genre' instead
   * 4742 Failed Access Check
 * stats: Removed back compat from older versions. Only 'type' is mandatory
 * Return empty objects when the request was correct but the results were empty
-
-
 
 ## Sending Handshake Request
 
@@ -342,7 +339,6 @@ Some methods have a user access level requirement. Access goes from 0-100 and is
 * 50: Content Manager
 * 75: Catalog Manager
 * 100: Admin
-
 
 ## Request URL Examples
 

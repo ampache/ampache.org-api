@@ -18,7 +18,6 @@ For now, here are a few basic rules that the API should follow:
 * Same thing for doubles
 * null and empty values may be returned. (for example XML will always return an object but it may not have any value)
 
-
 ### Tag is being renamed into Genre
 
 Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable.
@@ -52,4 +51,3 @@ The backward compatible names will be removed in Ampache 5.0.0
 * 'image height' => 'image_height'
 * 'image width' => 'image_width'
 * 'filename' => 'file' (Video search)
-

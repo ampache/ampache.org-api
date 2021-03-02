@@ -27,8 +27,8 @@ Select the type of search based on the type of data you are searching for. (song
 |-------------------|-------------------------|-------------------|:--------------------------------:|
 | anywhere          | Any searchable text     | text              |               song               |
 | title             | Title / Name            | text              | song,album,artist,playlist,label |
-| album             | Album                   | text              |               song               |
-| artist            | Artist                  | text              |            song,album            |
+| album             | Album                   | text              |            song,artist           |
+| artist            | Artist                  | text              |         song,album,artist        |
 | album_artist      | Album Artist            | text              |               song               |
 | composer          | Composer                | text              |               song               |
 | year              | Year                    | numeric           |            song,album            |
@@ -131,6 +131,7 @@ Currently there is not a simple way to identify what metadata types you have sav
 |       15        | is less than                      |
 
 To search a mixed type like metadata you must search using 4 rules.
+
 * Search rule 1 for band containing 'Prodigy', Search Rule 2 for bbm > 120
   * rule name (e.g. rule_1['metadata'], rule_2['metadata'])
   * rule operator (e.g. rule_1_operator[0], rule_2_operator[12])
@@ -150,4 +151,3 @@ To search a mixed type like metadata you must search using 4 rules.
     * random = (integer) 0|1 (random order of results; default to 0)
     * offset = (integer)
     * limit' = (integer)
-

@@ -70,9 +70,10 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
-| Input  | Type   | Description                                                                | Optional |
-|--------|--------|----------------------------------------------------------------------------|----------|
-| 'auth' | string | (Session ID) returns version information and extends the session if passed | YES      |
+| Input     | Type   | Description                                                                | Optional |
+|-----------|--------|----------------------------------------------------------------------------|----------|
+| 'auth'    | string | (Session ID) returns version information and extends the session if passed | YES      |
+| 'version' | string | $version (API Version that the application understands)                    | YES      |
 
 * return
 
@@ -529,11 +530,12 @@ This returns a single album based on the UID provided
 
 This returns the songs of a specified album
 
-| Input    | Type    | Description                                      | Optional |
-|----------|---------|--------------------------------------------------|----------|
-| 'filter' | string  | UID of Album, returns song XML                   | NO       |
-| 'offset' | integer | Return results starting from this index position | YES      |
-| 'limit'  | integer | Maximum number of results to return              | YES      |
+| Input    | Type    | Description                                        | Optional |
+|----------|---------|----------------------------------------------------|----------|
+| 'filter' | string  | UID of Album, returns song XML                     | NO       |
+| 'exact'  | boolean | 0,1 if true don't group songs from different disks | YES      |
+| 'offset' | integer | Return results starting from this index position   | YES      |
+| 'limit'  | integer | Maximum number of results to return                | YES      |
 
 * return
 

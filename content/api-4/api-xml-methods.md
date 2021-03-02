@@ -27,9 +27,10 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
-| Input  | Type   | Description                                    | Optional |
-|--------|--------|------------------------------------------------|---------:|
-| 'auth' | string | (Session ID) destroys the session if it exists |      YES |
+| Input     | Type   | Description                                                                | Optional |
+|-----------|--------|----------------------------------------------------------------------------|----------|
+| 'auth'    | string | (Session ID) returns version information and extends the session if passed | YES      |
+| 'version' | string | $version (API Version that the application understands)                    | YES      |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/ping.xml)
 
@@ -37,13 +38,11 @@ This can be called without being authenticated, it is useful for determining if 
 
 Destroy a session using the auth parameter.
 
-| Input  | Type   | Description                                                                | Optional |
-|--------|--------|----------------------------------------------------------------------------|---------:|
-| 'auth' | string | (Session ID) returns version information and extends the session if passed |       NO |
-
+| Input  | Type   | Description                                    | Optional |
+|--------|--------|------------------------------------------------|----------|
+| 'auth' | string | (Session ID) destroys the session if it exists | NO       |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/goodbye.xml)
-
 
 ## url_to_song
 
@@ -81,11 +80,9 @@ ARTIST
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20\(artist\).xml)
 
-
 ALBUM
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20\(album\).xml)
-
 
 PLAYLIST
 
@@ -109,7 +106,6 @@ Rules must be sent in groups of 3 using an int (starting from 1) to designate wh
 Use operator ('and'|'or') to choose whether to join or separate each rule when searching.
 
 Refer to the [Advanced Search](api-4.3/api-advanced-search) page for details about creating searches.
-
 
     INPUTS
     * ampache_url = (string)
@@ -227,45 +223,6 @@ This returns the songs of a specified album
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/album_songs.xml)
 
-## licenses
-
-* **NEW** in 4.2.0
-
-This returns the licenses based on the specified filter
-
-| Input    | Type    | Description                                                                   | Optional |
-|----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
-| 'offset' | integer | Return results starting from this index position                              |      YES |
-| 'limit'  | integer | Maximum number of results to return                                           |      YES |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/licenses.xml)
-
-## license
-
-* **NEW** in 4.2.0
-
-This returns a single license based on UID
-
-| Input    | Type    | Description                         | Optional |
-|----------|---------|-------------------------------------|---------:|
-| 'filter' | integer | UID of license, returns license XML |       NO |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/license.xml)
-
-## license_songs
-
-* **NEW** in 4.2.0
-
-This returns a list of songs based on the filter ID
-
-| Input    | Type    | Description                      | Optional |
-|----------|---------|----------------------------------|---------:|
-| 'filter' | integer | UID of license, returns song XML |       NO |
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/license_songs.xml)
-
 ## tags
 
 This returns the tags (Genres) based on the specified filter
@@ -367,8 +324,6 @@ This returns playlists based on the specified filter
 | 'offset'      | integer    | Return results starting from this index position                              |      YES |
 | 'limit'       | integer    | Maximum number of results to return                                           |      YES |
 | 'hide_search' | integer    | 0,1, if true do not include searches/smartlists in the result                 |      YES |
-
-
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlists.xml)
 
 ## playlist
@@ -524,8 +479,6 @@ Takes the file id with optional description and expires parameters.
 | 'type'        | string  | object_type                                   |       NO |
 | 'description' | string  | description (will be filled for you if empty) |      YES |
 | 'expires'     | integer | days to keep active                           |      YES |
-
-
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/share_create.xml)
 
 ## share_edit
@@ -801,18 +754,14 @@ Delete an existing user.
 
 * **NEW** in 4.2.0
 
-This returns licenses based on the specified filter
+This returns the licenses based on the specified filter
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean    | if true filter is exact rather then fuzzy                                     |      YES |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|          |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|          |            | Find objects with an 'update' time newer than the specified date              |          |
-| 'offset' | integer    | Return results starting from this index position                              |      YES |
-| 'limit'  | integer    | Maximum number of results to return                                           |      YES |
+| Input    | Type    | Description                                                                   | Optional |
+|----------|---------|-------------------------------------------------------------------------------|---------:|
+| 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
+| 'exact'  | boolean | if true filter is exact rather then fuzzy                                     |      YES |
+| 'offset' | integer | Return results starting from this index position                              |      YES |
+| 'limit'  | integer | Maximum number of results to return                                           |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/licenses.xml)
 
@@ -820,7 +769,7 @@ This returns licenses based on the specified filter
 
 * **NEW** in 4.2.0
 
-This returns a single license
+This returns a single license based on UID
 
 | Input    | Type    | Description                         | Optional |
 |----------|---------|-------------------------------------|---------:|
@@ -832,13 +781,11 @@ This returns a single license
 
 * **NEW** in 4.2.0
 
-This returns the songs for a license
+This returns a list of songs based on the filter ID
 
-| Input    | Type    | Description                                      | Optional |
-|----------|---------|--------------------------------------------------|---------:|
-| 'filter' | integer | UID of license, returns song XML                 |       NO |
-| 'offset' | integer | Return results starting from this index position |      YES |
-| 'limit'  | integer | Maximum number of results to return              |      YES |
+| Input    | Type    | Description                      | Optional |
+|----------|---------|----------------------------------|---------:|
+| 'filter' | integer | UID of license, returns song XML |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/license_songs.xml)
 
@@ -1111,7 +1058,6 @@ Get an art image.
 
 This is for controlling localplay
 
-
 | Input     | Type    | Description                                                  | Optional |
 |-----------|---------|--------------------------------------------------------------|----------|
 | 'command' | string  | 'next', 'prev', 'stop', 'play', 'pause', 'add', 'volume_up', | NO       |
@@ -1286,4 +1232,3 @@ Video XML Document -- Attention UIDs for video elements are non-unique against s
 </video>
 </root>
 ```
-

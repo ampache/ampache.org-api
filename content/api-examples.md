@@ -19,4 +19,3 @@ Each API version has it's own examples.
 * API 4 examples
   * [API 4 JSON Examples](https://github.com/ampache/python3-ampache/tree/api4/docs/json-responses)
   * [API 4 XML Examples](https://github.com/ampache/python3-ampache/tree/api4/docs/xml-responses)
-
