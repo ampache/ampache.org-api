@@ -1056,8 +1056,16 @@ This is for controlling localplay
 |           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
 | 'clear'   | boolean | 0,1 Clear the current playlist before adding                 | YES      |
 
+* return object
+
 ```JSON
-TBC
+"localplay": { "command": {} }
+```
+
+* throws object
+
+```JSON
+"error": ""
 ```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/localplay.json)
@@ -1085,7 +1093,18 @@ This is for controlling democratic play
 | 'method' | string  |             |       NO |
 | 'action' | string  |             |       NO |
 
+* return object|array
+
 ```JSON
-TBC
+"url": ""|"method": "","result": false|"song": []
 ```
 
+* throws object
+
+```JSON
+"error": ""
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/democratic%20\(play\).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/democratic%20\(vote\).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/democratic%20\(playlist\).json)

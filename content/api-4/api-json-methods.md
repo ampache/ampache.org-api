@@ -108,15 +108,15 @@ Use operator ('and'|'or') to choose whether to join or separate each rule when s
 
 Refer to the [Advanced Search](api-4.3/api-advanced-search) page for details about creating searches.
 
-    INPUTS
-    * ampache_url = (string)
-    * ampache_API = (string)
-    * operator = (string) 'and'|'or' (whether to match one rule or all)
-    * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
-    * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
-    * random = (integer) 0|1 (random order of results; default to 0)
-    * offset = (integer)
-    * limit' = (integer)
+* INPUTS
+  * ampache_url = (string)
+  * ampache_API = (string)
+  * operator = (string) 'and'|'or' (whether to match one rule or all)
+  * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
+  * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
+  * random = (integer) 0|1 (random order of results; default to 0)
+  * offset = (integer)
+  * limit' = (integer)
 
 SONG
 
@@ -1056,8 +1056,16 @@ This is for controlling localplay
 |           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
 | 'clear'   | boolean | 0,1 Clear the current playlist before adding                 | YES      |
 
+* return object
+
 ```JSON
-TBC
+"localplay": { "command": {} }
+```
+
+* throws object
+
+```JSON
+"error": ""
 ```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/localplay.json)
@@ -1085,7 +1093,18 @@ This is for controlling democratic play
 | 'method' | string  |             |       NO |
 | 'action' | string  |             |       NO |
 
+* return object|array
+
 ```JSON
-TBC
+"url": ""|"method": "","result": false|"song": []
 ```
 
+* throws object
+
+```JSON
+"error": ""
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/democratic%20\(play\).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/democratic%20\(vote\).json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/democratic%20\(playlist\).json)

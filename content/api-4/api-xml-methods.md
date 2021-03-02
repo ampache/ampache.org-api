@@ -107,15 +107,15 @@ Use operator ('and'|'or') to choose whether to join or separate each rule when s
 
 Refer to the [Advanced Search](api-4.3/api-advanced-search) page for details about creating searches.
 
-    INPUTS
-    * ampache_url = (string)
-    * ampache_API = (string)
-    * operator = (string) 'and'|'or' (whether to match one rule or all)
-    * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
-    * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
-    * random = (integer) 0|1 (random order of results; default to 0)
-    * offset = (integer)
-    * limit' = (integer)
+* INPUTS
+  * ampache_url = (string)
+  * ampache_API = (string)
+  * operator = (string) 'and'|'or' (whether to match one rule or all)
+  * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
+  * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
+  * random = (integer) 0|1 (random order of results; default to 0)
+  * offset = (integer)
+  * limit' = (integer)
 
 SONG
 
