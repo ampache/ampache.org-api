@@ -451,8 +451,8 @@ This searches the shares and returns... shares
 
 Return shares by UID
 
-| Input    | Type    | Description                        | Optional |
-|----------|---------|------------------------------------|---------:|
+| Input    | Type    | Description                            | Optional |
+|----------|---------|----------------------------------------|---------:|
 | 'filter' | integer | UID of Share, returns song JSON     NO |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/share.json)
@@ -825,13 +825,13 @@ This get the latest posted shouts
 
 This rates a library item
 
-| Input    | Type    | Description                                   | Optional |
-|----------|---------|-----------------------------------------------|---------:|
-| 'type'   | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
-|          |         | 'podcast', 'podcast_episode', 'video'         |          |
-|          |         | 'tvshow', 'tvshow_season'                     |          |
-| 'id'     | integer | library item id                               |       NO |
-| 'rating' | integer | rating between 0-5                            |       NO |
+| Input    | Type    | Description                            | Optional |
+|----------|---------|----------------------------------------|---------:|
+| 'type'   | string  | 'song', 'album', 'artist', 'playlist', |       NO |
+|          |         | 'podcast', 'podcast_episode', 'video'  |          |
+|          |         | 'tvshow', 'tvshow_season'              |          |
+| 'id'     | integer | library item id                        |       NO |
+| 'rating' | integer | rating between 0-5                     |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/rate.json)
 
@@ -1036,10 +1036,10 @@ Downloads a given media file. set format=raw to download the full file
 
 Get an art image.
 
-| Input    | Type    | Description                                                | Optional |
-|----------|---------|------------------------------------------------------------|---------:|
-| 'id'     | integer | $object_id                                                 |       NO |
-| 'type'   | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
+| Input  | Type    | Description                                                | Optional |
+|--------|---------|------------------------------------------------------------|---------:|
+| 'id'   | integer | $object_id                                                 |       NO |
+| 'type' | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
 
 ## Control Methods
 

@@ -27,8 +27,8 @@ Select the type of search based on the type of data you are searching for. (song
 |-------------------|-------------------------|-------------------|:--------------------------------:|
 | anywhere          | Any searchable text     | text              |               song               |
 | title             | Title / Name            | text              | song,album,artist,playlist,label |
-| album             | Album                   | text              |            song,artist           |
-| artist            | Artist                  | text              |         song,album,artist        |
+| album             | Album                   | text              |           song,artist            |
+| artist            | Artist                  | text              |        song,album,artist         |
 | album_artist      | Album Artist            | text              |               song               |
 | composer          | Composer                | text              |               song               |
 | year              | Year                    | numeric           |            song,album            |
