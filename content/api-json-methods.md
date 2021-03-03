@@ -436,6 +436,7 @@ This returns the songs of the specified artist
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|----------|
 | 'filter' | string  | UID of Artist, returns Song JSON                 | NO       |
+| 'top50'  | boolean | 0,1, if true filter to the artist top 50         | YES      |
 | 'offset' | integer | Return results starting from this index position | YES      |
 | 'limit'  | integer | Maximum number of results to return              | YES      |
 
