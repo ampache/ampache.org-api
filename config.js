@@ -33,6 +33,7 @@ const config = {
       '/api-examples',
       '/api-acls',
       '/api-4',
+      '/api-changelog',
       '/versions',
     ],
     collapsedNav: [
