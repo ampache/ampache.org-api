@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: '/api/',
-    siteUrl: 'http://ampache.org/api',
+    siteUrl: 'https://ampache.org/api',
     gaTrackingId: null,
     trailingSlash: false,
   },
@@ -39,7 +39,7 @@ const config = {
     collapsedNav: [
       '/versions',
     ],
-    links: [{ text: '', link: '' }, 
+    links: [{ text: '', link: '' },
 	        { text: '', link: '' }],
     frontline: false,
     ignoreIndex: false,

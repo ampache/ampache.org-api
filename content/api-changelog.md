@@ -252,7 +252,7 @@ Bump API version to 400003 (4.0.0 build 003)
 
 ### Added
 
-* user_numeric searches also available in the API. ([<http://ampache.org/api/api-xml-methods>])
+* user_numeric searches also available in the API. ([<https://ampache.org/api/api-xml-methods>])
 
 ### Changed
 
@@ -278,7 +278,7 @@ Bump API version to 400003 (4.0.0 build 003)
 
 ### Added
 
-* Documented the Ampache API [<http://ampache.org/api/api-xml-methods>]
+* Documented the Ampache API [<https://ampache.org/api/api-xml-methods>]
 * Include smartlists in the API playlist calls.
 * Authentication: allow sha256 encrypted apikey for auth
   * You must send an encrypted api key in the following fashion. (Hash key joined with username)
