@@ -53,6 +53,12 @@ All API code that used 'Tag' now references 'Genre' instead
 * Return empty objects when the request was correct but the results were empty
 * Don't transcode podcast_episodes
 
+### API 4.4.1
+
+### Fixed
+
+* API::stats would not offset recent calls
+
 ## API 4.4.0
 
 ### Added
