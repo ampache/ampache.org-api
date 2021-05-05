@@ -4,7 +4,7 @@ metaTitle: "API Changelog"
 metaDescription: "API Changelog"
 ---
 
-## API develop
+### API develop
 
 All API code that used 'Tag' now references 'Genre' instead
 
@@ -52,6 +52,16 @@ All API code that used 'Tag' now references 'Genre' instead
 * stats: Removed back compat from older versions. Only 'type' is mandatory
 * Return empty objects when the request was correct but the results were empty
 * Don't transcode podcast_episodes
+* localplay
+  * added 'track' parameter used by 'skip' commands to go to the playlist track (playlist starts at 1)
+* Plugins: Use only https for building gravatar urls
+
+### API 4.4.2
+
+### Fixed
+
+* API::indexes Artist albums were being added incorrectly for XML
+* Send back the full album name in responses
 
 ### API 4.4.1
 
