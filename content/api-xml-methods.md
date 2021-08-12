@@ -920,6 +920,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 | 'filter' | string | UID of Playlist                                                   | NO       |
 | 'name'   | string | Playlist name                                                     | YES      |
 | 'type'   | string | Playlist type 'public', 'private'                                 | YES      |
+| 'owner'  | string | Change playlist owner to the user id (-1 = System playlist)       | YES      |
 | 'items'  | string | comma-separated song_id's (replaces existing items with a new id) | YES      |
 | 'tracks' | string | comma-separated playlisttrack numbers matched to 'items' in order | YES      |
 
@@ -2140,11 +2141,12 @@ Make sure you remember to urlencode those file names!
 
 **ACCESS REQUIRED:** 50 (Content Manager)
 
-| Input     | Type    | Description                      | Optional |
-|-----------|---------|----------------------------------|----------|
-| 'file'    | string  | FULL path to local file          | NO       |
-| 'task'    | string  | 'add','clean','verify', 'remove' | NO       |
-| 'catalog' | integer | $catalog_id                      | NO       |
+| Input     | Type    | Description                          | Optional |
+|-----------|---------|--------------------------------------|----------|
+| 'file'    | string  | FULL path to local file              | NO       |
+| 'task'    | string  | 'add','clean','verify','remove'      | NO       |
+|           |         | (can include comma-separated values) | NO       |
+| 'catalog' | integer | $catalog_id                          | NO       |
 
 * return
 
@@ -2779,5 +2781,7 @@ This is for controlling democratic play (Songs only)
 ```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/democratic%20\(play\).xml)
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/democratic%20\(vote\).xml)
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/democratic%20\(playlist\).xml)

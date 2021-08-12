@@ -4,7 +4,7 @@ metaTitle: "API 5"
 metaDescription: "API documentation"
 ---
 
-The [Ampache API](https://ampache.org/api/) Provides methods for pulling out it's meta data in the form of
+The Ampache API Provides methods for pulling out it's meta data in the form of
 simple XML (and JSON!) documents. This was originally created for use by [Amarok](https://ampache.org/api/http://amarok.kde.org/),
 but there is no reason it couldn't be used to create other front-ends to the Ampache data.
 
