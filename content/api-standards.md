@@ -22,8 +22,8 @@ For now, here are a few basic rules that the API should follow:
 
 There are 2 date formats used in the API:
 
-* [Unix epoch time](https://www.php.net/manual/en/function.time.php] (e.g. 1629345129) 
-* [ISO 8601 date](https://www.iso.org/iso-8601-date-and-time-format.html] (e.g. 2004-02-12T15:19:21+00:00)
+* [Unix epoch time](https://www.php.net/manual/en/function.time.php) (e.g. 1629345129) 
+* [ISO 8601 date](https://www.iso.org/iso-8601-date-and-time-format.html) (e.g. 2004-02-12T15:19:21+00:00)
 
 The Ampache handshake method returns dates in ISO 8601
 
