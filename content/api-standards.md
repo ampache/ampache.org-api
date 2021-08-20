@@ -18,6 +18,17 @@ For now, here are a few basic rules that the API should follow:
 * Same thing for doubles
 * null and empty values may be returned. (for example XML will always return an object but it may not have any value)
 
+## Rules regarding dates
+
+Podcasts and Podcast Episodes should return ISO 8601 dates (2004-02-12T15:19:21+00:00)
+
+* podcast_episode object "pubdate"
+* podcast object "build_date" and "sync_date"
+
+Ampache dates should be returned as an integer using Unix epoch time
+
+e.g. the string "2021-08-19T03:52:09+00:00" should return as 1629345129
+
 ### Tag is being renamed into Genre
 
 Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable.
