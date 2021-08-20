@@ -20,14 +20,49 @@ For now, here are a few basic rules that the API should follow:
 
 ## Rules regarding dates
 
-Podcasts and Podcast Episodes should return ISO 8601 dates (2004-02-12T15:19:21+00:00)
+There are 2 date formats used in the API:
 
-* podcast_episode object "pubdate"
+* (Unix epoch time)[https://www.php.net/manual/en/function.time.php] (e.g. 1629345129) 
+* (ISO 8601 date)[https://www.iso.org/iso-8601-date-and-time-format.html] (e.g. 2004-02-12T15:19:21+00:00)
+
+The Ampache handshake method returns dates in ISO 8601
+
+```JSON
+{
+    "session_expire": "2021-08-20T12:20:26+10:00",
+    "update": "2021-07-21T12:51:36+10:00",
+    "add": "2021-08-03T10:04:14+10:00",
+    "clean": "2021-08-03T10:05:54+10:00",
+}
+```
+
+Podcasts and Podcast Episodes objects also return ISO dates for the following fields
+
 * podcast object "build_date" and "sync_date"
+* podcast_episode object "pubdate"
 
-Ampache dates should be returned as an integer using Unix epoch time
+```JSON
+{
+    "build_date": "1970-01-01T10:00:00+10:00",
+    "sync_date": "2021-08-20T11:08:30+10:00",
+    "podcast_episode": [
+        {
+            "pubdate": "2021-08-17T23:00:00+10:00",
+        }
+    ]
+}
+```
 
-e.g. the string "2021-08-19T03:52:09+00:00" should return as 1629345129
+All remaining Ampache dates should be returned as an integer using Unix epoch time
+
+```JSON
+{
+    "last_add": "1627949046",
+    "last_clean": "1627949154",
+    "last_update": "1626835896"
+}
+```
+
 
 ### Tag is being renamed into Genre
 
