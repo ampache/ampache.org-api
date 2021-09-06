@@ -6,10 +6,27 @@ metaDescription: "API Changelog"
 
 ### API develop
 
+### Added
+
+* NEW API functions
+  * Api::live_stream (get a radio stream by id)
+  * Api::live_streams
+* stream: added type 'podcast_episode' ('podcast' to be removed in Ampache 6)
+
+### Fixed
+
+* get_indexes: JSON didn't think live_streams was valid (it is)
+
+### API 5.0.0
+
 All API code that used 'Tag' now references 'Genre' instead
+
+This version of the API is the first semantic version. "5.0.0"
 
 ### Added
 
+* Add global playcount to podcast_episode and video responses
+* searches (the number of saved smartlists) added to the handshake/ping response
 * NEW API functions
   * Api::song_delete (Delete files when you are allowed to)
   * Api::user_preferences (Get your user preferences)
@@ -29,9 +46,18 @@ All API code that used 'Tag' now references 'Genre' instead
   * Api::bookmark_edit (Edit a bookmark)
   * Api::bookmark_delete (Delete a bookmark by object id, type, user and client name)
   * Api::localplay_songs (Get the list of songs in your localplay instance)
+  * API::deleted_songs
+  * API::deleted_podcast_episodes
+  * API::deleted_videos
 
 ### Changed
 
+* The API version matches release version '5.0.0'
+* A backcompatible version (500000) is sent when using old api versions
+* handshake and ping counts now return the actual object counts for playlists
+  * 'playlists' => $counts['playlist'],
+  * 'searches' => $counts['search'],
+  * 'playlists_searches' => $counts['playlist'] + $counts['search']
 * Renamed functions:
   * tags => genres
   * tag => genre
@@ -54,7 +80,15 @@ All API code that used 'Tag' now references 'Genre' instead
 * Don't transcode podcast_episodes
 * localplay
   * added 'track' parameter used by 'skip' commands to go to the playlist track (playlist starts at 1)
-* Plugins: Use only https for building gravatar urls
+* system_update: update the database if required as well
+* playlist_edit: added 'owner' as an optional parameter (Change playlist owner to the user id)
+* catalog_file: Allow comma-separate task values. (good for API inotify scripts)
+* podcast_episode object "pubdate" has been changed to ISO 8601 date (2004-02-12T15:19:21+00:00)
+* podcast object "build_date" and "sync_date" have also been changed to ISO 8601 date
+
+### Fixed
+
+* catalog_file: Couldn't add files
 
 ### API 4.4.2
 

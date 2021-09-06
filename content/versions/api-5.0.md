@@ -1,30 +1,15 @@
 ---
-title: "API 5"
-metaTitle: "API 5"
+title: "API 5.0"
+metaTitle: "API 5.0"
 metaDescription: "API documentation"
 ---
 
-The Ampache API Provides methods for pulling out it's meta data in the form of
-simple XML (and JSON!) documents. This was originally created for use by [Amarok](https://ampache.org/api/http://amarok.kde.org/),
-but there is no reason it couldn't be used to create other front-ends to the Ampache data.
+**Compatible Versions:**
 
-Access to the API is controlled by the Internal [Access Control Lists](https://ampache.org/api/api-acls).
-Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results
-pass offset as an additional parameter.
+* 5.0.0-release
 
-If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D).
-All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
-
-## Archived Version Documentation
-
-After each release, a documentation page will be created to allow pruning old features from the current version.
-Note that API 4.1 docs cover all previous versions.
-
-* [API 5.0 Documentation](https://ampache.org/api/versions/api-5.0)
-* [API 4.4 Documentation](https://ampache.org/api/api-4)
-* [API 4.3 Documentation](https://ampache.org/api/versions/api-4.3)
-* [API 4.2 Documentation](https://ampache.org/api/versions/api-4.2)
-* [API 4.1 Documentation](https://ampache.org/api/versions/api-4.1)
+Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](/api-acls). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
+If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
 
 ## Changelog API develop
 
@@ -230,8 +215,6 @@ All Data methods return HTTP 200 responses
 * labels
 * label
 * label_artists
-* live_streams **develop only**
-* live_stream **develop only**
 * user
 * user_create
 * user_update
