@@ -4,18 +4,27 @@ metaTitle: "API Changelog"
 metaDescription: "API Changelog"
 ---
 
-### API develop
+### API-develop
 
 ### Added
 
 * NEW API functions
   * Api::live_stream (get a radio stream by id)
   * Api::live_streams
-* stream: added type 'podcast_episode' ('podcast' to be removed in Ampache 6)
+* Api::stream Added type 'podcast_episode' ('podcast' to be removed in Ampache 6)
+* Add 'time' and 'size' to all podcast_episode responses
+
+### Changed
+
+* live_stream objects added 'catalog' and 'site_url'
+* stats: additional type values: 'video', 'playlist', 'podcast', 'podcast_episode'
 
 ### Fixed
 
 * get_indexes: JSON didn't think live_streams was valid (it is)
+* record_play: user is optional
+* Bad xml tags in deleted functions
+* scrobble: Add song_mbid, artist_mbid, album_mbid (docs have no '_' so support both)
 
 ### API 5.0.0
 

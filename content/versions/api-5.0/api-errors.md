@@ -55,7 +55,7 @@ To separate Ampache from the http codes it's been decided to prefix our codes wi
 
 Error 4700: Access Control not Enabled
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4700.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4700.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -68,7 +68,7 @@ Error 4700: Access Control not Enabled
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4700.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4700.json)
 
 ```JSON
 {
@@ -83,7 +83,7 @@ Error 4700: Access Control not Enabled
 
 Error 4701: Received Invalid Handshake
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4701.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4701.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -96,7 +96,7 @@ Error 4701: Received Invalid Handshake
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4701.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4701.json)
 
 ```JSON
 {
@@ -111,7 +111,7 @@ Error 4701: Received Invalid Handshake
 
 Error 4703: Missing Feature
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4703.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4703.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -124,7 +124,7 @@ Error 4703: Missing Feature
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4703.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4703.json)
 
 ```JSON
 {
@@ -139,7 +139,7 @@ Error 4703: Missing Feature
 
 Error 4704: Not Found
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4704.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4704.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -152,7 +152,7 @@ Error 4704: Not Found
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4704.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4704.json)
 
 ```JSON
 {
@@ -167,7 +167,7 @@ Error 4704: Not Found
 
 Error 4705: Missing Method
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4705.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4705.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -180,7 +180,7 @@ Error 4705: Missing Method
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4705.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4705.json)
 
 ```JSON
 {
@@ -195,7 +195,7 @@ Error 4705: Missing Method
 
 Error 4706: Depreciated Method
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4706.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4706.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -208,7 +208,7 @@ Error 4706: Depreciated Method
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4706.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4706.json)
 
 ```JSON
 {
@@ -223,7 +223,7 @@ Error 4706: Depreciated Method
 
 Error 4710: Bad Request
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4710.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4710.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -236,7 +236,7 @@ Error 4710: Bad Request
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4710.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4710.json)
 
 ```JSON
 {
@@ -251,7 +251,7 @@ Error 4710: Bad Request
 
 Error 4742: Failed Access Check
 
-[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/error-4742.xml)
+[Example XML](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/error-4742.xml)
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -264,7 +264,7 @@ Error 4742: Failed Access Check
 </root>
 ```
 
-[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/error-4742.json)
+[Example JSON](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/error-4742.json)
 
 ```JSON
 {
