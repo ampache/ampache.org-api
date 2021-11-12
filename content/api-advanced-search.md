@@ -62,9 +62,9 @@ Select the type of search based on the type of data you are searching for. (song
 | other_user_artist  | Another User (Artist)   | user_numeric      |               song               |
 | label              | Label                   | text              |               song               |
 | license            | Music License           | boolean_numeric   |               song               |
-| playlist           | Playlist                | boolean_numeric   |               song               |
+| playlist           | Playlist                | boolean_numeric   |            song,album            |
 | smartplaylist      | Smart Playlist          | boolean_subsearch |               song               |
-| playlist_name      | Playlist Name           | text              |               song               |
+| playlist_name      | Playlist Name           | text              |            song,album            |
 | comment            | Comment                 | text              |               song               |
 | lyrics             | Lyrics                  | text              |               song               |
 | file               | Filename                | text              |            song,video            |

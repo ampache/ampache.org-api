@@ -4,7 +4,15 @@ metaTitle: "API Changelog"
 metaDescription: "API Changelog"
 ---
 
-### API-develop
+### API 5.1.1
+
+### Fixed
+
+* Access to podcast_episode_delete
+* stats calls with an offest and limit
+* advanced_search calls with an offset and limit
+
+### API 5.1.0
 
 ### Added
 
