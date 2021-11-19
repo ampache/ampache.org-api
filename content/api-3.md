@@ -1,30 +1,20 @@
 ---
-title: "API 4"
-metaTitle: "API 4"
+title: "API 3"
+metaTitle: "API 3"
 metaDescription: "API documentation"
 ---
 
+**WARNING** This API is old! So this should only really be used to understand old programs.
+
+API3 is XML only and will not be updated to support JSON responses.
+
 **Compatible Versions:**
 
-* 4.2.0-release
-* 4.2.1-release
-* 4.2.2-release
-* 4.2.3-release
-* 4.2.4-release
-* 4.2.5-release
-* 4.2.6-release
-* 4.3.0-release
-* 4.4.0-release
-* 4.4.1-release
-* 4.4.2-release
-* 4.4.3-release
+* develop
+* 5.2.0-develop
 
 Ampache Provides an API for pulling out it's meta data in the form of simple XML documents. This was originally created for use by [Amarok](http://amarok.kde.org/), but there is no reason it couldn't be used to create other front-ends to the Ampache data. Access to the API is controlled by the Internal [Access Control Lists](https://ampache.org/api/api-acls). The KEY defined in the ACL is the passphrase that must be used to establish an API session. Currently all requests are limited to a maximum of 5000 results for performance reasons. To get additional results pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues?state=closed). All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
-
-## Changelog
-
-Take a look at the [API Changelog](https://ampache.org/api/api-changelog) to keep an eye on changes between versions
 
 ## Sending Handshake Request
 
@@ -119,25 +109,6 @@ For XML
 </root>
 ```
 
-For JSON
-
-```JSON
-{
-    "auth": "%AUTHENTICATION TOKEN%",
-    "api": "%APIVERSION%",
-    "session_expire": "2020-01-28T13:59:24+10:00",
-    "update": "2020-01-24T19:29:35+10:00",
-    "add": "2020-01-28T04:49:18+10:00",
-    "clean": "2020-01-28T04:47:28+10:00",
-    "songs": "274209",
-    "albums": "26275",
-    "artists": "11275",
-    "playlists": 31,
-    "videos": "0",
-    "catalogs": "4"
-}
-```
-
 All future interactions with the Ampache API must include the `AUTHENTICATION_TOKEN` as a `GET` variable named `auth`.
 
 ## Methods
@@ -148,21 +119,16 @@ You can also pass it `limit=none` to overcome the `limit` limitation and return 
 
 For more in depth information regarding the different api servers you can view the following documentation pages.
 
-* [XML Documentation (api4)](https://ampache.org/api/api-4/api-xml-methods)
-* [JSON Documentation (api4)](https://ampache.org/api/api-4/api-json-methods)
+* [XML Documentation (api4)](https://ampache.org/api/api-3/api-xml-methods)
 
 ### Non-Data Methods
 
 * handshake
 * ping
-* goodbye
 * url_to_song
-* check_parameter
-* message
 
 ### Data Methods
 
-* get_indexes
 * artists
 * artist
 * artist_songs
@@ -183,56 +149,20 @@ For more in depth information regarding the different api servers you can view t
 * playlist
 * playlist_songs
 * playlist_create
-* playlist_edit
 * playlist_delete
 * playlist_add_song
 * playlist_remove_song
-* playlist_generate
 * search_songs
 * videos
 * video
-* shares
-* share
-* share_create
-* share_edit
-* share_delete
-* get_similar
-* podcasts
-* podcast
-* podcast_create
-* podcast_edit
-* podcast_delete
-* podcast_episodes
-* podcast_episode
-* podcast_episode_delete
-* catalogs
-* catalog
-* catalog_file
-* licenses
-* license
-* license_songs
 * user
-* user_create
-* user_update
-* user_delete
-* stream
-* download
-* get_art
 * rate
-* flag
-* record_play
-* scrobble
 * followers
 * following
 * toggle_follow
 * last_shouts
 * timeline
 * friends_timeline
-* catalog_action
-* update_from_tags
-* update_artist_info
-* update_art
-* update_podcast
 
 ### Control Methods
 
@@ -251,12 +181,6 @@ XML
 http://localhost/ampache/server/xml.server.php?action=tags&auth=1234567890123456789012345678901&filter=Rock
 ```
 
-JSON
-
-```JSON
-http://localhost/ampache/server/json.server.php?action=tags&auth=1234567890123456789012345678901&filter=Rock
-```
-
 ### Requesting all song titles, with an offset of 5000
 
 XML
@@ -265,8 +189,3 @@ XML
 http://localhost/ampache/server/xml.server.php?action=songs&auth=12345678901234567890123456789012&offset=5000
 ```
 
-JSON
-
-```JSON
-http://localhost/ampache/server/json.server.php?action=songs&auth=12345678901234567890123456789012&offset=5000
-```

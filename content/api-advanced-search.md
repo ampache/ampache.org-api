@@ -1,6 +1,6 @@
 ---
-title: "API 5 advanced_search"
-metaTitle: "API 5 advanced_search"
+title: "API advanced_search"
+metaTitle: "API advanced_search"
 metaDescription: "API documentation"
 ---
 
@@ -160,3 +160,14 @@ To search a mixed type like metadata you must search using 4 rules.
 | random   | boolean | 0, 1 (random order of results; default to 0)  |      YES |
 | offset   | integer |                                               |      YES |
 | limit'   | integer |                                               |      YES |
+
+### Example URLs
+
+Here are some example calls that might help you get an idea of the URL required to create an advanced search.
+
+Artist `https://music.com.au/server/xml.server.php?action=advanced_search&auth=eeb9f1b6056246a7d563f479f518bb34&operator=or&type=artist&offset=0&limit=4&random=0&rule_1=favorite&rule_1_operator=0&rule_1_input=%25&rule_2=artist&rule_2_operator=2&rule_2_input=Car`
+
+Album `https://music.com.au/server/xml.server.php?action=advanced_search&auth=eeb9f1b6056246a7d563f479f518bb34&operator=or&type=album&offset=0&limit=4&random=0&rule_1=favorite&rule_1_operator=0&rule_1_input=%25&rule_2=artist&rule_2_operator=0&rule_2_input=Men`
+
+Song `https://music.com.au/server/xml.server.php?action=advanced_search&auth=eeb9f1b6056246a7d563f479f518bb34&operator=or&type=song&offset=0&limit=4&random=0&rule_1=favorite&rule_1_operator=0&rule_1_input=%25&rule_2=title&rule_2_operator=2&rule_2_input=Dance`
+
