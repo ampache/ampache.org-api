@@ -1,8 +1,14 @@
 ---
-title: "API Changelog"
-metaTitle: "API Changelog"
+title: "Changelog"
+metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
+
+### API 5.2.0
+
+### Added
+
+* Support responding in API3 and API4 formats
 
 ### API 5.1.1
 

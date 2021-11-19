@@ -1,6 +1,6 @@
 ---
-title: "API Examples"
-metaTitle: "API Examples"
+title: "Examples"
+metaTitle: "Examples"
 metaDescription: "API documentation"
 ---
 
@@ -19,3 +19,7 @@ Each API version has it's own examples.
 * API 4 examples
   * [API 4 JSON Examples](https://github.com/ampache/python3-ampache/tree/api4/docs/json-responses)
   * [API 4 XML Examples](https://github.com/ampache/python3-ampache/tree/api4/docs/xml-responses)
+
+* API 3 examples
+  * [API 3 XML Examples](https://github.com/ampache/python3-ampache/tree/api3/docs/xml-responses)
+  
