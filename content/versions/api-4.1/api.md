@@ -43,7 +43,7 @@ The key that must be passed to Ampache is the API Key generated for a specific u
 http://localhost/ampache/server/xml.server.php?action=handshake&auth=API_KEY&version=350001
 ```
 
-In API 400001 the key that must be passed to Ampache is `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
+If you are using Ampache 4.0.0 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
 
 ```PHP
 $user = 'username';

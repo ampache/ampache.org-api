@@ -50,7 +50,7 @@ The key that must be passed to Ampache is the API Key generated for a specific u
 http://localhost/ampache/server/xml.server.php?action=handshake&auth=API_KEY&version=350001
 ```
 
-In API 400001 the key that must be passed to Ampache is `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
+If you are using Ampache 4.0.0 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
 
 ```PHP
 $user = 'username';
@@ -119,7 +119,7 @@ You can also pass it `limit=none` to overcome the `limit` limitation and return 
 
 For more in depth information regarding the different api servers you can view the following documentation pages.
 
-* [XML Documentation (api4)](https://ampache.org/api/api-3/api-xml-methods)
+* [XML Documentation (api3)](https://ampache.org/api/api-3/api-xml-methods)
 
 ### Non-Data Methods
 
@@ -188,4 +188,3 @@ XML
 ```XML
 http://localhost/ampache/server/xml.server.php?action=songs&auth=12345678901234567890123456789012&offset=5000
 ```
-
