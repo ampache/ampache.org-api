@@ -5,14 +5,17 @@ metaDescription: "API documentation"
 ---
 
 Advanced search is the API method to access the search rules used in the WEB UI.
+
 It can be confusing to process how the rules are generated so this has been split into it's own page.
 
 ## Using advanced_search
 
 Perform an advanced search given passed rules. This works in a similar way to the web/UI search pages.
+
 You can pass multiple rules as well as joins to create in depth search results
 
 Rules must be sent in groups of 3 using an int (starting from 1) to designate which rules are combined.
+
 Use operator ('and', 'or') to choose whether to join or separate each rule when searching.
 
 * Rule arrays must contain the following:
@@ -114,7 +117,9 @@ Send the correct input based on the type of search.
 | boolean      |
 
 **NOTE** To search metadata you need to add a 4th rule "rule_*_subtype"
+
 Operators for metadata are using the text/tag types **AND** numeric types in a single list as they can be ints/strings/dates.
+
 Currently there is not a simple way to identify what metadata types you have saved. New methods will be created for this.
 
 ### Metadata operator table

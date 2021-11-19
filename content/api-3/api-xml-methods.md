@@ -183,6 +183,8 @@ This returns the songs of a specified album
 
 This returns the tags (Genres) based on the specified filter
 
+**NOTE** For API3 forward compatability, this function is also called with `genres`
+
 | Input    | Type    | Description                                                                   | Optional |
 |----------|---------|-------------------------------------------------------------------------------|---------:|
 | 'filter' | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
@@ -196,6 +198,8 @@ This returns the tags (Genres) based on the specified filter
 
 This returns a single tag based on UID
 
+**NOTE** For API3 forward compatability, this function is also called with `genre`
+
 | Input    | Type    | Description                 | Optional |
 |----------|---------|-----------------------------|---------:|
 | 'filter' | integer | UID of tag, returns tag XML |       NO |
@@ -205,6 +209,8 @@ This returns a single tag based on UID
 ## tag_artists
 
 This returns the artists associated with the tag in question as defined by the UID
+
+**NOTE** For API3 forward compatability, this function is also called with `genre_artists`
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
@@ -218,6 +224,8 @@ This returns the artists associated with the tag in question as defined by the U
 
 This returns the albums associated with the tag in question
 
+**NOTE** For API3 forward compatability, this function is also called with `genre_albums`
+
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
 | 'filter' | integer | UID of tag, returns album XML                    |       NO |
@@ -229,6 +237,8 @@ This returns the albums associated with the tag in question
 ## tag_songs
 
 returns the songs for this tag
+
+**NOTE** For API3 forward compatability, this function is also called with `genre_songs`
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
@@ -273,13 +283,8 @@ This returns playlists based on the specified filter
 |---------------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter'      | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
 | 'exact'       | boolean    | if true filter is exact rather then fuzzy                                     |      YES |
-| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|               |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|               |            | Find objects with an 'update' time newer than the specified date              |          |
 | 'offset'      | integer    | Return results starting from this index position                              |      YES |
 | 'limit'       | integer    | Maximum number of results to return                                           |      YES |
-| 'hide_search' | integer    | 0,1, if true do not include searches/smartlists in the result                 |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlists.xml)
 
@@ -330,24 +335,23 @@ This deletes a playlist
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 
-| Input    | Type    | Description                                               | Optional |
-|----------|---------|-----------------------------------------------------------|---------:|
-| 'filter' | integer | UID of Playlist                                           |       NO |
-| 'song'   | integer | UID of song to add to playlist                            |       NO |
-| 'check'  | boolean | 0, 1 Whether to check and ignore duplicates (default = 0) |      YES |
+| Input    | Type    | Description                    | Optional |
+|----------|---------|--------------------------------|---------:|
+| 'filter' | integer | UID of Playlist                |       NO |
+| 'song'   | integer | UID of song to add to playlist |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_add_song.xml)
 
 ## playlist_remove_song
 
 This remove a song from a playlist.
-Previous versions required 'track' instead of 'song'.
+
+**NOTE** In API3 this function don't not allow `song` parameters
 
 | Input    | Type    | Description                          | Optional |
 |----------|---------|--------------------------------------|---------:|
 | 'filter' | string  | UID of Playlist                      |       NO |
-| 'song'   | integer | UID of song to remove from playlist  |      YES |
-| 'track'  | integer | Track number to remove from playlist |      YES |
+| 'track'  | integer | Track number to remove from playlist |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_remove_song.xml)
 
@@ -389,17 +393,15 @@ This returns a single video
 ## stats
 
 Get some items based on some simple search types and filters.
-This method has partial backwards compatibility with older api versions but should be updated to follow the current input values.
-(Changed in 400001 `filter` added)
 
-| Input      | Type    | Description                                                                 | Optional |
-|------------|---------|-----------------------------------------------------------------------------|---------:|
-| 'type'     | string  | 'song', 'album', 'artist'                                                   |       NO |
-| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', 'forgotten', 'flagged', 'random' |       NO |
-| 'user_id'  | integer |                                                                             |      YES |
-| 'username' | string  |                                                                             |      YES |
-| 'offset'   | integer | Return results starting from this index position                            |      YES |
-| 'limit'    | integer | Maximum number of results to return                                         |      YES |
+**NOTE** In API3 this function only returns albums
+
+| Input      | Type    | Description                                                      | Optional |
+|------------|---------|------------------------------------------------------------------|---------:|
+| 'type'     | string  | 'newest', 'highest', 'frequent', 'recent', 'forgotten', 'random' |       NO |
+| 'username' | string  | Used for recent searches.                                        |      YES |
+| 'offset'   | integer | Return results starting from this index position                 |      YES |
+| 'limit'    | integer | Maximum number of results to return                              |      YES |
 
 SONG
 
@@ -507,14 +509,9 @@ This get current user friends timeline
 
 This is for controlling localplay
 
-| Input     | Type    | Description                                                  | Optional |
-|-----------|---------|--------------------------------------------------------------|----------|
-| 'command' | string  | 'next', 'prev', 'stop', 'play', 'pause', 'add', 'volume_up', | NO       |
-|           |         | 'volume_down', 'volume_mute', 'delete_all', 'skip', 'status' |          |
-| 'oid'     | integer | object_id                                                    | YES      |
-| 'type'    | string  | 'Song', 'Video', 'Podcast_Episode', 'Channel',               | YES      |
-|           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
-| 'clear'   | boolean | 0,1 Clear the current playlist before adding                 | YES      |
+| Input     | Type    | Description                    | Optional |
+|-----------|---------|--------------------------------|----------|
+| 'command' | string  | 'next', 'prev', 'stop', 'play' | NO       |
 
 * return
 
@@ -538,17 +535,15 @@ This is for controlling democratic play
   * method
     * vote
       * oid (Unique ID of the element you want to vote on)
-      * type (Type of object, only song is currently accepted so this is optional)
     * devote
       * oid (Unique ID of the element you want to vote on)
-      * type (Type of object, only song is currently accepted so this is optional)
     * playlist (Returns an array of song items with an additional \<vote>[VOTE COUNT]\</vote> element)
     * play (Returns the URL for playing democratic play)
 
-| Input    | Type    | Description | Optional |
-|----------|---------|-------------|---------:|
-| 'oid'    | integer |             |       NO |
-| 'action' | string  |             |       NO |
+| Input    | Type    | Description                  | Optional |
+|----------|---------|------------------------------|---------:|
+| 'oid'    | integer | UID of Song object           | NO       |
+| 'method' | string  | vote, devote, playlist, play | NO       |
 
 ```XML
 TBC
