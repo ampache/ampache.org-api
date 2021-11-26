@@ -4,11 +4,21 @@ metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
 
-### API 5.2.0
+## API 5.2.0
+
+**note** JSON didn't exist for API3 so all json requests from API3 calls will revert to API5
 
 ### Added
 
-* Support responding in API3 and API4 formats
+* Support for API3, API4 and API5 responses including PHP8 support (keeps original tag calls)
+* API3
+  * Add genre calls as an alias to tag functions to match API4 and API5
+
+### Fixed
+
+* Session and user id identification and errors from that
+* API3
+  * democratic: This method was broken in API3 and never worked correctly
 
 ### API 5.1.1
 
