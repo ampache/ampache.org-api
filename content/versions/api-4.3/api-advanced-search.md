@@ -33,8 +33,8 @@ Select the type of search based on the type of data you are searching for. (song
 | composer          | Composer                | text              |               song               |
 | year              | Year                    | numeric           |            song,album            |
 | original_year     | Original Year           | numeric           |              album               |
-| yearformed        | Year                    | numeric           |              artist              |
-| placeformed       | Place                   | text              |              artist              |
+| yearformed        | Year Formed             | numeric           |              artist              |
+| placeformed       | Place Formed            | text              |              artist              |
 | release_type      | Release Type            | text              |              album               |
 | myrating          | My Rating               | numeric           |        song,album,artist         |
 | rating            | Rating (Average)        | numeric           |        song,album,artist         |
