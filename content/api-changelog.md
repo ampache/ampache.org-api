@@ -4,6 +4,27 @@ metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
 
+## API 5.2.1
+
+### Changed
+
+* API5
+  * Return the xml total_count of playlists based on hide_search preference
+
+### Fixed
+
+* API4
+  * update_from_tags: type case error
+  * rate: Object type to class mapping
+  * flag: Object type to class mapping
+  * update_art: Object type to class mapping and type case check
+  * update_from_tags: Object type to class mapping
+  * genre and tag function compatibility
+* API3
+  * stats: incorrect getRandom call
+  * rate: Object type to class mapping
+  * playlist: bad escaping on the playlist id
+
 ## API 5.2.0
 
 Check out the docs for multi API support at [ampache.org](https://ampache.org/api/)
@@ -15,9 +36,9 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 * Support for API3, API4 and API5 responses including PHP8 support (keeps original tag calls)
 * API5
   * playlists: sql for searches wasn't filtering
-  * playlists: add parameter 'show_all' if true ignore 'api_hide_dupe_searches' setting
+  * playlists: add parameter 'show_dupes' if true ignore 'api_hide_dupe_searches' setting
 * API4
-  * playlists: add parameter 'show_all' if true ignore 'api_hide_dupe_searches' setting
+  * playlists: add parameter 'show_dupes' if true ignore 'api_hide_dupe_searches' setting
 * API3
   * Added genre calls as an alias to tag functions to match API4 and API5
 
