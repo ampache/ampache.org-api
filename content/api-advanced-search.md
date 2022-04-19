@@ -51,6 +51,7 @@ Select the type of search based on the type of data you are searching for. (song
 | album                    | Album Title               | text              |            song,artist           |
 | artist                   | Artist                    | text              |         song,album,artist        |
 | album_artist             | Album Artist              | text              |               song               |
+| song_artist              | Song Artist               | text              |              album               |
 | composer                 | Composer                  | text              |               song               |
 | year                     | Year                      | numeric           |            song,album            |
 | original_year            | Original Year             | numeric           |              album               |
@@ -60,7 +61,8 @@ Select the type of search based on the type of data you are searching for. (song
 | release_status           | Release Status            | text              |              album               |
 | myrating                 | My Rating                 | numeric           |        song,album,artist         |
 | rating                   | Rating (Average)          | numeric           |        song,album,artist         |
-| albumrating              | My Rating (Album)         | numeric           |               song               |
+| songrating               | My Rating (Song)          | numeric           |           album,artist           |
+| albumrating              | My Rating (Album)         | numeric           |            song,artist           |
 | artistrating             | My Rating (Artist)        | numeric           |            song,album            |
 | favorite                 | Favorites                 | text              |        song,album,artist         |
 | favorite_album           | Favorites (Album)         | text              |               song               |
@@ -99,7 +101,7 @@ Select the type of search based on the type of data you are searching for. (song
 | added                    | Added                     | date              |               song               |
 | updated                  | Updated                   | date              |               song               |
 | recent_played            | Recently Played           | numeric_limit     |        song,album,artist         |
-| recent_added             | Recently Added            | numeric_limit     |               song               |
+| recent_added             | Recently Added            | numeric_limit     |            song,album            |
 | recent_updated           | Recently Updated          | numeric_limit     |               song               |
 | catalog                  | Catalog                   | boolean_numeric   |        song,album,artist         |
 | mbid                     | MusicBrainz ID            | text              |        song,album,artist         |

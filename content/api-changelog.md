@@ -4,6 +4,22 @@ metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
 
+## API 5.3.0
+
+### Added
+
+* advanced_search:
+  * Add `songrating` to album search (My Rating (Song))
+  * Add `songrating` (My Rating (Song)) and `albumrating` (My Rating (Album)) to artist search
+  * Allow empty/null searches for all mbid searches
+  * Allow empty/null searches for label searches
+  * Add `song_count` to album and artist search
+  * Add `album_count` to artist search
+  * Add `myplayedartist` (Played by Me (Artist)) to album search
+  * Add `song_artist` to album search
+  * Add alias `album_artist` to album search for `artist` searches
+  * Add `recent_added` to album search
+
 ## API 5.2.1
 
 ### Changed
