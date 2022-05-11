@@ -4,6 +4,23 @@ metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
 
+## API 5.3.3
+
+### Added
+
+* advanced_search
+  * Add `song_title` to album search
+  * Add `album_title` and `song_title` to artist search
+  * Add `orphaned_album` to song search
+
+## API 5.3.2
+
+**NO CHANGE**
+
+## API 5.3.1
+
+**NO CHANGE**
+
 ## API 5.3.0
 
 ### Added
