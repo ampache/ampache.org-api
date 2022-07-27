@@ -4,6 +4,23 @@ metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
 
+## API  5.4.1
+
+### Added
+
+* Include `lyrics` in Song objects
+* advanced_search
+  * Add `file` to album and artist search
+  * Add `track` to song search
+  * Add `summary` to artist search
+
+## API 5.4.0
+
+### Added
+
+* advanced_search
+  * Add `file` to album and artist search
+
 ## API 5.3.3
 
 ### Added
