@@ -1,21 +1,18 @@
 # Updating ampache.org-api
 
-Site generated from wiki files using:
-
-* [Gatsby](https://www.gatsbyjs.org/)
-* [gatsby-gitbook-starter](https://github.com/hasura/gatsby-gitbook-starter)
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Requirements
 
 * npm/node
-* Gatsby ```sudo npm install -g gatsby-cli```
 
 ## How to
 
 * Clone this repo
 * Run ```npm install``` / ```npm update```
-* Make changes to content/, etc.
-* Build ```npm run-script build```
-* Copy the /public folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
-  * ```cp -rfv ./public/* ../ampache.github.io/api/```
+* Make changes to the files in the /docs/ folder
+* Build ```npm run build```
+* Copy the /build folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
+  * ```cp -rfv ./build/* ../ampache.github.io/api/```
 * Commit to this repo and ampache.github.io after changes
+
