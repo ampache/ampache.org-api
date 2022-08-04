@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-errors",
+  "id": "api-errors",
+  "title": "API 5 Errors",
+  "description": "Ampache's API errors are loosely based around the HTTP status codes. All errors are returned in the form of an XML/JSON Document however the string error message provided is translated into the language of the Ampache server in question. All services should only use the code value.",
+  "source": "@site/docs/api-errors.md",
+  "sourceDirName": ".",
+  "slug": "/api-errors",
+  "permalink": "/api/api-errors",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 5 Errors",
+    "metaTitle": "API 5 Errors",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 5 JSON Methods",
+    "permalink": "/api/api-json-methods"
+  },
+  "next": {
+    "title": "advanced_search",
+    "permalink": "/api/api-advanced-search"
+  }
+}

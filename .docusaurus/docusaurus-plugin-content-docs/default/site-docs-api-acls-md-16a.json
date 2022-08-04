@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-acls",
+  "id": "api-acls",
+  "title": "Access Control Lists",
+  "description": "Ampache supports internal Access Control Lists, these are IP/DNS based restrictions on different actions and interactions with Ampache. By Default Access Controls lists are turned off in Ampache. In order to turn them on you must modify the /config/ampache.cfg.php and set access_control to true",
+  "source": "@site/docs/api-acls.md",
+  "sourceDirName": ".",
+  "slug": "/api-acls",
+  "permalink": "/api/api-acls",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Access Control Lists",
+    "metaTitle": "Access Control Lists",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/api/api-examples"
+  },
+  "next": {
+    "title": "Changelog",
+    "permalink": "/api/api-changelog"
+  }
+}

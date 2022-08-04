@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/versions",
+  "id": "versions/versions",
+  "title": "Past Releases",
+  "description": "Archived API versions",
+  "source": "@site/docs/versions/versions.md",
+  "sourceDirName": "versions",
+  "slug": "/versions/",
+  "permalink": "/api/versions/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Past Releases",
+    "metaTitle": "Past Releases",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 3 XML",
+    "permalink": "/api/api-3/api-xml-methods"
+  },
+  "next": {
+    "title": "API 4.1",
+    "permalink": "/api/versions/api-4.1/"
+  }
+}

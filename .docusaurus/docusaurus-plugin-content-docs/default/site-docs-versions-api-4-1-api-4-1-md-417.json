@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-4.1/api-4.1",
+  "id": "versions/api-4.1/api-4.1",
+  "title": "API 4.1",
+  "description": "Compatible Versions: >= 350001",
+  "source": "@site/docs/versions/api-4.1/api-4.1.md",
+  "sourceDirName": "versions/api-4.1",
+  "slug": "/versions/api-4.1/",
+  "permalink": "/api/versions/api-4.1/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 4.1",
+    "metaTitle": "API 4.1",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Past Releases",
+    "permalink": "/api/versions/"
+  },
+  "next": {
+    "title": "XML 4.1",
+    "permalink": "/api/versions/api-4.1/xml-methods"
+  }
+}

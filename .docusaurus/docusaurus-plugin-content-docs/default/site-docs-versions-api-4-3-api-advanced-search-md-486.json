@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-4.3/api-advanced-search",
+  "id": "versions/api-4.3/api-advanced-search",
+  "title": "advanced_search 4.3",
+  "description": "Advanced search is the API method to access the search rules used in the WEB UI. It can be confusing to process how the rules are generated so this has been split into it's own page.",
+  "source": "@site/docs/versions/api-4.3/api-advanced-search.md",
+  "sourceDirName": "versions/api-4.3",
+  "slug": "/versions/api-4.3/api-advanced-search",
+  "permalink": "/api/versions/api-4.3/api-advanced-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "advanced_search 4.3",
+    "metaTitle": "advanced_search 4.3",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 4.3",
+    "permalink": "/api/versions/api-4.3/"
+  },
+  "next": {
+    "title": "Errors 4.3",
+    "permalink": "/api/versions/api-4.3/api-errors"
+  }
+}

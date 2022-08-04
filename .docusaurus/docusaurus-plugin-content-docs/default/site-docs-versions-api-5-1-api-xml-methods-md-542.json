@@ -1,0 +1,23 @@
+{
+  "unversionedId": "versions/api-5.1/api-xml-methods",
+  "id": "versions/api-5.1/api-xml-methods",
+  "title": "API 5.1 XML Methods",
+  "description": "Let's go through come calls and examples that you can do for each XML method.",
+  "source": "@site/docs/versions/api-5.1/api-xml-methods.md",
+  "sourceDirName": "versions/api-5.1",
+  "slug": "/versions/api-5.1/api-xml-methods",
+  "permalink": "/api/versions/api-5.1/api-xml-methods",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 5.1 XML Methods",
+    "metaTitle": "API 5.1 XML Methods",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 5.1 Standards",
+    "permalink": "/api/versions/api-5.1/api-standards"
+  }
+}

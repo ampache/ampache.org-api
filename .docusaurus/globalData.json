@@ -1,0 +1,233 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/api/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/api/",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "api-3/api-3",
+              "path": "/api/api-3/",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-3/api-errors",
+              "path": "/api/api-3/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-3/api-xml-methods",
+              "path": "/api/api-3/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-4/api-4",
+              "path": "/api/api-4/",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-4/api-errors",
+              "path": "/api/api-4/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-4/api-json-methods",
+              "path": "/api/api-4/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-4/api-xml-methods",
+              "path": "/api/api-4/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-acls",
+              "path": "/api/api-acls",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-advanced-search",
+              "path": "/api/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-changelog",
+              "path": "/api/api-changelog",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-errors",
+              "path": "/api/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-examples",
+              "path": "/api/api-examples",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-json-methods",
+              "path": "/api/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-standards",
+              "path": "/api/api-standards",
+              "sidebar": "api"
+            },
+            {
+              "id": "api-xml-methods",
+              "path": "/api/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "index",
+              "path": "/api/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.1/api-4.1",
+              "path": "/api/versions/api-4.1/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.1/xml-methods",
+              "path": "/api/versions/api-4.1/xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.2/api-4.2",
+              "path": "/api/versions/api-4.2/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.2/api-advanced-search",
+              "path": "/api/versions/api-4.2/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.2/api-errors",
+              "path": "/api/versions/api-4.2/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.2/api-json-methods",
+              "path": "/api/versions/api-4.2/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.2/api-xml-methods",
+              "path": "/api/versions/api-4.2/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.3/api-4.3",
+              "path": "/api/versions/api-4.3/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.3/api-advanced-search",
+              "path": "/api/versions/api-4.3/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.3/api-errors",
+              "path": "/api/versions/api-4.3/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.3/api-json-methods",
+              "path": "/api/versions/api-4.3/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-4.3/api-xml-methods",
+              "path": "/api/versions/api-4.3/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.0/api-5.0",
+              "path": "/api/versions/api-5.0/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.0/api-advanced-search",
+              "path": "/api/versions/api-5.0/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.0/api-errors",
+              "path": "/api/versions/api-5.0/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.0/api-json-methods",
+              "path": "/api/versions/api-5.0/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.0/api-standards",
+              "path": "/api/versions/api-5.0/api-standards",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.0/api-xml-methods",
+              "path": "/api/versions/api-5.0/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.1/api-5.1",
+              "path": "/api/versions/api-5.1/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.1/api-advanced-search",
+              "path": "/api/versions/api-5.1/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.1/api-errors",
+              "path": "/api/versions/api-5.1/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.1/api-json-methods",
+              "path": "/api/versions/api-5.1/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.1/api-standards",
+              "path": "/api/versions/api-5.1/api-standards",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.1/api-xml-methods",
+              "path": "/api/versions/api-5.1/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/versions",
+              "path": "/api/versions/",
+              "sidebar": "api"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "api": {
+              "link": {
+                "path": "/api/",
+                "label": "index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

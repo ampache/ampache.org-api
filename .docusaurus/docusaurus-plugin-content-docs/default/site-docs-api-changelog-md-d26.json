@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-changelog",
+  "id": "api-changelog",
+  "title": "Changelog",
+  "description": "API  5.4.1",
+  "source": "@site/docs/api-changelog.md",
+  "sourceDirName": ".",
+  "slug": "/api-changelog",
+  "permalink": "/api/api-changelog",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Changelog",
+    "metaTitle": "Changelog",
+    "metaDescription": "API Changelog"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Access Control Lists",
+    "permalink": "/api/api-acls"
+  },
+  "next": {
+    "title": "API 4",
+    "permalink": "/api/api-4/"
+  }
+}

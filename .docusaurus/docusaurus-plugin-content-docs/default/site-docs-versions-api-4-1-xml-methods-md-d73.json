@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-4.1/xml-methods",
+  "id": "versions/api-4.1/xml-methods",
+  "title": "XML 4.1",
+  "description": "Lets go through come calls and examples that you can do for each XML method.",
+  "source": "@site/docs/versions/api-4.1/xml-methods.md",
+  "sourceDirName": "versions/api-4.1",
+  "slug": "/versions/api-4.1/xml-methods",
+  "permalink": "/api/versions/api-4.1/xml-methods",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "XML 4.1",
+    "metaTitle": "XML 4.1",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 4.1",
+    "permalink": "/api/versions/api-4.1/"
+  },
+  "next": {
+    "title": "API 4.2",
+    "permalink": "/api/versions/api-4.2/"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-3/api-errors",
+  "id": "api-3/api-errors",
+  "title": "API 3 Errors",
+  "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+  "source": "@site/docs/api-3/api-errors.md",
+  "sourceDirName": "api-3",
+  "slug": "/api-3/api-errors",
+  "permalink": "/api/api-3/api-errors",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 3 Errors",
+    "metaTitle": "API 3 Errors",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 3",
+    "permalink": "/api/api-3/"
+  },
+  "next": {
+    "title": "API 3 XML",
+    "permalink": "/api/api-3/api-xml-methods"
+  }
+}

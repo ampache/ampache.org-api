@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-4.3/api-4.3",
+  "id": "versions/api-4.3/api-4.3",
+  "title": "API 4.3",
+  "description": "Compatible Versions:",
+  "source": "@site/docs/versions/api-4.3/api-4.3.md",
+  "sourceDirName": "versions/api-4.3",
+  "slug": "/versions/api-4.3/",
+  "permalink": "/api/versions/api-4.3/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 4.3",
+    "metaTitle": "API 4.3",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "XML 4.2",
+    "permalink": "/api/versions/api-4.2/api-xml-methods"
+  },
+  "next": {
+    "title": "advanced_search 4.3",
+    "permalink": "/api/versions/api-4.3/api-advanced-search"
+  }
+}

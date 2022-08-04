@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-5.0/api-5.0",
+  "id": "versions/api-5.0/api-5.0",
+  "title": "API 5.0",
+  "description": "Compatible Versions:",
+  "source": "@site/docs/versions/api-5.0/api-5.0.md",
+  "sourceDirName": "versions/api-5.0",
+  "slug": "/versions/api-5.0/",
+  "permalink": "/api/versions/api-5.0/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 5.0",
+    "metaTitle": "API 5.0",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "XML 4.3",
+    "permalink": "/api/versions/api-4.3/api-xml-methods"
+  },
+  "next": {
+    "title": "API 5.0 advanced_search",
+    "permalink": "/api/versions/api-5.0/api-advanced-search"
+  }
+}

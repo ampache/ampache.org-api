@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-examples",
+  "id": "api-examples",
+  "title": "Examples",
+  "description": "Example Responses",
+  "source": "@site/docs/api-examples.md",
+  "sourceDirName": ".",
+  "slug": "/api-examples",
+  "permalink": "/api/api-examples",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Examples",
+    "metaTitle": "Examples",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "advanced_search",
+    "permalink": "/api/api-advanced-search"
+  },
+  "next": {
+    "title": "Access Control Lists",
+    "permalink": "/api/api-acls"
+  }
+}

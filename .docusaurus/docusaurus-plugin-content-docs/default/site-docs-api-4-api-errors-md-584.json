@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-4/api-errors",
+  "id": "api-4/api-errors",
+  "title": "API 4 Errors",
+  "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+  "source": "@site/docs/api-4/api-errors.md",
+  "sourceDirName": "api-4",
+  "slug": "/api-4/api-errors",
+  "permalink": "/api/api-4/api-errors",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 4 Errors",
+    "metaTitle": "API 4 Errors",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 4",
+    "permalink": "/api/api-4/"
+  },
+  "next": {
+    "title": "API 4 JSON",
+    "permalink": "/api/api-4/api-json-methods"
+  }
+}

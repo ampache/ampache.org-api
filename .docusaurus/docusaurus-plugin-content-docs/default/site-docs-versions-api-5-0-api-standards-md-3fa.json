@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-5.0/api-standards",
+  "id": "versions/api-5.0/api-standards",
+  "title": "API 5.0 Standards",
+  "description": "Here are some basic standards that all Ampache API's should follow.",
+  "source": "@site/docs/versions/api-5.0/api-standards.md",
+  "sourceDirName": "versions/api-5.0",
+  "slug": "/versions/api-5.0/api-standards",
+  "permalink": "/api/versions/api-5.0/api-standards",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API 5.0 Standards",
+    "metaTitle": "API 5.0 Standards",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API 5.0 JSON Methods",
+    "permalink": "/api/versions/api-5.0/api-json-methods"
+  },
+  "next": {
+    "title": "API 5.0 XML Methods",
+    "permalink": "/api/versions/api-5.0/api-xml-methods"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-4.3/api-errors",
+  "id": "versions/api-4.3/api-errors",
+  "title": "Errors 4.3",
+  "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+  "source": "@site/docs/versions/api-4.3/api-errors.md",
+  "sourceDirName": "versions/api-4.3",
+  "slug": "/versions/api-4.3/api-errors",
+  "permalink": "/api/versions/api-4.3/api-errors",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Errors 4.3",
+    "metaTitle": "Errors 4.3",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "advanced_search 4.3",
+    "permalink": "/api/versions/api-4.3/api-advanced-search"
+  },
+  "next": {
+    "title": "JSON 4.3",
+    "permalink": "/api/versions/api-4.3/api-json-methods"
+  }
+}

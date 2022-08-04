@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-4.2/api-xml-methods",
+  "id": "versions/api-4.2/api-xml-methods",
+  "title": "XML 4.2",
+  "description": "Lets go through come calls and examples that you can do for each XML method.",
+  "source": "@site/docs/versions/api-4.2/api-xml-methods.md",
+  "sourceDirName": "versions/api-4.2",
+  "slug": "/versions/api-4.2/api-xml-methods",
+  "permalink": "/api/versions/api-4.2/api-xml-methods",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "XML 4.2",
+    "metaTitle": "XML 4.2",
+    "metaDescription": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "JSON 4.2",
+    "permalink": "/api/versions/api-4.2/api-json-methods"
+  },
+  "next": {
+    "title": "API 4.3",
+    "permalink": "/api/versions/api-4.3/"
+  }
+}
