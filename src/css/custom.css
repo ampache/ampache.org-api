@@ -38,7 +38,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Make the navbar menu light so you can see it */
+.footer {
+  background-color: #0b333f;
+}
+
 .navbar__toggle {
-  color: #fff;
+  color: #fff; /* Make the navbar menu light so you can see it */
 }

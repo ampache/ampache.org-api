@@ -1,0 +1,1363 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "className": "docs-version-current",
+          "path": "/api/",
+          "tagsPath": "/api/tags",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/user/AMPACHE/www/ampache.org-api/sidebars.js",
+          "contentPath": "/home/user/AMPACHE/www/ampache.org-api/docs",
+          "contentPathLocalized": "/home/user/AMPACHE/www/ampache.org-api/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "api-3/api-3",
+              "id": "api-3/api-3",
+              "title": "API 3",
+              "description": "WARNING This API is old! So this should only really be used to understand old programs.",
+              "source": "@site/docs/api-3/api-3.md",
+              "sourceDirName": "api-3",
+              "slug": "/api-3/",
+              "permalink": "/api/api-3/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 3",
+                "metaTitle": "API 3",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4 XML",
+                "permalink": "/api/api-4/api-xml-methods"
+              },
+              "next": {
+                "title": "API 3 Errors",
+                "permalink": "/api/api-3/api-errors"
+              }
+            },
+            {
+              "unversionedId": "api-3/api-errors",
+              "id": "api-3/api-errors",
+              "title": "API 3 Errors",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+              "source": "@site/docs/api-3/api-errors.md",
+              "sourceDirName": "api-3",
+              "slug": "/api-3/api-errors",
+              "permalink": "/api/api-3/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 3 Errors",
+                "metaTitle": "API 3 Errors",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 3",
+                "permalink": "/api/api-3/"
+              },
+              "next": {
+                "title": "API 3 XML",
+                "permalink": "/api/api-3/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "api-3/api-xml-methods",
+              "id": "api-3/api-xml-methods",
+              "title": "API 3 XML",
+              "description": "Lets go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/api-3/api-xml-methods.md",
+              "sourceDirName": "api-3",
+              "slug": "/api-3/api-xml-methods",
+              "permalink": "/api/api-3/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 3 XML",
+                "metaTitle": "API 3 XML",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 3 Errors",
+                "permalink": "/api/api-3/api-errors"
+              },
+              "next": {
+                "title": "Past Releases",
+                "permalink": "/api/versions/"
+              }
+            },
+            {
+              "unversionedId": "api-4/api-4",
+              "id": "api-4/api-4",
+              "title": "API 4",
+              "description": "Compatible Versions:",
+              "source": "@site/docs/api-4/api-4.md",
+              "sourceDirName": "api-4",
+              "slug": "/api-4/",
+              "permalink": "/api/api-4/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4",
+                "metaTitle": "API 4",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Changelog",
+                "permalink": "/api/api-changelog"
+              },
+              "next": {
+                "title": "API 4 Errors",
+                "permalink": "/api/api-4/api-errors"
+              }
+            },
+            {
+              "unversionedId": "api-4/api-errors",
+              "id": "api-4/api-errors",
+              "title": "API 4 Errors",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+              "source": "@site/docs/api-4/api-errors.md",
+              "sourceDirName": "api-4",
+              "slug": "/api-4/api-errors",
+              "permalink": "/api/api-4/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4 Errors",
+                "metaTitle": "API 4 Errors",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4",
+                "permalink": "/api/api-4/"
+              },
+              "next": {
+                "title": "API 4 JSON",
+                "permalink": "/api/api-4/api-json-methods"
+              }
+            },
+            {
+              "unversionedId": "api-4/api-json-methods",
+              "id": "api-4/api-json-methods",
+              "title": "API 4 JSON",
+              "description": "Lets go through come calls and examples that you can do for each JSON method.",
+              "source": "@site/docs/api-4/api-json-methods.md",
+              "sourceDirName": "api-4",
+              "slug": "/api-4/api-json-methods",
+              "permalink": "/api/api-4/api-json-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4 JSON",
+                "metaTitle": "API 4 JSON",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4 Errors",
+                "permalink": "/api/api-4/api-errors"
+              },
+              "next": {
+                "title": "API 4 XML",
+                "permalink": "/api/api-4/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "api-4/api-xml-methods",
+              "id": "api-4/api-xml-methods",
+              "title": "API 4 XML",
+              "description": "Lets go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/api-4/api-xml-methods.md",
+              "sourceDirName": "api-4",
+              "slug": "/api-4/api-xml-methods",
+              "permalink": "/api/api-4/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4 XML",
+                "metaTitle": "API 4 XML",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4 JSON",
+                "permalink": "/api/api-4/api-json-methods"
+              },
+              "next": {
+                "title": "API 3",
+                "permalink": "/api/api-3/"
+              }
+            },
+            {
+              "unversionedId": "api-acls",
+              "id": "api-acls",
+              "title": "Access Control Lists",
+              "description": "Ampache supports internal Access Control Lists, these are IP/DNS based restrictions on different actions and interactions with Ampache. By Default Access Controls lists are turned off in Ampache. In order to turn them on you must modify the /config/ampache.cfg.php and set access_control to true",
+              "source": "@site/docs/api-acls.md",
+              "sourceDirName": ".",
+              "slug": "/api-acls",
+              "permalink": "/api/api-acls",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Access Control Lists",
+                "metaTitle": "Access Control Lists",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Examples",
+                "permalink": "/api/api-examples"
+              },
+              "next": {
+                "title": "Changelog",
+                "permalink": "/api/api-changelog"
+              }
+            },
+            {
+              "unversionedId": "api-advanced-search",
+              "id": "api-advanced-search",
+              "title": "advanced_search",
+              "description": "Advanced search is the API method to access the search rules used in the WEB UI.",
+              "source": "@site/docs/api-advanced-search.md",
+              "sourceDirName": ".",
+              "slug": "/api-advanced-search",
+              "permalink": "/api/api-advanced-search",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "advanced_search",
+                "metaTitle": "advanced_search",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5 Errors",
+                "permalink": "/api/api-errors"
+              },
+              "next": {
+                "title": "Examples",
+                "permalink": "/api/api-examples"
+              }
+            },
+            {
+              "unversionedId": "api-changelog",
+              "id": "api-changelog",
+              "title": "Changelog",
+              "description": "API  5.4.1",
+              "source": "@site/docs/api-changelog.md",
+              "sourceDirName": ".",
+              "slug": "/api-changelog",
+              "permalink": "/api/api-changelog",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Changelog",
+                "metaTitle": "Changelog",
+                "metaDescription": "API Changelog"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Access Control Lists",
+                "permalink": "/api/api-acls"
+              },
+              "next": {
+                "title": "API 4",
+                "permalink": "/api/api-4/"
+              }
+            },
+            {
+              "unversionedId": "api-errors",
+              "id": "api-errors",
+              "title": "API 5 Errors",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes. All errors are returned in the form of an XML/JSON Document however the string error message provided is translated into the language of the Ampache server in question. All services should only use the code value.",
+              "source": "@site/docs/api-errors.md",
+              "sourceDirName": ".",
+              "slug": "/api-errors",
+              "permalink": "/api/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5 Errors",
+                "metaTitle": "API 5 Errors",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5 JSON Methods",
+                "permalink": "/api/api-json-methods"
+              },
+              "next": {
+                "title": "advanced_search",
+                "permalink": "/api/api-advanced-search"
+              }
+            },
+            {
+              "unversionedId": "api-examples",
+              "id": "api-examples",
+              "title": "Examples",
+              "description": "Example Responses",
+              "source": "@site/docs/api-examples.md",
+              "sourceDirName": ".",
+              "slug": "/api-examples",
+              "permalink": "/api/api-examples",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Examples",
+                "metaTitle": "Examples",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "advanced_search",
+                "permalink": "/api/api-advanced-search"
+              },
+              "next": {
+                "title": "Access Control Lists",
+                "permalink": "/api/api-acls"
+              }
+            },
+            {
+              "unversionedId": "api-json-methods",
+              "id": "api-json-methods",
+              "title": "API 5 JSON Methods",
+              "description": "Let's go through come calls and examples that you can do for each JSON method.",
+              "source": "@site/docs/api-json-methods.md",
+              "sourceDirName": ".",
+              "slug": "/api-json-methods",
+              "permalink": "/api/api-json-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5 JSON Methods",
+                "metaTitle": "API 5 JSON Methods",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5 XML Methods",
+                "permalink": "/api/api-xml-methods"
+              },
+              "next": {
+                "title": "API 5 Errors",
+                "permalink": "/api/api-errors"
+              }
+            },
+            {
+              "unversionedId": "api-standards",
+              "id": "api-standards",
+              "title": "API 5 Standards",
+              "description": "Here are some basic standards that all Ampache API's should follow.",
+              "source": "@site/docs/api-standards.md",
+              "sourceDirName": ".",
+              "slug": "/api-standards",
+              "permalink": "/api/api-standards",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5 Standards",
+                "metaTitle": "API 5 Standards",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Ampache API",
+                "permalink": "/api/"
+              },
+              "next": {
+                "title": "API 5 XML Methods",
+                "permalink": "/api/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "api-xml-methods",
+              "id": "api-xml-methods",
+              "title": "API 5 XML Methods",
+              "description": "Let's go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/api-xml-methods.md",
+              "sourceDirName": ".",
+              "slug": "/api-xml-methods",
+              "permalink": "/api/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5 XML Methods",
+                "metaTitle": "API 5 XML Methods",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5 Standards",
+                "permalink": "/api/api-standards"
+              },
+              "next": {
+                "title": "API 5 JSON Methods",
+                "permalink": "/api/api-json-methods"
+              }
+            },
+            {
+              "unversionedId": "index",
+              "id": "index",
+              "title": "Ampache API",
+              "description": "The Ampache API Provides methods for pulling out it's meta data in the form of",
+              "source": "@site/docs/index.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/api/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Ampache API",
+                "metaTitle": "Ampache API",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "next": {
+                "title": "API 5 Standards",
+                "permalink": "/api/api-standards"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.1/api-4.1",
+              "id": "versions/api-4.1/api-4.1",
+              "title": "API 4.1",
+              "description": "Compatible Versions: >= 350001",
+              "source": "@site/docs/versions/api-4.1/api-4.1.md",
+              "sourceDirName": "versions/api-4.1",
+              "slug": "/versions/api-4.1/",
+              "permalink": "/api/versions/api-4.1/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4.1",
+                "metaTitle": "API 4.1",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Past Releases",
+                "permalink": "/api/versions/"
+              },
+              "next": {
+                "title": "XML 4.1",
+                "permalink": "/api/versions/api-4.1/xml-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.1/xml-methods",
+              "id": "versions/api-4.1/xml-methods",
+              "title": "XML 4.1",
+              "description": "Lets go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/versions/api-4.1/xml-methods.md",
+              "sourceDirName": "versions/api-4.1",
+              "slug": "/versions/api-4.1/xml-methods",
+              "permalink": "/api/versions/api-4.1/xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "XML 4.1",
+                "metaTitle": "XML 4.1",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4.1",
+                "permalink": "/api/versions/api-4.1/"
+              },
+              "next": {
+                "title": "API 4.2",
+                "permalink": "/api/versions/api-4.2/"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.2/api-4.2",
+              "id": "versions/api-4.2/api-4.2",
+              "title": "API 4.2",
+              "description": "Compatible Versions:",
+              "source": "@site/docs/versions/api-4.2/api-4.2.md",
+              "sourceDirName": "versions/api-4.2",
+              "slug": "/versions/api-4.2/",
+              "permalink": "/api/versions/api-4.2/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4.2",
+                "metaTitle": "API 4.2",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "XML 4.1",
+                "permalink": "/api/versions/api-4.1/xml-methods"
+              },
+              "next": {
+                "title": "advanced_search 4.2",
+                "permalink": "/api/versions/api-4.2/api-advanced-search"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.2/api-advanced-search",
+              "id": "versions/api-4.2/api-advanced-search",
+              "title": "advanced_search 4.2",
+              "description": "Advanced search is the API method to access the search rules used in the WEB UI.",
+              "source": "@site/docs/versions/api-4.2/api-advanced-search.md",
+              "sourceDirName": "versions/api-4.2",
+              "slug": "/versions/api-4.2/api-advanced-search",
+              "permalink": "/api/versions/api-4.2/api-advanced-search",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "advanced_search 4.2",
+                "metaTitle": "advanced_search 4.2",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4.2",
+                "permalink": "/api/versions/api-4.2/"
+              },
+              "next": {
+                "title": "Errors 4.2",
+                "permalink": "/api/versions/api-4.2/api-errors"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.2/api-errors",
+              "id": "versions/api-4.2/api-errors",
+              "title": "Errors 4.2",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+              "source": "@site/docs/versions/api-4.2/api-errors.md",
+              "sourceDirName": "versions/api-4.2",
+              "slug": "/versions/api-4.2/api-errors",
+              "permalink": "/api/versions/api-4.2/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Errors 4.2",
+                "metaTitle": "Errors 4.2",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "advanced_search 4.2",
+                "permalink": "/api/versions/api-4.2/api-advanced-search"
+              },
+              "next": {
+                "title": "JSON 4.2",
+                "permalink": "/api/versions/api-4.2/api-json-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.2/api-json-methods",
+              "id": "versions/api-4.2/api-json-methods",
+              "title": "JSON 4.2",
+              "description": "Lets go through come calls and examples that you can do for each JSON method.",
+              "source": "@site/docs/versions/api-4.2/api-json-methods.md",
+              "sourceDirName": "versions/api-4.2",
+              "slug": "/versions/api-4.2/api-json-methods",
+              "permalink": "/api/versions/api-4.2/api-json-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "JSON 4.2",
+                "metaTitle": "JSON 4.2",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Errors 4.2",
+                "permalink": "/api/versions/api-4.2/api-errors"
+              },
+              "next": {
+                "title": "XML 4.2",
+                "permalink": "/api/versions/api-4.2/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.2/api-xml-methods",
+              "id": "versions/api-4.2/api-xml-methods",
+              "title": "XML 4.2",
+              "description": "Lets go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/versions/api-4.2/api-xml-methods.md",
+              "sourceDirName": "versions/api-4.2",
+              "slug": "/versions/api-4.2/api-xml-methods",
+              "permalink": "/api/versions/api-4.2/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "XML 4.2",
+                "metaTitle": "XML 4.2",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "JSON 4.2",
+                "permalink": "/api/versions/api-4.2/api-json-methods"
+              },
+              "next": {
+                "title": "API 4.3",
+                "permalink": "/api/versions/api-4.3/"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.3/api-4.3",
+              "id": "versions/api-4.3/api-4.3",
+              "title": "API 4.3",
+              "description": "Compatible Versions:",
+              "source": "@site/docs/versions/api-4.3/api-4.3.md",
+              "sourceDirName": "versions/api-4.3",
+              "slug": "/versions/api-4.3/",
+              "permalink": "/api/versions/api-4.3/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 4.3",
+                "metaTitle": "API 4.3",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "XML 4.2",
+                "permalink": "/api/versions/api-4.2/api-xml-methods"
+              },
+              "next": {
+                "title": "advanced_search 4.3",
+                "permalink": "/api/versions/api-4.3/api-advanced-search"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.3/api-advanced-search",
+              "id": "versions/api-4.3/api-advanced-search",
+              "title": "advanced_search 4.3",
+              "description": "Advanced search is the API method to access the search rules used in the WEB UI. It can be confusing to process how the rules are generated so this has been split into it's own page.",
+              "source": "@site/docs/versions/api-4.3/api-advanced-search.md",
+              "sourceDirName": "versions/api-4.3",
+              "slug": "/versions/api-4.3/api-advanced-search",
+              "permalink": "/api/versions/api-4.3/api-advanced-search",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "advanced_search 4.3",
+                "metaTitle": "advanced_search 4.3",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 4.3",
+                "permalink": "/api/versions/api-4.3/"
+              },
+              "next": {
+                "title": "Errors 4.3",
+                "permalink": "/api/versions/api-4.3/api-errors"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.3/api-errors",
+              "id": "versions/api-4.3/api-errors",
+              "title": "Errors 4.3",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+              "source": "@site/docs/versions/api-4.3/api-errors.md",
+              "sourceDirName": "versions/api-4.3",
+              "slug": "/versions/api-4.3/api-errors",
+              "permalink": "/api/versions/api-4.3/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Errors 4.3",
+                "metaTitle": "Errors 4.3",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "advanced_search 4.3",
+                "permalink": "/api/versions/api-4.3/api-advanced-search"
+              },
+              "next": {
+                "title": "JSON 4.3",
+                "permalink": "/api/versions/api-4.3/api-json-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.3/api-json-methods",
+              "id": "versions/api-4.3/api-json-methods",
+              "title": "JSON 4.3",
+              "description": "Lets go through come calls and examples that you can do for each JSON method.",
+              "source": "@site/docs/versions/api-4.3/api-json-methods.md",
+              "sourceDirName": "versions/api-4.3",
+              "slug": "/versions/api-4.3/api-json-methods",
+              "permalink": "/api/versions/api-4.3/api-json-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "JSON 4.3",
+                "metaTitle": "JSON 4.3",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "Errors 4.3",
+                "permalink": "/api/versions/api-4.3/api-errors"
+              },
+              "next": {
+                "title": "XML 4.3",
+                "permalink": "/api/versions/api-4.3/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-4.3/api-xml-methods",
+              "id": "versions/api-4.3/api-xml-methods",
+              "title": "XML 4.3",
+              "description": "Lets go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/versions/api-4.3/api-xml-methods.md",
+              "sourceDirName": "versions/api-4.3",
+              "slug": "/versions/api-4.3/api-xml-methods",
+              "permalink": "/api/versions/api-4.3/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "XML 4.3",
+                "metaTitle": "XML 4.3",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "JSON 4.3",
+                "permalink": "/api/versions/api-4.3/api-json-methods"
+              },
+              "next": {
+                "title": "API 5.0",
+                "permalink": "/api/versions/api-5.0/"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.0/api-5.0",
+              "id": "versions/api-5.0/api-5.0",
+              "title": "API 5.0",
+              "description": "Compatible Versions:",
+              "source": "@site/docs/versions/api-5.0/api-5.0.md",
+              "sourceDirName": "versions/api-5.0",
+              "slug": "/versions/api-5.0/",
+              "permalink": "/api/versions/api-5.0/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.0",
+                "metaTitle": "API 5.0",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "XML 4.3",
+                "permalink": "/api/versions/api-4.3/api-xml-methods"
+              },
+              "next": {
+                "title": "API 5.0 advanced_search",
+                "permalink": "/api/versions/api-5.0/api-advanced-search"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.0/api-advanced-search",
+              "id": "versions/api-5.0/api-advanced-search",
+              "title": "API 5.0 advanced_search",
+              "description": "Advanced search is the API method to access the search rules used in the WEB UI.",
+              "source": "@site/docs/versions/api-5.0/api-advanced-search.md",
+              "sourceDirName": "versions/api-5.0",
+              "slug": "/versions/api-5.0/api-advanced-search",
+              "permalink": "/api/versions/api-5.0/api-advanced-search",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.0 advanced_search",
+                "metaTitle": "API 5.0 advanced_search",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.0",
+                "permalink": "/api/versions/api-5.0/"
+              },
+              "next": {
+                "title": "API 5.0 Errors",
+                "permalink": "/api/versions/api-5.0/api-errors"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.0/api-errors",
+              "id": "versions/api-5.0/api-errors",
+              "title": "API 5.0 Errors",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes. All errors are returned in the form of an XML/JSON Document however the string error message provided is translated into the language of the Ampache server in question. All services should only use the code value.",
+              "source": "@site/docs/versions/api-5.0/api-errors.md",
+              "sourceDirName": "versions/api-5.0",
+              "slug": "/versions/api-5.0/api-errors",
+              "permalink": "/api/versions/api-5.0/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.0 Errors",
+                "metaTitle": "API 5.0 Errors",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.0 advanced_search",
+                "permalink": "/api/versions/api-5.0/api-advanced-search"
+              },
+              "next": {
+                "title": "API 5.0 JSON Methods",
+                "permalink": "/api/versions/api-5.0/api-json-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.0/api-json-methods",
+              "id": "versions/api-5.0/api-json-methods",
+              "title": "API 5.0 JSON Methods",
+              "description": "Let's go through come calls and examples that you can do for each JSON method.",
+              "source": "@site/docs/versions/api-5.0/api-json-methods.md",
+              "sourceDirName": "versions/api-5.0",
+              "slug": "/versions/api-5.0/api-json-methods",
+              "permalink": "/api/versions/api-5.0/api-json-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.0 JSON Methods",
+                "metaTitle": "API 5.0 JSON Methods",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.0 Errors",
+                "permalink": "/api/versions/api-5.0/api-errors"
+              },
+              "next": {
+                "title": "API 5.0 Standards",
+                "permalink": "/api/versions/api-5.0/api-standards"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.0/api-standards",
+              "id": "versions/api-5.0/api-standards",
+              "title": "API 5.0 Standards",
+              "description": "Here are some basic standards that all Ampache API's should follow.",
+              "source": "@site/docs/versions/api-5.0/api-standards.md",
+              "sourceDirName": "versions/api-5.0",
+              "slug": "/versions/api-5.0/api-standards",
+              "permalink": "/api/versions/api-5.0/api-standards",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.0 Standards",
+                "metaTitle": "API 5.0 Standards",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.0 JSON Methods",
+                "permalink": "/api/versions/api-5.0/api-json-methods"
+              },
+              "next": {
+                "title": "API 5.0 XML Methods",
+                "permalink": "/api/versions/api-5.0/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.0/api-xml-methods",
+              "id": "versions/api-5.0/api-xml-methods",
+              "title": "API 5.0 XML Methods",
+              "description": "Let's go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/versions/api-5.0/api-xml-methods.md",
+              "sourceDirName": "versions/api-5.0",
+              "slug": "/versions/api-5.0/api-xml-methods",
+              "permalink": "/api/versions/api-5.0/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.0 XML Methods",
+                "metaTitle": "API 5.0 XML Methods",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.0 Standards",
+                "permalink": "/api/versions/api-5.0/api-standards"
+              },
+              "next": {
+                "title": "API 5.1",
+                "permalink": "/api/versions/api-5.1/"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.1/api-5.1",
+              "id": "versions/api-5.1/api-5.1",
+              "title": "API 5.1",
+              "description": "Compatible Versions:",
+              "source": "@site/docs/versions/api-5.1/api-5.1.md",
+              "sourceDirName": "versions/api-5.1",
+              "slug": "/versions/api-5.1/",
+              "permalink": "/api/versions/api-5.1/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.1",
+                "metaTitle": "API 5.1",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.0 XML Methods",
+                "permalink": "/api/versions/api-5.0/api-xml-methods"
+              },
+              "next": {
+                "title": "API 5.1 advanced_search",
+                "permalink": "/api/versions/api-5.1/api-advanced-search"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.1/api-advanced-search",
+              "id": "versions/api-5.1/api-advanced-search",
+              "title": "API 5.1 advanced_search",
+              "description": "Advanced search is the API method to access the search rules used in the WEB UI.",
+              "source": "@site/docs/versions/api-5.1/api-advanced-search.md",
+              "sourceDirName": "versions/api-5.1",
+              "slug": "/versions/api-5.1/api-advanced-search",
+              "permalink": "/api/versions/api-5.1/api-advanced-search",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.1 advanced_search",
+                "metaTitle": "API 5.1 advanced_search",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.1",
+                "permalink": "/api/versions/api-5.1/"
+              },
+              "next": {
+                "title": "API 5.1 Errors",
+                "permalink": "/api/versions/api-5.1/api-errors"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.1/api-errors",
+              "id": "versions/api-5.1/api-errors",
+              "title": "API 5.1 Errors",
+              "description": "Ampache's API errors are loosely based around the HTTP status codes. All errors are returned in the form of an XML/JSON Document however the string error message provided is translated into the language of the Ampache server in question. All services should only use the code value.",
+              "source": "@site/docs/versions/api-5.1/api-errors.md",
+              "sourceDirName": "versions/api-5.1",
+              "slug": "/versions/api-5.1/api-errors",
+              "permalink": "/api/versions/api-5.1/api-errors",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.1 Errors",
+                "metaTitle": "API 5.1 Errors",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.1 advanced_search",
+                "permalink": "/api/versions/api-5.1/api-advanced-search"
+              },
+              "next": {
+                "title": "API 5.1 JSON Methods",
+                "permalink": "/api/versions/api-5.1/api-json-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.1/api-json-methods",
+              "id": "versions/api-5.1/api-json-methods",
+              "title": "API 5.1 JSON Methods",
+              "description": "Let's go through come calls and examples that you can do for each JSON method.",
+              "source": "@site/docs/versions/api-5.1/api-json-methods.md",
+              "sourceDirName": "versions/api-5.1",
+              "slug": "/versions/api-5.1/api-json-methods",
+              "permalink": "/api/versions/api-5.1/api-json-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.1 JSON Methods",
+                "metaTitle": "API 5.1 JSON Methods",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.1 Errors",
+                "permalink": "/api/versions/api-5.1/api-errors"
+              },
+              "next": {
+                "title": "API 5.1 Standards",
+                "permalink": "/api/versions/api-5.1/api-standards"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.1/api-standards",
+              "id": "versions/api-5.1/api-standards",
+              "title": "API 5.1 Standards",
+              "description": "Here are some basic standards that all Ampache API's should follow.",
+              "source": "@site/docs/versions/api-5.1/api-standards.md",
+              "sourceDirName": "versions/api-5.1",
+              "slug": "/versions/api-5.1/api-standards",
+              "permalink": "/api/versions/api-5.1/api-standards",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.1 Standards",
+                "metaTitle": "API 5.1 Standards",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.1 JSON Methods",
+                "permalink": "/api/versions/api-5.1/api-json-methods"
+              },
+              "next": {
+                "title": "API 5.1 XML Methods",
+                "permalink": "/api/versions/api-5.1/api-xml-methods"
+              }
+            },
+            {
+              "unversionedId": "versions/api-5.1/api-xml-methods",
+              "id": "versions/api-5.1/api-xml-methods",
+              "title": "API 5.1 XML Methods",
+              "description": "Let's go through come calls and examples that you can do for each XML method.",
+              "source": "@site/docs/versions/api-5.1/api-xml-methods.md",
+              "sourceDirName": "versions/api-5.1",
+              "slug": "/versions/api-5.1/api-xml-methods",
+              "permalink": "/api/versions/api-5.1/api-xml-methods",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "API 5.1 XML Methods",
+                "metaTitle": "API 5.1 XML Methods",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 5.1 Standards",
+                "permalink": "/api/versions/api-5.1/api-standards"
+              }
+            },
+            {
+              "unversionedId": "versions/versions",
+              "id": "versions/versions",
+              "title": "Past Releases",
+              "description": "Archived API versions",
+              "source": "@site/docs/versions/versions.md",
+              "sourceDirName": "versions",
+              "slug": "/versions/",
+              "permalink": "/api/versions/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Past Releases",
+                "metaTitle": "Past Releases",
+                "metaDescription": "API documentation"
+              },
+              "sidebar": "api",
+              "previous": {
+                "title": "API 3 XML",
+                "permalink": "/api/api-3/api-xml-methods"
+              },
+              "next": {
+                "title": "API 4.1",
+                "permalink": "/api/versions/api-4.1/"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "api": [
+              {
+                "type": "doc",
+                "id": "index"
+              },
+              {
+                "type": "doc",
+                "id": "api-standards"
+              },
+              {
+                "type": "doc",
+                "id": "api-xml-methods"
+              },
+              {
+                "type": "doc",
+                "id": "api-json-methods"
+              },
+              {
+                "type": "doc",
+                "id": "api-errors"
+              },
+              {
+                "type": "doc",
+                "id": "api-advanced-search"
+              },
+              {
+                "type": "doc",
+                "id": "api-examples"
+              },
+              {
+                "type": "doc",
+                "id": "api-acls"
+              },
+              {
+                "type": "doc",
+                "id": "api-changelog"
+              },
+              {
+                "type": "category",
+                "label": "API 4",
+                "link": {
+                  "type": "doc",
+                  "id": "api-4/api-4"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "api-4/api-errors"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api-4/api-json-methods"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api-4/api-xml-methods"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "API 3",
+                "link": {
+                  "type": "doc",
+                  "id": "api-3/api-3"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "api-3/api-errors"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api-3/api-xml-methods"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Past Releases",
+                "link": {
+                  "type": "doc",
+                  "id": "versions/versions"
+                },
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "API 4.1",
+                    "link": {
+                      "type": "doc",
+                      "id": "versions/api-4.1/api-4.1"
+                    },
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.1/xml-methods"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  },
+                  {
+                    "type": "category",
+                    "label": "API 4.2",
+                    "link": {
+                      "type": "doc",
+                      "id": "versions/api-4.2/api-4.2"
+                    },
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.2/api-advanced-search"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.2/api-errors"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.2/api-json-methods"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.2/api-xml-methods"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  },
+                  {
+                    "type": "category",
+                    "label": "API 4.3",
+                    "link": {
+                      "type": "doc",
+                      "id": "versions/api-4.3/api-4.3"
+                    },
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.3/api-advanced-search"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.3/api-errors"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.3/api-json-methods"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-4.3/api-xml-methods"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  },
+                  {
+                    "type": "category",
+                    "label": "API 5.0",
+                    "link": {
+                      "type": "doc",
+                      "id": "versions/api-5.0/api-5.0"
+                    },
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.0/api-advanced-search"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.0/api-errors"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.0/api-json-methods"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.0/api-standards"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.0/api-xml-methods"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  },
+                  {
+                    "type": "category",
+                    "label": "API 5.1",
+                    "link": {
+                      "type": "doc",
+                      "id": "versions/api-5.1/api-5.1"
+                    },
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.1/api-advanced-search"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.1/api-errors"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.1/api-json-methods"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.1/api-standards"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "versions/api-5.1/api-xml-methods"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": []
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}
