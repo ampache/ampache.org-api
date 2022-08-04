@@ -11,6 +11,7 @@
   --ifm-navbar-link-color: #f8ac4c; /* ampache */
   --ifm-menu-color-background-active: #f8ac4c; /* ampache */
   --ifm-breadcrumb-item-background-active: #f8ac4c; /* ampache */
+  --ifm-menu-color: #e3e3e3; /* ampache */
   --ifm-menu-color-active: #fff; /* ampache */
   --ifm-breadcrumb-color-active: #000; /* ampache */
   --ifm-link-color: #ff8300; /* ampache */
@@ -42,6 +43,7 @@
   background-color: #0b333f;
 }
 
+.theme-doc-sidebar-item-link,
 .margin-right--md,
 .menu__caret,
 .navbar__items--right,
