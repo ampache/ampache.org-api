@@ -11,7 +11,7 @@
   --ifm-navbar-link-color: #f8ac4c; /* ampache */
   --ifm-menu-color-background-active: #f8ac4c; /* ampache */
   --ifm-breadcrumb-item-background-active: #f8ac4c; /* ampache */
-  --ifm-menu-color-active: #000; /* ampache */
+  --ifm-menu-color-active: #fff; /* ampache */
   --ifm-breadcrumb-color-active: #000; /* ampache */
   --ifm-link-color: #ff8300; /* ampache */
   --ifm-link-hover-color: #f8ac4c; /* ampache */
@@ -42,7 +42,10 @@
   background-color: #0b333f;
 }
 
+.margin-right--md,
+.menu__caret,
 .navbar__items--right,
+.navbar-sidebar__back,
 .navbar__toggle {
-  color: #fff; /* Make the navbar menu light so you can see it */
+  color: #fff; /* Make the navbar and menu links/images light so you can see them */
 }
