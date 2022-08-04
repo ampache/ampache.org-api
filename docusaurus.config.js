@@ -66,7 +66,7 @@ const config = {
         style: 'dark',
         links: [
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ampache.`,
+        copyright: `Copyright © 2001 - ${new Date().getFullYear()} Ampache.org`,
       },
       prism: {
         theme: lightCodeTheme,
