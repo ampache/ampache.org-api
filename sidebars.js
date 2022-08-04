@@ -72,7 +72,7 @@ const sidebars = {
         },
         {
           type: 'category',
-      label: 'versions',
+          label: 'API 4.3',
           link: {type: 'doc', id: 'versions/api-4.3/api-4.3'},
           items: [
             'versions/api-4.3/api-advanced-search',
