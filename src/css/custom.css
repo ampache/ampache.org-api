@@ -7,6 +7,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-navbar-background-color: #0b333f; /* ampache */
+  --ifm-footer-background-color: #0b333f; /* ampache */
   --ifm-navbar-link-color: #f8ac4c; /* ampache */
   --ifm-menu-color-background-active: #f8ac4c; /* ampache */
   --ifm-breadcrumb-item-background-active: #f8ac4c; /* ampache */
@@ -36,6 +37,7 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
 /* Make the navbar menu light so you can see it */
 .navbar__toggle {
   color: #fff;
