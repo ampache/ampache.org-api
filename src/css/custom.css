@@ -13,8 +13,8 @@
   --ifm-breadcrumb-item-background-active: #f8ac4c; /* ampache */
   --ifm-menu-color-active: #000; /* ampache */
   --ifm-breadcrumb-color-active: #000; /* ampache */
-  --ifm-link-color: #000; /* ampache */
-  --ifm-link-hover-color: #ff8300; /* ampache */
+  --ifm-link-color: #ff8300; /* ampache */
+  --ifm-link-hover-color: #f8ac4c; /* ampache */
   --ifm-color-primary: #ff8300; /* ampache */
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -28,7 +28,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #ff8300;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -42,6 +42,7 @@
   background-color: #0b333f;
 }
 
+.navbar__items--right,
 .navbar__toggle {
   color: #fff; /* Make the navbar menu light so you can see it */
 }
