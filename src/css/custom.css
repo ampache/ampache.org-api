@@ -24,7 +24,7 @@
   --ifm-menu-color: #ff8300;
   --ifm-menu-color-active: #000;
   --ifm-menu-color-background-active: #f8ac4c;
-  --ifm-menu-color-background-hover: #1b1b1d;
+  --ifm-menu-color-background-hover: #f8ac4c;
   --ifm-menu-link-color: #fff;
   --ifm-navbar-background-color: #0b333f;
   --ifm-navbar-link-color: #f8ac4c;
@@ -48,6 +48,7 @@
   --ifm-link-hover-color: #f8ac4c;
   --ifm-menu-color: #fff;
   --ifm-menu-color-active: #000;
+  --ifm-menu-color-background-active: #f8ac4c;
   --ifm-menu-color-background-hover: #f8ac4c;
   --ifm-toc-link-color: #fff;
 }
@@ -56,11 +57,11 @@
   background-color: #0b333f;
 }
 
-.menu__caret,
-.navbar-sidebar__item.menu,
 .margin-right--md,
+.menu__caret,
 .navbar__items--right,
+.navbar__toggle,
 .navbar-sidebar__back,
-.navbar__toggle {
-  color: #fff; /* Make the navbar and menu links/images light so you can see them */
+.navbar-sidebar__item.menu {
+  color: #fff;
 }
