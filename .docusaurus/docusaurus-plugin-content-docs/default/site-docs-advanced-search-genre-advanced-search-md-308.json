@@ -1,0 +1,18 @@
+{
+  "unversionedId": "advanced-search/genre-advanced-search",
+  "id": "advanced-search/genre-advanced-search",
+  "title": "Genre Search",
+  "description": "API documentation",
+  "source": "@site/docs/advanced-search/genre-advanced-search.md",
+  "sourceDirName": "advanced-search",
+  "slug": "/advanced-search/genre-advanced-search",
+  "permalink": "/api/advanced-search/genre-advanced-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Genre Search",
+    "metaTitle": "Genre Search",
+    "description": "API documentation"
+  }
+}

@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "API 5 Errors",
-    "permalink": "/api/api-errors"
+    "title": "Access Control Lists",
+    "permalink": "/api/api-acls"
   },
   "next": {
-    "title": "Examples",
-    "permalink": "/api/api-examples"
+    "title": "Song Search",
+    "permalink": "/api/advanced-search/song-advanced-search"
   }
 }

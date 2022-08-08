@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Examples",
-    "permalink": "/api/api-examples"
+    "title": "API Changelog",
+    "permalink": "/api/api-changelog"
   },
   "next": {
-    "title": "Changelog",
-    "permalink": "/api/api-changelog"
+    "title": "advanced_search",
+    "permalink": "/api/api-advanced-search"
   }
 }

@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-changelog",
   "id": "api-changelog",
-  "title": "Changelog",
+  "title": "API Changelog",
   "description": "API Changelog",
   "source": "@site/docs/api-changelog.md",
   "sourceDirName": ".",
@@ -11,17 +11,17 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Changelog",
-    "metaTitle": "Changelog",
+    "title": "API Changelog",
+    "metaTitle": "API Changelog",
     "description": "API Changelog"
   },
   "sidebar": "api",
   "previous": {
-    "title": "Access Control Lists",
-    "permalink": "/api/api-acls"
+    "title": "API Examples",
+    "permalink": "/api/api-examples"
   },
   "next": {
-    "title": "API 4",
-    "permalink": "/api/api-4/"
+    "title": "Access Control Lists",
+    "permalink": "/api/api-acls"
   }
 }

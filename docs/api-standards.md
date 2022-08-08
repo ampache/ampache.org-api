@@ -1,6 +1,6 @@
 ---
-title: "API 5 Standards"
-metaTitle: "API 5 Standards"
+title: "API5 Standards"
+metaTitle: "API5 Standards"
 description: "API documentation"
 ---
 
@@ -62,7 +62,6 @@ All remaining Ampache dates should be returned as an integer using Unix epoch ti
     "last_update": "1626835896"
 }
 ```
-
 
 ### Tag is being renamed into Genre
 

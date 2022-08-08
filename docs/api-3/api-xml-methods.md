@@ -1,6 +1,6 @@
 ---
-title: "API 3 XML"
-metaTitle: "API 3 XML"
+title: "API3 XML"
+metaTitle: "API3 XML"
 description: "API documentation"
 ---
 

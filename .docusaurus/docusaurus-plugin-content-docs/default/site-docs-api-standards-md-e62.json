@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-standards",
   "id": "api-standards",
-  "title": "API 5 Standards",
+  "title": "API5 Standards",
   "description": "API documentation",
   "source": "@site/docs/api-standards.md",
   "sourceDirName": ".",
@@ -11,8 +11,8 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API 5 Standards",
-    "metaTitle": "API 5 Standards",
+    "title": "API5 Standards",
+    "metaTitle": "API5 Standards",
     "description": "API documentation"
   },
   "sidebar": "api",
@@ -21,7 +21,7 @@
     "permalink": "/api/"
   },
   "next": {
-    "title": "API 5 XML Methods",
+    "title": "API5 XML Methods",
     "permalink": "/api/api-xml-methods"
   }
 }

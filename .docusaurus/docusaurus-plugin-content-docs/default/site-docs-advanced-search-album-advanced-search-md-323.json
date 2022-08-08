@@ -1,0 +1,27 @@
+{
+  "unversionedId": "advanced-search/album-advanced-search",
+  "id": "advanced-search/album-advanced-search",
+  "title": "Album Search",
+  "description": "API documentation",
+  "source": "@site/docs/advanced-search/album-advanced-search.md",
+  "sourceDirName": "advanced-search",
+  "slug": "/advanced-search/album-advanced-search",
+  "permalink": "/api/advanced-search/album-advanced-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Album Search",
+    "metaTitle": "Album Search",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Song Search",
+    "permalink": "/api/advanced-search/song-advanced-search"
+  },
+  "next": {
+    "title": "Artist Search",
+    "permalink": "/api/advanced-search/artist-advanced-search"
+  }
+}

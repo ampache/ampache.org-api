@@ -1,5 +1,5 @@
 ---
-title: "API 4 XML"
+title: "API4 XML"
 metaTitle: "API 4 XML"
 description: "API documentation"
 ---

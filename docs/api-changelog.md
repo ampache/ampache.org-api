@@ -1,6 +1,6 @@
 ---
-title: "Changelog"
-metaTitle: "Changelog"
+title: "API Changelog"
+metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
@@ -10,12 +10,14 @@ description: "API Changelog"
 
 * advanced_search
   * Add `podcast` as a search type
-    * rule_1 `title`
-    * rule_1 `podcast_episode` (Search podcast episode name)
+    * Add rule `title`
+    * Add rule `podcast_episode` (Search by podcast episode name)
   * Add `podcast_episode` as a search type
-    * rule_1 `title`
-    * rule_1 `podcast` (Search by podcast name)
-    * rule_1 `file`
+    * Add rule `title`
+    * Add rule `podcast` (Search by podcast name)
+    * Add rule `file`
+  * Add `genre` as a search type
+    * Add rule `title`
 
 ## API  5.4.1
 

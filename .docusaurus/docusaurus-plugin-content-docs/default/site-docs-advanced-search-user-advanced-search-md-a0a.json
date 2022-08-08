@@ -1,0 +1,27 @@
+{
+  "unversionedId": "advanced-search/user-advanced-search",
+  "id": "advanced-search/user-advanced-search",
+  "title": "User Search",
+  "description": "API documentation",
+  "source": "@site/docs/advanced-search/user-advanced-search.md",
+  "sourceDirName": "advanced-search",
+  "slug": "/advanced-search/user-advanced-search",
+  "permalink": "/api/advanced-search/user-advanced-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "User Search",
+    "metaTitle": "User Search",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Podcast Episode Search",
+    "permalink": "/api/advanced-search/podcast-episode-advanced-search"
+  },
+  "next": {
+    "title": "Video Search",
+    "permalink": "/api/advanced-search/video-advanced-search"
+  }
+}

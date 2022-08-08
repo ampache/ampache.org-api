@@ -1,0 +1,27 @@
+{
+  "unversionedId": "advanced-search/video-advanced-search",
+  "id": "advanced-search/video-advanced-search",
+  "title": "Video Search",
+  "description": "API documentation",
+  "source": "@site/docs/advanced-search/video-advanced-search.md",
+  "sourceDirName": "advanced-search",
+  "slug": "/advanced-search/video-advanced-search",
+  "permalink": "/api/advanced-search/video-advanced-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Video Search",
+    "metaTitle": "Video Search",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "User Search",
+    "permalink": "/api/advanced-search/user-advanced-search"
+  },
+  "next": {
+    "title": "API 4",
+    "permalink": "/api/api-4/"
+  }
+}

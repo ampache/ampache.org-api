@@ -63,7 +63,6 @@ All remaining Ampache dates should be returned as an integer using Unix epoch ti
 }
 ```
 
-
 ### Tag is being renamed into Genre
 
 Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable.

@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Changelog",
-    "permalink": "/api/api-changelog"
+    "title": "Video Search",
+    "permalink": "/api/advanced-search/video-advanced-search"
   },
   "next": {
-    "title": "API 4 Errors",
+    "title": "API4 Errors",
     "permalink": "/api/api-4/api-errors"
   }
 }

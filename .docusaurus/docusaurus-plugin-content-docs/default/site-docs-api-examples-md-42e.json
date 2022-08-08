@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-examples",
   "id": "api-examples",
-  "title": "Examples",
+  "title": "API Examples",
   "description": "API documentation",
   "source": "@site/docs/api-examples.md",
   "sourceDirName": ".",
@@ -11,17 +11,17 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Examples",
-    "metaTitle": "Examples",
+    "title": "API Examples",
+    "metaTitle": "API Examples",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "advanced_search",
-    "permalink": "/api/api-advanced-search"
+    "title": "API5 Errors",
+    "permalink": "/api/api-errors"
   },
   "next": {
-    "title": "Access Control Lists",
-    "permalink": "/api/api-acls"
+    "title": "API Changelog",
+    "permalink": "/api/api-changelog"
   }
 }

@@ -1,6 +1,6 @@
 ---
-title: "API 3 Errors"
-metaTitle: "API 3 Errors"
+title: "API3 Errors"
+metaTitle: "API3 Errors"
 description: "API documentation"
 ---
 

@@ -3,12 +3,106 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/api/__docusaurus/debug',
+    component: ComponentCreator('/api/__docusaurus/debug', '5f7'),
+    exact: true
+  },
+  {
+    path: '/api/__docusaurus/debug/config',
+    component: ComponentCreator('/api/__docusaurus/debug/config', 'a04'),
+    exact: true
+  },
+  {
+    path: '/api/__docusaurus/debug/content',
+    component: ComponentCreator('/api/__docusaurus/debug/content', '7d4'),
+    exact: true
+  },
+  {
+    path: '/api/__docusaurus/debug/globalData',
+    component: ComponentCreator('/api/__docusaurus/debug/globalData', '545'),
+    exact: true
+  },
+  {
+    path: '/api/__docusaurus/debug/metadata',
+    component: ComponentCreator('/api/__docusaurus/debug/metadata', '354'),
+    exact: true
+  },
+  {
+    path: '/api/__docusaurus/debug/registry',
+    component: ComponentCreator('/api/__docusaurus/debug/registry', 'e2e'),
+    exact: true
+  },
+  {
+    path: '/api/__docusaurus/debug/routes',
+    component: ComponentCreator('/api/__docusaurus/debug/routes', '915'),
+    exact: true
+  },
+  {
     path: '/api/',
-    component: ComponentCreator('/api/', '874'),
+    component: ComponentCreator('/api/', '698'),
     routes: [
       {
         path: '/api/',
         component: ComponentCreator('/api/', '7b1'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/album-advanced-search',
+        component: ComponentCreator('/api/advanced-search/album-advanced-search', 'ccc'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/artist-advanced-search',
+        component: ComponentCreator('/api/advanced-search/artist-advanced-search', '961'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/genre-advanced-search',
+        component: ComponentCreator('/api/advanced-search/genre-advanced-search', 'a75'),
+        exact: true
+      },
+      {
+        path: '/api/advanced-search/label-advanced-search',
+        component: ComponentCreator('/api/advanced-search/label-advanced-search', '510'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/playlist-advanced-search',
+        component: ComponentCreator('/api/advanced-search/playlist-advanced-search', 'dec'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/podcast-advanced-search',
+        component: ComponentCreator('/api/advanced-search/podcast-advanced-search', '8d1'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/podcast-episode-advanced-search',
+        component: ComponentCreator('/api/advanced-search/podcast-episode-advanced-search', '985'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/song-advanced-search',
+        component: ComponentCreator('/api/advanced-search/song-advanced-search', 'ce2'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/user-advanced-search',
+        component: ComponentCreator('/api/advanced-search/user-advanced-search', '657'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/advanced-search/video-advanced-search',
+        component: ComponentCreator('/api/advanced-search/video-advanced-search', '1b7'),
         exact: true,
         sidebar: "api"
       },

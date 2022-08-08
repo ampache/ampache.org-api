@@ -11,6 +11,55 @@
           "mainDocId": "index",
           "docs": [
             {
+              "id": "advanced-search/album-advanced-search",
+              "path": "/api/advanced-search/album-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/artist-advanced-search",
+              "path": "/api/advanced-search/artist-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/genre-advanced-search",
+              "path": "/api/advanced-search/genre-advanced-search"
+            },
+            {
+              "id": "advanced-search/label-advanced-search",
+              "path": "/api/advanced-search/label-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/playlist-advanced-search",
+              "path": "/api/advanced-search/playlist-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/podcast-advanced-search",
+              "path": "/api/advanced-search/podcast-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/podcast-episode-advanced-search",
+              "path": "/api/advanced-search/podcast-episode-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/song-advanced-search",
+              "path": "/api/advanced-search/song-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/user-advanced-search",
+              "path": "/api/advanced-search/user-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "advanced-search/video-advanced-search",
+              "path": "/api/advanced-search/video-advanced-search",
+              "sidebar": "api"
+            },
+            {
               "id": "api-3/api-3",
               "path": "/api/api-3/",
               "sidebar": "api"

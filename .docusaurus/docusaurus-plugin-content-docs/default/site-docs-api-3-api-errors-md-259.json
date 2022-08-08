@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-3/api-errors",
   "id": "api-3/api-errors",
-  "title": "API 3 Errors",
+  "title": "API3 Errors",
   "description": "API documentation",
   "source": "@site/docs/api-3/api-errors.md",
   "sourceDirName": "api-3",
@@ -11,8 +11,8 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API 3 Errors",
-    "metaTitle": "API 3 Errors",
+    "title": "API3 Errors",
+    "metaTitle": "API3 Errors",
     "description": "API documentation"
   },
   "sidebar": "api",
@@ -21,7 +21,7 @@
     "permalink": "/api/api-3/"
   },
   "next": {
-    "title": "API 3 XML",
+    "title": "API3 XML",
     "permalink": "/api/api-3/api-xml-methods"
   }
 }

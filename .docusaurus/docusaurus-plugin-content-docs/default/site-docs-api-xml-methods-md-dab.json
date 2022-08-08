@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-xml-methods",
   "id": "api-xml-methods",
-  "title": "API 5 XML Methods",
+  "title": "API5 XML Methods",
   "description": "API documentation",
   "source": "@site/docs/api-xml-methods.md",
   "sourceDirName": ".",
@@ -11,17 +11,17 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API 5 XML Methods",
-    "metaTitle": "API 5 XML Methods",
+    "title": "API5 XML Methods",
+    "metaTitle": "API5 XML Methods",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "API 5 Standards",
+    "title": "API5 Standards",
     "permalink": "/api/api-standards"
   },
   "next": {
-    "title": "API 5 JSON Methods",
+    "title": "API5 JSON Methods",
     "permalink": "/api/api-json-methods"
   }
 }
