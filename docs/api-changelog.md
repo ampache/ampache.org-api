@@ -1,7 +1,7 @@
 ---
 title: "Changelog"
 metaTitle: "Changelog"
-metaDescription: "API Changelog"
+description: "API Changelog"
 ---
 
 ## API develop

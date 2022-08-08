@@ -1,7 +1,7 @@
 ---
 title: "API 4 Errors"
 metaTitle: "API 4 Errors"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 Ampache's API errors are loosely based around the HTTP status codes.

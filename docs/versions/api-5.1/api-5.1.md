@@ -1,7 +1,7 @@
 ---
 title: "API 5.1"
 metaTitle: "API 5.1"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 **Compatible Versions:**

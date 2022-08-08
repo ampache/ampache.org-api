@@ -1,7 +1,7 @@
 ---
 title: "Examples"
 metaTitle: "Examples"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 ## Example Responses

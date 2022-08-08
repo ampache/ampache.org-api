@@ -1,7 +1,7 @@
 ---
 title: "API 4 JSON"
 metaTitle: "API 4 JSON"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 Lets go through come calls and examples that you can do for each JSON method.

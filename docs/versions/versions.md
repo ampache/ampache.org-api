@@ -1,7 +1,7 @@
 ---
 title: "Past Releases"
 metaTitle: "Past Releases"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 ## Archived API versions

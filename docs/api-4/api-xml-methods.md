@@ -1,7 +1,7 @@
 ---
 title: "API 4 XML"
 metaTitle: "API 4 XML"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 Lets go through come calls and examples that you can do for each XML method.

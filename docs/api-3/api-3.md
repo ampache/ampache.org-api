@@ -1,7 +1,7 @@
 ---
 title: "API 3"
 metaTitle: "API 3"
-metaDescription: "API documentation"
+description: "API documentation"
 ---
 
 **WARNING** This API is old! So this should only really be used to understand old programs.
