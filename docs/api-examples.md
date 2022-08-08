@@ -22,4 +22,3 @@ Each API version has it's own examples.
 
 * API3 examples
   * [API3 XML Examples](https://github.com/ampache/python3-ampache/tree/api3/docs/xml-responses)
-  
