@@ -4,6 +4,19 @@ metaTitle: "Changelog"
 metaDescription: "API Changelog"
 ---
 
+## API develop
+
+### Added
+
+* advanced_search
+  * Add `podcast` as a search type
+    * rule_1 `title`
+    * rule_1 `podcast_episode` (Search podcast episode name)
+  * Add `podcast_episode` as a search type
+    * rule_1 `title`
+    * rule_1 `podcast` (Search by podcast name)
+    * rule_1 `file`
+
 ## API  5.4.1
 
 ### Added
