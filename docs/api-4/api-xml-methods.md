@@ -837,13 +837,11 @@ This get the latest posted shouts
 
 This rates a library item
 
-| Input    | Type    | Description                                   | Optional |
-|----------|---------|-----------------------------------------------|---------:|
-| 'type'   | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
-|          |         | 'podcast', 'podcast_episode', 'video'         |          |
-|          |         | 'tvshow', 'tvshow_season'                     |          |
-| 'id'     | string  | library item id                               |       NO |
-| 'rating' | integer | rating between 0-5                            |       NO |
+| Input    | Type    | Description                                                                                            | Optional |
+|----------|---------|--------------------------------------------------------------------------------------------------------|---------:|
+| 'type'   | string  | 'song', 'album', 'artist', 'playlist', 'podcast', 'podcast_episode', 'video','tvshow', 'tvshow_season' |       NO |
+| 'id'     | string  | library item id                                                                                        |       NO |
+| 'rating' | integer | rating between 0-5                                                                                     |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/rate.xml)
 
@@ -854,13 +852,11 @@ This flags a library item as a favorite
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
 
-| Input  | Type    | Description                            | Optional |
-|--------|---------|----------------------------------------|---------:|
-| 'type' | string  | 'song', 'album', 'artist', 'playlist', |       NO |
-|        |         | 'podcast', 'podcast_episode', 'video'  |          |
-|        |         | 'tvshow', 'tvshow_season'              |          |
-| 'id'   | integer | $object_id                             |       NO |
-| 'flag' | boolean | 0, 1                                   |       NO |
+| Input  | Type    | Description                                                                                            | Optional |
+|--------|---------|--------------------------------------------------------------------------------------------------------|---------:|
+| 'type' | string  | 'song', 'album', 'artist', 'playlist', 'podcast', 'podcast_episode', 'video','tvshow', 'tvshow_season' |       NO |
+| 'id'   | integer | $object_id                                                                                             |       NO |
+| 'flag' | boolean | 0, 1                                                                                                   |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/flag.xml)
 
@@ -1050,10 +1046,10 @@ Downloads a given media file. set format=raw to download the full file
 
 Get an art image.
 
-| Input    | Type    | Description                                                | Optional |
-|----------|---------|------------------------------------------------------------|---------:|
-| 'id'     | integer | $object_id                                                 |       NO |
-| 'type'   | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
+| Input  | Type    | Description                                                | Optional |
+|--------|---------|------------------------------------------------------------|---------:|
+| 'id'   | integer | $object_id                                                 |       NO |
+| 'type' | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
 
 ## Control Methods
 

@@ -28,8 +28,8 @@ Select the type of search based on the type of data you are searching for. (song
 |--------------------|-------------------------|-------------------|:--------------------------------:|
 | anywhere           | Any searchable text     | text              |               song               |
 | title              | Title / Name            | text              | song,album,artist,playlist,label |
-| album              | Album Title             | text              |            song,artist           |
-| artist             | Artist                  | text              |         song,album,artist        |
+| album              | Album Title             | text              |           song,artist            |
+| artist             | Artist                  | text              |        song,album,artist         |
 | album_artist       | Album Artist            | text              |               song               |
 | composer           | Composer                | text              |               song               |
 | year               | Year                    | numeric           |            song,album            |
@@ -150,13 +150,13 @@ To search a mixed type like metadata you must search using 4 rules.
 
 @param array $input
 
-| Input    | Type    | Description                                   | Optional |
-|----------|---------|-----------------------------------------------|---------:|
-| operator | string  | 'and','or' (whether to match one rule or all) |       NO |
-| rule_*   | array   | [rule_1,rule_1_operator,rule_1_input],        |       NO |
-| rule_*   | array   | [rule_2,rule_2_operator,rule_2_input], [etc]  |      YES |
-| type     | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
-|          |         | 'label', 'user', 'video'                      |          |
-| random   | boolean | 0, 1 (random order of results; default to 0)  |      YES |
-| offset   | integer |                                               |      YES |
-| limit'   | integer |                                               |      YES |
+| Input    | Type    | Description                                    | Optional |
+|----------|---------|------------------------------------------------|---------:|
+| operator | string  | 'and', 'or' (whether to match one rule or all) |       NO |
+| rule_*   | array   | [rule_1,rule_1_operator,rule_1_input],         |       NO |
+| rule_*   | array   | [rule_2,rule_2_operator,rule_2_input], [etc]   |      YES |
+| type     | string  | 'song', 'album', 'artist', 'playlist',         |       NO |
+|          |         | 'label', 'user', 'video'                       |          |
+| random   | boolean | 0, 1 (random order of results; default to 0)   |      YES |
+| offset   | integer |                                                |      YES |
+| limit'   | integer |                                                |      YES |

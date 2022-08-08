@@ -426,7 +426,7 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
 | 'flag'   | integer | get flagged songs only 0, 1 (default = 0)                        |      YES |
-| 'format' | string  | 'song', 'index','id' (default = 'song')                          |      YES |
+| 'format' | string  | 'song', 'index', 'id' (default = 'song')                         |      YES |
 | 'offset' | integer | Return results starting from this index position                 |      YES |
 | 'limit'  | integer | Maximum number of results to return                              |      YES |
 
@@ -838,13 +838,11 @@ This get the latest posted shouts
 
 This rates a library item
 
-| Input    | Type    | Description                                   | Optional |
-|----------|---------|-----------------------------------------------|---------:|
-| 'type'   | string  | 'song', 'album', 'artist', 'playlist',        |       NO |
-|          |         | 'podcast', 'podcast_episode', 'video'         |          |
-|          |         | 'tvshow', 'tvshow_season'                     |          |
-| 'id'     | integer | library item id                               |       NO |
-| 'rating' | integer | rating between 0-5                            |       NO |
+| Input    | Type    | Description                                                                                            | Optional |
+|----------|---------|--------------------------------------------------------------------------------------------------------|---------:|
+| 'type'   | string  | 'song', 'album', 'artist', 'playlist', 'podcast', 'podcast_episode', 'video','tvshow', 'tvshow_season' |       NO |
+| 'id'     | integer | library item id                                                                                        |       NO |
+| 'rating' | integer | rating between 0-5                                                                                     |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/rate.json)
 
@@ -855,13 +853,11 @@ This flags a library item as a favorite
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
 
-| Input  | Type    | Description                            | Optional |
-|--------|---------|----------------------------------------|---------:|
-| 'type' | string  | 'song', 'album', 'artist', 'playlist', |       NO |
-|        |         | 'podcast', 'podcast_episode', 'video'  |          |
-|        |         | 'tvshow', 'tvshow_season'              |          |
-| 'id'   | integer | $object_id                             |       NO |
-| 'flag' | boolean | 0, 1                                   |       NO |
+| Input  | Type    | Description                                                                                            | Optional |
+|--------|---------|--------------------------------------------------------------------------------------------------------|---------:|
+| 'type' | string  | 'song', 'album', 'artist', 'playlist', 'podcast', 'podcast_episode', 'video','tvshow', 'tvshow_season' |       NO |
+| 'id'   | integer | $object_id                                                                                             |       NO |
+| 'flag' | boolean | 0, 1                                                                                                   |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/flag.json)
 
@@ -944,11 +940,11 @@ Perform actions on local catalog files.
 Single file versions of catalog add, clean, verify and remove (delete)
 Make sure you remember to urlencode those file names!
 
-| Input     | Type    | Description                     | Optional |
-|-----------|---------|---------------------------------|---------:|
-| 'file'    | string  | FULL path to local file         |       NO |
-| 'task'    | string  | 'add','clean','verify','remove' |       NO |
-| 'catalog' | integer | $catalog_id                     |       NO |
+| Input     | Type    | Description                        | Optional |
+|-----------|---------|------------------------------------|---------:|
+| 'file'    | string  | FULL path to local file            |       NO |
+| 'task'    | string  | 'add', 'clean', 'verify', 'remove' |       NO |
+| 'catalog' | integer | $catalog_id                        |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_file.json)
 
@@ -1049,10 +1045,10 @@ Downloads a given media file. set format=raw to download the full file
 
 Get an art image.
 
-| Input    | Type    | Description                                                | Optional |
-|----------|---------|------------------------------------------------------------|---------:|
-| 'id'     | integer | $object_id                                                 |       NO |
-| 'type'   | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
+| Input  | Type    | Description                                                | Optional |
+|--------|---------|------------------------------------------------------------|---------:|
+| 'id'   | integer | $object_id                                                 |       NO |
+| 'type' | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
 
 ## Control Methods
 

@@ -324,7 +324,7 @@ Minor bugfixes
 
 ### Deprecated
 
-* Search rules 'has image','image height', 'image width', 'filename'. (Removed in Ampache 5.0.0)
+* Search rules 'has image', 'image height', 'image width', 'filename'. (Removed in Ampache 5.0.0)
 
 ### Fixed
 

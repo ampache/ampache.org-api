@@ -629,7 +629,7 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
 | 'flag'   | integer | get flagged songs only 0, 1 (default = 0)                        |      YES |
-| 'format' | string  | 'song', 'index','id' (default = 'song')                          |      YES |
+| 'format' | string  | 'song', 'index', 'id' (default = 'song')                          |      YES |
 | 'offset' | integer |                                                                  |      YES |
 | 'limit'  | integer |                                                                  |      YES |
 

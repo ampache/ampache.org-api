@@ -447,7 +447,7 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
 | 'flag'   | integer | get flagged songs only 0, 1 (default = 0)                        |      YES |
-| 'format' | string  | 'song', 'index','id' (default = 'song')                          |      YES |
+| 'format' | string  | 'song', 'index', 'id' (default = 'song')                          |      YES |
 | 'offset' | integer |                                                                  |      YES |
 | 'limit'  | integer |                                                                  |      YES |
 
@@ -1003,7 +1003,7 @@ Make sure you remember to urlencode those file names!
 | Input     | Type    | Description                      | Optional |
 |-----------|---------|----------------------------------|---------:|
 | 'file'    | string  | FULL path to local file          |       NO |
-| 'task'    | string  | 'add','clean','verify', 'remove' |       NO |
+| 'task'    | string  | 'add', 'clean', 'verify', 'remove' |       NO |
 | 'catalog' | integer | $catalog_id                      |       NO |
 
 [Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/973d5c9d1118e1101ee8610b2f1bb188aa283a10/docs/xml-responses/catalog_file.xml)
