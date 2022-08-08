@@ -2,7 +2,7 @@
   "unversionedId": "api-examples",
   "id": "api-examples",
   "title": "Examples",
-  "description": "Example Responses",
+  "description": "API documentation",
   "source": "@site/docs/api-examples.md",
   "sourceDirName": ".",
   "slug": "/api-examples",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "Examples",
     "metaTitle": "Examples",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

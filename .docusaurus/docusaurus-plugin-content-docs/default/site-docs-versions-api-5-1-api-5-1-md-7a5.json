@@ -2,7 +2,7 @@
   "unversionedId": "versions/api-5.1/api-5.1",
   "id": "versions/api-5.1/api-5.1",
   "title": "API 5.1",
-  "description": "Compatible Versions:",
+  "description": "API documentation",
   "source": "@site/docs/versions/api-5.1/api-5.1.md",
   "sourceDirName": "versions/api-5.1",
   "slug": "/versions/api-5.1/",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 5.1",
     "metaTitle": "API 5.1",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

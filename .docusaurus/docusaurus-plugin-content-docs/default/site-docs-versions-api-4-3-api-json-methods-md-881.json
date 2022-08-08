@@ -2,7 +2,7 @@
   "unversionedId": "versions/api-4.3/api-json-methods",
   "id": "versions/api-4.3/api-json-methods",
   "title": "JSON 4.3",
-  "description": "Lets go through come calls and examples that you can do for each JSON method.",
+  "description": "API documentation",
   "source": "@site/docs/versions/api-4.3/api-json-methods.md",
   "sourceDirName": "versions/api-4.3",
   "slug": "/versions/api-4.3/api-json-methods",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "JSON 4.3",
     "metaTitle": "JSON 4.3",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

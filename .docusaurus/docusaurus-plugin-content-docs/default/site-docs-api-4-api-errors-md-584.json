@@ -2,7 +2,7 @@
   "unversionedId": "api-4/api-errors",
   "id": "api-4/api-errors",
   "title": "API 4 Errors",
-  "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+  "description": "API documentation",
   "source": "@site/docs/api-4/api-errors.md",
   "sourceDirName": "api-4",
   "slug": "/api-4/api-errors",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 4 Errors",
     "metaTitle": "API 4 Errors",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

@@ -2,7 +2,7 @@
   "unversionedId": "api-3/api-3",
   "id": "api-3/api-3",
   "title": "API 3",
-  "description": "WARNING This API is old! So this should only really be used to understand old programs.",
+  "description": "API documentation",
   "source": "@site/docs/api-3/api-3.md",
   "sourceDirName": "api-3",
   "slug": "/api-3/",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 3",
     "metaTitle": "API 3",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

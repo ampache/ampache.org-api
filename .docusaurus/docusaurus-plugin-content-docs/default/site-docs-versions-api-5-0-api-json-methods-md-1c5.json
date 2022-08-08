@@ -2,7 +2,7 @@
   "unversionedId": "versions/api-5.0/api-json-methods",
   "id": "versions/api-5.0/api-json-methods",
   "title": "API 5.0 JSON Methods",
-  "description": "Let's go through come calls and examples that you can do for each JSON method.",
+  "description": "API documentation",
   "source": "@site/docs/versions/api-5.0/api-json-methods.md",
   "sourceDirName": "versions/api-5.0",
   "slug": "/versions/api-5.0/api-json-methods",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 5.0 JSON Methods",
     "metaTitle": "API 5.0 JSON Methods",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

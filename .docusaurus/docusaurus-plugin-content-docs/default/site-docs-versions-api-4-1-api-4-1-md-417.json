@@ -2,7 +2,7 @@
   "unversionedId": "versions/api-4.1/api-4.1",
   "id": "versions/api-4.1/api-4.1",
   "title": "API 4.1",
-  "description": "Compatible Versions: >= 350001",
+  "description": "API documentation",
   "source": "@site/docs/versions/api-4.1/api-4.1.md",
   "sourceDirName": "versions/api-4.1",
   "slug": "/versions/api-4.1/",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 4.1",
     "metaTitle": "API 4.1",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

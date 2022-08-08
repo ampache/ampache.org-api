@@ -2,7 +2,7 @@
   "unversionedId": "api-xml-methods",
   "id": "api-xml-methods",
   "title": "API 5 XML Methods",
-  "description": "Let's go through come calls and examples that you can do for each XML method.",
+  "description": "API documentation",
   "source": "@site/docs/api-xml-methods.md",
   "sourceDirName": ".",
   "slug": "/api-xml-methods",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 5 XML Methods",
     "metaTitle": "API 5 XML Methods",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

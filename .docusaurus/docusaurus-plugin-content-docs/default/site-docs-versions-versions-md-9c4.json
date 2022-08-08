@@ -2,7 +2,7 @@
   "unversionedId": "versions/versions",
   "id": "versions/versions",
   "title": "Past Releases",
-  "description": "Archived API versions",
+  "description": "API documentation",
   "source": "@site/docs/versions/versions.md",
   "sourceDirName": "versions",
   "slug": "/versions/",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "Past Releases",
     "metaTitle": "Past Releases",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

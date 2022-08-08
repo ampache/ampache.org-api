@@ -2,7 +2,7 @@
   "unversionedId": "api-4/api-4",
   "id": "api-4/api-4",
   "title": "API 4",
-  "description": "Compatible Versions:",
+  "description": "API documentation",
   "source": "@site/docs/api-4/api-4.md",
   "sourceDirName": "api-4",
   "slug": "/api-4/",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 4",
     "metaTitle": "API 4",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

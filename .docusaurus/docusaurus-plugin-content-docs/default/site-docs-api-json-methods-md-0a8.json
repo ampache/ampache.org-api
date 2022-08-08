@@ -2,7 +2,7 @@
   "unversionedId": "api-json-methods",
   "id": "api-json-methods",
   "title": "API 5 JSON Methods",
-  "description": "Let's go through come calls and examples that you can do for each JSON method.",
+  "description": "API documentation",
   "source": "@site/docs/api-json-methods.md",
   "sourceDirName": ".",
   "slug": "/api-json-methods",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "API 5 JSON Methods",
     "metaTitle": "API 5 JSON Methods",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

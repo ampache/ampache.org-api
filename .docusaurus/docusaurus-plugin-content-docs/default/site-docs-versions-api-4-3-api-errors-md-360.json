@@ -2,7 +2,7 @@
   "unversionedId": "versions/api-4.3/api-errors",
   "id": "versions/api-4.3/api-errors",
   "title": "Errors 4.3",
-  "description": "Ampache's API errors are loosely based around the HTTP status codes.",
+  "description": "API documentation",
   "source": "@site/docs/versions/api-4.3/api-errors.md",
   "sourceDirName": "versions/api-4.3",
   "slug": "/versions/api-4.3/api-errors",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "Errors 4.3",
     "metaTitle": "Errors 4.3",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

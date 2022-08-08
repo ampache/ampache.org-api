@@ -2,7 +2,7 @@
   "unversionedId": "versions/api-4.1/xml-methods",
   "id": "versions/api-4.1/xml-methods",
   "title": "XML 4.1",
-  "description": "Lets go through come calls and examples that you can do for each XML method.",
+  "description": "API documentation",
   "source": "@site/docs/versions/api-4.1/xml-methods.md",
   "sourceDirName": "versions/api-4.1",
   "slug": "/versions/api-4.1/xml-methods",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "XML 4.1",
     "metaTitle": "XML 4.1",
-    "metaDescription": "API documentation"
+    "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {

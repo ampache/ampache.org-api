@@ -2,7 +2,7 @@
   "unversionedId": "api-changelog",
   "id": "api-changelog",
   "title": "Changelog",
-  "description": "API  5.4.1",
+  "description": "API Changelog",
   "source": "@site/docs/api-changelog.md",
   "sourceDirName": ".",
   "slug": "/api-changelog",
@@ -13,7 +13,7 @@
   "frontMatter": {
     "title": "Changelog",
     "metaTitle": "Changelog",
-    "metaDescription": "API Changelog"
+    "description": "API Changelog"
   },
   "sidebar": "api",
   "previous": {
