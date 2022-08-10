@@ -15,6 +15,8 @@ description: "API Changelog"
   * Add `podcast_episode` as a search type
     * Add rule `title`
     * Add rule `podcast` (Search by podcast name)
+    * Add rule `time` (Length in minutes)
+    * Add rule `state` (Completed, Pending Skipped)
     * Add rule `file`
   * Add `genre` as a search type
     * Add rule `title`
