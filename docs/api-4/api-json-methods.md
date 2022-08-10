@@ -28,9 +28,9 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
 | Input     | Type   | Description                                                                | Optional |
-|-----------|--------|----------------------------------------------------------------------------|----------|
-| 'auth'    | string | (Session ID) returns version information and extends the session if passed | YES      |
-| 'version' | string | $version (API Version that the application understands)                    | YES      |
+|-----------|--------|----------------------------------------------------------------------------|---------:|
+| 'auth'    | string | (Session ID) returns version information and extends the session if passed |      YES |
+| 'version' | string | $version (API Version that the application understands)                    |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/ping.json)
 
@@ -39,8 +39,8 @@ This can be called without being authenticated, it is useful for determining if 
 Destroy a session using the auth parameter.
 
 | Input  | Type   | Description                                    | Optional |
-|--------|--------|------------------------------------------------|----------|
-| 'auth' | string | (Session ID) destroys the session if it exists | NO       |
+|--------|--------|------------------------------------------------|---------:|
+| 'auth' | string | (Session ID) destroys the session if it exists |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/goodbye.json)
 
@@ -60,17 +60,15 @@ This takes a url and returns the song object in question
 
 This takes a collection of inputs and returns ID + name for the object type
 
-| Input         | Type       | Description                                                      | Optional |
-|---------------|------------|------------------------------------------------------------------|---------:|
-| 'type'        | string     | 'song', 'album', 'artist', 'playlist'                            |       NO |
-| 'filter'      | string     |                                                                  |      YES |
-| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
-|               |            | Find objects with an 'add' date newer than the specified date    |          |
-| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16)                                |      YES |
-|               |            | Find objects with an 'update' time newer than the specified date |          |
-| 'offset'      | integer    | Return results starting from this index position                 |      YES |
-| 'limit'       | integer    | Maximum number of results to return                              |      YES |
-| 'hide_search' | integer    | 0,1, if true do not include searches/smartlists in the result    |      YES |
+| Input         | Type       | Description                                                                                        | Optional |
+|---------------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'type'        | string     | `song`, `album`, `artist`, `playlist`                                                              |       NO |
+| 'filter'      | string     |                                                                                                    |      YES |
+| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset'      | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'       | integer    | Maximum number of results to return                                                                |      YES |
+| 'hide_search' | integer    | `0`, `1` (if true do not include searches/smartlists in the result)                                |      YES |
 
 SONGS
 
@@ -112,9 +110,9 @@ Refer to the [Advanced Search](https://ampache.org/api/api-advanced-search) page
   * ampache_url = (string)
   * ampache_API = (string)
   * operator = (string) 'and'|'or' (whether to match one rule or all)
-  * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
-  * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
-  * random = (integer) 0|1 (random order of results; default to 0)
+  * rules = (array) = [[`rule_1`, `rule_1_operator`, `rule_1_input`], [`rule_2`, `rule_2_operator`, `rule_2_input`], [etc]]
+  * type = (string) `song`, `album`, `artist`, `playlist`, `label`, `user`, `video`
+  * random = (integer) `0`, `1` (random order of results; default to 0)
   * offset = (integer)
   * limit' = (integer)
 
@@ -134,17 +132,15 @@ ALBUM
 
 This takes a collection of inputs and returns artist objects.
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | if true filter is exact rather then fuzzy                                     |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|           |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|           |            | Find objects with an 'update' time newer than the specified date              |          |
-| 'offset'  | integer    | Return results starting from this index position                              |      YES |
-| 'limit'   | integer    | Maximum number of results to return                                           |      YES |
-| 'include' | string     | 'albums', 'songs' and will include the corresponding JSON                     |      YES |
+| Input     | Type       | Description                                                                                        | Optional |
+|-----------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number                      |      YES |
+| 'exact'   | boolean    | if true filter is exact rather then fuzzy                                                          |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset'  | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'   | integer    | Maximum number of results to return                                                                |      YES |
+| 'include' | string     | `albums`, `songs` (include child objects in the response)                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artists.json)
 
@@ -152,10 +148,10 @@ This takes a collection of inputs and returns artist objects.
 
 This returns a single artist based on the UID of said artist
 
-| Input     | Type    | Description                                                                         | Optional |
-|-----------|---------|-------------------------------------------------------------------------------------|---------:|
-| 'filter'  | integer | UID of Artist, returns artist JSON                                                  |       NO |
-| 'include' | string  | 'albums', 'songs' and will include the corresponding JSON nested in the artist JSON |      YES |
+| Input     | Type    | Description                                               | Optional |
+|-----------|---------|-----------------------------------------------------------|---------:|
+| 'filter'  | integer | UID of Artist, returns artist JSON                        |       NO |
+| 'include' | string  | `albums`, `songs` (include child objects in the response) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artist.json)
 
@@ -187,17 +183,15 @@ This returns the songs of the specified artist
 
 This returns albums based on the provided search filters
 
-| Input     | Type       | Description                                                                   | Optional |
-|-----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | if true filter is exact rather then fuzzy                                     |       NO |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|           |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|           |            | Find objects with an 'update' time newer than the specified date              |          |
-| 'offset'  | integer    | Return results starting from this index position                              |      YES |
-| 'limit'   | integer    | Maximum number of results to return                                           |      YES |
-| 'include' | string     | 'albums', 'songs' will include nested in the album JSON                       |      YES |
+| Input     | Type       | Description                                                                                        | Optional |
+|-----------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number                      |      YES |
+| 'exact'   | boolean    | if true filter is exact rather then fuzzy                                                          |       NO |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset'  | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'   | integer    | Maximum number of results to return                                                                |      YES |
+| 'include' | string     | `albums`, `songs` (include child objects in the response)                                          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/albums.json)
 
@@ -205,10 +199,10 @@ This returns albums based on the provided search filters
 
 This returns a single album based on the UID provided
 
-| Input     | Type    | Description                                                          | Optional |
-|-----------|---------|----------------------------------------------------------------------|---------:|
-| 'filter'  | integer | UID of Album, returns album JSON                                     |       NO |
-| 'include' | string  | 'songs' will include the corresponding JSON nested in the album JSON |      YES |
+| Input     | Type    | Description                                     | Optional |
+|-----------|---------|-------------------------------------------------|---------:|
+| 'filter'  | integer | UID of Album, returns album JSON                |       NO |
+| 'include' | string  | `songs` (include child objects in the response) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/album.json)
 
@@ -287,16 +281,14 @@ returns the songs for this tag
 
 Returns songs based on the specified filter
 
-| Input    | Type       | Description                                                                   | Optional |
-|----------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|          |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update' | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|          |            | Find objects with an 'update' time newer than the specified date              |          |
-| 'exact'  | boolean    | if true filter is exact rather then fuzzy                                     |       NO |
-| 'offset' | integer    | Return results starting from this index position                              |      YES |
-| 'limit'  | integer    | Maximum number of results to return                                           |      YES |
+| Input    | Type       | Description                                                                                        | Optional |
+|----------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number                      |       NO |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'exact'  | boolean    | if true filter is exact rather then fuzzy                                                          |       NO |
+| 'offset' | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'  | integer    | Maximum number of results to return                                                                |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/songs.json)
 
@@ -314,18 +306,16 @@ returns a single song
 
 This returns playlists based on the specified filter
 
-| Input         | Type       | Description                                                                   | Optional |
-|---------------|------------|-------------------------------------------------------------------------------|---------:|
-| 'filter'      | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'       | boolean    | if true filter is exact rather then fuzzy                                     |      YES |
-| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|               |            | Find objects with an 'add' date newer than the specified date                 |          |
-| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16)                                             |      YES |
-|               |            | Find objects with an 'update' time newer than the specified date              |          |
-| 'offset'      | integer    | Return results starting from this index position                              |      YES |
-| 'limit'       | integer    | Maximum number of results to return                                           |      YES |
-| 'hide_search' | integer    | 0,1, if true do not include searches/smartlists in the result                 |      YES |
-| 'show_dupes'  | integer    | 0,1, if true if true ignore 'api_hide_dupe_searches' setting                  |      YES |
+| Input         | Type       | Description                                                                                        | Optional |
+|---------------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter'      | string     | Value is Alpha Match for returned results, may be more than one letter/number                      |      YES |
+| 'exact'       | boolean    | if true filter is exact rather then fuzzy                                                          |      YES |
+| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update'      | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset'      | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'       | integer    | Maximum number of results to return                                                                |      YES |
+| 'hide_search' | integer    | `0`, `1` (if true do not include searches/smartlists in the result)                                |      YES |
+| 'show_dupes'  | integer    | `0`, `1` (if true if true ignore 'api_hide_dupe_searches' setting)                                 |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlists.json)
 
@@ -355,10 +345,10 @@ This returns the songs for a playlist
 
 This create a new playlist and return it
 
-| Input  | Type   | Description                       | Optional |
-|--------|--------|-----------------------------------|---------:|
-| 'name' | string | Playlist name                     |       NO |
-| 'type' | string | Playlist type 'public', 'private' |      YES |
+| Input  | Type   | Description                         | Optional |
+|--------|--------|-------------------------------------|---------:|
+| 'name' | string | Playlist name                       |       NO |
+| 'type' | string | `public`, `private` (Playlist type) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_create.json)
 
@@ -371,7 +361,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 |----------|--------|-------------------------------------------------------------------------|---------:|
 | 'filter' | string | UID of Playlist                                                         |       NO |
 | 'name'   | string | Playlist name                                                           |      YES |
-| 'type'   | string | Playlist type 'public', 'private'                                       |      YES |
+| 'type'   | string | `public`, `private` (Playlist type)                                     |      YES |
 | 'items'  | string | comma-separated song_id's (replace existing items with a new object_id) |      YES |
 | 'tracks' | string | comma-separated playlisttrack numbers matched to items in order         |      YES |
 
@@ -391,11 +381,11 @@ This deletes a playlist
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 
-| Input    | Type    | Description                                               | Optional |
-|----------|---------|-----------------------------------------------------------|---------:|
-| 'filter' | integer | UID of Playlist                                           |       NO |
-| 'song'   | integer | UID of song to add to playlist                            |       NO |
-| 'check'  | boolean | 0, 1 Whether to check and ignore duplicates (default = 0) |      YES |
+| Input    | Type    | Description                                                   | Optional |
+|----------|---------|---------------------------------------------------------------|---------:|
+| 'filter' | integer | UID of Playlist                                               |       NO |
+| 'song'   | integer | UID of song to add to playlist                                |       NO |
+| 'check'  | boolean | `0`, `1` Whether to check and ignore duplicates (default = 0) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_add_song.json)
 
@@ -421,12 +411,12 @@ Get a list of song JSON, indexes or id's based on some simple search criteria
 
 | Input    | Type    | Description                                                      | Optional |
 |----------|---------|------------------------------------------------------------------|---------:|
-| 'mode'   | string  | 'recent', 'forgotten', 'unplayed', 'random' (default = 'random') |      YES |
+| 'mode'   | string  | `recent`, `forgotten`, `unplayed`, `random` (default = 'random') |      YES |
 | 'filter' | string  | string LIKE matched to song title                                |      YES |
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
-| 'flag'   | integer | get flagged songs only 0, 1 (default = 0)                        |      YES |
-| 'format' | string  | 'song', 'index', 'id' (default = 'song')                         |      YES |
+| 'flag'   | integer | `0`, `1` (get flagged songs only. default = 0)                   |      YES |
+| 'format' | string  | `song`, `index`, `id` (default = 'song')                         |      YES |
 | 'offset' | integer | Return results starting from this index position                 |      YES |
 | 'limit'  | integer | Maximum number of results to return                              |      YES |
 
@@ -448,12 +438,12 @@ ID
 
 This searches the shares and returns... shares
 
-| Input    | Type    | Description                                      | Optional |
-|----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | Value is Alpha Match for Share Title             |      YES |
-| 'exact'  | integer | 0, 1 boolean to match the exact filter string    |      YES |
-| 'offset' | integer | Return results starting from this index position |      YES |
-| 'limit'  | integer | Maximum number of results to return              |      YES |
+| Input    | Type    | Description                                       | Optional |
+|----------|---------|---------------------------------------------------|---------:|
+| 'filter' | string  | Value is Alpha Match for Share Title              |      YES |
+| 'exact'  | integer | `0`, `1` boolean to match the exact filter string |      YES |
+| 'offset' | integer | Return results starting from this index position  |      YES |
+| 'limit'  | integer | Maximum number of results to return               |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/shares.json)
 
@@ -495,8 +485,8 @@ Takes the share id to update with optional description and expires parameters.
 | Input         | Type    | Description                        | Optional |
 |---------------|---------|------------------------------------|---------:|
 | 'filter'      | string  | Alpha-numeric search term          |       NO |
-| 'stream'      | boolean | 0, 1                               |      YES |
-| 'download'    | boolean | 0, 1                               |      YES |
+| 'stream'      | boolean | `0`, `1`                           |      YES |
+| 'download'    | boolean | `0`, `1`                           |      YES |
 | 'expires'     | integer | number of whole days before expiry |      YES |
 | 'description' | string  | update description                 |      YES |
 
@@ -522,7 +512,7 @@ Return similar artist id's or similar song ids compared to the input filter
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'type'   | string  | 'song' or 'artist'                               |       NO |
+| 'type'   | string  | `song`, `artist`                                 |       NO |
 | 'filter' | integer | artist id or song id                             |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
@@ -575,7 +565,7 @@ Get information about podcasts
 | 'filter'  | string  | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
 | 'offset'  | integer | Return results starting from this index position                              |      YES |
 | 'limit'   | integer | Maximum number of results to return                                           |      YES |
-| 'include' | string  | 'episodes' (include episodes in the response)                                 |      YES |
+| 'include' | string  | `episodes` (include podcast_episodes in the response)                         |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcasts.json)
 
@@ -585,10 +575,10 @@ Get information about podcasts
 
 Get the podcast from it's id.
 
-| Input     | Type   | Description                                   | Optional |
-|-----------|--------|-----------------------------------------------|---------:|
-| 'filter'  | string | UID of podcast, returns podcast JSON          |       NO |
-| 'include' | string | 'episodes' (include episodes in the response) |      YES |
+| Input     | Type   | Description                                           | Optional |
+|-----------|--------|-------------------------------------------------------|---------:|
+| 'filter'  | string | UID of podcast, returns podcast JSON                  |       NO |
+| 'include' | string | `episodes` (include podcast_episodes in the response) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast.json)
 
@@ -683,8 +673,8 @@ This method has partial backwards compatibility with older api versions but shou
 
 | Input      | Type    | Description                                                                 | Optional |
 |------------|---------|-----------------------------------------------------------------------------|---------:|
-| 'type'     | string  | 'song', 'album', 'artist'                                                   |       NO |
-| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', 'forgotten', 'flagged', 'random' |       NO |
+| 'type'     | string  | `song`, `album`, `artist`                                                   |       NO |
+| 'filter'   | string  | `newest`, `highest`, `frequent`, `recent`, `forgotten`, `flagged`, `random` |       NO |
 | 'user_id'  | integer |                                                                             |      YES |
 | 'username' | string  |                                                                             |      YES |
 | 'offset'   | integer | Return results starting from this index position                            |      YES |
@@ -720,9 +710,9 @@ Create a new user. (Requires the username, password and email.)
 |------------|---------|----------------------------|---------:|
 | 'username' | string  | $username                  |       NO |
 | 'password' | string  | hash('sha256', $password)) |       NO |
-| 'email'    | string  | 'user@gmail.com'           |       NO |
+| 'email'    | string  | e.g. user@gmail.com        |       NO |
 | 'fullname' | string  |                            |      YES |
-| 'disable'  | boolean | 0, 1                       |      YES |
+| 'disable'  | boolean | `0`, `1`                   |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_create.json)
 
@@ -734,12 +724,12 @@ Update an existing user.
 |--------------|---------|----------------------------|---------:|
 | 'username'   | string  | $username                  |       NO |
 | 'password'   | string  | hash('sha256', $password)) |      YES |
-| 'email'      | string  | 'user@gmail.com'           |      YES |
+| 'email'      | string  | e.g. user@gmail.com        |      YES |
 | 'fullname'   | string  |                            |      YES |
 | 'website'    | string  |                            |      YES |
 | 'state'      | string  |                            |      YES |
 | 'city'       | string  |                            |      YES |
-| 'disable'    | boolean | 0, 1                       |      YES |
+| 'disable'    | boolean | `0`, `1`                   |      YES |
 | 'maxbitrate' | string  |                            |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_update.json)
@@ -838,11 +828,11 @@ This get the latest posted shouts
 
 This rates a library item
 
-| Input    | Type    | Description                                                                                            | Optional |
-|----------|---------|--------------------------------------------------------------------------------------------------------|---------:|
-| 'type'   | string  | 'song', 'album', 'artist', 'playlist', 'podcast', 'podcast_episode', 'video','tvshow', 'tvshow_season' |       NO |
-| 'id'     | integer | library item id                                                                                        |       NO |
-| 'rating' | integer | rating between 0-5                                                                                     |       NO |
+| Input    | Type    | Description                                                                                             | Optional |
+|----------|---------|---------------------------------------------------------------------------------------------------------|---------:|
+| 'type'   | string  | `song`, `album`, `artist`, `playlist`, `podcast`, `podcast_episode`, `video`, `tvshow`, `tvshow_season` |       NO |
+| 'id'     | integer | library item id                                                                                         |       NO |
+| 'rating' | integer | rating between 0-5                                                                                      |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/rate.json)
 
@@ -853,11 +843,11 @@ This flags a library item as a favorite
 * Setting flag to true (1) will set the flag
 * Setting flag to false (0) will remove the flag
 
-| Input  | Type    | Description                                                                                            | Optional |
-|--------|---------|--------------------------------------------------------------------------------------------------------|---------:|
-| 'type' | string  | 'song', 'album', 'artist', 'playlist', 'podcast', 'podcast_episode', 'video','tvshow', 'tvshow_season' |       NO |
-| 'id'   | integer | $object_id                                                                                             |       NO |
-| 'flag' | boolean | 0, 1                                                                                                   |       NO |
+| Input  | Type    | Description                                                                                             | Optional |
+|--------|---------|---------------------------------------------------------------------------------------------------------|---------:|
+| 'type' | string  | `song`, `album`, `artist`, `playlist`, `podcast`, `podcast_episode`, `video`, `tvshow`, `tvshow_season` |       NO |
+| 'id'   | integer | $object_id                                                                                              |       NO |
+| 'flag' | boolean | `0`, `1`                                                                                                |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/flag.json)
 
@@ -874,7 +864,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 | Input    | Type           | Description           | Optional |
 |----------|----------------|-----------------------|---------:|
 | 'id'     | integer        | $object_id            |       NO |
-| 'user'   | integer,string | $user_id OR $username |      YES |
+| 'user'   | integer/string | $user_id OR $username |      YES |
 | 'client' | string         | $agent                |      YES |
 | 'date'   | string         | UNIXTIME()            |      YES |
 
@@ -903,9 +893,9 @@ Search for a song using text info and then record a play if found. This allows o
 
 This searches the catalogs and returns... catalogs
 
-| Input    | Type   | Description                                                      | Optional |
-|----------|--------|------------------------------------------------------------------|---------:|
-| 'filter' | string | Catalog type music, clip, tvshow, movie, personal_video, podcast |      YES |
+| Input    | Type   | Description                                                                    | Optional |
+|----------|--------|--------------------------------------------------------------------------------|---------:|
+| 'filter' | string | `music`, `clip`, `tvshow`, `movie`, `personal_video`, `podcast` (Catalog type) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalogs.json)
 
@@ -927,7 +917,7 @@ Kick off a catalog update or clean for the selected catalog
 
 | Input     | Type    | Description                       | Optional |
 |-----------|---------|-----------------------------------|---------:|
-| 'task'    | string  | 'add_to_catalog', 'clean_catalog' |       NO |
+| 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(clean_catalog\).json)
@@ -943,7 +933,7 @@ Make sure you remember to urlencode those file names!
 | Input     | Type    | Description                        | Optional |
 |-----------|---------|------------------------------------|---------:|
 | 'file'    | string  | FULL path to local file            |       NO |
-| 'task'    | string  | 'add', 'clean', 'verify', 'remove' |       NO |
+| 'task'    | string  | `add`, `clean`, `verify`, `remove` |       NO |
 | 'catalog' | integer | $catalog_id                        |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_file.json)
@@ -977,7 +967,7 @@ Update a single album, artist, song from the tag data
 
 | Input  | Type    | Description                     | Optional |
 |--------|---------|---------------------------------|---------:|
-| 'type' | string  | 'artist', 'album', 'song'       |       NO |
+| 'type' | string  | `song`, `artist`, `album`       |       NO |
 | 'id'   | integer | $artist_id, $album_id, $song_id |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/update_from_tags.json)
@@ -1001,8 +991,8 @@ Doesn't overwrite existing art by default.
 | Input       | Type    | Description       | Optional |
 |-------------|---------|-------------------|---------:|
 | 'id'        | integer | $object_id        |       NO |
-| 'type'      | string  | 'song', 'podcast' |       NO |
-| 'overwrite' | boolean | 0, 1              |      YES |
+| 'type'      | string  | `song`, `podcast` |       NO |
+| 'overwrite' | boolean | `0`, `1`          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/update_art.json)
 
@@ -1022,24 +1012,24 @@ Sync and download new podcast episodes
 
 Streams a given media file. Takes the file id in parameter with optional max bit rate, file format, time offset, size and estimate content length option.
 
-| Input     | Type    | Description                 | Optional |
-|-----------|---------|-----------------------------|---------:|
-| 'id'      | integer | $object_id                  |       NO |
-| 'type'    | string  | 'song', 'podcast'           |       NO |
-| 'bitrate' | integer | max bitrate for transcoding |      YES |
-| 'format'  | string  | 'mp3', 'ogg', 'raw', etc    |      YES |
-| 'offset'  | integer | time offset in seconds      |      YES |
-| 'length'  | boolean | 0, 1                        |      YES |
+| Input     | Type    | Description                                                | Optional |
+|-----------|---------|------------------------------------------------------------|---------:|
+| 'id'      | integer | $object_id                                                 |       NO |
+| 'type'    | string  | `song`, `podcast`                                          |       NO |
+| 'bitrate' | integer | max bitrate for transcoding                                |      YES |
+| 'format'  | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
+| 'offset'  | integer | time offset in seconds                                     |      YES |
+| 'length'  | boolean | `0`, `1`                                                   |      YES |
 
 ## download
 
 Downloads a given media file. set format=raw to download the full file
 
-| Input    | Type    | Description              | Optional |
-|----------|---------|--------------------------|---------:|
-| 'id'     | integer | $object_id               |       NO |
-| 'type'   | string  | 'song', 'podcast'        |       NO |
-| 'format' | string  | 'mp3', 'ogg', 'raw', etc |      YES |
+| Input    | Type    | Description                                                | Optional |
+|----------|---------|------------------------------------------------------------|---------:|
+| 'id'     | integer | $object_id                                                 |       NO |
+| 'type'   | string  | `song`, `podcast`                                          |       NO |
+| 'format' | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
 
 ## get_art
 
@@ -1048,7 +1038,7 @@ Get an art image.
 | Input  | Type    | Description                                                | Optional |
 |--------|---------|------------------------------------------------------------|---------:|
 | 'id'   | integer | $object_id                                                 |       NO |
-| 'type' | string  | 'song', 'artist', 'album', 'playlist', 'search', 'podcast' |       NO |
+| 'type' | string  | `song`, `artist`, `album`, `playlist`, `search`, `podcast` |       NO |
 
 ## Control Methods
 
@@ -1056,14 +1046,12 @@ Get an art image.
 
 This is for controlling localplay
 
-| Input     | Type    | Description                                                  | Optional |
-|-----------|---------|--------------------------------------------------------------|----------|
-| 'command' | string  | 'next', 'prev', 'stop', 'play', 'pause', 'add', 'volume_up', | NO       |
-|           |         | 'volume_down', 'volume_mute', 'delete_all', 'skip', 'status' |          |
-| 'oid'     | integer | object_id                                                    | YES      |
-| 'type'    | string  | 'Song', 'Video', 'Podcast_Episode', 'Channel',               | YES      |
-|           |         | 'Broadcast', 'Democratic', 'Live_Stream'                     |          |
-| 'clear'   | boolean | 0,1 Clear the current playlist before adding                 | YES      |
+| Input     | Type    | Description                                                                                                               | Optional |
+|-----------|---------|---------------------------------------------------------------------------------------------------------------------------|---------:|
+| 'command' | string  | `next`, `prev`, `stop`, `play`, `pause`, `add`, `volume_up`, `volume_down`, `volume_mute`, `delete_all`, `skip`, `status` |       NO |
+| 'oid'     | integer | $object_id                                                                                                                |      YES |
+| 'type'    | string  | `song`, `video`, `podcast_episode`, `channel`, `broadcast`, `democratic`, `live_stream`                                   |      YES |
+| 'clear'   | boolean | `0`, `1` (Clear the current playlist before adding)                                                                       |      YES |
 
 * return object
 

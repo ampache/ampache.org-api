@@ -80,7 +80,7 @@ This takes a collection of inputs and returns ID + name for the object type
 
 | Input    | Type       | Description                                                                | Optional |
 |----------|------------|----------------------------------------------------------------------------|---------:|
-| 'type'   | string     | 'song', 'album', 'artist', 'playlist'                                      |       NO |
+| 'type'   | string     | `song`, `album`, `artist`, `playlist`                                      |       NO |
 | 'filter' | string     |                                                                            |      YES |
 | 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date    |      YES |
 | 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date |      YES |
@@ -138,51 +138,51 @@ Use operator ('and', 'or') to choose whether to join or separate each rule when 
 
 Select the type of search based on the type of data you are searching for. (songs, playlists, etc)
 
-| rule_1            | Title                 | Type                      |           Valid Items            |
-|-------------------|-----------------------|---------------------------|:--------------------------------:|
-| anywhere          | Any searchable text   | text                      |               song               |
-| title             | Title / Name          | text                      | song,album,artist,playlist,label |
-| favorite          | Favorites             | text                      |       song, album, artist        |
-| playlist_name     | Playlist Name         | text                      |               song               |
-| album             | Album                 | text                      |               song               |
-| artist            | Artist                | text                      |            song,album            |
-| composer          | Composer              | text                      |               song               |
-| comment           | Comment               | text                      |               song               |
-| label             | Label                 | text                      |               song               |
-| lyrics            | Lyrics                | text                      |               song               |
-| tag               | Tag                   | tags                      |        song,album,artist         |
-| album_tag         | Album tag             | tags                      |               song               |
-| artist_tag        | Artist tag            | tags                      |               song               |
-| filename          | Filename              | text                      |            song,video            |
-| placeformed       | Place                 | text                      |              artist              |
-| username          | Username              | text                      |               user               |
-| year              | Year                  | numeric                   |            song,album            |
-| time              | Length (in minutes)   | numeric                   |            song,album            |
-| rating            | Rating (Average)      | numeric                   |        song,album,artist         |
-| myrating          | My Rating             | numeric                   |        song,album,artist         |
-| artistrating      | My Rating (Artist)    | numeric                   |            song,album            |
-| albumrating       | My Rating (Album)     | numeric                   |               song               |
-| played_times      | # Played              | numeric                   |        song,album,artist         |
-| bitrate           | Bitrate               | numeric                   |               song               |
-| has imageght      | Local Image           | boolean                   |           album,artist           |
-| image height      | Image Height          | numeric                   |           album,artist           |
-| image width       | Image Width           | numeric                   |           album,artist           |
-| yearformed        | Year                  | numeric                   |              artist              |
-| played            | Played                | boolean                   |               song               |
-| myplayed          | Played by Me          | boolean                   |               song               |
-| myplayedartist    | Played by Me (Artist) | boolean                   |               song               |
-| myplayedalbum     | Played by Me (Album)  | boolean                   |               song               |
-| last_play         | My Last Play          | days                      |        song,album,artist         |
-| added             | Added                 | date                      |               song               |
-| updated           | Updated               | date                      |               song               |
-| catalog           | Catalog               | boolean_numeric           |            song,album            |
-| other_user        | Another User          | user_numeric              |        song,album,artist         |
-| other_user_album  | Another User          | user_numeric              |               song               |
-| other_user_artist | Another User          | user_numeric              |               song               |
-| playlist          | Playlist              | boolean_numeric           |               song               |
-| licensing         | Music License         | boolean_numeric           |               song               |
-| smartplaylist     | Smart Playlist        | boolean_subsearch         |               song               |
-| metadata          | Metadata              | metadata (multiple types) |               song               |
+| rule_1            | Title                 | Type                      |             Valid Items              |
+|-------------------|-----------------------|---------------------------|:------------------------------------:|
+| anywhere          | Any searchable text   | text                      |                 song                 |
+| title             | Title / Name          | text                      | song, album, artist, playlist, label |
+| favorite          | Favorites             | text                      |         song, album, artist          |
+| playlist_name     | Playlist Name         | text                      |                 song                 |
+| album             | Album                 | text                      |                 song                 |
+| artist            | Artist                | text                      |             song, album              |
+| composer          | Composer              | text                      |                 song                 |
+| comment           | Comment               | text                      |                 song                 |
+| label             | Label                 | text                      |                 song                 |
+| lyrics            | Lyrics                | text                      |                 song                 |
+| tag               | Tag                   | tags                      |         song, album, artist          |
+| album_tag         | Album tag             | tags                      |                 song                 |
+| artist_tag        | Artist tag            | tags                      |                 song                 |
+| filename          | Filename              | text                      |             song, video              |
+| placeformed       | Place                 | text                      |                artist                |
+| username          | Username              | text                      |                 user                 |
+| year              | Year                  | numeric                   |             song, album              |
+| time              | Length (in minutes)   | numeric                   |             song, album              |
+| rating            | Rating (Average)      | numeric                   |         song, album, artist          |
+| myrating          | My Rating             | numeric                   |         song, album, artist          |
+| artistrating      | My Rating (Artist)    | numeric                   |             song, album              |
+| albumrating       | My Rating (Album)     | numeric                   |                 song                 |
+| played_times      | # Played              | numeric                   |         song, album, artist          |
+| bitrate           | Bitrate               | numeric                   |                 song                 |
+| has imageght      | Local Image           | boolean                   |            album, artist             |
+| image height      | Image Height          | numeric                   |            album, artist             |
+| image width       | Image Width           | numeric                   |            album, artist             |
+| yearformed        | Year                  | numeric                   |                artist                |
+| played            | Played                | boolean                   |                 song                 |
+| myplayed          | Played by Me          | boolean                   |                 song                 |
+| myplayedartist    | Played by Me (Artist) | boolean                   |                 song                 |
+| myplayedalbum     | Played by Me (Album)  | boolean                   |                 song                 |
+| last_play         | My Last Play          | days                      |         song, album, artist          |
+| added             | Added                 | date                      |                 song                 |
+| updated           | Updated               | date                      |                 song                 |
+| catalog           | Catalog               | boolean_numeric           |             song, album              |
+| other_user        | Another User          | user_numeric              |         song, album, artist          |
+| other_user_album  | Another User          | user_numeric              |                 song                 |
+| other_user_artist | Another User          | user_numeric              |                 song                 |
+| playlist          | Playlist              | boolean_numeric           |                 song                 |
+| licensing         | Music License         | boolean_numeric           |                 song                 |
+| smartplaylist     | Smart Playlist        | boolean_subsearch         |                 song                 |
+| metadata          | Metadata              | metadata (multiple types) |                 song                 |
 
 #### Available search operators
 
@@ -249,9 +249,9 @@ To search a mixed type like metadata you must search using 4 rules.
     INPUTS
     * ampache_url = (string)
     * ampache_API = (string)
-    * operator = (string) 'and', 'or' (whether to match one rule or all)
-    * rules = (array) = [[rule_1,rule_1_operator,rule_1_input], [rule_2,rule_2_operator,rule_2_input], [etc]]
-    * type = (string) 'song', 'album', 'artist', 'playlist', 'label', 'user', 'video'
+    * operator = (string) `and`, `or` (whether to match one rule or all)
+    * rules = (array) = [[`rule_1`, `rule_1_operator`, `rule_1_input`], [`rule_2`, `rule_2_operator`, `rule_2_input`], [etc]]
+    * type = (string) `song`, `album`, `artist`, `playlist`, `label`, `user`, `video`
     * offset = (integer)
     * limit' = (integer)
 
@@ -275,15 +275,15 @@ This takes a collection of inputs and returns artist objects.
 
 @param array $input
 
-| Input     | Type       | Description                                                                       | Optional |
-|-----------|------------|-----------------------------------------------------------------------------------|---------:|
-| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number     |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                                  |      YES |
-| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date           |      YES |
-| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date        |      YES |
-| 'offset'  | integer    |                                                                                   |      YES |
-| 'limit'   | integer    |                                                                                   |      YES |
-| 'include' | string     | 'albums', 'songs' and will include the corresponding XML nested in the artist XML |      YES |
+| Input     | Type       | Description                                                                   | Optional |
+|-----------|------------|-------------------------------------------------------------------------------|---------:|
+| 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
+| 'exact'   | boolean    | `0`, `1` (if true filter is exact rather then fuzzy)                          |      YES |
+| 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
+| 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
+| 'offset'  | integer    |                                                                               |      YES |
+| 'limit'   | integer    |                                                                               |      YES |
+| 'include' | string     | `albums`, `songs` (include child objects in the response)                     |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artists.xml)
 
@@ -294,10 +294,10 @@ This takes a collection of inputs and returns artist objects.
 This returns a single artist based on the UID of said artist
 @param array $input
 
-| Input     | Type   | Description                                                                       | Optional |
-|-----------|--------|-----------------------------------------------------------------------------------|---------:|
-| 'filter'  | string | UID of Artist, returns artist XML                                                 |       NO |
-| 'include' | string | 'albums', 'songs' and will include the corresponding XML nested in the artist XML |      YES |
+| Input     | Type   | Description                                               | Optional |
+|-----------|--------|-----------------------------------------------------------|---------:|
+| 'filter'  | string | UID of Artist, returns artist XML                         |       NO |
+| 'include' | string | `albums`, `songs` (include child objects in the response) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artist.xml)
 
@@ -341,12 +341,12 @@ This returns albums based on the provided search filters
 | Input     | Type       | Description                                                                   | Optional |
 |-----------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter'  | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'   | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
+| 'exact'   | boolean    | `0`, `1` (if true filter is exact rather then fuzzy)                          |       NO |
 | 'add'     | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
 | 'update'  | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
 | 'offset'  | integer    |                                                                               |      YES |
 | 'limit'   | integer    |                                                                               |      YES |
-| 'include' | string     | 'albums', 'songs' will include the corresponding XML nested in the album XML  |      YES |
+| 'include' | string     | `albums`, `songs` (include child objects in the response)                     |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/albums.xml)
 
@@ -463,7 +463,7 @@ Returns songs based on the specified filter
 | Input    | Type       | Description                                                                   | Optional |
 |----------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |       NO |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |       NO |
+| 'exact'  | boolean    | `0`, `1` (if true filter is exact rather then fuzzy)                          |       NO |
 | 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
 | 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
 | 'offset' | integer    |                                                                               |      YES |
@@ -494,7 +494,7 @@ This returns playlists based on the specified filter
 | Input    | Type       | Description                                                                   | Optional |
 |----------|------------|-------------------------------------------------------------------------------|---------:|
 | 'filter' | string     | Value is Alpha Match for returned results, may be more than one letter/number |      YES |
-| 'exact'  | boolean    | (0, 1) if true filter is exact rather then fuzzy                              |      YES |
+| 'exact'  | boolean    | `0`, `1` (if true filter is exact rather then fuzzy)                          |      YES |
 | 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) add date is newer then specified date       |      YES |
 | 'update' | set_filter | ISO 8601 Date Format (2020-09-16) update itme is newer then specified date    |      YES |
 | 'offset' | integer    |                                                                               |      YES |
@@ -537,10 +537,10 @@ This returns the songs for a playlist
 This create a new playlist and return it
 @param array $input
 
-| Input  | Type   | Description                       | Optional |
-|--------|--------|-----------------------------------|---------:|
-| 'name' | string | Playlist name                     |       NO |
-| 'type' | string | Playlist type 'public', 'private' |      YES |
+| Input  | Type   | Description                         | Optional |
+|--------|--------|-------------------------------------|---------:|
+| 'name' | string | Playlist name                       |       NO |
+| 'type' | string | `public`, `private` (Playlist type) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_create.xml)
 
@@ -558,7 +558,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 |----------|--------|-------------------------------------------------------------------------|---------:|
 | 'filter' | string | UID of Playlist                                                         |       NO |
 | 'name'   | string | Playlist name                                                           |      YES |
-| 'type'   | string | Playlist type 'public', 'private'                                       |      YES |
+| 'type'   | string | `public`, `private` (Playlist type)                                     |      YES |
 | 'items'  | string | comma-separated song_id's (replace existing items with a new object_id) |      YES |
 | 'tracks' | string | comma-separated playlisttrack numbers matched to items in order         |      YES |
 
@@ -585,11 +585,11 @@ This deletes a playlist
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 @param array $input
 
-| Input    | Type    | Description                                               | Optional |
-|----------|---------|-----------------------------------------------------------|---------:|
-| 'filter' | integer | UID of Playlist                                           |       NO |
-| 'song'   | integer | UID of song to add to playlist                            |       NO |
-| 'check'  | boolean | 0, 1 Whether to check and ignore duplicates (default = 0) |      YES |
+| Input    | Type    | Description                                                   | Optional |
+|----------|---------|---------------------------------------------------------------|---------:|
+| 'filter' | integer | UID of Playlist                                               |       NO |
+| 'song'   | integer | UID of song to add to playlist                                |       NO |
+| 'check'  | boolean | `0`, `1` Whether to check and ignore duplicates (default = 0) |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/.xml)
 
@@ -624,12 +624,12 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 
 | Input    | Type    | Description                                                      | Optional |
 |----------|---------|------------------------------------------------------------------|---------:|
-| 'mode'   | string  | 'recent', 'forgotten', 'unplayed', 'random' (default = 'random') |      YES |
+| 'mode'   | string  | `recent`, `forgotten`, `unplayed`, `random` (default = 'random') |      YES |
 | 'filter' | string  | string LIKE matched to song title                                |      YES |
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
-| 'flag'   | integer | get flagged songs only 0, 1 (default = 0)                        |      YES |
-| 'format' | string  | 'song', 'index', 'id' (default = 'song')                          |      YES |
+| 'flag'   | integer | `0`, `1` (get flagged songs only. default = 0)                   |      YES |
+| 'format' | string  | `song`, `index`, `id` (default = 'song')                         |      YES |
 | 'offset' | integer |                                                                  |      YES |
 | 'limit'  | integer |                                                                  |      YES |
 
@@ -701,8 +701,8 @@ This method has partial backwards compatibility with older api versions but shou
 
 | Input      | Type    | Description                                                                 | Optional |
 |------------|---------|-----------------------------------------------------------------------------|---------:|
-| 'type'     | string  | 'song', 'album', 'artist'                                                   |       NO |
-| 'filter'   | string  | 'newest', 'highest', 'frequent', 'recent', 'forgotten', 'flagged', 'random' |       NO |
+| 'type'     | string  | `song`, `album`, `artist`                                                   |       NO |
+| 'filter'   | string  | `newest`, `highest`, `frequent`, `recent`, `forgotten`, `flagged`, `random` |       NO |
 | 'user_id'  | integer |                                                                             |      YES |
 | 'username' | string  |                                                                             |      YES |
 | 'offset'   | integer |                                                                             |      YES |
@@ -744,9 +744,9 @@ Create a new user. (Requires the username, password and email.)
 |------------|---------|----------------------------|---------:|
 | 'username' | string  | $username                  |       NO |
 | 'password' | string  | hash('sha256', $password)) |       NO |
-| 'email'    | string  | 'user@gmail.com'           |       NO |
+| 'email'    | string  | e.g. user@gmail.com        |       NO |
 | 'fullname' | string  |                            |      YES |
-| 'disable'  | boolean | 0, 1                       |      YES |
+| 'disable'  | boolean | `0`, `1`                   |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_create.xml)
 
@@ -761,12 +761,12 @@ Update an existing user.
 |--------------|---------|----------------------------|---------:|
 | 'username'   | string  | $username                  |       NO |
 | 'password'   | string  | hash('sha256', $password)) |      YES |
-| 'email'      | string  | 'user@gmail.com'           |      YES |
+| 'email'      | string  | e.g. user@gmail.com        |      YES |
 | 'fullname'   | string  |                            |      YES |
 | 'website'    | string  |                            |      YES |
 | 'state'      | string  |                            |      YES |
 | 'city'       | string  |                            |      YES |
-| 'disable'    | boolean | 0, 1                       |      YES |
+| 'disable'    | boolean | `0`, `1`                   |      YES |
 | 'maxbitrate' | string  |                            |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_update.xml)
@@ -844,11 +844,11 @@ This get the latest posted shouts
 This rates a library item
 @param array $input
 
-| Input    | Type    | Description                                   | Optional |
-|----------|---------|-----------------------------------------------|---------:|
-| 'type'   | string  | library item type, album, artist, song, video |       NO |
-| 'id'     | string  | library item id                               |       NO |
-| 'rating' | integer | rating between 0-5                            |       NO |
+| Input    | Type    | Description                                    | Optional |
+|----------|---------|------------------------------------------------|---------:|
+| 'type'   | string  | `album`, `artist`, `song`, `video` (item type) |       NO |
+| 'id'     | string  | library item id                                |       NO |
+| 'rating' | integer | rating between 0-5                             |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/rate.xml)
 
@@ -862,11 +862,11 @@ This flags a library item as a favorite
 * Setting flag to false (0) will remove the flag
 @param array $input
 
-| Input  | Type    | Description                        | Optional |
-|--------|---------|------------------------------------|---------:|
-| 'type' | string  | 'song', 'album', 'artist', 'video' |       NO |
-| 'id'   | integer | $object_id                         |       NO |
-| 'flag' | boolean | 0, 1                               |       NO |
+| Input  | Type    | Description                | Optional |
+|--------|---------|----------------------------|---------:|
+| 'type' | string  | song, album, artist, video |       NO |
+| 'id'   | integer | $object_id                 |       NO |
+| 'flag' | boolean | `0`, `1`                   |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/flag.xml)
 
@@ -914,7 +914,7 @@ Kick off a catalog update or clean for the selected catalog
 
 | Input     | Type    | Description                       | Optional |
 |-----------|---------|-----------------------------------|---------:|
-| 'task'    | string  | 'add_to_catalog', 'clean_catalog' |       NO |
+| 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
 [Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20\(clean_catalog.xml))
@@ -959,7 +959,7 @@ Update a single album, artist, song from the tag data
 
 | Input  | Type    | Description                     | Optional |
 |--------|---------|---------------------------------|---------:|
-| 'type' | string  | 'artist', 'album', 'song'       |       NO |
+| 'type' | string  | `song`, `artist`, `album`       |       NO |
 | 'id'   | integer | $artist_id, $album_id, $song_id |       NO |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_from_tags.xml)
@@ -989,8 +989,8 @@ Doesn't overwrite existing art by default.
 | Input       | Type    | Description       | Optional |
 |-------------|---------|-------------------|---------:|
 | 'id'        | integer | $object_id        |       NO |
-| 'type'      | string  | 'song', 'podcast' |       NO |
-| 'overwrite' | boolean | 0, 1              |      YES |
+| 'type'      | string  | `song`, `podcast` |       NO |
+| 'overwrite' | boolean | `0`, `1`          |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_art.xml)
 
@@ -1016,14 +1016,14 @@ Sync and download new podcast episodes
 Streams a given media file. Takes the file id in parameter with optional max bit rate, file format, time offset, size and estimate content length option.
 @param array $input
 
-| Input     | Type    | Description                 | Optional |
-|-----------|---------|-----------------------------|---------:|
-| 'id'      | integer | $object_id                  |       NO |
-| 'type'    | string  | 'song', 'podcast'           |       NO |
-| 'bitrate' | integer | max bitrate for transcoding |      YES |
-| 'format'  | string  | 'mp3', 'ogg', 'raw', etc    |      YES |
-| 'offset'  | integer | time offset in seconds      |      YES |
-| 'length'  | boolean | 0, 1                        |      YES |
+| Input     | Type    | Description                                                | Optional |
+|-----------|---------|------------------------------------------------------------|---------:|
+| 'id'      | integer | $object_id                                                 |       NO |
+| 'type'    | string  | `song`, `podcast`                                          |       NO |
+| 'bitrate' | integer | max bitrate for transcoding                                |      YES |
+| 'format'  | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
+| 'offset'  | integer | time offset in seconds                                     |      YES |
+| 'length'  | boolean | `0`, `1`                                                   |      YES |
 
 ## download
 
@@ -1032,11 +1032,11 @@ Streams a given media file. Takes the file id in parameter with optional max bit
 Downloads a given media file. set format=raw to download the full file
 @param array $input
 
-| Input    | Type    | Description              | Optional |
-|----------|---------|--------------------------|---------:|
-| 'id'     | integer | $object_id               |       NO |
-| 'type'   | string  | 'song', 'podcast'        |       NO |
-| 'format' | string  | 'mp3', 'ogg', 'raw', etc |      YES |
+| Input    | Type    | Description                                                | Optional |
+|----------|---------|------------------------------------------------------------|---------:|
+| 'id'     | integer | $object_id                                                 |       NO |
+| 'type'   | string  | `song`, `podcast`                                          |       NO |
+| 'format' | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
 
 ## get_art
 

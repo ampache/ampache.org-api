@@ -48,7 +48,7 @@ If you have any questions or requests for this API please submit a [Feature Requ
   * catalogs: get all the catalogs
   * catalog: get a catalog by id
   * catalog_file: clean, add, verify using the file path (good for scripting)
-* Api::advanced_search added parameter 'random' (0|1) to shuffle your searches
+* Api::advanced_search added parameter 'random' (0, 1) to shuffle your searches
 
 ### Changed
 
@@ -98,8 +98,8 @@ The key that must be passed to Ampache is `SHA256(TIME+KEY)` where `KEY` is `SHA
 
 ```PHP
 $time = time();
-$key = hash('sha256','mypassword');
-$passphrase = hash('sha256',$time . $key);
+$key = hash('sha256', 'mypassword');
+$passphrase = hash('sha256', $time . $key);
 ```
 
 Once you've generated the encoded passphrase, you can call the following URL (localhost/ampache is the location of your Ampache installation)
