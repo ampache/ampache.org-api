@@ -14,14 +14,16 @@ Refer to the main [Advanced Search](https://ampache.org/api/api-advanced-search)
 
 Select the type of search based on the type of data you are searching for. (songs, playlists, etc)
 
-| rule_1                   | Title                                   | Operator Type     |
-|--------------------------|-----------------------------------------|-------------------|
-| title                    | Title / Name                            | text              |
-| name                     | (*Alias of title)                       |                   |
-| podcast                  | Podcast                                 | text              |
-| time                     | Length (in minutes)                     | numeric           |
-| file                     | Filename                                | text              |
-| state                    | File state (completed, pending skipped) | boolean_numeric   |
+| rule_1  | Title                                   | Operator Type   |
+|---------|-----------------------------------------|-----------------|
+| title   | Title / Name                            | text            |
+| name    | (*Alias of title)                       |                 |
+| podcast | Podcast                                 | text            |
+| time    | Length (in minutes)                     | numeric         |
+| file    | Filename                                | text            |
+| state   | File state (completed, pending skipped) | boolean_numeric |
+| added   | Added                                   | date            |
+| pubdate | Publication Date                        | date            |
 
 ### Available operator values
 

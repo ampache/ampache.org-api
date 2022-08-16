@@ -14,11 +14,16 @@ Refer to the main [Advanced Search](https://ampache.org/api/api-advanced-search)
 
 Select the type of search based on the type of data you are searching for. (songs, playlists, etc)
 
-| rule_1          | Title             | Operator Type |
-|-----------------|-------------------|---------------|
-| title           | Title / Name      | text          |
-| name            | (*Alias of title) |               |
-| podcast_episode | Podcast Episode   | text          |
+| rule_1          | Title                                   | Operator Type   |
+|-----------------|-----------------------------------------|-----------------|
+| title           | Title / Name                            | text            |
+| name            | (*Alias of title)                       |                 |
+| podcast_episode | Podcast Episode                         | text            |
+| time            | Length (in minutes)                     | numeric         |
+| file            | Filename                                | text            |
+| state           | File state (completed, pending skipped) | boolean_numeric |
+| added           | Added                                   | date            |
+| pubdate         | Publication Date                        | date            |
 
 ### Available operator values
 
@@ -36,4 +41,3 @@ Select your operator (integer only!) based on the type or your selected search
 |        7        | does not sound like               |
 |        8        | matches regular expression        |
 |        9        | does not match regular expression |
-
