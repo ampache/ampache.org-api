@@ -28,6 +28,10 @@ description: "API Changelog"
   * Add `genre` as a search type
     * Add rule `title`
 
+### Fixed
+
+* API4::share_create was unable to share when using lowercase types
+
 ## API  5.4.1
 
 ### Added
