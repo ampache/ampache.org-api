@@ -17,9 +17,10 @@ Select the type of search based on the type of data you are searching for. (song
 | title                    | Title / Name              | text              |
 | name                     | (*Alias of title)         |                   |
 | album                    | Album Title               | text              |
+| album_title              | (*Alias of album)         |                   |
 | artist                   | Artist                    | text              |
-| song_title               | Song Title                | text              |
-| album_title              | Album Title               | text              |
+| song                     | Song Title                | text              |
+| song_title               | (*Alias of song)          |                   |
 | summary                  | Summary                   | text              |
 | yearformed               | Year Formed               | numeric           |
 | placeformed              | Place Formed              | text              |

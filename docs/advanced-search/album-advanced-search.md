@@ -18,7 +18,8 @@ Select the type of search based on the type of data you are searching for. (song
 | name                     | (*Alias of title)         |                   |
 | artist                   | Artist                    | text              |
 | song_artist              | Song Artist               | text              |
-| song_title               | Song Title                | text              |
+| song                     | Song Title                | text              |
+| song_title               | (*Alias of song)          |                   |
 | year                     | Year                      | numeric           |
 | original_year            | Original Year             | numeric           |
 | release_type             | Release Type              | text              |
