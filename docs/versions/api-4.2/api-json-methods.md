@@ -799,7 +799,7 @@ Delete an existing user.
 |------------|--------|-------------|---------:|
 | 'username' | string |             |       NO |
 
-[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/user_update.json)
+[Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/json-responses/user_delete.json)
 
 ## licenses
 

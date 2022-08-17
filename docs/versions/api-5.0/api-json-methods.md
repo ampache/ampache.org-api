@@ -1636,7 +1636,7 @@ Delete an existing user.
 "error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/user_update.json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/json-responses/user_delete.json)
 
 ### licenses
 

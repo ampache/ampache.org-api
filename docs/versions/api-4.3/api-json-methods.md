@@ -729,7 +729,7 @@ Delete an existing user.
 |------------|--------|-------------|---------:|
 | 'username' | string |             |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_update.json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_delete.json)
 
 ## licenses
 
@@ -907,7 +907,9 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(clean_catalog\).json)
+[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(clean_catalog\).json)
+
+[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(add_to_catalog\).json)
 
 ## catalog_file
 
