@@ -759,13 +759,13 @@ This get an user public information
 Create a new user. (Requires the username, password and email.)
 @param array $input
 
-| Input      | Type    | Description                | Optional |
-|------------|---------|----------------------------|---------:|
-| 'username' | string  | $username                  |       NO |
-| 'password' | string  | hash('sha256', $password)) |       NO |
-| 'email'    | string  | e.g. user@gmail.com        |       NO |
-| 'fullname' | string  |                            |      YES |
-| 'disable'  | boolean | `0`, `1`                   |      YES |
+| Input      | Type    | Description               | Optional |
+|------------|---------|---------------------------|---------:|
+| 'username' | string  | $username                 |       NO |
+| 'password' | string  | hash('sha256', $password) |       NO |
+| 'email'    | string  | e.g. user@gmail.com       |       NO |
+| 'fullname' | string  |                           |      YES |
+| 'disable'  | boolean | `0`, `1`                  |      YES |
 
 [Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/xml-responses/user_create.xml)
 
@@ -774,17 +774,17 @@ Create a new user. (Requires the username, password and email.)
 Update an existing user.
 @param array $input
 
-| Input        | Type    | Description                | Optional |
-|--------------|---------|----------------------------|---------:|
-| 'username'   | string  | $username                  |       NO |
-| 'password'   | string  | hash('sha256', $password)) |      YES |
-| 'email'      | string  | e.g. user@gmail.com        |      YES |
-| 'fullname'   | string  |                            |      YES |
-| 'website'    | string  |                            |      YES |
-| 'state'      | string  |                            |      YES |
-| 'city'       | string  |                            |      YES |
-| 'disable'    | boolean | `0`, `1`                   |      YES |
-| 'maxbitrate' | string  |                            |      YES |
+| Input        | Type    | Description               | Optional |
+|--------------|---------|---------------------------|---------:|
+| 'username'   | string  | $username                 |       NO |
+| 'password'   | string  | hash('sha256', $password) |      YES |
+| 'email'      | string  | e.g. user@gmail.com       |      YES |
+| 'fullname'   | string  |                           |      YES |
+| 'website'    | string  |                           |      YES |
+| 'state'      | string  |                           |      YES |
+| 'city'       | string  |                           |      YES |
+| 'disable'    | boolean | `0`, `1`                  |      YES |
+| 'maxbitrate' | string  |                           |      YES |
 
 [Example: API 4.2](https://raw.githubusercontent.com/ampache/python3-ampache/4.2.2-1/docs/xml-responses/user_update.xml)
 

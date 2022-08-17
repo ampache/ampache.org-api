@@ -706,13 +706,13 @@ This get an user public information
 
 Create a new user. (Requires the username, password and email.)
 
-| Input      | Type    | Description                | Optional |
-|------------|---------|----------------------------|---------:|
-| 'username' | string  | $username                  |       NO |
-| 'password' | string  | hash('sha256', $password)) |       NO |
-| 'email'    | string  | e.g. user@gmail.com        |       NO |
-| 'fullname' | string  |                            |      YES |
-| 'disable'  | boolean | `0`, `1`                   |      YES |
+| Input      | Type    | Description               | Optional |
+|------------|---------|---------------------------|---------:|
+| 'username' | string  | $username                 |       NO |
+| 'password' | string  | hash('sha256', $password) |       NO |
+| 'email'    | string  | e.g. user@gmail.com       |       NO |
+| 'fullname' | string  |                           |      YES |
+| 'disable'  | boolean | `0`, `1`                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_create.json)
 
@@ -720,17 +720,17 @@ Create a new user. (Requires the username, password and email.)
 
 Update an existing user.
 
-| Input        | Type    | Description                | Optional |
-|--------------|---------|----------------------------|---------:|
-| 'username'   | string  | $username                  |       NO |
-| 'password'   | string  | hash('sha256', $password)) |      YES |
-| 'email'      | string  | e.g. user@gmail.com        |      YES |
-| 'fullname'   | string  |                            |      YES |
-| 'website'    | string  |                            |      YES |
-| 'state'      | string  |                            |      YES |
-| 'city'       | string  |                            |      YES |
-| 'disable'    | boolean | `0`, `1`                   |      YES |
-| 'maxbitrate' | string  |                            |      YES |
+| Input        | Type    | Description               | Optional |
+|--------------|---------|---------------------------|---------:|
+| 'username'   | string  | $username                 |       NO |
+| 'password'   | string  | hash('sha256', $password) |      YES |
+| 'email'      | string  | e.g. user@gmail.com       |      YES |
+| 'fullname'   | string  |                           |      YES |
+| 'website'    | string  |                           |      YES |
+| 'state'      | string  |                           |      YES |
+| 'city'       | string  |                           |      YES |
+| 'disable'    | boolean | `0`, `1`                  |      YES |
+| 'maxbitrate' | string  |                           |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_update.json)
 
@@ -742,7 +742,7 @@ Delete an existing user.
 |------------|--------|-------------|---------:|
 | 'username' | string |             |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_update.json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_delete.json)
 
 ## licenses
 
@@ -868,7 +868,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 | 'client' | string         | $agent                |      YES |
 | 'date'   | string         | UNIXTIME()            |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/record_play.json)
+[Example]https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/record_play.json)
 
 ## scrobble
 
@@ -920,7 +920,11 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(clean_catalog\).json)
+[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(clean_catalog\).json)
+
+[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(add_to_catalog\).json)
+
+[Example: error](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(error\).json)
 
 ## catalog_file
 

@@ -386,7 +386,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 | 'song'   | integer | UID of song to add to playlist                                |       NO |
 | 'check'  | boolean | `0`, `1` Whether to check and ignore duplicates (default = 0) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_add_song.xml)
 
 ## playlist_remove_song
 
@@ -705,13 +705,13 @@ This get an user public information
 
 Create a new user. (Requires the username, password and email.)
 
-| Input      | Type    | Description                | Optional |
-|------------|---------|----------------------------|---------:|
-| 'username' | string  | $username                  |       NO |
-| 'password' | string  | hash('sha256', $password)) |       NO |
-| 'email'    | string  | e.g. user@gmail.com        |       NO |
-| 'fullname' | string  |                            |      YES |
-| 'disable'  | boolean | `0`, `1`                   |      YES |
+| Input      | Type    | Description               | Optional |
+|------------|---------|---------------------------|---------:|
+| 'username' | string  | $username                 |       NO |
+| 'password' | string  | hash('sha256', $password) |       NO |
+| 'email'    | string  | e.g. user@gmail.com       |       NO |
+| 'fullname' | string  |                           |      YES |
+| 'disable'  | boolean | `0`, `1`                  |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/user_create.xml)
 
@@ -719,17 +719,17 @@ Create a new user. (Requires the username, password and email.)
 
 Update an existing user.
 
-| Input        | Type    | Description                | Optional |
-|--------------|---------|----------------------------|---------:|
-| 'username'   | string  | $username                  |       NO |
-| 'password'   | string  | hash('sha256', $password)) |      YES |
-| 'email'      | string  | e.g. user@gmail.com        |      YES |
-| 'fullname'   | string  |                            |      YES |
-| 'website'    | string  |                            |      YES |
-| 'state'      | string  |                            |      YES |
-| 'city'       | string  |                            |      YES |
-| 'disable'    | boolean | `0`, `1`                   |      YES |
-| 'maxbitrate' | string  |                            |      YES |
+| Input        | Type    | Description               | Optional |
+|--------------|---------|---------------------------|---------:|
+| 'username'   | string  | $username                 |       NO |
+| 'password'   | string  | hash('sha256', $password) |      YES |
+| 'email'      | string  | e.g. user@gmail.com       |      YES |
+| 'fullname'   | string  |                           |      YES |
+| 'website'    | string  |                           |      YES |
+| 'state'      | string  |                           |      YES |
+| 'city'       | string  |                           |      YES |
+| 'disable'    | boolean | `0`, `1`                  |      YES |
+| 'maxbitrate' | string  |                           |      YES |
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/user_update.xml)
 
@@ -919,9 +919,11 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(clean_catalog.xml))
+[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(clean_catalog\).xml)
 
-[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(add_to_catalog.xml))
+[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(add_to_catalog\).xml)
+
+[Example: error](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(error\).xml)
 
 ## catalog_file
 
