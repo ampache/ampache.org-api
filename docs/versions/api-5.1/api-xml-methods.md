@@ -890,6 +890,8 @@ This create a new playlist and return it
 This modifies name and type of a playlist
 Previously name and type were mandatory while filter wasn't. this has been reversed.
 
+**NOTE** items and tracks must be sent together and be of equal length
+
 | Input    | Type   | Description                                                       | Optional |
 |----------|--------|-------------------------------------------------------------------|---------:|
 | 'filter' | string | UID of Playlist                                                   |       NO |

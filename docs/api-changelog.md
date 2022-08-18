@@ -8,6 +8,8 @@ description: "API Changelog"
 
 ### Added
 
+* Api::stream add new types `playlist` and `search` (Streams a random object from these lists)
+* Api::download add new types `playlist` and `search`
 * advanced_search
   * Add `podcast` as a search type
     * Add rule `title`
@@ -30,7 +32,10 @@ description: "API Changelog"
 
 ### Fixed
 
+* API4::get_indexes podcast_episode was encoding into the API5 object
 * API4::share_create was unable to share when using lowercase types
+* advanced_search
+  * Added missing `song` (was `song_title`) to album searches
 
 ## API  5.4.1
 
