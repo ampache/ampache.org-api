@@ -1,6 +1,6 @@
 ---
-title: "API 4.1"
-metaTitle: "API 4.1"
+title: "API4.1"
+metaTitle: "API4.1"
 description: "API documentation"
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "API5.0 XML Methods"
-metaTitle: "API5.0 XML Methods"
+title: "API5.5 JSON Methods"
+metaTitle: "API5.5 JSON Methods"
 description: "API documentation"
 ---
 
-Let's go through come calls and examples that you can do for each XML method.
+Let's go through come calls and examples that you can do for each JSON method.
 
 With the exception of Binary methods, all responses will return a HTTP 200 response.
 
-Also remember that Binary data methods will not return xml; just the file/data you have requested.
+Also remember that Binary data methods will not return JSON; just the file/data you have requested.
 
 Binary methods will also return:
 
@@ -30,40 +30,38 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 | 'timestamp' | integer | UNIXTIME() The timestamp used in seed of password hash (Required if login/password authentication) |      YES |
 | 'version'   | string  | $version (API Version that the application understands)                                            |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <auth>
-    <api>
-    <session_expire>
-    <update>
-    <add>
-    <clean>
-    <songs>
-    <albums>
-    <artists>
-    <genres>
-    <playlists>
-    <users>
-    <catalogs>
-    <videos>
-    <podcasts>
-    <podcast_episodes>
-    <shares>
-    <licenses>
-    <live_streams>
-    <labels>
-</root>
+```JSON
+"auth": "",
+"api": "",
+"session_expire": "",
+"update": "",
+"add": "",
+"clean": "",
+"songs": 0,
+"albums": 0,
+"artists": 0,
+"genres": 0,
+"playlists": 0,
+"users": 0,
+"catalogs": 0,
+"videos": 0,
+"podcasts": 0,
+"podcast_episodes": 0,
+"shares": 0,
+"licenses": 0,
+"live_streams": 0,
+"labels": 0
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/handshake.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/handshake.json)
 
 ### ping
 
@@ -74,47 +72,43 @@ This can be called without being authenticated, it is useful for determining if 
 | 'auth'    | string | (Session ID) returns version information and extends the session if passed |      YES |
 | 'version' | string | $version (API Version that the application understands)                    |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <session_expire>
-    <server>
-    <version>
-    <compatible>
-    <auth>
-    <api>
-    <update>
-    <add>
-    <clean>
-    <songs>
-    <albums>
-    <artists>
-    <genres>
-    <playlists>
-    <users>
-    <catalogs>
-    <videos>
-    <podcasts>
-    <podcast_episodes>
-    <shares>
-    <licenses>
-    <live_streams>
-    <labels>
-</root>
+```JSON
+"session_expire": "",
+"server": "",
+"version": "",
+"compatible": "",
+"auth": "",
+"api": "",
+"update": "",
+"add": "",
+"clean": "",
+"songs": 0,
+"albums": 0,
+"artists": 0,
+"genres": 0,
+"playlists": 0,
+"users": 0,
+"catalogs": 0,
+"videos": 0,
+"podcasts": 0,
+"podcast_episodes": 0,
+"shares": 0,
+"licenses": 0,
+"live_streams": 0,
+"labels": 0
 ```
 
-* throws
+* throws array
 
-```XML
-<root>
-    <server>
-    <version>
-    <compatible>
-</root>
+```JSON
+"server": "",
+"version": "",
+"compatible": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/ping.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/ping.json)
 
 ### goodbye
 
@@ -124,21 +118,19 @@ Destroy a session using the auth parameter.
 |--------|--------|------------------------------------------------|---------:|
 | 'auth' | string | (Session ID) destroys the session if it exists |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/goodbye.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/goodbye.json)
 
 ## Non-Data Methods
 
@@ -150,21 +142,19 @@ Check Ampache for updates and run the update if there is one.
 
 **ACCESS REQUIRED:** 100 (Admin)
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/system_update.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_update.json)
 
 ### system_preferences
 
@@ -172,75 +162,73 @@ Get your server preferences
 
 **ACCESS REQUIRED:** 100 (Admin)
 
-* return
+* return array
 
-```XML
-<root>
-    <preferences>
-</root>
+```JSON
+"preference": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/system_preferences.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_preferences.json)
 
 ### users
 
 Get ids and usernames for your site
 
-* return
+* return array
 
-```XML
-<root>
-    <user>
-</root>
+```JSON
+"user": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/users.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/users.json)
 
 ### user_preferences
 
 Get your user preferences
 
-* return
+* return array
 
-```XML
-<root>
-    <preference>
-</root>
+```JSON
+"preference": []
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/user_preferences.xml)
+* throws object
+
+```JSON
+"error": ""
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preferences.json)
 
 ### bookmarks
 
 Get information about bookmarked media this user is allowed to manage.
 
-* return
+* return array
 
-```XML
-<root>
-    <bookmark>
-</root>
+```JSON
+"bookmark": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/bookmarks.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmarks.json)
 
 ## Data Methods
 
@@ -254,36 +242,33 @@ This takes a collection of inputs and returns ID + name for the object type
 |---------------|------------|----------------------------------------------------------------------------------------------------|---------:|
 | 'type'        | string     | `song`, `album`, `artist`, `album_artist`, `playlist`, `podcast`, `podcast_episode`, `live_stream` |       NO |
 | 'filter'      | string     | Value is Alpha Match for returned results, may be more than one letter/number                      |      YES |
+| 'add'         | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
 | 'update'      | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
 | 'include'     | boolean    | `0`, `1` (include songs in a playlist or episodes in a podcast)                                    |      YES |
 | 'offset'      | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'       | integer    | Maximum number of results to return                                                                |      YES |
 | 'hide_search' | integer    | `0`, `1` (if true do not include searches/smartlists in the result)                                |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>|<album>|<artist>|<playlist>|<podcast>
-</root>
+```JSON
+"song": []|"album": []|"artist": []|"playlist": []|"podcast": []
+
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-SONGS [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_indexes%20\(song\).xml)
+SONGS [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(song\).json)
 
-ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_indexes%20\(artist\).xml)
+ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(artist\).json)
 
-ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_indexes%20\(album\).xml)
+ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(album\).json)
 
-PLAYLIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_indexes%20\(playlist\).xml)
-
-PODCAST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_indexes%20\(podcast\).xml)
+PLAYLIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_indexes%20\(playlist\).json)
 
 ### advanced_search
 
@@ -307,36 +292,33 @@ Just add 1 to the rule value to create a new group of rules.
 * Optional (Metadata searches **only**)
   * rule_1_subtype
 
-| Input    | Type    | Description                                                     | Optional |
-|----------|---------|-----------------------------------------------------------------|---------:|
-| operator | string  | and, or (whether to match one rule or all)                      |       NO |
-| rule_*   | array   | [`rule_1`, `rule_1_operator`, `rule_1_input`]                   |       NO |
-| rule_*   | array   | [`rule_2`, `rule_2_operator`, `rule_2_input`], [etc]            |      YES |
-| type     | string  | `song`, `album`, `artist`, `playlist`, `label`, `user`, `video` |       NO |
-| random   | boolean | `0`, `1` (random order of results; default to 0)                |      YES |
-| 'offset' | integer | Return results starting from this index position                |      YES |
-| 'limit'  | integer | Maximum number of results to return                             |      YES |
+| Input    | Type    | Description                                                                                            | Optional |
+|----------|---------|--------------------------------------------------------------------------------------------------------|---------:|
+| operator | string  | and, or (whether to match one rule or all)                                                             |       NO |
+| rule_*   | array   | [`rule_1`, `rule_1_operator`, `rule_1_input`]                                                          |       NO |
+| rule_*   | array   | [`rule_2`, `rule_2_operator`, `rule_2_input`], [etc]                                                   |      YES |
+| type     | string  | `song`, `album`, `artist`, `label`, `playlist`, `podcast`, `podcast_episode`, `genre`, `user`, `video` |       NO |
+| random   | boolean | `0`, `1` (random order of results; default to 0)                                                       |      YES |
+| 'offset' | integer | Return results starting from this index position                                                       |      YES |
+| 'limit'  | integer | Maximum number of results to return                                                                    |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>|<album>|<artist>|<playlist>|<label>|<user>|<video>
-</root>
+```JSON
+"song": []|"album": []|"artist": []|"playlist": []|"label": []|"user": []|"video": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/advanced_search%20\(song\).xml)
+SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/advanced_search%20\(song\).json)
 
-ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/advanced_search%20\(artist\).xml)
+ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/advanced_search%20\(artist\).json)
 
-ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/advanced_search%20\(album\).xml)
+ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/advanced_search%20\(album\).json)
 
 ### artists
 
@@ -353,22 +335,19 @@ This takes a collection of inputs and returns artist objects.
 | 'offset'       | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'        | integer    | Maximum number of results to return                                                                |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <artist>
-</root>
+```JSON
+"artist": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/artists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artists.json)
 
 ### artist
 
@@ -376,25 +355,38 @@ This returns a single artist based on the UID of said artist
 
 | Input     | Type   | Description                                               | Optional |
 |-----------|--------|-----------------------------------------------------------|---------:|
-| 'filter'  | string | UID of Artist, returns artist XML                         |       NO |
+| 'filter'  | string | UID of Artist, returns artist JSON                        |       NO |
 | 'include' | string | `albums`, `songs` (include child objects in the response) |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <artist>
-</root>
+```JSON
+"id": "",
+"name": "",
+"albums": [],
+"albumcount": 0,
+"songs": [],
+"songcount": 0,
+"genre": [],
+"art": "",
+"flag": 0,
+"preciserating": 0,
+"rating": 0,
+"averagerating": 0,
+"mbid": "",
+"summary": "",
+"time": 0,
+"yearformed": 0,
+"placeformed": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/artist.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artist.json)
 
 ### artist_albums
 
@@ -402,26 +394,23 @@ This returns the albums of an artist
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of Artist, returns Album XML                 |       NO |
+| 'filter' | string  | UID of Artist, returns Album JSON                |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <album>
-</root>
+```JSON
+album": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/artist_albums.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artist_albums.json)
 
 ### artist_songs
 
@@ -429,27 +418,24 @@ This returns the songs of the specified artist
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of Artist, returns Song XML                  |       NO |
+| 'filter' | string  | UID of Artist, returns Song JSON                 |       NO |
 | 'top50'  | boolean | `0`, `1` (if true filter to the artist top 50)   |      YES |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/artist_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/artist_songs.json)
 
 ### albums
 
@@ -465,22 +451,19 @@ This returns albums based on the provided search filters
 | 'limit'   | integer    | Maximum number of results to return                                                                |      YES |
 | 'include' | string     | `albums`, `songs` (include child objects in the response)                                          |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <album>
-</root>
+```JSON
+"album": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/albums.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/albums.json)
 
 ### album
 
@@ -488,25 +471,37 @@ This returns a single album based on the UID provided
 
 | Input     | Type   | Description                                     | Optional |
 |-----------|--------|-------------------------------------------------|---------:|
-| 'filter'  | string | UID of Album, returns album XML                 |       NO |
+| 'filter'  | string | UID of Album, returns album JSON                |       NO |
 | 'include' | string | `songs` (include child objects in the response) |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <album>
-</root>
+```JSON
+"id": "",
+"name": "",
+"artist": {},
+"time": 0,
+"year": 0,
+"tracks": [],
+"songcount": 0,
+"diskcount": 0,
+"type": "",
+"genre": [],
+"art": "",
+"flag": 0,
+"preciserating": 0.0,
+"rating": 0.0,
+"averagerating": 0.0,
+"mbid": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/album.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/album.json)
 
 ### album_songs
 
@@ -514,27 +509,24 @@ This returns the songs of a specified album
 
 | Input    | Type    | Description                                               | Optional |
 |----------|---------|-----------------------------------------------------------|---------:|
-| 'filter' | string  | UID of Album, returns song XML                            |       NO |
+| 'filter' | string  | UID of Album, returns song JSON                           |       NO |
 | 'exact'  | boolean | `0`, `1` (if true don't group songs from different disks) |      YES |
 | 'offset' | integer | Return results starting from this index position          |      YES |
 | 'limit'  | integer | Maximum number of results to return                       |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/album_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/album_songs.json)
 
 ### genres
 
@@ -547,49 +539,48 @@ This returns the genres (Tags) based on the specified filter
 | 'offset' | integer | Return results starting from this index position                |      YES |
 | 'limit'  | integer | Maximum number of results to return                             |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <genre>
-</root>
+```JSON
+"genre": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/genres.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/genres.json)
 
 ### genre
 
-This returns a single genre based on UID.
-All XML Documents that have a ```<genre></genre>``` element may have 0 or more genre elements associated with them.
-Each genre element has an attribute "count" that indicates the number of people who have specified this genre.
+This returns a single genre based on UID
 
-| Input    | Type   | Description                     | Optional |
-|----------|--------|---------------------------------|---------:|
-| 'filter' | string | UID of genre, returns genre XML |       NO |
+| Input    | Type   | Description                      | Optional |
+|----------|--------|----------------------------------|---------:|
+| 'filter' | string | UID of genre, returns genre JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <genre>
-</root>
+```JSON
+"id": "",
+"name": "",
+"albums": 0,
+"artists": 0,
+"songs": 0,
+"videos": 0,
+"playlists": 0,
+"live_streams": 0
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/genre.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/genre.json)
 
 ### genre_artists
 
@@ -597,26 +588,23 @@ This returns the artists associated with the genre in question as defined by the
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns artist XML                 |      YES |
+| 'filter' | string  | UID of genre, returns artist JSON                |      YES |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <artist>
-</root>
+```JSON
+"artist": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/genre_artists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/genre_artists.json)
 
 ### genre_albums
 
@@ -624,26 +612,23 @@ This returns the albums associated with the genre in question
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns album XML                  |      YES |
+| 'filter' | string  | UID of genre, returns album JSON                 |      YES |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <album>
-</root>
+```JSON
+"album": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/genre_albums.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/genre_albums.json)
 
 ### genre_songs
 
@@ -651,26 +636,23 @@ returns the songs for this genre
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns song XML                   |      YES |
+| 'filter' | string  | UID of genre, returns song JSON                  |      YES |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/genre_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/genre_songs.json)
 
 ### songs
 
@@ -685,47 +667,78 @@ Returns songs based on the specified filter
 | 'offset' | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'  | integer    | Maximum number of results to return                                                                |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/songs.json)
 
 ### song
 
 returns a single song
 
-| Input    | Type   | Description                   | Optional |
-|----------|--------|-------------------------------|---------:|
-| 'filter' | string | UID of Song, returns song XML |       NO |
+| Input    | Type   | Description                    | Optional |
+|----------|--------|--------------------------------|---------:|
+| 'filter' | string | UID of Song, returns song JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"id": "",
+"title": "",
+"name": "",
+"artist": {},
+"album": {},
+"genre": [],
+"albumartist": {},
+"filename": "",
+"track": 0,
+"playlisttrack": 0,
+"time": 0,
+"year": 0,
+"bitrate": 0,
+"rate": 0,
+"mode": "",
+"mime": "",
+"url": "",
+"size": 0,
+"mbid": "0",
+"album_mbid": "",
+"artist_mbid": "",
+"albumartist_mbid": ",
+"art": "",
+"flag": 0,
+"preciserating": 0.0,
+"rating": 0.0,
+"averagerating": 0.0,
+"playcount": 0,
+"catalog": 0,
+"composer": "",
+"channels": null,
+"comment": "",
+"publisher": "",
+"language": "",
+"replaygain_album_gain": 0.000000,
+"replaygain_album_peak": 0.000000,
+"replaygain_track_gain": 0.000000,
+"replaygain_track_peak": 0.000000
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/song.json)
 
 ### song_delete
 
@@ -735,46 +748,78 @@ Delete an existing song. (if you are allowed to)
 |----------|--------|-----------------------|---------:|
 | 'filter' | string | UID of song to delete |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/song_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/song_delete.json)
 
 ### url_to_song
 
 This takes a url and returns the song object in question
 
-| Input | Type   | Description                                                   | Optional |
-|-------|--------|---------------------------------------------------------------|---------:|
-| 'url' | string | Full Ampache URL from server, translates back into a song XML |       NO |
+| Input | Type   | Description                                                    | Optional |
+|-------|--------|----------------------------------------------------------------|---------:|
+| 'url' | string | Full Ampache URL from server, translates back into a song JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"id": "",
+"title": "",
+"name": "",
+"artist": {},
+"album": {},
+"genre": [],
+"albumartist": {},
+"filename": "",
+"track": 0,
+"playlisttrack": 0,
+"time": 0,
+"year": 0,
+"bitrate": 0,
+"rate": 0,
+"mode": "",
+"mime": "",
+"url": "",
+"size": 0,
+"mbid": "",
+"album_mbid": "",
+"artist_mbid": "",
+"albumartist_mbid": "",
+"art": "",
+"flag": 0,
+"preciserating": 0.0,
+"rating": 0.0,
+"averagerating": 0.0,
+"playcount": 0,
+"catalog": 0,
+"composer": "",
+"channels": null,
+"comment": "",
+"publisher": "",
+"language": "",
+"replaygain_album_gain": 0.000000,
+"replaygain_album_peak": 0.000000,
+"replaygain_track_gain": 0.000000,
+"replaygain_track_peak": 0.000000
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/url_to_song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/url_to_song.json)
 
 ### playlists
 
@@ -789,48 +834,43 @@ This returns playlists based on the specified filter
 | 'offset'      | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'       | integer    | Maximum number of results to return                                                                |      YES |
 | 'hide_search' | integer    | `0`, `1` (if true do not include searches/smartlists in the result)                                |      YES |
+| 'show_dupes'  | integer    | `0`, `1` (if true if true ignore 'api_hide_dupe_searches' setting)                                 |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <playlist>
-</root>
+```JSON
+"playlist": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlists.json)
 
 ### playlist
 
 This returns a single playlist
 
-| Input    | Type   | Description                           | Optional |
-|----------|--------|---------------------------------------|---------:|
-| 'filter' | string | UID of playlist, returns playlist XML |       NO |
+| Input    | Type   | Description                            | Optional |
+|----------|--------|----------------------------------------|---------:|
+| 'filter' | string | UID of playlist, returns playlist JSON |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <playlist>
-</root>
+```JSON
+"playlist": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist.json)
 
 ### playlist_songs
 
@@ -838,26 +878,23 @@ This returns the songs for a playlist
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of Playlist, returns song XML                |       NO |
+| 'filter' | string  | UID of Playlist, returns song JSON               |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_songs.json)
 
 ### playlist_create
 
@@ -868,22 +905,19 @@ This create a new playlist and return it
 | 'name' | string | Playlist name                       |       NO |
 | 'type' | string | `public`, `private` (Playlist type) |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <playlist>
-</root>
+```JSON
+"playlist": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_create.json)
 
 ### playlist_edit
 
@@ -901,45 +935,41 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 | 'items'  | string | comma-separated song_id's (replaces existing items with a new id) |      YES |
 | 'tracks' | string | comma-separated playlisttrack numbers matched to 'items' in order |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_edit.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_edit.json)
 
 ### playlist_delete
 
 This deletes a playlist
 
 | Input    | Type   | Description     | Optional |
-|----------|--------|-----------------|----------|
-| 'filter' | string | UID of Playlist | NO       |
+|----------|--------|-----------------|---------:|
+| 'filter' | string | UID of Playlist |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_delete.json)
 
 ### playlist_add_song
 
@@ -951,21 +981,19 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 | 'song'   | string  | UID of song to add to playlist                                |       NO |
 | 'check'  | boolean | `0`, `1` Whether to check and ignore duplicates (default = 0) |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_add_song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_add_song.json)
 
 ### playlist_remove_song
 
@@ -978,30 +1006,26 @@ Previous versions required 'track' instead of 'song'.
 | 'song'   | string  | UID of song to remove from playlist  |      YES |
 | 'track'  | integer | Track number to remove from playlist |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_remove_song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_remove_song.json)
 
 ### playlist_generate
 
-Get a list of song XML, indexes or id's based on some simple search criteria
+Get a list of song JSON, indexes or id's based on some simple search criteria
 'recent' will search for tracks played after 'Popular Threshold' days
 'forgotten' will search for tracks played before 'Popular Threshold' days
 'unplayed' added in 400002 for searching unplayed tracks
-
-**Note** when using the 'id' format total_count is not returned.
 
 | Input    | Type    | Description                                                      | Optional |
 |----------|---------|------------------------------------------------------------------|---------:|
@@ -1009,31 +1033,28 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 | 'filter' | string  | string LIKE matched to song title                                |      YES |
 | 'album'  | integer | $album_id                                                        |      YES |
 | 'artist' | integer | $artist_id                                                       |      YES |
-| 'flag'   | integer | `0`, `1` (get flagged songs only. default = 0)                   |      YES |
+| 'flag'   | boolean | `0`, `1` (get flagged songs only. default = 0)                   |      YES |
 | 'format' | string  | `song`, `index`, `id` (default = 'song')                         |      YES |
 | 'offset' | integer | Return results starting from this index position                 |      YES |
 | 'limit'  | integer | Maximum number of results to return                              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>|<index>|<id>
-</root>
+```JSON
+"song": []|"index": []|"id": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_generate%20\(song\).xml)
+SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_generate%20\(song\).json)
 
-INDEX [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_generate%20\(index\).xml)
+INDEX [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_generate%20\(index\).json)
 
-ID [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/playlist_generate%20\(id\).xml)
+ID [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/playlist_generate%20\(id\).json)
 
 ### shares
 
@@ -1046,47 +1067,55 @@ This searches the shares and returns... shares
 | 'offset' | integer | Return results starting from this index position  |      YES |
 | 'limit'  | integer | Maximum number of results to return               |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <share>
-</root>
+```JSON
+"share": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/shares.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/shares.json)
 
 ### share
 
 Return shares by UID
 
-| Input    | Type   | Description                    | Optional |
-|----------|--------|--------------------------------|---------:|
-| 'filter' | string | UID of Share, returns song XML |       NO |
+| Input    | Type   | Description                     | Optional |
+|----------|--------|---------------------------------|---------:|
+| 'filter' | string | UID of Share, returns song JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <share>
-</root>
+```JSON
+"id": "",
+"name": "",
+"owner": "",
+"allow_stream": 0,
+"allow_download": 0,
+"creation_date": "",
+"lastvisit_date": "",
+"object_type": "",
+"object_id": "",
+"expire_days": 0,
+"max_counter": 0,
+"counter": 0,
+"secret": "",
+"public_url": "",
+"description": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/share.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share.json)
 
 ### share_create
 
@@ -1100,51 +1129,46 @@ Takes the file id with optional description and expires parameters.
 | 'description' | string  | description (will be filled for you if empty) |      YES |
 | 'expires'     | integer | days to keep active                           |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <share>
-</root>
+```JSON
+"share": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/share_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_create.json)
 
 ### share_edit
 
 Update the description and/or expiration date for an existing share.
 Takes the share id to update with optional description and expires parameters.
 
-| Input         | Type    | Description                        | Optional |
-|---------------|---------|------------------------------------|---------:|
-| 'filter'      | string  | Alpha-numeric search term          |       NO |
-| 'stream'      | boolean | `0`, `1` Allow streaming           |      YES |
-| 'download'    | boolean | `0`, `1` Allow Downloading         |      YES |
-| 'expires'     | integer | number of whole days before expiry |      YES |
-| 'description' | string  | update description                 |      YES |
+| Input         | Type    | Description                  | Optional |
+|---------------|---------|------------------------------|---------:|
+| 'filter'      | string  | Alpha-numeric search term    |       NO |
+| 'stream'      | boolean | `0`, `1`                     |      YES |
+| 'download'    | boolean | `0`, `1`                     |      YES |
+| 'expires'     | integer | number of days before expiry |      YES |
+| 'description' | string  | update description           |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/share_edit.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_edit.json)
 
 ### share_delete
 
@@ -1154,21 +1178,19 @@ Delete an existing share.
 |----------|--------|------------------------|---------:|
 | 'filter' | string | UID of Share to delete |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/share_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/share_delete.json)
 
 ### get_similar
 
@@ -1181,22 +1203,20 @@ Return similar artist id's or similar song ids compared to the input filter
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>|<artist>
-</root>
+```JSON
+"song": []|"artist": []
+
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_similar.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_similar.json)
 
 ### search_songs
 
@@ -1208,22 +1228,19 @@ This searches the songs and returns... songs
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/search_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/search_songs.json)
 
 ### videos
 
@@ -1236,82 +1253,47 @@ This returns video objects!
 | 'offset' | integer | Return results starting from this index position                |      YES |
 | 'limit'  | integer | Maximum number of results to return                             |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <video>
-</root>
+```JSON
+"video": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/videos.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/videos.json)
 
 ### video
 
 This returns a single video
 
-| Input    | Type   | Description                     | Optional |
-|----------|--------|---------------------------------|---------:|
-| 'filter' | string | UID of video, returns video XML |       NO |
+| Input    | Type   | Description                      | Optional |
+|----------|--------|----------------------------------|---------:|
+| 'filter' | string | UID of video, returns video JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <video>
-</root>
+```JSON
+"id": "",
+"title": "",
+"mime": "",
+"resolution": "",
+"size": 0,
+"genre": [],
+"url": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/video.xml)
-
-### stats
-
-Get some items based on some simple search types and filters. (Random by default)
-This method HAD partial backwards compatibility with older api versions but it has now been removed
-
-| Input      | Type    | Description                                                                 | Optional |
-|------------|---------|-----------------------------------------------------------------------------|---------:|
-| 'type'     | string  | `song`, `album`, `artist`                                                   |       NO |
-| 'filter'   | string  | `newest`, `highest`, `frequent`, `recent`, `forgotten`, `flagged`, `random` |      YES |
-| 'user_id'  | integer |                                                                             |      YES |
-| 'username' | string  |                                                                             |      YES |
-| 'offset'   | integer | Return results starting from this index position                            |      YES |
-| 'limit'    | integer | Maximum number of results to return                                         |      YES |
-
-* return
-
-```XML
-<root>
-    <total_count>
-    <song>|<album>|<artist>
-</root>
-```
-
-* throws
-
-```XML
-<root><error></root>
-```
-
-SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/stats%20\(song\).xml)
-
-ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/stats%20\(artist\).xml)
-
-ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/stats%20\(album\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/video.json)
 
 ### podcasts
 
@@ -1324,22 +1306,19 @@ Get information about podcasts
 | 'limit'   | integer | Maximum number of results to return                                           |      YES |
 | 'include' | string  | `episodes` (include podcast_episodes in the response)                         |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <podcast>
-</root>
+```JSON
+"podcast": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcasts.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcasts.json)
 
 ### podcast
 
@@ -1347,25 +1326,33 @@ Get the podcast from it's id.
 
 | Input     | Type   | Description                                           | Optional |
 |-----------|--------|-------------------------------------------------------|---------:|
-| 'filter'  | string | UID of podcast, returns podcast XML                   |       NO |
+| 'filter'  | string | UID of podcast, returns podcast JSON                  |       NO |
 | 'include' | string | `episodes` (include podcast_episodes in the response) |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <podcast>
-</root>
+```JSON
+"id": "",
+"name": "",
+"description": "",
+"language": "",
+"copyright": "",
+"feed_url": "",
+"generator": "",
+"website": "",
+"build_date": "",
+"sync_date": "",
+"public_url": "",
+"podcast_episode": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast.json)
 
 ### podcast_create
 
@@ -1379,22 +1366,19 @@ Takes the url and catalog parameters.
 | 'url'     | string | rss url for podcast |       NO |
 | 'catalog' | string | podcast catalog     |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <podcast>
-</root>
+```JSON
+"podcast": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_create.json)
 
 ### podcast_edit
 
@@ -1413,21 +1397,19 @@ Takes the podcast id to update with optional description and expires parameters.
 | 'generator'   | string |                           |      YES |
 | 'copyright'   | string |                           |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast_edit.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_edit.json)
 
 ### podcast_delete
 
@@ -1439,21 +1421,19 @@ Delete an existing podcast.
 |----------|--------|--------------------------|---------:|
 | 'filter' | string | UID of podcast to delete |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_delete.json)
 
 ### podcast_episodes
 
@@ -1465,22 +1445,19 @@ This returns the episodes for a podcast
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <podcast_episode>
-</root>
+```JSON
+"podcast_episode": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast_episodes.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_episodes.json)
 
 ### podcast_episode
 
@@ -1490,22 +1467,19 @@ Get the podcast_episode from it's id.
 |----------|--------|---------------------------|---------:|
 | 'filter' | string | podcast_episode ID number |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <podcast_episode>
-</root>
+```JSON
+"podcast_episode": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast_episode.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_episode.json)
 
 ### podcast_episode_delete
 
@@ -1515,45 +1489,73 @@ Delete an existing podcast_episode.
 |----------|--------|----------------------------------|---------:|
 | 'filter' | string | UID of podcast_episode to delete |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/podcast_episode_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/podcast_episode_delete.json)
+
+### stats
+
+Get some items based on some simple search types and filters. (Random by default)
+This method **HAD** partial backwards compatibility with older api versions but it has now been removed
+
+| Input      | Type    | Description                                                                  | Optional |
+|------------|---------|------------------------------------------------------------------------------|---------:|
+| 'type'     | string  | `song`, `album`, `artist`, `video`, `playlist`, `podcast`, `podcast_episode` |       NO |
+| 'filter'   | string  | `newest`, `highest`, `frequent`, `recent`, `forgotten`, `flagged`, `random`  |      YES |
+| 'user_id'  | integer |                                                                              |      YES |
+| 'username' | string  |                                                                              |      YES |
+| 'offset'   | integer | Return results starting from this index position                             |      YES |
+| 'limit'    | integer | Maximum number of results to return                                          |      YES |
+
+* return array
+
+```JSON
+"song": []|"album": []|"artist": []
+```
+
+* throws object
+
+```JSON
+"error": ""
+```
+
+SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/stats%20\(song\).json)
+
+ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/stats%20\(artist\).json)
+
+ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/stats%20\(album\).json)
 
 ### user
 
 This get an user public information
 
-| Input      | Type   | Description                             | Optional |
-|------------|--------|-----------------------------------------|---------:|
-| 'username' | string | Username of the user to get details for |       NO |
+| Input      | Type   | Description                         | Optional |
+|------------|--------|-------------------------------------|---------:|
+| 'username' | string | Username of the user to get details |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <user>
-</root>
+```JSON
+"user": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/user.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user.json)
 
 ### user_create
 
@@ -1569,21 +1571,19 @@ Create a new user. (Requires the username, password and email.)
 | 'fullname' | string  |                           |      YES |
 | 'disable'  | boolean | `0`, `1`                  |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/user_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_create.json)
 
 ### user_update
 
@@ -1603,21 +1603,19 @@ Update an existing user.
 | 'disable'    | boolean | `0`, `1`                  |      YES |
 | 'maxbitrate' | string  |                           |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/user_update.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_update.json)
 
 ### user_delete
 
@@ -1626,77 +1624,74 @@ Delete an existing user.
 **ACCESS REQUIRED:** 100 (Admin)
 
 | Input      | Type   | Description | Optional |
-|------------|--------|-------------|----------|
-| 'username' | string |             | NO       |
+|------------|--------|-------------|---------:|
+| 'username' | string |             |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/user_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_delete.json)
 
 ### licenses
 
 This returns licenses based on the specified filter
 
-| Input    | Type    | Description                                                     | Optional |
-|----------|---------|-----------------------------------------------------------------|---------:|
-| 'filter' | string  | Filter results to match this string                             |      YES |
-| 'exact'  | boolean | `0`, `1` (if true filter is exact `=` rather than fuzzy `LIKE`) |      YES |
-| 'offset' | integer | Return results starting from this index position                |      YES |
-| 'limit'  | integer | Maximum number of results to return                             |      YES |
+| Input    | Type       | Description                                                                                        | Optional |
+|----------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                                                |      YES |
+| 'exact'  | boolean    | `0`, `1` (if true filter is exact `=` rather than fuzzy `LIKE`)                                    |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset' | integer    |                                                                                                    |      YES |
+| 'limit'  | integer    |                                                                                                    |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <license>
-</root>
+```JSON
+"license": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/licenses.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/licenses.json)
 
 ### license
 
 This returns a single license
 
-| Input    | Type   | Description                         | Optional |
-|----------|--------|-------------------------------------|---------:|
-| 'filter' | string | UID of license, returns license XML |       NO |
+| Input    | Type   | Description                          | Optional |
+|----------|--------|--------------------------------------|---------:|
+| 'filter' | string | UID of license, returns license JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <license>
-</root>
+```JSON
+"id": "",
+"name": "",
+"description": "",
+"external_link": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/license.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/license.json)
 
 ### license_songs
 
@@ -1704,79 +1699,139 @@ This returns the songs for a license
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of license, returns song XML                 |       NO |
+| 'filter' | string  | UID of license, returns song JSON                |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <song>
-</root>
+```JSON
+"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/license_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/license_songs.json)
+
+### live_streams
+
+This returns live_streams based on the specified filter
+
+| Input    | Type       | Description                                                                                        | Optional |
+|----------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                                                |      YES |
+| 'exact'  | boolean    | `0`, `1` (if true filter is exact `=` rather than fuzzy `LIKE`)                                    |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset' | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'  | integer    | Maximum number of results to return                                                                |      YES |
+
+* return array
+
+```JSON
+"live_stream": []
+```
+
+* throws object
+
+```JSON
+"error": ""
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/live_streams.json)
+
+### live_stream
+
+This returns a single live_stream
+
+| Input    | Type   | Description                                  | Optional |
+|----------|--------|----------------------------------------------|---------:|
+| 'filter' | string | UID of live_stream, returns live_stream JSON |       NO |
+
+* return object
+
+```JSON
+"id": "",
+"name": "",
+"artists": 0,
+"summary": "",
+"external_link": "'",
+"address": "",
+"category": "",
+"email": "",
+"website": "",
+"user": 0
+```
+
+* throws object
+
+```JSON
+"error": ""
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/live_stream.json)
 
 ### labels
 
 This returns labels based on the specified filter
 
-| Input    | Type    | Description                                                     | Optional |
-|----------|---------|-----------------------------------------------------------------|---------:|
-| 'filter' | string  | Filter results to match this string                             |      YES |
-| 'exact'  | boolean | `0`, `1` (if true filter is exact `=` rather than fuzzy `LIKE`) |      YES |
-| 'offset' | integer | Return results starting from this index position                |      YES |
-| 'limit'  | integer | Maximum number of results to return                             |      YES |
+| Input    | Type       | Description                                                                                        | Optional |
+|----------|------------|----------------------------------------------------------------------------------------------------|---------:|
+| 'filter' | string     | Filter results to match this string                                                                |      YES |
+| 'exact'  | boolean    | `0`, `1` (if true filter is exact `=` rather than fuzzy `LIKE`)                                    |      YES |
+| 'add'    | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'add' date newer than the specified date    |      YES |
+| 'update' | set_filter | ISO 8601 Date Format (2020-09-16) Find objects with an 'update' time newer than the specified date |      YES |
+| 'offset' | integer    | Return results starting from this index position                                                   |      YES |
+| 'limit'  | integer    | Maximum number of results to return                                                                |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <label>
-</root>
+```JSON
+"label": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/labels.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/labels.json)
 
 ### label
 
 This returns a single label
 
-| Input    | Type   | Description                     | Optional |
-|----------|--------|---------------------------------|---------:|
-| 'filter' | string | UID of label, returns label XML |       NO |
+| Input    | Type   | Description                      | Optional |
+|----------|--------|----------------------------------|---------:|
+| 'filter' | string | UID of label, returns label JSON |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <label>
-</root>
+```JSON
+"id": "",
+"name": "",
+"artists": 0,
+"summary": "",
+"external_link": "'",
+"address": "",
+"category": "",
+"email": "",
+"website": "",
+"user": 0
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/label.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/label.json)
 
 ### label_artists
 
@@ -1784,74 +1839,67 @@ This returns the artists for a label
 
 | Input    | Type    | Description                                      | Optional |
 |----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | UID of label, returns artist XML                 |       NO |
+| 'filter' | string  | UID of label, returns artist JSON                |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <artist>
-</root>
+```JSON
+"artist": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/label_artists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/label_artists.json)
 
 ### followers
 
 This gets the followers for the requested username
 
-| Input      | Type   | Description                                        | Optional |
-|------------|--------|----------------------------------------------------|---------:|
-| 'username' | string | Username of the user for who to get followers list |       NO |
+| Input      | Type   | Description                                | Optional |
+|------------|--------|--------------------------------------------|---------:|
+| 'username' | string | Username of the user to get followers list |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <user>
-</root>
+```JSON
+"user": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/followers.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/followers.json)
 
 ### following
 
 Get a list of people that this user follows
 
-| Input      | Type   | Description                                         | Optional |
-|------------|--------|-----------------------------------------------------|---------:|
-| 'username' | string | (Username of the user for who to get following list |       NO |
+| Input      | Type   | Description                                | Optional |
+|------------|--------|--------------------------------------------|---------:|
+| 'username' | string | Username of the user to get following list |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <user>
-</root>
+```JSON
+"user": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/following.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/following.json)
 
 ### toggle_follow
 
@@ -1861,21 +1909,19 @@ This follow/unfollow an user
 |------------|--------|-----------------------------------------|---------:|
 | 'username' | string | Username of the user to follow/unfollow |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/toggle_follow.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/toggle_follow.json)
 
 ### last_shouts
 
@@ -1886,21 +1932,19 @@ This gets the latest posted shouts
 | 'username' | string  | Get latest shouts for this username |      YES |
 | 'limit'    | integer | Maximum number of results to return |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <shout>
-</root>
+```JSON
+"shout": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/last_shouts.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/last_shouts.json)
 
 ### rate
 
@@ -1909,24 +1953,22 @@ This rates a library item
 | Input    | Type    | Description                                                                                             | Optional |
 |----------|---------|---------------------------------------------------------------------------------------------------------|---------:|
 | 'type'   | string  | `song`, `album`, `artist`, `playlist`, `podcast`, `podcast_episode`, `video`, `tvshow`, `tvshow_season` |       NO |
-| 'id'     | string  | library item id                                                                                         |       NO |
+| 'id'     | integer | library item id                                                                                         |       NO |
 | 'rating' | integer | rating between 0-5                                                                                      |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/rate.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/rate.json)
 
 ### flag
 
@@ -1941,21 +1983,19 @@ This flags a library item as a favorite
 | 'id'   | integer | $object_id                                                                                              |       NO |
 | 'flag' | boolean | `0`, `1`                                                                                                |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/flag.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/flag.json)
 
 ### record_play
 
@@ -1966,58 +2006,54 @@ If you don't supply a user id (optional) then just fall back to you.
 **ACCESS REQUIRED:** 100 (Admin) permission to change another user's play history
 
 | Input    | Type    | Description | Optional |
-|----------|---------|-------------|----------|
-| 'id'     | integer | $object_id  | NO       |
-| 'user'   | integer | $user_id    | YES      |
-| 'client' | string  | $agent      | YES      |
-| 'date'   | integer | UNIXTIME()  | YES      |
+|----------|---------|-------------|---------:|
+| 'id'     | integer | $object_id  |       NO |
+| 'user'   | integer | $user_id    |      YES |
+| 'client' | string  | $agent      |      YES |
+| 'date'   | integer | UNIXTIME()  |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/record_play.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/record_play.json)
 
 ### scrobble
 
 Search for a song using text info and then record a play if found. This allows other sources to record play history to ampache
 
-| Input        | Type    | Description  | Optional |
-|--------------|---------|--------------|----------|
-| 'song'       | string  | $song_name   | NO       |
-| 'artist'     | string  | $artist_name | NO       |
-| 'album'      | string  | $album_name  | NO       |
-| 'songmbid'   | string  | $song_mbid   | YES      |
-| 'artistmbid' | string  | $artist_mbid | YES      |
-| 'albummbid'  | string  | $album_mbid  | YES      |
-| 'date'       | integer | UNIXTIME()   | YES      |
-| 'client'     | string  | $agent       | YES      |
+| Input        | Type    | Description                  | Optional |
+|--------------|---------|------------------------------|---------:|
+| 'song'       | string  | HTML encoded string          |       NO |
+| 'artist'     | string  | HTML encoded string          |       NO |
+| 'album'      | string  | HTML encoded string          |       NO |
+| 'songmbid'   | string  | `song_mbid` also supported   |      YES |
+| 'artistmbid' | string  | `artist_mbid` also supported |      YES |
+| 'albummbid'  | string  | `album_mbid` also supported  |      YES |
+| 'date'       | integer | UNIXTIME()                   |      YES |
+| 'client'     | string  | $agent                       |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/scrobble.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/scrobble.json)
 
 ### catalogs
 
@@ -2027,47 +2063,51 @@ This searches the catalogs and returns... catalogs
 |----------|--------|--------------------------------------------------------------------------------|---------:|
 | 'filter' | string | `music`, `clip`, `tvshow`, `movie`, `personal_video`, `podcast` (Catalog type) |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <total_count>
-    <catalog>
-</root>
+```JSON
+"catalog": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/catalogs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalogs.json)
 
 ### catalog
 
 Return catalog by UID
 
 | Input    | Type   | Description    | Optional |
-|----------|--------|----------------|----------|
-| 'filter' | string | UID of Catalog | NO       |
+|----------|--------|----------------|---------:|
+| 'filter' | string | UID of Catalog |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <total_count>
-    <catalog>
-</root>
+```JSON
+"id": "",
+"name": "",
+"type": "",
+"gather_types": "",
+"enabled": 0,
+"last_add": "",
+"last_clean": "",
+"last_update": "",
+"path": "",
+"rename_pattern": "",
+"sort_pattern": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/catalog.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog.json)
 
 ### catalog_action
 
@@ -2080,23 +2120,21 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/catalog_action%20\(clean_catalog\).xml)
+[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog_action%20\(clean_catalog\).json)
 
-[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/catalog_action%20\(add_to_catalog\).xml)
+[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog_action%20\(add_to_catalog\).json)
 
 ### catalog_file
 
@@ -2106,27 +2144,25 @@ Make sure you remember to urlencode those file names!
 
 **ACCESS REQUIRED:** 50 (Content Manager)
 
-| Input     | Type    | Description                                                             | Optional |
-|-----------|---------|-------------------------------------------------------------------------|---------:|
-| 'file'    | string  | FULL path to local file                                                 |       NO |
-| 'task'    | string  | `add`, `clean`, `verify`, `remove` (can include comma-separated values) |       NO |
-| 'catalog' | integer | $catalog_id                                                             |       NO |
+| Input     | Type    | Description                                                              | Optional |
+|-----------|---------|--------------------------------------------------------------------------|---------:|
+| 'file'    | string  | FULL path to local file                                                  |       NO |
+| 'task'    | string  | `add`, `clean`, `verify`, `remove`, (can include comma-separated values) |       NO |
+| 'catalog' | integer | $catalog_id                                                              |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/catalog_file.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/catalog_file.json)
 
 ### timeline
 
@@ -2138,21 +2174,19 @@ This get an user timeline
 | 'limit'    | integer | Maximum number of results to return               |      YES |
 | 'since'    | integer | UNIXTIME()                                        |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <activity>
-</root>
+```JSON
+"activity": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/timeline.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/timeline.json)
 
 ### friends_timeline
 
@@ -2163,21 +2197,19 @@ This get current user friends timeline
 | 'limit' | integer | Maximum number of results to return |      YES |
 | 'since' | integer | UNIXTIME()                          |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <activity>
-</root>
+```JSON
+"activity": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/friends_timeline.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/friends_timeline.json)
 
 ### update_from_tags
 
@@ -2188,21 +2220,19 @@ Update a single album, artist, song from the tag data
 | 'type' | string  | `song`, `artist`, `album`       |       NO |
 | 'id'   | integer | $artist_id, $album_id, $song_id |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/update_from_tags.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_from_tags.json)
 
 ### update_artist_info
 
@@ -2212,24 +2242,22 @@ Make sure lastfm_API_key is set in your configuration file
 **ACCESS REQUIRED:** 75 (Catalog Manager)
 
 | Input | Type    | Description | Optional |
-|-------|---------|-------------|----------|
-| 'id'  | integer | $artist_id  | NO       |
+|-------|---------|-------------|---------:|
+| 'id'  | integer | $artist_id  |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/update_artist_info.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_artist_info.json)
 
 ### update_art
 
@@ -2244,22 +2272,19 @@ Doesn't overwrite existing art by default.
 | 'type'      | string  | `song`, `podcast` |       NO |
 | 'overwrite' | boolean | `0`, `1`          |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-    <art>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/update_art.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_art.json)
 
 ### update_podcast
 
@@ -2268,24 +2293,22 @@ Sync and download new podcast episodes
 **ACCESS REQUIRED:** 50 (Content Manager)
 
 | Input | Type    | Description | Optional |
-|-------|---------|-------------|----------|
-| 'id'  | integer | $object_id  | NO       |
+|-------|---------|-------------|---------:|
+| 'id'  | integer | $object_id  |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/update_podcast.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/update_podcast.json)
 
 ### user_preference
 
@@ -2295,21 +2318,19 @@ Get your user preference by name
 |----------|--------|---------------------------------------------------|---------:|
 | 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <preference>
-</root>
+```JSON
+"preference": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/user_preference.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/user_preference.json)
 
 ### system_preference
 
@@ -2321,21 +2342,19 @@ Get your server preference by name
 |----------|--------|---------------------------------------------------|---------:|
 | 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <preference>
-</root>
+```JSON
+"preference": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/system_preferences.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/system_preferences.json)
 
 ### preference_create
 
@@ -2353,21 +2372,19 @@ Add a new preference to your server
 | 'subcategory' | string  |                                                                                  |      YES |
 | 'level'       | integer | access level required to change the value (default 100)                          |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <preference>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/preference_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_create.json)
 
 ### preference_edit
 
@@ -2381,21 +2398,19 @@ Edit a preference value and apply to all users if allowed
 | 'value'  | mixed   | (string/integer) Preference value                 |       NO |
 | 'all'    | boolean | `0`, `1` apply to all users                       |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/preference_edit.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_edit.json)
 
 ### preference_delete
 
@@ -2407,21 +2422,19 @@ Delete a non-system preference by name
 |----------|--------|---------------------------------------------------|---------:|
 | 'filter' | string | Preference name e.g ('notify_email', 'ajax_load') |       NO |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/preference_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/preference_delete.json)
 
 ### get_bookmark
 
@@ -2432,21 +2445,19 @@ Get the bookmark from it's object_id and object_type.
 | 'filter' | string | $object_id to find                               |       NO |
 | 'type'   | string | `song`, `video`, `podcast_episode` (object_type) |       NO |
 
-* return
+* return array
 
-```XML
-<root>
-    <bookmark>
-</root>
+```JSON
+"bookmark": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/get_bookmark.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/get_bookmark.json)
 
 ### bookmark_create
 
@@ -2460,21 +2471,19 @@ Create a placeholder for the current media that you can return to later.
 | 'client'   | string  | Agent string. (Default: 'AmpacheAPI')            |      YES |
 | 'date'     | integer | update time (Default: UNIXTIME())                |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <bookmark>
-</root>
+```JSON
+"bookmark": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/bookmark_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmark_create.json)
 
 ### bookmark_edit
 
@@ -2488,21 +2497,19 @@ Edit a placeholder for the current media that you can return to later.
 | 'client'   | string  | Agent string. (Default: 'AmpacheAPI')            |      YES |
 | 'date'     | integer | update time (Default: UNIXTIME())                |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <bookmark>
-</root>
+```JSON
+"bookmark": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/bookmark_edit.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmark_edit.json)
 
 ### bookmark_delete
 
@@ -2514,21 +2521,19 @@ Delete an existing bookmark. (if it exists)
 | 'type'   | string | `song`, `video`, `podcast_episode` (object_type) |       NO |
 | 'client' | string | Agent string. (Default: 'AmpacheAPI')            |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <success>
-</root>
+```JSON
+"success": ""
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/bookmark_delete)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/bookmark_delete)
 
 ### deleted_songs
 
@@ -2539,21 +2544,19 @@ Returns songs that have been deleted from the server
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <deleted_song>
-</root>
+```JSON
+"deleted_song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/deleted_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/deleted_songs.json)
 
 ### deleted_podcast_episodes
 
@@ -2564,21 +2567,19 @@ This returns the episodes for a podcast that have been deleted
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <deleted_podcast_episode>
-</root>
+```JSON
+"deleted_podcast_episode": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/deleted_podcast_episodes.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/deleted_podcast_episodes.json)
 
 ### deleted_videos
 
@@ -2589,21 +2590,19 @@ This returns video objects that have been deleted
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
 
-* return
+* return array
 
-```XML
-<root>
-    <deleted_video>
-</root>
+```JSON
+"deleted_video": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/deleted_videos.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/deleted_videos.json)
 
 ## Binary Data Methods
 
@@ -2613,10 +2612,12 @@ Binary data methods are used for returning raw data to the user such as a image 
 
 Streams a given media file. Takes the file id in parameter with optional max bit rate, file format, time offset, size and estimate content length option.
 
+**NOTE** search and playlist will only stream a random object from the list
+
 | Input     | Type    | Description                                                | Optional |
 |-----------|---------|------------------------------------------------------------|---------:|
 | 'id'      | integer | $object_id                                                 |       NO |
-| 'type'    | string  | `song`, `podcast_episode`, `podcast`                       |       NO |
+| 'type'    | string  | `song`, `podcast_episode`, `search`, `playlist`            |       NO |
 | 'bitrate' | integer | max bitrate for transcoding                                |      YES |
 | 'format'  | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
 | 'offset'  | integer | Return results starting from this index position           |      YES |
@@ -2630,10 +2631,12 @@ Streams a given media file. Takes the file id in parameter with optional max bit
 
 Downloads a given media file. set format=raw to download the full file
 
+**NOTE** search and playlist will only download a random object from the list
+
 | Input    | Type    | Description                                                | Optional |
 |----------|---------|------------------------------------------------------------|---------:|
 | 'id'     | integer | $object_id                                                 |       NO |
-| 'type'   | string  | `song`, `podcast_episode`                                  |       NO |
+| 'type'   | string  | `song`, `podcast_episode`, `search`, `playlist`            |       NO |
 | 'format' | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
 
 * return file (HTTP 200 OK)
@@ -2666,27 +2669,21 @@ This is for controlling localplay
 | 'type'    | string  | `song`, `video`, `podcast_episode`, `channel`, `broadcast`, `democratic`, `live_stream`                                   |      YES |
 | 'clear'   | boolean | `0`, `1` (Clear the current playlist before adding)                                                                       |      YES |
 
-* return
+* return object
 
-```XML
-<root>
-    <localplay>
-        <command>
-            <next>|<prev>|<stop>|<play>|<pause>|<add>|<volume_up>|<volume_down>|<volume_mute>|<delete_all>|<skip>|<status>
-        </command>
-    </localplay>
-</root>
+```JSON
+"localplay": { "command": {} }
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/localplay.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/localplay.json)
 
-[Example (status)](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/localplay%20\(status\).xml)
+[Example (status)](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/localplay%20\(status\).json)
 
 ### democratic
 
@@ -2703,22 +2700,20 @@ This is for controlling democratic play (Songs only)
 | 'oid'    | integer | UID of Song object                   |       NO |
 | 'method' | string  | `vote`, `devote`, `playlist`, `play` |       NO |
 
-* return
+* return object|array
 
-```XML
-<root>
-    <url>|<method><result>|<song>
-</root>
+```JSON
+"url": ""|"method": "","result": false|"song": []
 ```
 
-* throws
+* throws object
 
-```XML
-<root><error></root>
+```JSON
+"error": ""
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/democratic%20\(play\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/democratic%20\(play\).json)
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/democratic%20\(vote\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/democratic%20\(vote\).json)
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/018d2c397e2bfef4b6e0a7792b7558bd20c814d0/docs/xml-responses/democratic%20\(playlist\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/json-responses/democratic%20\(playlist\).json)

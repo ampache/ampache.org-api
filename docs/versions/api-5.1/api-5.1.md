@@ -1,6 +1,6 @@
 ---
-title: "API 5.1"
-metaTitle: "API 5.1"
+title: "API5.1"
+metaTitle: "API5.1"
 description: "API documentation"
 ---
 
@@ -50,7 +50,7 @@ The key that must be passed to Ampache is the API Key generated for a specific u
 http://localhost/ampache/server/xml.server.php?action=handshake&auth=API_KEY&version=350001
 ```
 
-In API 4.0.0 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
+In API4 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
 
 ```PHP
 $user = 'username';
