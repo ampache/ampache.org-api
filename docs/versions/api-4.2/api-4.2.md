@@ -72,8 +72,8 @@ If you have any questions or requests for this API please submit a [Feature Requ
 ### Deprecated
 
 * API Build number is depreciated (the last 3 digits of the api version)
-  * API 5.0.0 will be released with a string version ("5.0.0-release")
-* Tag in songs is depreciated and will be removed in API 5.0.0.
+  * API5 will be released with a string version ("5.0.0-release")
+* Tag in songs is depreciated and will be removed in API5.
   * Use genre instead of tag, genre provides an ID as well as the name.
 
 ### Fixed
