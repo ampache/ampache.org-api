@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "API 4.2",
-    "permalink": "/api/versions/api-4.2/"
-  },
-  "next": {
     "title": "Errors 4.2",
     "permalink": "/api/versions/api-4.2/api-errors"
+  },
+  "next": {
+    "title": "API4.1",
+    "permalink": "/api/versions/api-4.1/"
   }
 }

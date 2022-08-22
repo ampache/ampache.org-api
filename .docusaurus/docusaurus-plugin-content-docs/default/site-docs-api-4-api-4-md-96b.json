@@ -21,7 +21,7 @@
     "permalink": "/api/advanced-search/video-advanced-search"
   },
   "next": {
-    "title": "API4 Errors",
-    "permalink": "/api/api-4/api-errors"
+    "title": "API4 XML",
+    "permalink": "/api/api-4/api-xml-methods"
   }
 }

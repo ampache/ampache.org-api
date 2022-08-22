@@ -260,6 +260,36 @@
               "sidebar": "api"
             },
             {
+              "id": "versions/api-5.5/api-5.5",
+              "path": "/api/versions/api-5.5/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.5/api-advanced-search",
+              "path": "/api/versions/api-5.5/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.5/api-errors",
+              "path": "/api/versions/api-5.5/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.5/api-json-methods",
+              "path": "/api/versions/api-5.5/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.5/api-standards",
+              "path": "/api/versions/api-5.5/api-standards",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-5.5/api-xml-methods",
+              "path": "/api/versions/api-5.5/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
               "id": "versions/versions",
               "path": "/api/versions/",
               "sidebar": "api"

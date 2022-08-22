@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Errors 4.2",
-    "permalink": "/api/versions/api-4.2/api-errors"
-  },
-  "next": {
     "title": "XML 4.2",
     "permalink": "/api/versions/api-4.2/api-xml-methods"
+  },
+  "next": {
+    "title": "Errors 4.2",
+    "permalink": "/api/versions/api-4.2/api-errors"
   }
 }

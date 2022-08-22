@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-5.5/api-json-methods",
+  "id": "versions/api-5.5/api-json-methods",
+  "title": "API5.5 JSON Methods",
+  "description": "API documentation",
+  "source": "@site/docs/versions/api-5.5/api-json-methods.md",
+  "sourceDirName": "versions/api-5.5",
+  "slug": "/versions/api-5.5/api-json-methods",
+  "permalink": "/api/versions/api-5.5/api-json-methods",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API5.5 JSON Methods",
+    "metaTitle": "API5.5 JSON Methods",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API5.5 XML Methods",
+    "permalink": "/api/versions/api-5.5/api-xml-methods"
+  },
+  "next": {
+    "title": "API5.5 Errors",
+    "permalink": "/api/versions/api-5.5/api-errors"
+  }
+}

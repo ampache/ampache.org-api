@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "JSON 4.3",
-    "permalink": "/api/versions/api-4.3/api-json-methods"
+    "title": "API 4.3",
+    "permalink": "/api/versions/api-4.3/"
   },
   "next": {
-    "title": "API 5.0",
-    "permalink": "/api/versions/api-5.0/"
+    "title": "JSON 4.3",
+    "permalink": "/api/versions/api-4.3/api-json-methods"
   }
 }

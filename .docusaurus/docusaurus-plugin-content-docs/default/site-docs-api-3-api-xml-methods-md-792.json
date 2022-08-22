@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "API3 Errors",
-    "permalink": "/api/api-3/api-errors"
+    "title": "API 3",
+    "permalink": "/api/api-3/"
   },
   "next": {
-    "title": "Past Releases",
-    "permalink": "/api/versions/"
+    "title": "API3 Errors",
+    "permalink": "/api/api-3/api-errors"
   }
 }

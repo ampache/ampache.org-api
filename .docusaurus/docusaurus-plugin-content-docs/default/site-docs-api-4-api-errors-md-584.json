@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "API 4",
-    "permalink": "/api/api-4/"
-  },
-  "next": {
     "title": "API4 JSON",
     "permalink": "/api/api-4/api-json-methods"
+  },
+  "next": {
+    "title": "API 3",
+    "permalink": "/api/api-3/"
   }
 }

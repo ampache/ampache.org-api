@@ -1,7 +1,7 @@
 {
   "unversionedId": "versions/api-4.1/api-4.1",
   "id": "versions/api-4.1/api-4.1",
-  "title": "API 4.1",
+  "title": "API4.1",
   "description": "API documentation",
   "source": "@site/docs/versions/api-4.1/api-4.1.md",
   "sourceDirName": "versions/api-4.1",
@@ -11,14 +11,14 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API 4.1",
-    "metaTitle": "API 4.1",
+    "title": "API4.1",
+    "metaTitle": "API4.1",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "Past Releases",
-    "permalink": "/api/versions/"
+    "title": "advanced_search 4.2",
+    "permalink": "/api/versions/api-4.2/api-advanced-search"
   },
   "next": {
     "title": "XML 4.1",
