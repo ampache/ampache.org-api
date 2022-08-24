@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-3/api-3",
   "id": "api-3/api-3",
-  "title": "API 3",
+  "title": "API3",
   "description": "API documentation",
   "source": "@site/docs/api-3/api-3.md",
   "sourceDirName": "api-3",
@@ -11,8 +11,8 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API 3",
-    "metaTitle": "API 3",
+    "title": "API3",
+    "metaTitle": "API3",
     "description": "API documentation"
   },
   "sidebar": "api",

@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-4/api-4",
   "id": "api-4/api-4",
-  "title": "API 4",
+  "title": "API4",
   "description": "API documentation",
   "source": "@site/docs/api-4/api-4.md",
   "sourceDirName": "api-4",
@@ -11,14 +11,14 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API 4",
-    "metaTitle": "API 4",
+    "title": "API4",
+    "metaTitle": "API4",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "Video Search",
-    "permalink": "/api/advanced-search/video-advanced-search"
+    "title": "API5 advanced_search",
+    "permalink": "/api/api-5/api-advanced-search"
   },
   "next": {
     "title": "API4 XML",

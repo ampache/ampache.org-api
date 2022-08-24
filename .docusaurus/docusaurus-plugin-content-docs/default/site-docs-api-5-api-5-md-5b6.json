@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api-5/api-5",
+  "id": "api-5/api-5",
+  "title": "API5",
+  "description": "API documentation",
+  "source": "@site/docs/api-5/api-5.md",
+  "sourceDirName": "api-5",
+  "slug": "/api-5/",
+  "permalink": "/api/api-5/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API5",
+    "metaTitle": "API5",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Video Search",
+    "permalink": "/api/advanced-search/video-advanced-search"
+  },
+  "next": {
+    "title": "API5 Standards",
+    "permalink": "/api/api-5/api-standards"
+  }
+}
