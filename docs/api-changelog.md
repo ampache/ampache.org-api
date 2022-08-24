@@ -4,6 +4,14 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API develop
+
+### Added
+
+* advanced_search
+  * Add song_artist as a search type (uses artist rules)
+  * Add album_artist as a search type (uses artist rules)
+
 ## API 5.5.0
 
 ### Added
