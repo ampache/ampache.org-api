@@ -1,6 +1,6 @@
 ---
-title: "API5.5 JSON Methods"
-metaTitle: "API5.5 JSON Methods"
+title: "API5 JSON Methods"
+metaTitle: "API5 JSON Methods"
 description: "API documentation"
 ---
 

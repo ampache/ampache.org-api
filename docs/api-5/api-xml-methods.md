@@ -1,6 +1,6 @@
 ---
-title: "API5.5 XML Methods"
-metaTitle: "API5.5 XML Methods"
+title: "API5 XML Methods"
+metaTitle: "API5 XML Methods"
 description: "API documentation"
 ---
 

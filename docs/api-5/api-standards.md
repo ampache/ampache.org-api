@@ -1,6 +1,6 @@
 ---
-title: "API5.5 Standards"
-metaTitle: "API5.5 Standards"
+title: "API5 Standards"
+metaTitle: "API5 Standards"
 description: "API documentation"
 ---
 

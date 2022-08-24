@@ -40,7 +40,19 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'API 4',
+      label: 'API5',
+      link: {type: 'doc', id: 'api-5/api-5'},
+      items: [
+        'api-5/api-standards',
+        'api-5/api-xml-methods',
+        'api-5/api-json-methods',
+        'api-5/api-errors',
+        'api-5/api-advanced-search',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'API4',
       link: {type: 'doc', id: 'api-4/api-4'},
       items: [
         'api-4/api-xml-methods',
@@ -50,7 +62,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'API 3',
+      label: 'API3',
       link: {type: 'doc', id: 'api-3/api-3'},
       items: [
         'api-3/api-xml-methods',
@@ -62,18 +74,6 @@ const sidebars = {
       label: 'Past Releases',
       link: {type: 'doc', id: 'versions/versions'},
       items: [
-        {
-          type: 'category',
-          label: 'API 5.5',
-          link: {type: 'doc', id: 'versions/api-5.5/api-5.5'},
-          items: [
-            'versions/api-5.5/api-standards',
-            'versions/api-5.5/api-xml-methods',
-            'versions/api-5.5/api-json-methods',
-            'versions/api-5.5/api-errors',
-            'versions/api-5.5/api-advanced-search',
-          ],
-        },
         {
           type: 'category',
           label: 'API 5.1',
