@@ -34,4 +34,3 @@ Select your operator (integer only!) based on the type or your selected search
 |        7        | does not sound like               |
 |        8        | matches regular expression        |
 |        9        | does not match regular expression |
-

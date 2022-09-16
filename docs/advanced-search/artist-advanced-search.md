@@ -37,6 +37,8 @@ Select the type of search based on the type of data you are searching for. (song
 | time                     | Length (in minutes)       | numeric           |
 | genre                    | Genre                     | tags              |
 | tag                      | (*Alias of genre)         |                   |
+| song_genre               | Song Genre                | tags              |
+| song_tag                 | (*Alias of song_genre)    |                   |
 | no_genre                 | No Genre                  | is_true           |
 | no_tag                   | (*Alias of no_genre)      |                   |
 | other_user               | Another User              | user_numeric      |
@@ -46,6 +48,9 @@ Select the type of search based on the type of data you are searching for. (song
 | recent_played            | Recently Played           | numeric_limit     |
 | catalog                  | Catalog                   | boolean_numeric   |
 | mbid                     | MusicBrainz ID            | text              |
+| mbid_artist              | (*Alias of mbid)          |                   |
+| mbid_song                | MusicBrainz ID (Song)     |                   |
+| mbid_album               | MusicBrainz ID (Album)    | text              |
 | has_image                | Local Image               | boolean           |
 | image_height             | Image Height              | numeric           |
 | image_width              | Image Width               | numeric           |
@@ -78,4 +83,3 @@ Send the correct input based on the type of search.
 | text         |
 | integer      |
 | boolean      |
-

@@ -66,6 +66,7 @@ Select the type of search based on the type of data you are searching for. (song
 | recent_updated           | Recently Updated          | numeric_limit     |
 | catalog                  | Catalog                   | boolean_numeric   |
 | mbid                     | MusicBrainz ID            | text              |
+| mbid_song                | (*Alias of mbid)          |                   |
 | mbid_album               | MusicBrainz ID (Album)    | text              |
 | mbid_artist              | MusicBrainz ID (Artist)   | text              |
 | metadata                 | Metadata                  | metadata (mixed)  |
@@ -132,4 +133,3 @@ To search a mixed type like metadata you must search using 4 rules.
   * rule operator (e.g. rule_1_operator[0], rule_2_operator[12])
   * rule input (e.g. rule_1_input['Prodigy'], rule_2_input['120'])
   * rule subtype (e.g. rule_1_subtype['4'], rule_2_subtype['9'])
-
