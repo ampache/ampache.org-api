@@ -4,13 +4,25 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
-## API develop
+## API 5.5.2
 
 ### Added
 
 * advanced_search
-  * Add song_artist as a search type (uses artist rules)
-  * Add album_artist as a search type (uses artist rules)
+  * Add `song_artist` as a search type (uses artist rules)
+  * Add `album_artist` as a search type (uses artist rules)
+  * Add `song_genre`, `mbid_artist`, `mbid_song` to album search
+  * Add `song_genre`, `mbid_album`, `mbid_song` to artist search
+  * Add `possible_duplicate_album` to song search
+
+### Fixed
+
+* advanced_search
+  * unable to retrieve song_artist or album_artist results
+
+## API 5.5.1
+
+**NO CHANGE**
 
 ## API 5.5.0
 
