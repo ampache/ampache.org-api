@@ -1,7 +1,7 @@
 {
   "unversionedId": "api-errors",
   "id": "api-errors",
-  "title": "API5 Errors",
+  "title": "API6 Errors",
   "description": "API documentation",
   "source": "@site/docs/api-errors.md",
   "sourceDirName": ".",
@@ -11,13 +11,13 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API5 Errors",
-    "metaTitle": "API5 Errors",
+    "title": "API6 Errors",
+    "metaTitle": "API6 Errors",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "API5 JSON Methods",
+    "title": "API6 JSON Methods",
     "permalink": "/api/api-json-methods"
   },
   "next": {

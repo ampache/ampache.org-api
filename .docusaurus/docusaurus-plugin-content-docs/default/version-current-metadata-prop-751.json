@@ -17,25 +17,25 @@
       },
       {
         "type": "link",
-        "label": "API5 Standards",
+        "label": "API6 Standards",
         "href": "/api/api-standards",
         "docId": "api-standards"
       },
       {
         "type": "link",
-        "label": "API5 XML Methods",
+        "label": "API6 XML Methods",
         "href": "/api/api-xml-methods",
         "docId": "api-xml-methods"
       },
       {
         "type": "link",
-        "label": "API5 JSON Methods",
+        "label": "API6 JSON Methods",
         "href": "/api/api-json-methods",
         "docId": "api-json-methods"
       },
       {
         "type": "link",
-        "label": "API5 Errors",
+        "label": "API6 Errors",
         "href": "/api/api-errors",
         "docId": "api-errors"
       },
@@ -535,7 +535,7 @@
     },
     "api-errors": {
       "id": "api-errors",
-      "title": "API5 Errors",
+      "title": "API6 Errors",
       "description": "API documentation",
       "sidebar": "api"
     },
@@ -547,19 +547,19 @@
     },
     "api-json-methods": {
       "id": "api-json-methods",
-      "title": "API5 JSON Methods",
+      "title": "API6 JSON Methods",
       "description": "API documentation",
       "sidebar": "api"
     },
     "api-standards": {
       "id": "api-standards",
-      "title": "API5 Standards",
+      "title": "API6 Standards",
       "description": "API documentation",
       "sidebar": "api"
     },
     "api-xml-methods": {
       "id": "api-xml-methods",
-      "title": "API5 XML Methods",
+      "title": "API6 XML Methods",
       "description": "API documentation",
       "sidebar": "api"
     },
