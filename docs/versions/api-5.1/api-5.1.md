@@ -39,7 +39,7 @@ $passphrase = hash('sha256', $time . $key);
 Once you've generated the encoded passphrase, you can call the following URL (localhost/ampache is the location of your Ampache installation)
 
 ```Text
-http://localhost/ampache/server/xml.server.php?action=handshake&auth=PASSPHRASE&timestamp=TIME&version=350001&user=USER
+http://localhost/ampache/server/xml.server.php?action=handshake&auth=PASSPHRASE&timestamp=TIME&version=510001&user=USER
 ```
 
 ### Api Key
@@ -47,7 +47,7 @@ http://localhost/ampache/server/xml.server.php?action=handshake&auth=PASSPHRASE&
 The key that must be passed to Ampache is the API Key generated for a specific user (none by default, only the administrator can generate one). Then call the following URL (localhost/ampache is the location of your Ampache installation):
 
 ```Text
-http://localhost/ampache/server/xml.server.php?action=handshake&auth=API_KEY&version=350001
+http://localhost/ampache/server/xml.server.php?action=handshake&auth=API_KEY&version=510001
 ```
 
 In API4 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
