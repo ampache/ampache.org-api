@@ -26,7 +26,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 | 'timestamp' | integer | UNIXTIME() (Timestamp used in seed of password hash. Required if login/password authentication) |      YES |
 | 'version'   | string  | $version (API Version that the application understands)                                         |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/handshake.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/handshake.xml)
 
 ## ping
 
@@ -39,7 +39,7 @@ This can be called without being authenticated, it is useful for determining if 
 |--------|--------|----------------------------------------------------------------------------|---------:|
 | 'auth' | string | (Session ID) returns version information and extends the session if passed |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/ping.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/ping.xml)
 
 ## goodbye
 
@@ -53,7 +53,7 @@ Destroy a session using the auth parameter.
 |--------|--------|------------------------------------------------|---------:|
 | 'auth' | string | (Session ID) destroys the session if it exists |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/goodbye.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/goodbye.xml)
 
 ## url_to_song
 
@@ -66,7 +66,7 @@ This takes a url and returns the song object in question
 |-------|--------|---------------------------------------------------------------|---------:|
 | 'url' | string | Full Ampache URL from server, translates back into a song XML |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/url_to_song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/url_to_song.xml)
 
 ## Data Methods
 
@@ -89,19 +89,19 @@ This takes a collection of inputs and returns ID + name for the object type
 
 SONGS
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(songs\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20\(songs\).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(artists\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20\(artists\).xml)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(albums\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20\(albums\).xml)
 
 PLAYLIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/get_indexes%20\(playlists\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/get_indexes%20\(playlists\).xml)
 
 ## advanced_search
 
@@ -257,15 +257,15 @@ To search a mixed type like metadata you must search using 4 rules.
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20\(song\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/advanced_search%20\(song\).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20\(artist\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/advanced_search%20\(artist\).xml)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/advanced_search%20\(album\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/advanced_search%20\(album\).xml)
 
 ## artists
 
@@ -285,7 +285,7 @@ This takes a collection of inputs and returns artist objects.
 | 'limit'   | integer    |                                                                               |      YES |
 | 'include' | string     | `albums`, `songs` (include child objects in the response)                     |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/artists.xml)
 
 ## artist
 
@@ -299,7 +299,7 @@ This returns a single artist based on the UID of said artist
 | 'filter'  | string | UID of Artist, returns artist XML                         |       NO |
 | 'include' | string | `albums`, `songs` (include child objects in the response) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artist.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/artist.xml)
 
 ## artist_albums
 
@@ -314,7 +314,7 @@ This returns the albums of an artist
 | 'offset' | integer |                                  |      YES |
 | 'limit'  | integer |                                  |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artist_albums.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/artist_albums.xml)
 
 ## artist_songs
 
@@ -329,7 +329,7 @@ This returns the songs of the specified artist
 | 'offset' | integer |                                 |      YES |
 | 'limit'  | integer |                                 |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/artist_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/artist_songs.xml)
 
 ## albums
 
@@ -348,7 +348,7 @@ This returns albums based on the provided search filters
 | 'limit'   | integer    |                                                                               |      YES |
 | 'include' | string     | `albums`, `songs` (include child objects in the response)                     |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/albums.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/albums.xml)
 
 ## album
 
@@ -362,7 +362,7 @@ This returns a single album based on the UID provided
 | 'filter'  | string | UID of Album, returns album XML                                        |       NO |
 | 'include' | string | 'songs' and will include the corresponding XML nested in the album XML |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/album.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/album.xml)
 
 ## album_songs
 
@@ -377,7 +377,7 @@ This returns the songs of a specified album
 | 'offset' | integer |                                |      YES |
 | 'limit'  | integer |                                |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/album_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/album_songs.xml)
 
 ## tags
 
@@ -393,7 +393,7 @@ This returns the tags (Genres) based on the specified filter
 | 'offset' | integer |                                                                               |      YES |
 | 'limit'  | integer |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/tags.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/tags.xml)
 
 ## tag
 
@@ -406,7 +406,7 @@ This returns a single tag based on UID
 |----------|--------|-----------------------------|---------:|
 | 'filter' | string | UID of tag, returns tag XML |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/tag.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/tag.xml)
 
 ## tag_artists
 
@@ -421,7 +421,7 @@ This returns the artists associated with the tag in question as defined by the U
 | 'offset' | integer |                                |      YES |
 | 'limit'  | integer |                                |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/tag_artists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/tag_artists.xml)
 
 ## tag_albums
 
@@ -436,7 +436,7 @@ This returns the albums associated with the tag in question
 | 'offset' | integer |                               |      YES |
 | 'limit'  | integer |                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/tag_albums.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/tag_albums.xml)
 
 ## tag_songs
 
@@ -451,7 +451,7 @@ returns the songs for this tag
 | 'offset' | integer |                              |      YES |
 | 'limit'  | integer |                              |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/tag_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/tag_songs.xml)
 
 ## songs
 
@@ -469,7 +469,7 @@ Returns songs based on the specified filter
 | 'offset' | integer    |                                                                               |      YES |
 | 'limit'  | integer    |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/songs.xml)
 
 ## song
 
@@ -482,7 +482,7 @@ returns a single song
 |----------|--------|-------------------------------|---------:|
 | 'filter' | string | UID of Song, returns song XML |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/song.xml)
 
 ## playlists
 
@@ -500,7 +500,7 @@ This returns playlists based on the specified filter
 | 'offset' | integer    |                                                                               |      YES |
 | 'limit'  | integer    |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlists.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlists.xml)
 
 ## playlist
 
@@ -513,7 +513,7 @@ This returns a single playlist
 |----------|--------|---------------------------------------|---------:|
 | 'filter' | string | UID of playlist, returns playlist XML |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist.xml)
 
 ## playlist_songs
 
@@ -528,7 +528,7 @@ This returns the songs for a playlist
 | 'offset' | integer |                                   |      YES |
 | 'limit'  | integer |                                   |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_songs.xml)
 
 ## playlist_create
 
@@ -542,7 +542,7 @@ This create a new playlist and return it
 | 'name' | string | Playlist name                       |       NO |
 | 'type' | string | `public`, `private` (Playlist type) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_create.xml)
 
 ## playlist_edit
 
@@ -562,7 +562,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 | 'items'  | string | comma-separated song_id's (replace existing items with a new object_id) |      YES |
 | 'tracks' | string | comma-separated playlisttrack numbers matched to items in order         |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_edit.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_edit.xml)
 
 ## playlist_delete
 
@@ -575,7 +575,7 @@ This deletes a playlist
 |----------|--------|-----------------|---------:|
 | 'filter' | string | UID of Playlist |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_delete.xml)
 
 ## playlist_add_song
 
@@ -591,7 +591,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 | 'song'   | integer | UID of song to add to playlist                                |       NO |
 | 'check'  | boolean | `0`, `1` Whether to check and ignore duplicates (default = 0) |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/.xml)
 
 ## playlist_remove_song
 
@@ -608,7 +608,7 @@ Previous versions required 'track' instead of 'song'.
 | 'song'   | string  | UID of song to remove from playlist  |      YES |
 | 'track'  | integer | Track number to remove from playlist |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_remove_song.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_remove_song.xml)
 
 ## playlist_generate
 
@@ -635,15 +635,15 @@ Get a list of song XML, indexes or id's based on some simple search criteria
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20\(song\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_generate%20\(song\).xml)
 
 INDEX
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20\(index\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_generate%20\(index\).xml)
 
 ID
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/playlist_generate%20\(id\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/playlist_generate%20\(id\).xml)
 
 ## search_songs
 
@@ -658,7 +658,7 @@ This searches the songs and returns... songs
 | 'offset' | integer |                                                 |      YES |
 | 'limit'  | integer |                                                 |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/search_songs.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/search_songs.xml)
 
 ## videos
 
@@ -674,7 +674,7 @@ This returns video objects!
 | 'offset' | integer |                                                                               |      YES |
 | 'limit'  | integer |                                                                               |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/videos.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/videos.xml)
 
 ## video
 
@@ -687,7 +687,7 @@ This returns a single video
 |----------|--------|---------------------------------|---------:|
 | 'filter' | string | UID of video, returns video XML |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/video.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/video.xml)
 
 ## stats
 
@@ -710,15 +710,15 @@ This method has partial backwards compatibility with older api versions but shou
 
 SONG
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20\(song\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/stats%20\(song\).xml)
 
 ARTIST
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20\(artist\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/stats%20\(artist\).xml)
 
 ALBUM
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/stats%20\(album\).xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/stats%20\(album\).xml)
 
 ## user
 
@@ -731,7 +731,7 @@ This get an user public information
 |------------|--------|-----------------------------------------|---------:|
 | 'username' | string | Username of the user to get details for |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/user.xml)
 
 ## user_create
 
@@ -748,7 +748,7 @@ Create a new user. (Requires the username, password and email.)
 | 'fullname' | string  |                           |      YES |
 | 'disable'  | boolean | `0`, `1`                  |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_create.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/user_create.xml)
 
 ## user_update
 
@@ -769,7 +769,7 @@ Update an existing user.
 | 'disable'    | boolean | `0`, `1`                  |      YES |
 | 'maxbitrate' | string  |                           |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_update.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/user_update.xml)
 
 ## user_delete
 
@@ -782,7 +782,7 @@ Delete an existing user.
 |------------|--------|-------------|---------:|
 | 'username' | string |             |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/user_delete.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/user_delete.xml)
 
 ## followers
 
@@ -795,7 +795,7 @@ This get an user followers
 |------------|--------|----------------------------------------------------|---------:|
 | 'username' | string | Username of the user for who to get followers list |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/followers.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/followers.xml)
 
 ## following
 
@@ -808,7 +808,7 @@ This get the user list followed by an user
 |------------|--------|-----------------------------------------------------|---------:|
 | 'username' | string | (Username of the user for who to get following list |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/following.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/following.xml)
 
 ## toggle_follow
 
@@ -821,7 +821,7 @@ This follow/unfollow an user
 |------------|--------|-----------------------------------------|---------:|
 | 'username' | string | Username of the user to follow/unfollow |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/toggle_follow.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/toggle_follow.xml)
 
 ## last_shouts
 
@@ -835,7 +835,7 @@ This get the latest posted shouts
 | 'username' | string  | Username of the user for who to get latest shouts |      YES |
 | 'limit'    | integer |                                                   |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/last_shouts.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/last_shouts.xml)
 
 ## rate
 
@@ -850,7 +850,7 @@ This rates a library item
 | 'id'     | string  | library item id                                |       NO |
 | 'rating' | integer | rating between 0-5                             |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/rate.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/rate.xml)
 
 ## flag
 
@@ -868,7 +868,7 @@ This flags a library item as a favorite
 | 'id'   | integer | $object_id                 |       NO |
 | 'flag' | boolean | `0`, `1`                   |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/flag.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/flag.xml)
 
 ## record_play
 
@@ -883,7 +883,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 | 'user'   | integer | $user_id    |       NO |
 | 'client' | string  | $agent      |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/record_play.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/record_play.xml)
 
 ## scrobble
 
@@ -903,7 +903,7 @@ Search for a song using text info and then record a play if found. This allows o
 | 'date'       | integer | UNIXTIME()   |      YES |
 | 'client'     | string  | $agent       |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/scrobble.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/scrobble.xml)
 
 ## catalog_action
 
@@ -917,9 +917,9 @@ Kick off a catalog update or clean for the selected catalog
 | 'task'    | string  | `add_to_catalog`, `clean_catalog` |       NO |
 | 'catalog' | integer | $catalog_id                       |       NO |
 
-[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20\(clean_catalog.xml))
+[Example: clean_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(clean_catalog.xml))
 
-[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/catalog_action%20\(add_to_catalog.xml))
+[Example: add_to_catalog](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/catalog_action%20\(add_to_catalog.xml))
 
 ## timeline
 
@@ -934,7 +934,7 @@ This get an user timeline
 | 'limit'    | integer |                                                   |      YES |
 | 'since'    | integer | UNIXTIME()                                        |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/timeline.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/timeline.xml)
 
 ## friends_timeline
 
@@ -948,7 +948,7 @@ This get current user friends timeline
 | 'limit' | integer |             |      YES |
 | 'since' | integer | UNIXTIME()  |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/friends_timeline.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/friends_timeline.xml)
 
 ## update_from_tags
 
@@ -962,7 +962,7 @@ Update a single album, artist, song from the tag data
 | 'type' | string  | `song`, `artist`, `album`       |       NO |
 | 'id'   | integer | $artist_id, $album_id, $song_id |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_from_tags.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/update_from_tags.xml)
 
 ## update_artist_info
 
@@ -976,7 +976,7 @@ Make sure lastfm_API_key is set in your configuration file
 |-------|---------|-------------|---------:|
 | 'id'  | integer | $artist_id  |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_artist_info.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/update_artist_info.xml)
 
 ## update_art
 
@@ -992,7 +992,7 @@ Doesn't overwrite existing art by default.
 | 'type'      | string  | `song`, `podcast` |       NO |
 | 'overwrite' | boolean | `0`, `1`          |      YES |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_art.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/update_art.xml)
 
 ## update_podcast
 
@@ -1005,7 +1005,7 @@ Sync and download new podcast episodes
 |-------|---------|-------------|---------:|
 | 'id'  | integer | $object_id  |       NO |
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/master/docs/xml-responses/update_podcast.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/xml-responses/update_podcast.xml)
 
 ## Binary Data Methods
 

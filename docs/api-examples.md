@@ -12,6 +12,10 @@ Responses have been created using the ```build_docs.py``` python script and are 
 
 Each API version has it's own examples.
 
+* API6 examples
+  * [API6 JSON Examples](https://github.com/ampache/python3-ampache/tree/api6/docs/json-responses)
+  * [API6 XML Examples](https://github.com/ampache/python3-ampache/tree/api6/docs/xml-responses)
+
 * API5 examples
   * [API5 JSON Examples](https://github.com/ampache/python3-ampache/tree/master/docs/json-responses)
   * [API5 XML Examples](https://github.com/ampache/python3-ampache/tree/master/docs/xml-responses)

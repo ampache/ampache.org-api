@@ -4,6 +4,12 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 5.5.4-develop
+
+### Fixed
+
+* User count in Api::ping and Api::handshake was doubled
+
 ## API 5.5.3
 
 **NO CHANGE**
