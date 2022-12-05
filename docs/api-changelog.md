@@ -4,11 +4,47 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
-## API 5.5.4-develop
+## API develop
+
+### Added
+
+* API6 (Based on API5)
+  * Add `prefix` (Prefix for Full Name) to album & artist responses
+  * Add `basename` (Name without prefix) to album & artist responses
+* advanced_search
+  * Add `barcode` to album search
+  * Add `catalog_number` to album search
+
+### Changed
+
+* Don't send AlbumDisk objects to the API
+* Album::check() add barcode, catalog number and subtitle for comparison checks
+* XML responses
+  * id is the only attribute and everything else is an element
+  * Name was not set as an attribute OR an element so now it's always an element
+
+### Fixed
+
+* Api5::songs set_filter call without browse parameter may have lost info
+* Api4::songs set_filter call without browse parameter may have lost info
+* Api5::get_indexes set album_artist filter correctly
+* Api4::get_indexes set album_artist filter correctly
+* Api5::artists set album_artist filter correctly
+* Api3 calls to songs with user ID instead of user object
+* Api6 JSON
+  * Share and Bookmark object id's were not strings
+
+### Removed
+
+* Api6::album_songs remove exact as a parameter
+
+## API 5.5.4
 
 ### Fixed
 
 * User count in Api::ping and Api::handshake was doubled
+* Api3::stats method had incorrect recent parameters
+* Ensure the output `bitrate` and `mime` are set for song objects
 
 ## API 5.5.3
 

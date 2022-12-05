@@ -24,6 +24,8 @@ Select the type of search based on the type of data you are searching for. (song
 | original_year            | Original Year                  | numeric         |
 | release_type             | Release Type                   | text            |
 | release_status           | Release Status                 | text            |
+| barcode                  | Barcode                        | text            |
+| catalog_number           | Catalog Number                 | text            |
 | myrating                 | My Rating                      | numeric         |
 | rating                   | Rating (Average)               | numeric         |
 | songrating               | My Rating (Song)               | numeric         |
