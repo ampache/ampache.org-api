@@ -397,16 +397,6 @@ Get some items based on some simple search types and filters.
 | 'offset'   | integer | Return results starting from this index position                 |      YES |
 | 'limit'    | integer | Maximum number of results to return                              |      YES |
 
-SONG
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/stats%20\(song\).xml)
-
-ARTIST
-
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/stats%20\(artist\).xml)
-
-ALBUM
-
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/stats%20\(album\).xml)
 
 ## user

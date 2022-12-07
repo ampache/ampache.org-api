@@ -11,32 +11,44 @@ description: "API Changelog"
 * API6 (Based on API5)
   * Add `prefix` (Prefix for Full Name) to album & artist responses
   * Add `basename` (Name without prefix) to album & artist responses
+  * Cast bool fields to `true` and `false` instead of "1" & "0"
 * advanced_search
   * Add `barcode` to album search
   * Add `catalog_number` to album search
 
+## API 5.5.6
+
+Fix various runtime errors and incorrect parameters for responses.
+
 ### Changed
 
-* Don't send AlbumDisk objects to the API
-* Album::check() add barcode, catalog number and subtitle for comparison checks
-* XML responses
-  * id is the only attribute and everything else is an element
-  * Name was not set as an attribute OR an element so now it's always an element
+* API browses all point to the Api class
+* Use `FILTER_VALIDATE_IP` on ping calls
 
 ### Fixed
 
-* Api5::songs set_filter call without browse parameter may have lost info
-* Api4::songs set_filter call without browse parameter may have lost info
-* Api5::get_indexes set album_artist filter correctly
-* Api4::get_indexes set album_artist filter correctly
-* Api5::artists set album_artist filter correctly
-* Api3 calls to songs with user ID instead of user object
-* Api6 JSON
-  * Share and Bookmark object id's were not strings
-
-### Removed
-
-* Api6::album_songs remove exact as a parameter
+* Api5
+  * `songs` set_filter call without browse parameter may have lost info
+  * `get_indexes` set album_artist filter correctly
+  * `artists` set album_artist filter correctly
+  * `share_create` undefined filter check
+* Api4
+  * `songs` set_filter call without browse parameter may have lost info
+  * `get_indexes` set album_artist filter correctly
+  * `timeline` incorrect JSON attribute `data` instead of `date`
+  * `catalogs` JSON had incorrect data for `last_add` and missing `enabled`
+  * `albums` return an empty response with a bad artist id
+  * `download` url parameter order matching "client, action, cache"
+  * `catalogs` undefined filter check
+  * `podcast` undefined filter check
+  * `podcast_edit` undefined filter check
+  * `podcasts` undefined filter check
+  * `share_create` undefined filter check
+  * `share_edit` undefined filter check
+* Api3
+  * `album_songs` return an empty response with a bad album id
+  * `artist_albums` return an empty response with a bad artist id
+  * Calls to `songs` with user ID instead of user object
 
 ## API 5.5.4
 
