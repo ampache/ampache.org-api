@@ -43,7 +43,7 @@ description: "API Changelog"
 * Api6 JSON
   * Share and Bookmark object id's were not strings
 * Api3
-  * Never send 0 ratings. They should always be null (e.g <rating/>)
+  * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
   * Artists method parameters were incorrect
 
 ### Removed
