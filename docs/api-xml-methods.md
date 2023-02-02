@@ -140,6 +140,31 @@ Destroy a session using the auth parameter.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/goodbye.xml)
 
+### register
+
+Register as a new user if allowed. (Requires the username, password and email.)
+
+| Input      | Type    | Description                       | Optional |
+|------------|---------|-----------------------------------|---------:|
+| 'username' | string  | $username                         |       NO |
+| 'password' | string  | hash('sha256', $password)         |       NO |
+| 'email'    | string  | e.g. user@gmail.com               |       NO |
+| 'fullname' | string  |                                   |      YES |
+
+* return
+
+```XML
+<root>
+    <success>
+</root>
+```
+
+* throws
+
+```XML
+<root><error></root>
+```
+
 ## Non-Data Methods
 
 These methods take no parameters beyond your auth key to return information
@@ -1561,14 +1586,14 @@ Create a new user. (Requires the username, password and email.)
 
 **ACCESS REQUIRED:** 100 (Admin)
 
-| Input                   | Type    | Description                       | Optional |
-|-------------------------|---------|-----------------------------------|---------:|
-| 'username'              | string  | $username                         |       NO |
-| 'password'              | string  | hash('sha256', $password)         |       NO |
-| 'email'                 | string  | e.g. user@gmail.com               |       NO |
-| 'fullname'              | string  |                                   |      YES |
-| 'disable'               | boolean | `0`, `1`                          |      YES |
-| 'catalog_filter_group'  | integer | Catalog filter group, default = 0 |      YES |
+| Input      | Type    | Description                       | Optional |
+|------------|---------|-----------------------------------|---------:|
+| 'username' | string  | $username                         |       NO |
+| 'password' | string  | hash('sha256', $password)         |       NO |
+| 'email'    | string  | e.g. user@gmail.com               |       NO |
+| 'fullname' | string  |                                   |      YES |
+| 'disable'  | boolean | `0`, `1`                          |      YES |
+| 'group'    | integer | Catalog filter group, default = 0 |      YES |
 
 * return
 
@@ -1592,17 +1617,22 @@ Update an existing user.
 
 **ACCESS REQUIRED:** 100 (Admin)
 
-| Input        | Type    | Description               | Optional |
-|--------------|---------|---------------------------|---------:|
-| 'username'   | string  | $username                 |       NO |
-| 'password'   | string  | hash('sha256', $password) |      YES |
-| 'email'      | string  | e.g. user@gmail.com       |      YES |
-| 'fullname'   | string  |                           |      YES |
-| 'website'    | string  |                           |      YES |
-| 'state'      | string  |                           |      YES |
-| 'city'       | string  |                           |      YES |
-| 'disable'    | boolean | `0`, `1`                  |      YES |
-| 'maxbitrate' | string  |                           |      YES |
+| Input               | Type    | Description                              | Optional |
+|---------------------|---------|------------------------------------------|---------:|
+| 'username'          | string  | $username                                |       NO |
+| 'password'          | string  | hash('sha256', $password)                |      YES |
+| 'email'             | string  | e.g. user@gmail.com                      |      YES |
+| 'fullname'          | string  |                                          |      YES |
+| 'website'           | string  |                                          |      YES |
+| 'state'             | string  |                                          |      YES |
+| 'city'              | string  |                                          |      YES |
+| 'disable'           | boolean | `0`, `1`                                 |      YES |
+| 'group'             | integer | Catalog filter group, default = 0        |      YES |
+| 'maxbitrate'        | string  |                                          |      YES |
+| 'fullname_public'   | integer | `0`, `1` show fullname in public display |      YES |
+| 'reset_apikey'      | integer | `0`, `1` reset user Api Key              |      YES |
+| 'reset_streamtoken' | integer | `0`, `1` reset user Stream Token         |      YES |
+| 'clear_stats'       | integer | `0`, `1` reset all stats for this user   |      YES |
 
 * return
 

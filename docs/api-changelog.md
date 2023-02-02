@@ -9,12 +9,46 @@ description: "API Changelog"
 ### Added
 
 * API6 (Based on API5)
+  * register: Allow users to register an account (if enabled)
+  * user_create: Add `group` parameter to pick a catalog filter group
+  * user_update:
+    * Add `group` parameter to pick a catalog filter group
+    * Add `fullname_public` to enable/disable using fullname in public display
+    * Add `reset_apikey` to reset a user Api Key
+    * Add `reset_streamtoken` to reset a user Stream Token
+    * Add `clear_stats` reset all stats for this user **be very sure about this one!**
   * Add `prefix` (Prefix for Full Name) to album & artist responses
   * Add `basename` (Name without prefix) to album & artist responses
-  * Cast bool fields to `true` and `false` instead of "1" & "0"
+  * JSON: Cast bool fields to `true` and `false` instead of "1" & "0"
+  * Add `bitrate` to Democratic objects
+  * Add `format` to Song and Democratic objects
+  * Add `stream_format`, `stream_bitrate`, `stream_mime` to Song objects (This is the transcoded output for a stream)
 * advanced_search
   * Add `barcode` to album search
   * Add `catalog_number` to album search
+
+### Changed
+
+* ALL
+  * Albums with no album_artist may now return 0 artist called 'Various'
+* Don't send AlbumDisk objects to the API
+* XML responses
+  * id is the only attribute and everything else is an element
+  * Name was not set as an attribute OR an element so now it's always an element
+
+### Fixed
+
+* ALL
+  * advanced_search methods were breaking with various offset and limits
+* Api6 JSON
+  * Share and Bookmark object id's were not strings
+* Api3
+  * Never send 0 ratings. They should always be null (e.g <rating/>)
+  * Artists method parameters were incorrect
+
+### Removed
+
+* Api6::album_songs remove exact as a parameter
 
 ## API 5.5.6
 
