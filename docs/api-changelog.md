@@ -31,7 +31,7 @@ description: "API Changelog"
 
 * ALL
   * Albums with no album_artist may now return 0 artist called 'Various'
-* Don't send AlbumDisk objects to the API
+  * Don't send AlbumDisk objects to the API
 * XML responses
   * id is the only attribute and everything else is an element
   * Name was not set as an attribute OR an element so now it's always an element
