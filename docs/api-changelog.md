@@ -9,6 +9,7 @@ description: "API Changelog"
 ### Added
 
 * API6 (Based on API5)
+  * list: Replace get_indexes with a faster lookup and similar parameters returning `id` and `name` only
   * register: Allow users to register an account (if enabled)
   * user_create: Add `group` parameter to pick a catalog filter group
   * user_update:
@@ -35,6 +36,7 @@ description: "API Changelog"
 * XML responses
   * id is the only attribute and everything else is an element
   * Name was not set as an attribute OR an element so now it's always an element
+* Api6::get_indexes: This method is depreciated and will be removed in Ampache 7.0.0 (Use Api6::list instead)
 
 ### Fixed
 
@@ -48,7 +50,14 @@ description: "API Changelog"
 
 ### Removed
 
-* Api6::album_songs remove exact as a parameter
+* Api6::album_songs remove `exact` as a parameter
+* Api6::stream remove `podcast` as a valid `type` value
+* Warning of depreciated methods from API5 have been removed from API6
+  * Api6::tag
+  * Api6::tags
+  * Api6::tag_albums
+  * Api6::tag_artists
+  * Api6::tag_songs
 
 ## API 5.5.6
 
@@ -252,7 +261,7 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 * NEW API functions
   * Api::live_stream (get a radio stream by id)
   * Api::live_streams
-* Api::stream Added type 'podcast_episode' ('podcast' to be removed in Ampache 6)
+* Api::stream Added type 'podcast_episode' ('podcast' to be removed in Ampache 6.0.0)
 * Add 'time' and 'size' to all podcast_episode responses
 
 ### Changed
@@ -522,9 +531,9 @@ API 5.0.0-release will be the first Ampache release to match the release string.
 * API Build number is depreciated (the last 3 digits of the api version)
   * API 5.0.0 will be released with a string version ("5.0.0-release")
   * All future 4.x.x API versions will follow the main Ampache version. (420000, 421000, 422000)
-* total_count in the XML API is depreciated and will be removed in API 5.0.0.
+* ~~total_count in the XML API is depreciated and will be removed in API 5.0.0.~~
   * XML can count objects the same was as a JSON array [https://www.php.net/manual/en/simplexmlelement.count.php]
-* Genre in songs is depreciated and will be removed in API 5.0.0.
+* ~~Genre in songs is depreciated and will be removed in API 5.0.0.~~
   * Use tag instead of genre, tag provides a genre ID as well as the name.
 
 ### Fixed
