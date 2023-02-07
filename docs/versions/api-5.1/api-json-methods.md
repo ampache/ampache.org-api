@@ -2092,9 +2092,9 @@ Return catalog by UID
 "type": "",
 "gather_types": "",
 "enabled": 0,
-"last_add": "",
-"last_clean": "",
-"last_update": "",
+"last_add": 0,
+"last_clean": 0,
+"last_update": 0,
 "path": "",
 "rename_pattern": "",
 "sort_pattern": ""

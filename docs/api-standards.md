@@ -57,21 +57,25 @@ All remaining Ampache dates should be returned as an integer using Unix epoch ti
 
 ```JSON
 {
-    "last_add": "1627949046",
-    "last_clean": "1627949154",
-    "last_update": "1626835896"
+    "last_add": 1627949046,
+    "last_clean": 1627949154,
+    "last_update": 1626835896
 }
 ```
 
 ### Tag is being renamed into Genre
 
-Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable.
+Ampache 5.0.0 renamed all tag objects into genre and remove the old genre element from the object.
 
 ### Genre will provide a genre ID as well as the name
 
 ```XML
-<genre id="20" count="1" ><![CDATA[Metal]]></tag>
-<genre id="37" count="1" ><![CDATA[Hard Rock]]></tag>
+<genre id="20">
+    <name><![CDATA[Metal]]><name>
+</genre>
+<genre id="37">
+    <name><![CDATA[Hard Rock]]><name>
+</genre>
 ```
 
 ```JSON
@@ -90,7 +94,7 @@ Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable
 ### Remove spaces from advanced_search rule names. (Backwards compatible with old names)
 
 These rules have been changed to make sure everything has no spaces.
-The backward compatible names will be removed in Ampache 5.0.0
+The backward compatible names were **removed** in Ampache 5.0.0
 
 * 'has image' => 'has_image'
 * 'image height' => 'image_height'

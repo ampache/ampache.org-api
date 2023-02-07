@@ -57,9 +57,9 @@ All remaining Ampache dates should be returned as an integer using Unix epoch ti
 
 ```JSON
 {
-    "last_add": "1627949046",
-    "last_clean": "1627949154",
-    "last_update": "1626835896"
+    "last_add": 1627949046,
+    "last_clean": 1627949154,
+    "last_update": 1626835896
 }
 ```
 
@@ -70,8 +70,8 @@ Debate resolved. Ampache 5.0.0 will rename Tag and remove the old genre variable
 ### Genre will provide a genre ID as well as the name
 
 ```XML
-<genre id="20" count="1" ><![CDATA[Metal]]></tag>
-<genre id="37" count="1" ><![CDATA[Hard Rock]]></tag>
+<genre id="20"><![CDATA[Metal]]></genre>
+<genre id="37"><![CDATA[Hard Rock]]></genre>
 ```
 
 ```JSON
