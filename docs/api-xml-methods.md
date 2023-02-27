@@ -275,7 +275,7 @@ Data methods require additional information and parameters to return information
 
 This takes a named array of objects and returning `id`, `name`, `prefix` and `basename`
 
-This method replaces get_indexes and does not have the `include` parameter and does not include children in the response.
+**NOTE** This method replaces get_indexes and does not have the `include` parameter and does not include children in the response.
 
 | Input         | Type       | Description                                                                                        | Optional |
 |---------------|------------|----------------------------------------------------------------------------------------------------|---------:|
@@ -1645,11 +1645,13 @@ Create a new user. (Requires the username, password and email.)
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/user_create.xml)
 
-### user_update
+### user_edit
 
 Update an existing user.
 
 **ACCESS REQUIRED:** 100 (Admin)
+
+**NOTE** This function has been renamed from user_update to match other edit functions
 
 | Input               | Type    | Description                              | Optional |
 |---------------------|---------|------------------------------------------|---------:|
@@ -1682,7 +1684,7 @@ Update an existing user.
 <root><error></root>
 ```
 
-[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/user_update.xml)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/user_edit.xml)
 
 ### user_delete
 

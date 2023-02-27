@@ -175,109 +175,116 @@ All Auth methods return HTTP 200 responses
 
 * handshake
 * ping
-* goodbye **Api4+**
+* goodbye
 
 ### Non-Data Methods
 
 All Non-Data methods return HTTP 200 responses
 
-* system_update **Api5+**
-* users **Api4+**
-* user_preferences **Api5+**
-* bookmarks **Api5+**
+* system_update
+* users
+* user_preferences
+* bookmarks
 
 ### Data Methods
 
 All Data methods return HTTP 200 responses
 
 * [advanced_search](https://ampache.org/api/api-advanced-search)
-* stats
-* get_indexes **Api4+**
-* get_similar **Api4+**
-* get_bookmark **Api5+**
-* artists
-* artist
-* artist_songs
-* artist_albums
-* albums
 * album
+* albums
 * album_songs
-* songs
-* song
-* song_delete **Api5+**
-* url_to_song
-* genres
-* genre
-* genre_artists
-* genre_albums
-* genre_songs
-* playlists
-* playlist
-* playlist_songs
-* playlist_create
-* playlist_edit **Api4+**
-* playlist_delete
-* playlist_add_song
-* playlist_remove_song
-* playlist_generate **Api4+**
-* shares **Api4+**
-* share **Api4+**
-* share_create **Api4+**
-* share_edit **Api4+**
-* share_delete **Api4+**
-* search_songs
-* videos
-* video
-* podcasts **Api4+**
-* podcast **Api4+**
-* podcast_create **Api4+**
-* podcast_edit **Api4+**
-* podcast_delete **Api4+**
-* podcast_episodes **Api4+**
-* podcast_episode **Api4+**
-* podcast_episode_delete **Api4+**
-* catalogs **Api4+**
-* catalog **Api4+**
-* catalog_action **Api4+**
-* catalog_file **Api4+**
-* licenses
-* license
-* license_songs
-* labels **Api5+**
-* label **Api5+**
-* label_artists **Api5+**
-* live_streams  **Api5+**
-* live_stream  **Api5+**
-* rate
-* flag **Api4+**
-* record_play **Api4+**
-* scrobble **Api4+**
+* artist
+* artist_albums
+* artists
+* artist_songs
+* bookmark_create
+* bookmark_delete
+* bookmark_edit
+* catalog
+* catalog_action
+* catalog_file
+* catalogs
+* deleted_podcast_episodes
+* deleted_songs
+* deleted_videos
+* flag
 * followers
 * following
-* toggle_follow
-* last_shouts
-* timeline
 * friends_timeline
-* update_from_tags **Api4+**
-* update_artist_info **Api4+**
-* update_art **Api4+**
-* update_podcast **Api4+**
+* genre
+* genre_albums
+* genre_artists
+* genres
+* genre_songs
+* get_bookmark
+* get_indexes
+* get_similar
+* label
+* label_artists
+* labels
+* last_shouts
+* license
+* licenses
+* license_songs
+* list **Api6** Replaces get_indexes
+* live_stream
+* live_stream_create **Api6**
+* live_stream_delete **Api6**
+* live_stream_edit **Api6**
+* live_streams
+* playlist
+* playlist_add_song
+* playlist_create
+* playlist_delete
+* playlist_edit
+* playlist_generate
+* playlist_remove_song
+* playlists
+* playlist_songs
+* podcast
+* podcast_create
+* podcast_delete
+* podcast_edit
+* podcast_episode
+* podcast_episode_delete
+* podcast_episodes
+* podcasts
+* preference_create
+* preference_delete
+* preference_edit
+* rate
+* record_play
+* register **Api6**
+* scrobble
+* search_songs
+* share
+* share_create
+* share_delete
+* share_edit
+* shares
+* song
+* song_delete
+* songs
+* stats
+* system_preference
+* system_preferences
+* timeline
+* toggle_follow
+* update_art
+* update_artist_info
+* update_from_tags
+* update_podcast
+* url_to_song
 * user
-* user_create **Api4+**
-* user_update **Api4+**
-* user_delete **Api4+**
-* user_preference **Api5+**
-* system_preferences **Api5+**
-* system_preference **Api5+**
-* preference_create **Api5+**
-* preference_edit **Api5+**
-* preference_delete **Api5+**
-* bookmark_create **Api5+**
-* bookmark_edit **Api5+**
-* bookmark_delete **Api5+**
-* deleted_songs **Api5+**
-* deleted_podcast_episodes **Api5+**
-* deleted_videos **Api5+**
+* user_create
+* user_delete
+* user_edit **Api6**
+* user_preference
+* user_update
+* video
+* videos
+
 
 ### Binary Data Methods
 
@@ -289,16 +296,16 @@ All binary methods will not return XML/JSON responses. they will either return t
 
 @throws (HTTP 404 Not Found)
 
-* stream **Api4+**
-* download **Api4+**
-* get_art **Api4+**
+* stream
+* download
+* get_art
 
 ### Control Methods
 
 All Control methods return HTTP 200 responses
 
 * localplay
-* localplay_songs **Api5+**
+* localplay_songs
 * democratic
 
 ## Access Levels

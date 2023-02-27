@@ -10,7 +10,7 @@ description: "API Changelog"
 
 * API6 (Based on API5)
   * list: Replace get_indexes with a faster lookup and similar parameters returning `id`, `name`, `prefix` and `basename`
-  * live_stream_create: Create a new live stream
+  * live_stream_create: Create a new live stream (radio station)
   * live_stream_edit: Edit a live stream
   * live_stream_delete: Delete a stream buy ID
   * register: Allow users to register an account (if enabled)
@@ -33,13 +33,29 @@ description: "API Changelog"
 
 ### Changed
 
+* Api6
+  * Renamed user_update to user_edit (user_update still works and will be depreciated in API7)
 * ALL
   * Albums with no album_artist may now return 0 artist called 'Various'
   * Don't send AlbumDisk objects to the API
 * XML responses
   * id is the only attribute and everything else is an element
   * Name was not set as an attribute OR an element so now it's always an element
+  * Return original XML output (that may be malformed) when loadxml fails.
 * Api6::get_indexes: This method is depreciated and will be removed in Ampache 7.0.0 (Use Api6::list instead)
+
+### Removed
+
+* Api6
+  * preciserating removed from all objects (use rating)
+* Api6::album_songs remove `exact` as a parameter
+* Api6::stream remove `podcast` as a valid `type` value
+* Warning of depreciated methods from API5 have been removed from API6
+  * Api6::tag
+  * Api6::tags
+  * Api6::tag_albums
+  * Api6::tag_artists
+  * Api6::tag_songs
 
 ### Fixed
 
@@ -50,17 +66,6 @@ description: "API Changelog"
 * Api3
   * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
   * Artists method parameters were incorrect
-
-### Removed
-
-* Api6::album_songs remove `exact` as a parameter
-* Api6::stream remove `podcast` as a valid `type` value
-* Warning of depreciated methods from API5 have been removed from API6
-  * Api6::tag
-  * Api6::tags
-  * Api6::tag_albums
-  * Api6::tag_artists
-  * Api6::tag_songs
 
 ## API 5.5.6
 
