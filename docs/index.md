@@ -25,12 +25,11 @@ The goals of API6 are simply to extend on top of API5 and remove what's no longe
 
 After each release, a documentation page will be created to allow pruning old features from the current version.
 
-* API 6.0 Documentation **TBC** (Ampache Develop+)
 * [API 5.5 Documentation](https://ampache.org/api/api-5)
 * [API 4.4 Documentation](https://ampache.org/api/api-4)
 * [API 3.9 Documentation](https://ampache.org/api/api-3)
 
-Ampache supports the last major release of each API version. You can also check out the [past releases](https://ampache.org/api/versions/) page for some historical detail but **DO NOT** use these pages as a guide for API development
+Ampache supports the last major release of each API version. You can also check out the [past releases](https://ampache.org/api/versions/) page for some historical detail but **DO NOT** use these pages as a guide for API development.
 
 ## Changelog API develop
 
@@ -38,7 +37,7 @@ Take a look at the [API Changelog](https://ampache.org/api/api-changelog) to kee
 
 ## Before you begin
 
-Ampache 5.2.0+ supports multiple API versions. This means that you can send your handshake with a specific version (e.g. 390001, 440001 or 5.2.0) you will be sent API3, API4 and API5 responses in return.
+Ampache 5.2.0+ supports multiple API versions. This means that you can send your handshake with a specific version (e.g. 390001, 440001, 5.2.0 or 6.0.0) you will be sent API3, API4, API5 and API6 responses in return.
 
 To change from API3 to API5 you can send a ping with a new version parameter to update your session (or send goodbye to log off and start again.)
 
@@ -279,7 +278,7 @@ All Data methods return HTTP 200 responses
 * user
 * user_create
 * user_delete
-* user_edit **Api6**  Replaces user_update
+* user_edit **Api6** Replaces user_update
 * user_update
 * user_preference
 * videos
