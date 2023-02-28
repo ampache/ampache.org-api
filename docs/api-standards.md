@@ -18,6 +18,30 @@ For now, here are a few basic rules that the API should follow:
 * Same thing for doubles
 * null and empty values may be returned. (for example XML will always return an object but it may not have any value)
 
+## XML attributes and elements
+
+* Any object that has an ID will add that as an attribute to the repsonse
+* All other information is to be returned as an element
+
+```XML
+<album id="2">
+    <name><![CDATA[Colorsmoke EP]]></name>
+</album>
+```
+
+The exception to this is for success & error messages which return a code attribute.
+
+```XML
+<success code="1"><![CDATA[successfully updated: temp_user]]></success>
+```
+
+The message is also not an element.
+
+```XML
+<error code="400"><![CDATA[User does not have access to this function]]></error>
+```
+
+
 ## Rules regarding dates
 
 There are 2 date formats used in the API:
@@ -65,7 +89,7 @@ All remaining Ampache dates should be returned as an integer using Unix epoch ti
 
 ### Tag is being renamed into Genre
 
-Ampache 5.0.0 renamed all tag objects into genre and remove the old genre element from the object.
+Ampache 5.0.0 renamed all tag objects into genre and removed the old genre element from the object.
 
 ### Genre will provide a genre ID as well as the name
 

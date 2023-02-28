@@ -174,37 +174,38 @@ For more in depth information regarding the different api servers you can view t
 All Auth methods return HTTP 200 responses
 
 * handshake
-* ping
 * goodbye
+* ping
+* register **Api6**
 
 ### Non-Data Methods
 
 All Non-Data methods return HTTP 200 responses
 
+* bookmarks
 * system_update
 * users
 * user_preferences
-* bookmarks
 
 ### Data Methods
 
 All Data methods return HTTP 200 responses
 
 * [advanced_search](https://ampache.org/api/api-advanced-search)
-* album
 * albums
+* album
 * album_songs
+* artists
 * artist
 * artist_albums
-* artists
 * artist_songs
 * bookmark_create
 * bookmark_delete
 * bookmark_edit
+* catalogs
 * catalog
 * catalog_action
 * catalog_file
-* catalogs
 * deleted_podcast_episodes
 * deleted_songs
 * deleted_videos
@@ -212,27 +213,28 @@ All Data methods return HTTP 200 responses
 * followers
 * following
 * friends_timeline
+* genres
 * genre
 * genre_albums
 * genre_artists
-* genres
 * genre_songs
 * get_bookmark
 * get_indexes
 * get_similar
+* labels
 * label
 * label_artists
-* labels
 * last_shouts
-* license
 * licenses
+* license
 * license_songs
 * list **Api6** Replaces get_indexes
+* live_streams
 * live_stream
 * live_stream_create **Api6**
 * live_stream_delete **Api6**
 * live_stream_edit **Api6**
-* live_streams
+* playlists
 * playlist
 * playlist_add_song
 * playlist_create
@@ -240,32 +242,30 @@ All Data methods return HTTP 200 responses
 * playlist_edit
 * playlist_generate
 * playlist_remove_song
-* playlists
 * playlist_songs
+* podcasts
 * podcast
 * podcast_create
 * podcast_delete
 * podcast_edit
+* podcast_episodes
 * podcast_episode
 * podcast_episode_delete
-* podcast_episodes
-* podcasts
 * preference_create
 * preference_delete
 * preference_edit
 * rate
 * record_play
-* register **Api6**
 * scrobble
 * search_songs
+* shares
 * share
 * share_create
 * share_delete
 * share_edit
-* shares
+* songs
 * song
 * song_delete
-* songs
 * stats
 * system_preference
 * system_preferences
@@ -279,11 +279,11 @@ All Data methods return HTTP 200 responses
 * user
 * user_create
 * user_delete
-* user_edit **Api6**
-* user_preference
+* user_edit **Api6**  Replaces user_update
 * user_update
-* video
+* user_preference
 * videos
+* video
 
 
 ### Binary Data Methods
@@ -296,17 +296,17 @@ All binary methods will not return XML/JSON responses. they will either return t
 
 @throws (HTTP 404 Not Found)
 
-* stream
 * download
 * get_art
+* stream
 
 ### Control Methods
 
 All Control methods return HTTP 200 responses
 
+* democratic
 * localplay
 * localplay_songs
-* democratic
 
 ## Access Levels
 
