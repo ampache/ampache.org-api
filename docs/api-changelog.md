@@ -10,7 +10,7 @@ description: "API Changelog"
 
 * API6 (Based on API5)
   * list: Replace get_indexes with a faster lookup and similar parameters returning `id`, `name`, `prefix` and `basename`
-  * catalog_create: Create a catalog (Require: 75)
+  * catalog_add: Create a catalog (Require: 75)
   * catalog_delete: Delete a catalog (Require: 75)
   * live_stream_create: Create a new live stream (radio station)
   * live_stream_edit: Edit a live stream
