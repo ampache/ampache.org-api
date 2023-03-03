@@ -10,12 +10,14 @@ description: "API Changelog"
 
 * API6 (Based on API5)
   * list: Replace get_indexes with a faster lookup and similar parameters returning `id`, `name`, `prefix` and `basename`
+  * catalog_create: Create a catalog (Require: 75)
+  * catalog_delete: Delete a catalog (Require: 75)
   * live_stream_create: Create a new live stream (radio station)
   * live_stream_edit: Edit a live stream
   * live_stream_delete: Delete a stream buy ID
   * register: Allow users to register an account (if enabled)
-  * user_create: Add `group` parameter to pick a catalog filter group
-  * user_update:
+  * playlist_create: Return an error if the playlist name already exists for that user
+  * user_edit (previously user_create):
     * Add `group` parameter to pick a catalog filter group
     * Add `fullname_public` to enable/disable using fullname in public display
     * Add `reset_apikey` to reset a user Api Key
@@ -39,7 +41,8 @@ description: "API Changelog"
   * Albums with no album_artist may now return 0 artist called 'Various'
   * Don't send AlbumDisk objects to the API
 * XML responses
-  * id is the only attribute and everything else is an element
+  * Api6 XML success and error response messages are put in a `message` element (like json)
+  * For data responses id is the only attribute and everything else is an element
   * Name was not set as an attribute OR an element so now it's always an element
   * Return original XML output (that may be malformed) when loadxml fails.
 * Api6::get_indexes: This method is depreciated and will be removed in Ampache 7.0.0 (Use Api6::list instead)
