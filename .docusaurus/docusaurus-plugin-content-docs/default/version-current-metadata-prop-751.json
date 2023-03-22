@@ -121,6 +121,12 @@
         "href": "/api/api-advanced-search"
       },
       {
+        "type": "link",
+        "label": "Subsonic API",
+        "href": "/api/subsonic",
+        "docId": "subsonic"
+      },
+      {
         "type": "category",
         "label": "API5",
         "items": [
@@ -206,12 +212,6 @@
         "collapsed": true,
         "collapsible": true,
         "href": "/api/api-3/"
-      },
-      {
-        "type": "link",
-        "label": "Subsonic API",
-        "href": "/api/subsonic",
-        "docId": "subsonic"
       },
       {
         "type": "category",

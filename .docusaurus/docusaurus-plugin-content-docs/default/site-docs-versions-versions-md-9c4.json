@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Subsonic API",
-    "permalink": "/api/subsonic"
+    "title": "API3 Errors",
+    "permalink": "/api/api-3/api-errors"
   },
   "next": {
     "title": "API5.1",

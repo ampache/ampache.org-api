@@ -21,7 +21,7 @@
     "permalink": "/api/advanced-search/user-advanced-search"
   },
   "next": {
-    "title": "API5",
-    "permalink": "/api/api-5/"
+    "title": "Subsonic API",
+    "permalink": "/api/subsonic"
   }
 }

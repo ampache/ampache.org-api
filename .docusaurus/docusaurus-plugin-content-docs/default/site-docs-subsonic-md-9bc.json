@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "API3 Errors",
-    "permalink": "/api/api-3/api-errors"
+    "title": "Video Search",
+    "permalink": "/api/advanced-search/video-advanced-search"
   },
   "next": {
-    "title": "Past Releases",
-    "permalink": "/api/versions/"
+    "title": "API5",
+    "permalink": "/api/api-5/"
   }
 }

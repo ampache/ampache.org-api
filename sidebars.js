@@ -38,6 +38,7 @@ const sidebars = {
         'advanced-search/video-advanced-search',
       ],
     },
+    'subsonic',
     {
       type: 'category',
       label: 'API5',
@@ -69,7 +70,6 @@ const sidebars = {
         'api-3/api-errors',
       ],
     },
-    'subsonic',
     {
       type: 'category',
       label: 'Past Releases',

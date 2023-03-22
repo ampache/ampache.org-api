@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Video Search",
-    "permalink": "/api/advanced-search/video-advanced-search"
+    "title": "Subsonic API",
+    "permalink": "/api/subsonic"
   },
   "next": {
     "title": "API5 Standards",
