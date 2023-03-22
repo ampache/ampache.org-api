@@ -41,6 +41,7 @@ export default {
   '90dc6546': [() => import(/* webpackChunkName: '90dc6546' */ '@site/docs/versions/api-5.0/api-errors.md'), '@site/docs/versions/api-5.0/api-errors.md', require.resolveWeak('@site/docs/versions/api-5.0/api-errors.md')],
   '935f2afb': [() => import(/* webpackChunkName: '935f2afb' */ '~docs/default/version-current-metadata-prop-751.json'), '~docs/default/version-current-metadata-prop-751.json', require.resolveWeak('~docs/default/version-current-metadata-prop-751.json')],
   '96b9e82d': [() => import(/* webpackChunkName: '96b9e82d' */ '@site/docs/api-4/api-4.md'), '@site/docs/api-4/api-4.md', require.resolveWeak('@site/docs/api-4/api-4.md')],
+  '9bc533c2': [() => import(/* webpackChunkName: '9bc533c2' */ '@site/docs/subsonic.md'), '@site/docs/subsonic.md', require.resolveWeak('@site/docs/subsonic.md')],
   '9c401ef1': [() => import(/* webpackChunkName: '9c401ef1' */ '@site/docs/versions/versions.md'), '@site/docs/versions/versions.md', require.resolveWeak('@site/docs/versions/versions.md')],
   'a0afd0bd': [() => import(/* webpackChunkName: 'a0afd0bd' */ '@site/docs/advanced-search/user-advanced-search.md'), '@site/docs/advanced-search/user-advanced-search.md', require.resolveWeak('@site/docs/advanced-search/user-advanced-search.md')],
   'a8180c60': [() => import(/* webpackChunkName: 'a8180c60' */ '@site/docs/api-5/api-errors.md'), '@site/docs/api-5/api-errors.md', require.resolveWeak('@site/docs/api-5/api-errors.md')],

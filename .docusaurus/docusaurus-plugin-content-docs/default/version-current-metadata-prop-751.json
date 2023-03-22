@@ -208,6 +208,12 @@
         "href": "/api/api-3/"
       },
       {
+        "type": "link",
+        "label": "Subsonic API",
+        "href": "/api/subsonic",
+        "docId": "subsonic"
+      },
+      {
         "type": "category",
         "label": "Past Releases",
         "items": [
@@ -566,6 +572,12 @@
     "index": {
       "id": "index",
       "title": "Ampache API",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "subsonic": {
+      "id": "subsonic",
+      "title": "Subsonic API",
       "description": "API documentation",
       "sidebar": "api"
     },

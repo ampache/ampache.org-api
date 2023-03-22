@@ -170,6 +170,11 @@
               "sidebar": "api"
             },
             {
+              "id": "subsonic",
+              "path": "/api/subsonic",
+              "sidebar": "api"
+            },
+            {
               "id": "versions/api-4.1/api-4.1",
               "path": "/api/versions/api-4.1/",
               "sidebar": "api"

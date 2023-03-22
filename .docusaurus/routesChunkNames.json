@@ -1,5 +1,5 @@
 {
-  "/api/-4f0": {
+  "/api/-5e4": {
     "__comp": "1be78505",
     "__context": {
       "plugin": "237bcb03"
@@ -133,6 +133,10 @@
   "/api/api-xml-methods-097": {
     "__comp": "17896441",
     "content": "dabe12fe"
+  },
+  "/api/subsonic-5e8": {
+    "__comp": "17896441",
+    "content": "9bc533c2"
   },
   "/api/versions/-d17": {
     "__comp": "17896441",

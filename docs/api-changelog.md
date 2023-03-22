@@ -33,8 +33,19 @@ description: "API Changelog"
   * Cast bool fields to `true` and `false` instead of "1" & "0"
   * Add `total_count` to resonses to give clients an idea of the total possible objects
 * advanced_search
+  * Add `album_disk` as a search type (uses album rules)
+  * Add `song_genre` to album and artist searches
+  * Add `possible_duplicate_album` to song search
+  * Add `mbid_artist` to album search
   * Add `barcode` to album search
   * Add `catalog_number` to album search
+  * Add `smartplaylist` to album search
+  * Add `duplicate_tracks` to album and song search (MIN & MAX id for song search)
+  * Alias `possible_duplicate_album` => `possible_duplicate` for album search
+  * Alias `album_genre` => `genre` for album search
+  * Alias `mbid_album` => `mbid` for album search
+  * Alias `mbid_artist` => `mbid` for artist search
+  * Alias `song_genre` => `genre` for song search
 
 ### Changed
 

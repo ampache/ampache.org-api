@@ -4,7 +4,7 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/api/',
-    component: ComponentCreator('/api/', '4f0'),
+    component: ComponentCreator('/api/', '5e4'),
     routes: [
       {
         path: '/api/',
@@ -194,6 +194,12 @@ export default [
       {
         path: '/api/api-xml-methods',
         component: ComponentCreator('/api/api-xml-methods', '097'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/subsonic',
+        component: ComponentCreator('/api/subsonic', '5e8'),
         exact: true,
         sidebar: "api"
       },

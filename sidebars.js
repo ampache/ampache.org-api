@@ -69,6 +69,7 @@ const sidebars = {
         'api-3/api-errors',
       ],
     },
+    'subsonic',
     {
       type: 'category',
       label: 'Past Releases',

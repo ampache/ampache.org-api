@@ -1,0 +1,27 @@
+{
+  "unversionedId": "subsonic",
+  "id": "subsonic",
+  "title": "Subsonic API",
+  "description": "API documentation",
+  "source": "@site/docs/subsonic.md",
+  "sourceDirName": ".",
+  "slug": "/subsonic",
+  "permalink": "/api/subsonic",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Subsonic API",
+    "metaTitle": "Subsonic API",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API3 Errors",
+    "permalink": "/api/api-3/api-errors"
+  },
+  "next": {
+    "title": "Past Releases",
+    "permalink": "/api/versions/"
+  }
+}
