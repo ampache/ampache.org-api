@@ -15,7 +15,7 @@ description: "API Changelog"
   * API6::catalog_delete: Delete a catalog (Require: 75)
   * API6::live_stream_create: Create a new live stream (radio station)
   * API6::live_stream_edit: Edit a live stream
-  * API6::live_stream_delete: Delete a stream buy ID
+  * API6::live_stream_delete: Delete a stream by ID
   * API6::register: Allow users to register an account (if enabled)
   * API6::playlist_create: Return an error if the playlist name already exists for that user
   * API6::user_edit (previously user_create):
@@ -50,10 +50,12 @@ description: "API Changelog"
 ### Changed
 
 * Api6
-  * Renamed user_update to user_edit (user_update still works and will be depreciated in API7)
+  * Renamed `user_update` to `user_edit` (user_update still works and will be depreciated in API7)
 * ALL
+  * Add all possible plugin preferences to the system list so they can't be deleted
   * Albums with no album_artist may now return 0 artist called 'Various'
   * Don't send AlbumDisk objects to the API
+  * Send the authenticated user to all method calls
 * XML responses
   * Api6 XML success and error response messages are put in a `message` element (like json)
   * For data responses id is the only attribute and everything else is an element
@@ -64,7 +66,7 @@ description: "API Changelog"
 ### Removed
 
 * Api6
-  * preciserating removed from all objects (use rating)
+  * `preciserating` removed from all objects (use rating)
 * Api6::album_songs remove `exact` as a parameter
 * Api6::stream remove `podcast` as a valid `type` value
 * Warning of depreciated methods from API5 have been removed from API6
@@ -83,6 +85,18 @@ description: "API Changelog"
 * Api3
   * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
   * Artists method parameters were incorrect
+
+## API 5.6.0
+
+### Fixed
+
+* ALL
+  * share_create and share_edit methods broken when setting expiry days
+  * advanced_search methods were breaking with various offset and limits
+  * playlists methods parameter 'exact' always ending up false
+* Api5
+  * update_art hardcoded url to artist
+  * Typo in song bitrate xml
 
 ## API 5.5.6
 
