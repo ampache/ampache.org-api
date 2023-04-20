@@ -4,7 +4,7 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
-## API develop
+## API 6.0.0
 
 ### Added
 
@@ -29,9 +29,10 @@ description: "API Changelog"
   * Add `bitrate` to Democratic objects
   * Add `format` to Song and Democratic objects
   * Add `stream_format`, `stream_bitrate`, `stream_mime` to Song objects (This is the transcoded output for a stream)
+  * Add all mapped artists to song and album objects (JSON added an `artists` element)
 * JSON responses
   * Cast bool fields to `true` and `false` instead of "1" & "0"
-  * Add `total_count` to resonses to give clients an idea of the total possible objects
+  * Add `total_count` to responses to give clients an idea of the total possible objects
 * advanced_search
   * Add `album_disk` as a search type (uses album rules)
   * Add `song_genre` to album and artist searches
@@ -67,8 +68,10 @@ description: "API Changelog"
 
 * Api6
   * `preciserating` removed from all objects (use rating)
-* Api6::album_songs remove `exact` as a parameter
-* Api6::stream remove `podcast` as a valid `type` value
+  * Remove non-song MBIDs as not relevant to the object
+  * album_songs remove `exact` as a parameter
+  * stream remove `podcast` as a valid `type` value
+* preference_create: don't allow creating 'system' preferences
 * Warning of depreciated methods from API5 have been removed from API6
   * Api6::tag
   * Api6::tags
