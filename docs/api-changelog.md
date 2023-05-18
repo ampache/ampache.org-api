@@ -30,6 +30,7 @@ description: "API Changelog"
   * Add `format` to Song and Democratic objects
   * Add `stream_format`, `stream_bitrate`, `stream_mime` to Song objects (This is the transcoded output for a stream)
   * Add all mapped artists to song and album objects (JSON added an `artists` element)
+  * Add `bitrate`, `stream_bitrate`, `rate`, `mode`, `channels` to Podcast Episode objects
 * JSON responses
   * Cast bool fields to `true` and `false` instead of "1" & "0"
   * Add `total_count` to responses to give clients an idea of the total possible objects
@@ -88,6 +89,10 @@ description: "API Changelog"
 * Api3
   * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
   * Artists method parameters were incorrect
+
+## API 5.6.1
+
+**NO CHANGE**
 
 ## API 5.6.0
 
