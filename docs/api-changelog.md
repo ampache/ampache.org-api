@@ -295,7 +295,7 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 * API3
   * Added genre calls as an alias to tag functions to match API4 and API5
 
-### API 5.1.1
+## API 5.1.1
 
 ### Fixed
 
@@ -303,7 +303,7 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 * stats calls with an offest and limit
 * advanced_search calls with an offset and limit
 
-### API 5.1.0
+## API 5.1.0
 
 ### Added
 
@@ -325,7 +325,7 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 * Bad xml tags in deleted functions
 * scrobble: Add song_mbid, artist_mbid, album_mbid (docs have no '_' so support both)
 
-### API 5.0.0
+## API 5.0.0
 
 All API code that used 'Tag' now references 'Genre' instead
 
@@ -398,14 +398,14 @@ This version of the API is the first semantic version. "5.0.0"
 
 * catalog_file: Couldn't add files
 
-### API 4.4.2
+## API 4.4.2
 
 ### Fixed
 
 * API::indexes Artist albums were being added incorrectly for XML
 * Send back the full album name in responses
 
-### API 4.4.1
+## API 4.4.1
 
 ### Fixed
 
