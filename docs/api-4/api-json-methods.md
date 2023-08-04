@@ -88,7 +88,7 @@ PLAYLIST
 
 ### advanced_search
 
-### Changes to text searches
+#### Changes to text searches
 
 * 'is not' has been added shifting values down the list.
   0=contains, 1=does not contain, 2=starts with, 3=ends with
@@ -96,7 +96,7 @@ PLAYLIST
 * rule_1['name'] is depreciated. Instead of rule_1['name'] use rule_1['title'] (I have put a temp workaround into the search rules to alleviate this change for any existing apps)
 * Metadata Search is combined with text and numeric. Meaning that changes to text lists push the numeric fields down.
 
-### Using advanced_search
+#### Using advanced_search
 
 Perform an advanced search given passed rules. This works in a similar way to the web/UI search pages.
 You can pass multiple rules as well as joins to create in depth search results
