@@ -724,7 +724,7 @@ ALBUM
 
 * MINIMUM_API_VERSION=380001
 
-This get an user public information
+This gets a user's public information
 @param array $input
 
 | Input      | Type   | Description                             | Optional |
@@ -788,7 +788,7 @@ Delete an existing user.
 
 * MINIMUM_API_VERSION=380001
 
-This get an user followers
+This gets a user's followers
 @param array $input
 
 | Input      | Type   | Description                                        | Optional |
@@ -801,7 +801,7 @@ This get an user followers
 
 * MINIMUM_API_VERSION=380001
 
-This get the user list followed by an user
+This get the user list followed by a user
 @param array $input
 
 | Input      | Type   | Description                                         | Optional |
@@ -814,7 +814,7 @@ This get the user list followed by an user
 
 * MINIMUM_API_VERSION=380001
 
-This follow/unfollow an user
+This follow/unfollow a user
 @param array $input
 
 | Input      | Type   | Description                             | Optional |
@@ -925,7 +925,7 @@ Kick off a catalog update or clean for the selected catalog
 
 * MINIMUM_API_VERSION=380001
 
-This get an user timeline
+This gets a user's timeline
 @param array $input
 
 | Input      | Type    | Description                                       | Optional |

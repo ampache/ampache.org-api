@@ -745,7 +745,7 @@ Delete an existing podcast_episode.
 
 ## user
 
-This get an user public information
+This gets a user's public information
 @param array $input
 
 | Input      | Type   | Description                             | Optional |
@@ -847,7 +847,7 @@ This returns the songs for a license
 
 ## followers
 
-This get an user followers
+This gets a user's followers
 @param array $input
 
 | Input      | Type   | Description                                        | Optional |
@@ -858,7 +858,7 @@ This get an user followers
 
 ## following
 
-This get the user list followed by an user
+This get the user list followed by a user
 @param array $input
 
 | Input      | Type   | Description                                         | Optional |
@@ -869,7 +869,7 @@ This get the user list followed by an user
 
 ## toggle_follow
 
-This follow/unfollow an user
+This follow/unfollow a user
 @param array $input
 
 | Input      | Type   | Description                             | Optional |
@@ -1010,7 +1010,7 @@ Make sure you remember to urlencode those file names!
 
 ## timeline
 
-This get an user timeline
+This gets a user's timeline
 @param array $input
 
 | Input      | Type    | Description                                       | Optional |

@@ -692,7 +692,7 @@ Delete an existing podcast_episode.
 
 ## user
 
-This get an user public information
+This gets a user's public information
 
 | Input      | Type   | Description                                 | Optional |
 |------------|--------|---------------------------------------------|---------:|
@@ -783,7 +783,7 @@ This returns a list of songs based on the filter ID
 
 ## followers
 
-This get an user followers
+This gets a user's followers
 
 | Input      | Type   | Description                                        | Optional |
 |------------|--------|----------------------------------------------------|---------:|
@@ -793,7 +793,7 @@ This get an user followers
 
 ## following
 
-This get the user list followed by an user
+This get the user list followed by a user
 
 | Input      | Type   | Description                                         | Optional |
 |------------|--------|-----------------------------------------------------|---------:|
@@ -803,7 +803,7 @@ This get the user list followed by an user
 
 ## toggle_follow
 
-This follow/unfollow an user
+This follow/unfollow a user
 
 | Input      | Type   | Description                             | Optional |
 |------------|--------|-----------------------------------------|---------:|
@@ -940,7 +940,7 @@ Make sure you remember to urlencode those file names!
 
 ## timeline
 
-This get an user timeline
+This gets a user's timeline
 
 | Input      | Type    | Description                                       | Optional |
 |------------|---------|---------------------------------------------------|---------:|
