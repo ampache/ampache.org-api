@@ -6,6 +6,8 @@ description: "API Changelog"
 
 ## API 6.0.0
 
+Stream token's will let you design permalinked streams and allow users to stream iwhtout re authenticating to the server. [wiki](https://github.com/ampache/ampache/wiki/ampache6-details#allow-permalink-user-streams)
+
 ### Added
 
 * API6 (Based on API5)
@@ -18,6 +20,7 @@ description: "API Changelog"
   * API6::live_stream_delete: Delete a stream by ID
   * API6::register: Allow users to register an account (if enabled)
   * API6::playlist_create: Return an error if the playlist name already exists for that user
+  * API6::playlist_songs: Add `random` to get random objects filtered by limit
   * API6::user_edit (previously user_create):
     * Add `group` parameter to pick a catalog filter group
     * Add `fullname_public` to enable/disable using fullname in public display
@@ -35,7 +38,6 @@ description: "API Changelog"
   * Cast bool fields to `true` and `false` instead of "1" & "0"
   * Add `total_count` to responses to give clients an idea of the total possible objects
 * advanced_search
-  * Add `album_disk` as a search type (uses album rules)
   * Add `song_genre` to album and artist searches
   * Add `possible_duplicate_album` to song search
   * Add `mbid_artist` to album search
@@ -91,6 +93,13 @@ description: "API Changelog"
 * Api3
   * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
   * Artists method parameters were incorrect
+
+## API 5.6.2
+
+### Fixed
+
+* ALL
+  * Require and set a valid version for `api_force_version`
 
 ## API 5.6.1
 
