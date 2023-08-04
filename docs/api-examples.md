@@ -26,3 +26,12 @@ Each API version has it's own examples.
 
 * API3 examples
   * [API3 XML Examples](https://github.com/ampache/python3-ampache/tree/api3/docs/xml-responses)
+  
+## Subsonic Examples
+
+You can get examples from an official Subsonic release as well as examples from Ampache.
+
+These servers are using a Subsonic 1.16.1 compatible API version.
+
+* [Subsonic 6.1.6 (1.16.1)](https://github.com/ampache/python3-ampache/tree/api6/docs/subsonic-6.1.6)
+* [Ampache 6.0.0 (1.16.1)](https://github.com/ampache/python3-ampache/tree/api6/docs/ampache-subsonic)
