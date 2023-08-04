@@ -10,7 +10,7 @@ Remember that Binary data methods will not return JSON; just the file/data you h
 
 ## Non-Data Methods
 
-## handshake
+### handshake
 
 This is the function that handles verifying a new handshake Takes a timestamp, auth key, and username.
 
@@ -23,7 +23,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/handshake.json)
 
-## ping
+### ping
 
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
@@ -34,7 +34,7 @@ This can be called without being authenticated, it is useful for determining if 
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/ping.json)
 
-## goodbye
+### goodbye
 
 Destroy a session using the auth parameter.
 
@@ -44,7 +44,7 @@ Destroy a session using the auth parameter.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/goodbye.json)
 
-## url_to_song
+### url_to_song
 
 This takes a url and returns the song object in question
 
@@ -56,7 +56,7 @@ This takes a url and returns the song object in question
 
 ## Data Methods
 
-## get_indexes
+### get_indexes
 
 This takes a collection of inputs and returns ID + name for the object type
 
@@ -86,7 +86,7 @@ PLAYLIST
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_indexes%20\(playlist\).json)
 
-## advanced_search
+### advanced_search
 
 ### Changes to text searches
 
@@ -128,7 +128,7 @@ ALBUM
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/advanced_search%20\(album\).json)
 
-## artists
+### artists
 
 This takes a collection of inputs and returns artist objects.
 
@@ -144,7 +144,7 @@ This takes a collection of inputs and returns artist objects.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artists.json)
 
-## artist
+### artist
 
 This returns a single artist based on the UID of said artist
 
@@ -155,7 +155,7 @@ This returns a single artist based on the UID of said artist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artist.json)
 
-## artist_albums
+### artist_albums
 
 This returns the albums of an artist
 
@@ -167,7 +167,7 @@ This returns the albums of an artist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artist_albums.json)
 
-## artist_songs
+### artist_songs
 
 This returns the songs of the specified artist
 
@@ -179,7 +179,7 @@ This returns the songs of the specified artist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artist_songs.json)
 
-## albums
+### albums
 
 This returns albums based on the provided search filters
 
@@ -195,7 +195,7 @@ This returns albums based on the provided search filters
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/albums.json)
 
-## album
+### album
 
 This returns a single album based on the UID provided
 
@@ -206,7 +206,7 @@ This returns a single album based on the UID provided
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/album.json)
 
-## album_songs
+### album_songs
 
 This returns the songs of a specified album
 
@@ -218,7 +218,7 @@ This returns the songs of a specified album
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/album_songs.json)
 
-## tags
+### tags
 
 This returns the tags (Genres) based on the specified filter
 
@@ -231,7 +231,7 @@ This returns the tags (Genres) based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/tags.json)
 
-## tag
+### tag
 
 This returns a single tag based on UID
 
@@ -241,7 +241,7 @@ This returns a single tag based on UID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/tag.json)
 
-## tag_artists
+### tag_artists
 
 This returns the artists associated with the tag in question as defined by the UID
 
@@ -253,7 +253,7 @@ This returns the artists associated with the tag in question as defined by the U
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/tag_artists.json)
 
-## tag_albums
+### tag_albums
 
 This returns the albums associated with the tag in question
 
@@ -265,7 +265,7 @@ This returns the albums associated with the tag in question
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/tag_albums.json)
 
-## tag_songs
+### tag_songs
 
 returns the songs for this tag
 
@@ -277,7 +277,7 @@ returns the songs for this tag
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/tag_songs.json)
 
-## songs
+### songs
 
 Returns songs based on the specified filter
 
@@ -292,7 +292,7 @@ Returns songs based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/songs.json)
 
-## song
+### song
 
 returns a single song
 
@@ -302,7 +302,7 @@ returns a single song
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/song.json)
 
-## playlists
+### playlists
 
 This returns playlists based on the specified filter
 
@@ -319,7 +319,7 @@ This returns playlists based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlists.json)
 
-## playlist
+### playlist
 
 This returns a single playlist
 
@@ -329,7 +329,7 @@ This returns a single playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist.json)
 
-## playlist_songs
+### playlist_songs
 
 This returns the songs for a playlist
 
@@ -341,7 +341,7 @@ This returns the songs for a playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_songs.json)
 
-## playlist_create
+### playlist_create
 
 This create a new playlist and return it
 
@@ -352,7 +352,7 @@ This create a new playlist and return it
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_create.json)
 
-## playlist_edit
+### playlist_edit
 
 This modifies name and type of a playlist
 Previously name and type were mandatory while filter wasn't. this has been reversed.
@@ -367,7 +367,7 @@ Previously name and type were mandatory while filter wasn't. this has been rever
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_edit.json)
 
-## playlist_delete
+### playlist_delete
 
 This deletes a playlist
 
@@ -377,7 +377,7 @@ This deletes a playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_delete.json)
 
-## playlist_add_song
+### playlist_add_song
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 
@@ -389,7 +389,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_add_song.json)
 
-## playlist_remove_song
+### playlist_remove_song
 
 This remove a song from a playlist.
 Previous versions required 'track' instead of 'song'.
@@ -402,7 +402,7 @@ Previous versions required 'track' instead of 'song'.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_remove_song.json)
 
-## playlist_generate
+### playlist_generate
 
 Get a list of song JSON, indexes or id's based on some simple search criteria
 'recent' will search for tracks played after 'Popular Threshold' days
@@ -432,7 +432,7 @@ ID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_generate%20\(id\).json)
 
-## shares
+### shares
 
 * **NEW** in 4.2.0
 
@@ -447,7 +447,7 @@ This searches the shares and returns... shares
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/shares.json)
 
-## share
+### share
 
 * (MINIMUM_API_VERSION=420000)
 
@@ -459,7 +459,7 @@ Return shares by UID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/share.json)
 
-## share_create
+### share_create
 
 * (MINIMUM_API_VERSION=420000
 
@@ -475,7 +475,7 @@ Takes the file id with optional description and expires parameters.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/share_create.json)
 
-## share_edit
+### share_edit
 
 * (MINIMUM_API_VERSION=420000
 
@@ -492,7 +492,7 @@ Takes the share id to update with optional description and expires parameters.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/share_edit.json)
 
-## share_delete
+### share_delete
 
 * (MINIMUM_API_VERSION=420000
 
@@ -504,7 +504,7 @@ Delete an existing share.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/share_delete.json)
 
-## get_similar
+### get_similar
 
 * **NEW** in 4.2.0
 
@@ -519,7 +519,7 @@ Return similar artist id's or similar song ids compared to the input filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/get_similar.json)
 
-## search_songs
+### search_songs
 
 This searches the songs and returns... songs
 
@@ -531,7 +531,7 @@ This searches the songs and returns... songs
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/search_songs.json)
 
-## videos
+### videos
 
 This returns video objects!
 
@@ -544,7 +544,7 @@ This returns video objects!
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/videos.json)
 
-## video
+### video
 
 This returns a single video
 
@@ -554,7 +554,7 @@ This returns a single video
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/video.json)
 
-## podcasts
+### podcasts
 
 * **NEW** in 4.2.0
 
@@ -569,7 +569,7 @@ Get information about podcasts
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcasts.json)
 
-## podcast
+### podcast
 
 * **NEW** in 4.2.0
 
@@ -582,7 +582,7 @@ Get the podcast from it's id.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast.json)
 
-## podcast_create
+### podcast_create
 
 * **NEW** in 4.2.0
 
@@ -596,7 +596,7 @@ Takes the url and catalog parameters.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast_create.json)
 
-## podcast_edit
+### podcast_edit
 
 * **NEW** in 4.2.0
 
@@ -615,7 +615,7 @@ Takes the podcast id to update with optional description and expires parameters.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast_edit.json)
 
-## podcast_delete
+### podcast_delete
 
 * **NEW** in 4.2.0
 
@@ -627,7 +627,7 @@ Delete an existing podcast.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast_delete.json)
 
-## podcast_episodes
+### podcast_episodes
 
 * **NEW** in 4.2.0
 
@@ -641,7 +641,7 @@ This returns the episodes for a podcast
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast_episodes.json)
 
-## podcast_episode
+### podcast_episode
 
 * **NEW** in 4.2.0
 
@@ -653,7 +653,7 @@ Get the podcast_episode from it's id.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast_episode.json)
 
-## podcast_episode_delete
+### podcast_episode_delete
 
 * **NEW** in 4.2.0
 
@@ -665,7 +665,7 @@ Delete an existing podcast_episode.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/podcast_episode_delete.json)
 
-## stats
+### stats
 
 Get some items based on some simple search types and filters.
 This method has partial backwards compatibility with older api versions but should be updated to follow the current input values.
@@ -692,7 +692,7 @@ ALBUM
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/stats%20\(album\).json)
 
-## user
+### user
 
 This get an user public information
 
@@ -702,7 +702,7 @@ This get an user public information
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user.json)
 
-## user_create
+### user_create
 
 Create a new user. (Requires the username, password and email.)
 
@@ -716,7 +716,7 @@ Create a new user. (Requires the username, password and email.)
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_create.json)
 
-## user_update
+### user_update
 
 Update an existing user.
 
@@ -734,7 +734,7 @@ Update an existing user.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_update.json)
 
-## user_delete
+### user_delete
 
 Delete an existing user.
 
@@ -744,7 +744,7 @@ Delete an existing user.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/user_delete.json)
 
-## licenses
+### licenses
 
 * **NEW** in 4.2.0
 
@@ -759,7 +759,7 @@ This returns the licenses based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/licenses.json)
 
-## license
+### license
 
 * **NEW** in 4.2.0
 
@@ -771,7 +771,7 @@ This returns a single license based on UID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/license.json)
 
-## license_songs
+### license_songs
 
 * **NEW** in 4.2.0
 
@@ -783,7 +783,7 @@ This returns a list of songs based on the filter ID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/license_songs.json)
 
-## followers
+### followers
 
 This get an user followers
 
@@ -793,7 +793,7 @@ This get an user followers
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/followers.json)
 
-## following
+### following
 
 This get the user list followed by an user
 
@@ -803,7 +803,7 @@ This get the user list followed by an user
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/following.json)
 
-## toggle_follow
+### toggle_follow
 
 This follow/unfollow an user
 
@@ -813,7 +813,7 @@ This follow/unfollow an user
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/toggle_follow.json)
 
-## last_shouts
+### last_shouts
 
 This get the latest posted shouts
 
@@ -824,7 +824,7 @@ This get the latest posted shouts
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/last_shouts.json)
 
-## rate
+### rate
 
 This rates a library item
 
@@ -836,7 +836,7 @@ This rates a library item
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/rate.json)
 
-## flag
+### flag
 
 This flags a library item as a favorite
 
@@ -851,7 +851,7 @@ This flags a library item as a favorite
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/flag.json)
 
-## record_play
+### record_play
 
 Take a song_id and update the object_count and user_activity table with a play. This allows other sources to record play history to ampache
 
@@ -870,7 +870,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 
 [Example]https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/record_play.json)
 
-## scrobble
+### scrobble
 
 Search for a song using text info and then record a play if found. This allows other sources to record play history to ampache
 
@@ -887,7 +887,7 @@ Search for a song using text info and then record a play if found. This allows o
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/scrobble.json)
 
-## catalogs
+### catalogs
 
 * **NEW** in 4.2.0
 
@@ -899,7 +899,7 @@ This searches the catalogs and returns... catalogs
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalogs.json)
 
-## catalog
+### catalog
 
 * **NEW** in 4.2.0
 
@@ -911,7 +911,7 @@ Return catalog by UID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog.json)
 
-## catalog_action
+### catalog_action
 
 Kick off a catalog update or clean for the selected catalog
 
@@ -926,7 +926,7 @@ Kick off a catalog update or clean for the selected catalog
 
 [Example: error](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_action%20\(error\).json)
 
-## catalog_file
+### catalog_file
 
 * **NEW** in 4.2.0
 
@@ -942,7 +942,7 @@ Make sure you remember to urlencode those file names!
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/catalog_file.json)
 
-## timeline
+### timeline
 
 This get an user timeline
 
@@ -954,7 +954,7 @@ This get an user timeline
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/timeline.json)
 
-## friends_timeline
+### friends_timeline
 
 This get current user friends timeline
 
@@ -965,7 +965,7 @@ This get current user friends timeline
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/friends_timeline.json)
 
-## update_from_tags
+### update_from_tags
 
 Update a single album, artist, song from the tag data
 
@@ -976,7 +976,7 @@ Update a single album, artist, song from the tag data
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/update_from_tags.json)
 
-## update_artist_info
+### update_artist_info
 
 Update artist information and fetch similar artists from last.fm
 Make sure lastfm_API_key is set in your configuration file
@@ -987,7 +987,7 @@ Make sure lastfm_API_key is set in your configuration file
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/update_artist_info.json)
 
-## update_art
+### update_art
 
 Updates a single album, artist, song running the gather_art process
 Doesn't overwrite existing art by default.
@@ -1000,7 +1000,7 @@ Doesn't overwrite existing art by default.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/update_art.json)
 
-## update_podcast
+### update_podcast
 
 Sync and download new podcast episodes
 
@@ -1012,7 +1012,7 @@ Sync and download new podcast episodes
 
 ## Binary Data Methods
 
-## stream
+### stream
 
 Streams a given media file. Takes the file id in parameter with optional max bit rate, file format, time offset, size and estimate content length option.
 
@@ -1025,7 +1025,7 @@ Streams a given media file. Takes the file id in parameter with optional max bit
 | 'offset'  | integer | time offset in seconds                                     |      YES |
 | 'length'  | boolean | `0`, `1`                                                   |      YES |
 
-## download
+### download
 
 Downloads a given media file. set format=raw to download the full file
 
@@ -1035,7 +1035,7 @@ Downloads a given media file. set format=raw to download the full file
 | 'type'   | string  | `song`, `podcast`                                          |       NO |
 | 'format' | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
 
-## get_art
+### get_art
 
 Get an art image.
 
@@ -1046,7 +1046,7 @@ Get an art image.
 
 ## Control Methods
 
-## localplay
+### localplay
 
 This is for controlling localplay
 
@@ -1073,7 +1073,7 @@ This is for controlling localplay
 
 [Example (status)](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/localplay%20\(status\).json)
 
-## democratic
+### democratic
 
 This is for controlling democratic play
 

@@ -8,7 +8,7 @@ Lets go through come calls and examples that you can do for each XML method.
 
 ## Non-Data Methods
 
-## handshake
+### handshake
 
 This is the function that handles verifying a new handshake Takes a timestamp, auth key, and username.
 
@@ -21,7 +21,7 @@ This is the function that handles verifying a new handshake Takes a timestamp, a
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/handshake.xml)
 
-## ping
+### ping
 
 This can be called without being authenticated, it is useful for determining if what the status of the server is, and what version it is running/compatible with
 
@@ -32,7 +32,7 @@ This can be called without being authenticated, it is useful for determining if 
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/ping.xml)
 
-## url_to_song
+### url_to_song
 
 This takes a url and returns the song object in question
 
@@ -44,7 +44,7 @@ This takes a url and returns the song object in question
 
 ## Data Methods
 
-## advanced_search
+### advanced_search
 
 ### Changes to text searches
 
@@ -85,7 +85,7 @@ ALBUM
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/advanced_search%20\(album\).xml)
 
-## artists
+### artists
 
 This takes a collection of inputs and returns artist objects.
 
@@ -101,7 +101,7 @@ This takes a collection of inputs and returns artist objects.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/artists.xml)
 
-## artist
+### artist
 
 This returns a single artist based on the UID of said artist
 
@@ -112,7 +112,7 @@ This returns a single artist based on the UID of said artist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/artist.xml)
 
-## artist_albums
+### artist_albums
 
 This returns the albums of an artist
 
@@ -124,7 +124,7 @@ This returns the albums of an artist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/artist_albums.xml)
 
-## artist_songs
+### artist_songs
 
 This returns the songs of the specified artist
 
@@ -136,7 +136,7 @@ This returns the songs of the specified artist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/artist_songs.xml)
 
-## albums
+### albums
 
 This returns albums based on the provided search filters
 
@@ -152,7 +152,7 @@ This returns albums based on the provided search filters
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/albums.xml)
 
-## album
+### album
 
 This returns a single album based on the UID provided
 
@@ -163,7 +163,7 @@ This returns a single album based on the UID provided
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/album.xml)
 
-## album_songs
+### album_songs
 
 This returns the songs of a specified album
 
@@ -175,7 +175,7 @@ This returns the songs of a specified album
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/album_songs.xml)
 
-## tags
+### tags
 
 This returns the tags (Genres) based on the specified filter
 
@@ -190,7 +190,7 @@ This returns the tags (Genres) based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/tags.xml)
 
-## tag
+### tag
 
 This returns a single tag based on UID
 
@@ -202,7 +202,7 @@ This returns a single tag based on UID
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/tag.xml)
 
-## tag_artists
+### tag_artists
 
 This returns the artists associated with the tag in question as defined by the UID
 
@@ -216,7 +216,7 @@ This returns the artists associated with the tag in question as defined by the U
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/tag_artists.xml)
 
-## tag_albums
+### tag_albums
 
 This returns the albums associated with the tag in question
 
@@ -230,7 +230,7 @@ This returns the albums associated with the tag in question
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/tag_albums.xml)
 
-## tag_songs
+### tag_songs
 
 returns the songs for this tag
 
@@ -244,7 +244,7 @@ returns the songs for this tag
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/tag_songs.xml)
 
-## songs
+### songs
 
 Returns songs based on the specified filter
 
@@ -259,7 +259,7 @@ Returns songs based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/songs.xml)
 
-## song
+### song
 
 returns a single song
 
@@ -269,7 +269,7 @@ returns a single song
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/song.xml)
 
-## playlists
+### playlists
 
 This returns playlists based on the specified filter
 
@@ -282,7 +282,7 @@ This returns playlists based on the specified filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlists.xml)
 
-## playlist
+### playlist
 
 This returns a single playlist
 
@@ -292,7 +292,7 @@ This returns a single playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist.xml)
 
-## playlist_songs
+### playlist_songs
 
 This returns the songs for a playlist
 
@@ -304,7 +304,7 @@ This returns the songs for a playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_songs.xml)
 
-## playlist_create
+### playlist_create
 
 This create a new playlist and return it
 
@@ -315,7 +315,7 @@ This create a new playlist and return it
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_create.xml)
 
-## playlist_delete
+### playlist_delete
 
 This deletes a playlist
 
@@ -325,7 +325,7 @@ This deletes a playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_delete.xml)
 
-## playlist_add_song
+### playlist_add_song
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 
@@ -336,7 +336,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_add_song.xml)
 
-## playlist_remove_song
+### playlist_remove_song
 
 This remove a song from a playlist.
 
@@ -349,7 +349,7 @@ This remove a song from a playlist.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/playlist_remove_song.xml)
 
-## search_songs
+### search_songs
 
 This searches the songs and returns... songs
 
@@ -361,7 +361,7 @@ This searches the songs and returns... songs
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/search_songs.xml)
 
-## videos
+### videos
 
 This returns video objects!
 
@@ -374,7 +374,7 @@ This returns video objects!
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/videos.xml)
 
-## video
+### video
 
 This returns a single video
 
@@ -384,7 +384,7 @@ This returns a single video
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/video.xml)
 
-## stats
+### stats
 
 Get some items based on some simple search types and filters.
 
@@ -399,7 +399,7 @@ Get some items based on some simple search types and filters.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/stats%20\(album\).xml)
 
-## user
+### user
 
 This get an user public information
 
@@ -409,7 +409,7 @@ This get an user public information
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/user.xml)
 
-## followers
+### followers
 
 This get an user followers
 
@@ -419,7 +419,7 @@ This get an user followers
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/followers.xml)
 
-## following
+### following
 
 This get the user list followed by an user
 
@@ -429,7 +429,7 @@ This get the user list followed by an user
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/following.xml)
 
-## toggle_follow
+### toggle_follow
 
 This follow/unfollow an user
 
@@ -439,7 +439,7 @@ This follow/unfollow an user
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/toggle_follow.xml)
 
-## last_shouts
+### last_shouts
 
 This get the latest posted shouts
 
@@ -450,7 +450,7 @@ This get the latest posted shouts
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/last_shouts.xml)
 
-## rate
+### rate
 
 This rates a library item
 
@@ -462,7 +462,7 @@ This rates a library item
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/rate.xml)
 
-## timeline
+### timeline
 
 This get an user timeline
 
@@ -474,7 +474,7 @@ This get an user timeline
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/timeline.xml)
 
-## friends_timeline
+### friends_timeline
 
 This get current user friends timeline
 
@@ -487,7 +487,7 @@ This get current user friends timeline
 
 ## Control Methods
 
-## localplay
+### localplay
 
 This is for controlling localplay
 
@@ -509,7 +509,7 @@ This is for controlling localplay
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/localplay.xml)
 
-## democratic
+### democratic
 
 This is for controlling democratic play
 
