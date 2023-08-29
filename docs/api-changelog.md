@@ -4,6 +4,21 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.0.1
+
+### Changed
+
+* API6 XML
+  * get_similar: return song objects to match json
+
+### Fixed
+
+* API6
+  * user_preference: returned array instead of object
+  * system_preference: returned array instead of object
+  * preference_create: returned array instead of object
+  * preference_edit: returned array instead of object
+
 ## API 6.0.0
 
 Stream token's will let you design permalinked streams and allow users to stream iwhtout re authenticating to the server. [wiki](https://github.com/ampache/ampache/wiki/ampache6-details#allow-permalink-user-streams)
