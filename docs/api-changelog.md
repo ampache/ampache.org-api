@@ -4,6 +4,10 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.0.2
+
+**NO CHANGE**
+
 ## API 6.0.1
 
 ### Changed
