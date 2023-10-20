@@ -4,6 +4,51 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.1.0
+
+### Added
+
+* API6
+  * bookmark: Get single bookmark by bookmark_id
+  * lost_password: Allows a non-admin user to reset their password
+
+### Changed
+
+* API5
+  * bookmark_edit, bookmark_delete: show error on missing bookmark instead of empty object
+* API6
+  * bookmark_create, bookmark_edit, bookmark_delete: Remove `client` parameter default value ('AmpacheAPI')
+  * bookmark_edit, bookmark_delete: show error on missing bookmark instead of empty object
+  * bookmark_edit, bookmark_delete: add bookmark as a valid `object_type`
+
+### Fixed
+
+* API4
+  * Fix lots of Runtime Error's on missing optional data
+* API5
+  * Fix lots of Runtime Error's on missing optional data
+  * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+* API6
+  * Fix lots of Runtime Error's on missing optional data
+  * catalog_folder didn't get the group of items correctly
+  * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+
+## API 6.0.3
+
+### Added
+
+* API5::playlist_songs: Add `random` to get random objects filtered by limit
+
+### Fixed
+
+* ALL
+  * handshake: runtime errors with bad username
+  * handshake: Don't error on empty data counts
+  * ping: Don't error on empty data counts
+* Api6
+  * list: searches were missing from playlists
+  * browse: XML returned a list instead of a browse object
+
 ## API 6.0.2
 
 **NO CHANGE**
@@ -113,6 +158,34 @@ Stream token's will let you design permalinked streams and allow users to stream
 * Api3
   * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
   * Artists method parameters were incorrect
+
+## API 5.6.4
+
+### Fixed
+
+* API4
+  * Fix lots of Runtime Error's on missing optional data
+* API5
+  * Fix lots of Runtime Error's on missing optional data
+  * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+
+## API 5.6.3
+
+### Added
+
+* API5::playlist_songs: Add `random` to get random objects filtered by limit
+
+### Fixed
+
+* ALL
+  * handshake: runtime errors with bad username
+  * handshake: Don't error on empty data counts
+  * ping: Don't error on empty data counts
+* API4
+  * share_create: null `expires` fall back to `share_expire` or 7 days
+* API5
+  * share_create: null `expires` fall back to `share_expire` or 7 days
+  * preference_edit: Could apply to the wrong user
 
 ## API 5.6.2
 
