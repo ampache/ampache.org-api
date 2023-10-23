@@ -77,6 +77,18 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'API 6.0',
+          link: {type: 'doc', id: 'versions/api-6.0/api-6.0'},
+          items: [
+            'versions/api-6.0/api-standards',
+            'versions/api-6.0/api-xml-methods',
+            'versions/api-6.0/api-json-methods',
+            'versions/api-6.0/api-errors',
+            'versions/api-6.0/api-advanced-search',
+          ],
+        },
+        {
+          type: 'category',
           label: 'API 5.1',
           link: {type: 'doc', id: 'versions/api-5.1/api-5.1'},
           items: [
