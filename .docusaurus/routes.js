@@ -4,7 +4,7 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/api/',
-    component: ComponentCreator('/api/', '5e4'),
+    component: ComponentCreator('/api/', 'a42'),
     routes: [
       {
         path: '/api/',
@@ -350,6 +350,42 @@ export default [
       {
         path: '/api/versions/api-5.1/api-xml-methods',
         component: ComponentCreator('/api/versions/api-5.1/api-xml-methods', 'a47'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/versions/api-6.0/',
+        component: ComponentCreator('/api/versions/api-6.0/', 'b67'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/versions/api-6.0/api-advanced-search',
+        component: ComponentCreator('/api/versions/api-6.0/api-advanced-search', '435'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/versions/api-6.0/api-errors',
+        component: ComponentCreator('/api/versions/api-6.0/api-errors', '2ee'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/versions/api-6.0/api-json-methods',
+        component: ComponentCreator('/api/versions/api-6.0/api-json-methods', '683'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/versions/api-6.0/api-standards',
+        component: ComponentCreator('/api/versions/api-6.0/api-standards', '043'),
+        exact: true,
+        sidebar: "api"
+      },
+      {
+        path: '/api/versions/api-6.0/api-xml-methods',
+        component: ComponentCreator('/api/versions/api-6.0/api-xml-methods', '507'),
         exact: true,
         sidebar: "api"
       }

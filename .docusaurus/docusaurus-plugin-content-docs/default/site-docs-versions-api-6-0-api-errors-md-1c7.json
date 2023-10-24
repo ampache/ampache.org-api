@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-6.0/api-errors",
+  "id": "versions/api-6.0/api-errors",
+  "title": "API6 Errors",
+  "description": "API documentation",
+  "source": "@site/docs/versions/api-6.0/api-errors.md",
+  "sourceDirName": "versions/api-6.0",
+  "slug": "/versions/api-6.0/api-errors",
+  "permalink": "/api/versions/api-6.0/api-errors",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "API6 Errors",
+    "metaTitle": "API6 Errors",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API6 JSON Methods",
+    "permalink": "/api/versions/api-6.0/api-json-methods"
+  },
+  "next": {
+    "title": "advanced_search",
+    "permalink": "/api/versions/api-6.0/api-advanced-search"
+  }
+}

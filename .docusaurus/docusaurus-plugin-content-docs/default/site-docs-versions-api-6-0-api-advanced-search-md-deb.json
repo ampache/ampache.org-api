@@ -1,0 +1,27 @@
+{
+  "unversionedId": "versions/api-6.0/api-advanced-search",
+  "id": "versions/api-6.0/api-advanced-search",
+  "title": "advanced_search",
+  "description": "API documentation",
+  "source": "@site/docs/versions/api-6.0/api-advanced-search.md",
+  "sourceDirName": "versions/api-6.0",
+  "slug": "/versions/api-6.0/api-advanced-search",
+  "permalink": "/api/versions/api-6.0/api-advanced-search",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "advanced_search",
+    "metaTitle": "advanced_search",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "API6 Errors",
+    "permalink": "/api/versions/api-6.0/api-errors"
+  },
+  "next": {
+    "title": "API5.1",
+    "permalink": "/api/versions/api-5.1/"
+  }
+}

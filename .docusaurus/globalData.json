@@ -295,6 +295,36 @@
               "sidebar": "api"
             },
             {
+              "id": "versions/api-6.0/api-6.0",
+              "path": "/api/versions/api-6.0/",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-6.0/api-advanced-search",
+              "path": "/api/versions/api-6.0/api-advanced-search",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-6.0/api-errors",
+              "path": "/api/versions/api-6.0/api-errors",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-6.0/api-json-methods",
+              "path": "/api/versions/api-6.0/api-json-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-6.0/api-standards",
+              "path": "/api/versions/api-6.0/api-standards",
+              "sidebar": "api"
+            },
+            {
+              "id": "versions/api-6.0/api-xml-methods",
+              "path": "/api/versions/api-6.0/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
               "id": "versions/versions",
               "path": "/api/versions/",
               "sidebar": "api"

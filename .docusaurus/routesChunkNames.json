@@ -1,5 +1,5 @@
 {
-  "/api/-5e4": {
+  "/api/-a42": {
     "__comp": "1be78505",
     "__context": {
       "plugin": "237bcb03"
@@ -237,5 +237,29 @@
   "/api/versions/api-5.1/api-xml-methods-a47": {
     "__comp": "17896441",
     "content": "542a3051"
+  },
+  "/api/versions/api-6.0/-b67": {
+    "__comp": "17896441",
+    "content": "599334d1"
+  },
+  "/api/versions/api-6.0/api-advanced-search-435": {
+    "__comp": "17896441",
+    "content": "deb08c36"
+  },
+  "/api/versions/api-6.0/api-errors-2ee": {
+    "__comp": "17896441",
+    "content": "1c78cd59"
+  },
+  "/api/versions/api-6.0/api-json-methods-683": {
+    "__comp": "17896441",
+    "content": "7753c0b9"
+  },
+  "/api/versions/api-6.0/api-standards-043": {
+    "__comp": "17896441",
+    "content": "59f7cb6a"
+  },
+  "/api/versions/api-6.0/api-xml-methods-507": {
+    "__comp": "17896441",
+    "content": "ddc2c0f1"
   }
 }

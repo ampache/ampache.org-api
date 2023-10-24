@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Past Releases",
-    "permalink": "/api/versions/"
+    "title": "advanced_search",
+    "permalink": "/api/versions/api-6.0/api-advanced-search"
   },
   "next": {
     "title": "API5.1 Standards",
