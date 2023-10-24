@@ -6,11 +6,17 @@ description: "API Changelog"
 
 ## API 6.1.0
 
+Two new nethods have been added
+
+The bookmark methods have had a bit of a rework as they were not very useful
+
+Finally the issues with setting your auth token in the http header have been fixed
+
 ### Added
 
 * API6
-  * bookmark: Get single bookmark by bookmark_id
-  * lost_password: Allows a non-admin user to reset their password
+  * New Method: bookmark (Get single bookmark by bookmark_id)
+  * New Method: lost_password (Allows a non-admin user to reset their password)
   * bookmark_create: Add `include` parameter (if true include the object in the bookmark)
   * bookmark_edit: Add `include` parameter (if true include the object in the bookmark)
   * get_bookmark: Add `include` parameter (if true include the object in the bookmark)
@@ -36,20 +42,20 @@ description: "API Changelog"
 
 ### Fixed
 
+* ALL
+  * handshake: auth failure with header token
+  * playlist_generate: Don't error when optional `mode` and `format` are not set
 * API4
   * Fix lots of Runtime Error's on missing optional data
-  * playlist_generate: Don't error when optional `mode` and `format` are not set
 * API5
   * Fix lots of Runtime Error's on missing optional data
   * bookemark_edit: missing user id in data array
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
-  * playlist_generate: Don't error when optional `mode` and `format` are not set
 * API6
   * Fix lots of Runtime Error's on missing optional data
   * catalog_folder didn't get the group of items correctly
   * bookemark_edit: missing user id in data array
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
-  * playlist_generate: Don't error when optional `mode` and `format` are not set
 
 ## API 6.0.3
 
@@ -181,6 +187,8 @@ Stream token's will let you design permalinked streams and allow users to stream
 
 ### Fixed
 
+* ALL
+  * Fixed Bearer token auth on all methods
 * API4
   * Fix lots of Runtime Error's on missing optional data
 * API5
