@@ -6,7 +6,7 @@ description: "API Changelog"
 
 ## API 6.1.0
 
-Two new nethods have been added
+Two new methods have been added
 
 The bookmark methods have had a bit of a rework as they were not very useful
 
@@ -19,7 +19,9 @@ Finally the issues with setting your auth token in the http header have been fix
   * New Method: lost_password (Allows a non-admin user to reset their password)
   * bookmark_create: Add `include` parameter (if true include the object in the bookmark)
   * bookmark_edit: Add `include` parameter (if true include the object in the bookmark)
-  * get_bookmark: Add `include` parameter (if true include the object in the bookmark)
+  * get_bookmark
+    * Add `include` parameter (if true include the object in the bookmark)
+    * Add `all` parameter (if true include every bookmark for the object)
   * bookmarks
     * Add parameter `client` to filter by specific groups of bookmarks
     * Add `include` parameter (if true include the object in the bookmark)
@@ -30,11 +32,15 @@ Finally the issues with setting your auth token in the http header have been fix
   * bookmark_edit: show error on missing bookmark instead of empty object
   * bookmark_delete: show error on missing bookmark instead of empty object
 * API6
+  * get_bookmark
+    * add bookmark as a valid `object_type`
+    * Don't return single JSON bookmarks as an object
   * bookmark_create: Remove `client` parameter default value ('AmpacheAPI')
   * bookmark_edit
     * Remove `client` parameter default value ('AmpacheAPI')
     * show error on missing bookmark instead of empty object
     * add bookmark as a valid `object_type`
+    * Don't return single JSON bookmarks as an object
   * bookmark_delete
     * Remove `client` parameter default value ('AmpacheAPI')
     * show error on missing bookmark instead of empty object
@@ -45,17 +51,22 @@ Finally the issues with setting your auth token in the http header have been fix
 * ALL
   * handshake: auth failure with header token
   * playlist_generate: Don't error when optional `mode` and `format` are not set
+  * advanced_search: runtime error on empty data type
 * API4
   * Fix lots of Runtime Error's on missing optional data
 * API5
   * Fix lots of Runtime Error's on missing optional data
-  * bookemark_edit: missing user id in data array
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+  * bookmark_edit
+    * Missing user id in data array
+    * Not able to edit all bookmarks
 * API6
   * Fix lots of Runtime Error's on missing optional data
   * catalog_folder didn't get the group of items correctly
-  * bookemark_edit: missing user id in data array
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+  * bookmark_edit
+    * Missing user id in data array
+    * Not able to edit all bookmarks
 
 ## API 6.0.3
 
