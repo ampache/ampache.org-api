@@ -1,5 +1,4 @@
 {
-  "unversionedId": "advanced-search/podcast-advanced-search",
   "id": "advanced-search/podcast-advanced-search",
   "title": "Podcast Search",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/advanced-search/podcast-advanced-search",
   "permalink": "/api/advanced-search/podcast-advanced-search",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

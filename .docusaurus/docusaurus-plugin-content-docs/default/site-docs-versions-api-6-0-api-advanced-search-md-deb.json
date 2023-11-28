@@ -1,5 +1,4 @@
 {
-  "unversionedId": "versions/api-6.0/api-advanced-search",
   "id": "versions/api-6.0/api-advanced-search",
   "title": "advanced_search",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/versions/api-6.0/api-advanced-search",
   "permalink": "/api/versions/api-6.0/api-advanced-search",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

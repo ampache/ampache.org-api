@@ -1,5 +1,4 @@
 {
-  "unversionedId": "api-4/api-4",
   "id": "api-4/api-4",
   "title": "API4",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/api-4/",
   "permalink": "/api/api-4/",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

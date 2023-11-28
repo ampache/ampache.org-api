@@ -1,5 +1,4 @@
 {
-  "unversionedId": "api-errors",
   "id": "api-errors",
   "title": "API6 Errors",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/api-errors",
   "permalink": "/api/api-errors",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Ampache API",
-  "tagline": "Dinosaurs are cool",
+  "tagline": "For the love of music",
   "url": "https://ampache.org",
   "baseUrl": "/api/",
   "onBrokenLinks": "throw",
@@ -294,6 +294,12 @@ export default {
   "titleDelimiter": "|",
   "noIndex": false,
   "markdown": {
-    "mermaid": false
+    "format": "mdx",
+    "mermaid": false,
+    "mdx1Compat": {
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
+    }
   }
 };

@@ -1,5 +1,4 @@
 {
-  "unversionedId": "advanced-search/video-advanced-search",
   "id": "advanced-search/video-advanced-search",
   "title": "Video Search",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/advanced-search/video-advanced-search",
   "permalink": "/api/advanced-search/video-advanced-search",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

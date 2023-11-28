@@ -13,49 +13,57 @@
         "type": "link",
         "label": "Ampache API",
         "href": "/api/",
-        "docId": "index"
+        "docId": "index",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "API6 Standards",
         "href": "/api/api-standards",
-        "docId": "api-standards"
+        "docId": "api-standards",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "API6 XML Methods",
         "href": "/api/api-xml-methods",
-        "docId": "api-xml-methods"
+        "docId": "api-xml-methods",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "API6 JSON Methods",
         "href": "/api/api-json-methods",
-        "docId": "api-json-methods"
+        "docId": "api-json-methods",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "API6 Errors",
         "href": "/api/api-errors",
-        "docId": "api-errors"
+        "docId": "api-errors",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "API Examples",
         "href": "/api/api-examples",
-        "docId": "api-examples"
+        "docId": "api-examples",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "API Changelog",
         "href": "/api/api-changelog",
-        "docId": "api-changelog"
+        "docId": "api-changelog",
+        "unlisted": false
       },
       {
         "type": "link",
         "label": "Access Control Lists",
         "href": "/api/api-acls",
-        "docId": "api-acls"
+        "docId": "api-acls",
+        "unlisted": false
       },
       {
         "type": "category",
@@ -65,55 +73,64 @@
             "type": "link",
             "label": "Song Search",
             "href": "/api/advanced-search/song-advanced-search",
-            "docId": "advanced-search/song-advanced-search"
+            "docId": "advanced-search/song-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Album Search",
             "href": "/api/advanced-search/album-advanced-search",
-            "docId": "advanced-search/album-advanced-search"
+            "docId": "advanced-search/album-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Artist Search",
             "href": "/api/advanced-search/artist-advanced-search",
-            "docId": "advanced-search/artist-advanced-search"
+            "docId": "advanced-search/artist-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Label Search",
             "href": "/api/advanced-search/label-advanced-search",
-            "docId": "advanced-search/label-advanced-search"
+            "docId": "advanced-search/label-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Playlist Search",
             "href": "/api/advanced-search/playlist-advanced-search",
-            "docId": "advanced-search/playlist-advanced-search"
+            "docId": "advanced-search/playlist-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Podcast Search",
             "href": "/api/advanced-search/podcast-advanced-search",
-            "docId": "advanced-search/podcast-advanced-search"
+            "docId": "advanced-search/podcast-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Podcast Episode Search",
             "href": "/api/advanced-search/podcast-episode-advanced-search",
-            "docId": "advanced-search/podcast-episode-advanced-search"
+            "docId": "advanced-search/podcast-episode-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "User Search",
             "href": "/api/advanced-search/user-advanced-search",
-            "docId": "advanced-search/user-advanced-search"
+            "docId": "advanced-search/user-advanced-search",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "Video Search",
             "href": "/api/advanced-search/video-advanced-search",
-            "docId": "advanced-search/video-advanced-search"
+            "docId": "advanced-search/video-advanced-search",
+            "unlisted": false
           }
         ],
         "collapsed": true,
@@ -124,7 +141,8 @@
         "type": "link",
         "label": "Subsonic API",
         "href": "/api/subsonic",
-        "docId": "subsonic"
+        "docId": "subsonic",
+        "unlisted": false
       },
       {
         "type": "category",
@@ -134,31 +152,36 @@
             "type": "link",
             "label": "API5 Standards",
             "href": "/api/api-5/api-standards",
-            "docId": "api-5/api-standards"
+            "docId": "api-5/api-standards",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API5 XML Methods",
             "href": "/api/api-5/api-xml-methods",
-            "docId": "api-5/api-xml-methods"
+            "docId": "api-5/api-xml-methods",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API5 JSON Methods",
             "href": "/api/api-5/api-json-methods",
-            "docId": "api-5/api-json-methods"
+            "docId": "api-5/api-json-methods",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API5 Errors",
             "href": "/api/api-5/api-errors",
-            "docId": "api-5/api-errors"
+            "docId": "api-5/api-errors",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API5 advanced_search",
             "href": "/api/api-5/api-advanced-search",
-            "docId": "api-5/api-advanced-search"
+            "docId": "api-5/api-advanced-search",
+            "unlisted": false
           }
         ],
         "collapsed": true,
@@ -173,19 +196,22 @@
             "type": "link",
             "label": "API4 XML",
             "href": "/api/api-4/api-xml-methods",
-            "docId": "api-4/api-xml-methods"
+            "docId": "api-4/api-xml-methods",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API4 JSON",
             "href": "/api/api-4/api-json-methods",
-            "docId": "api-4/api-json-methods"
+            "docId": "api-4/api-json-methods",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API4 Errors",
             "href": "/api/api-4/api-errors",
-            "docId": "api-4/api-errors"
+            "docId": "api-4/api-errors",
+            "unlisted": false
           }
         ],
         "collapsed": true,
@@ -200,13 +226,15 @@
             "type": "link",
             "label": "API3 XML",
             "href": "/api/api-3/api-xml-methods",
-            "docId": "api-3/api-xml-methods"
+            "docId": "api-3/api-xml-methods",
+            "unlisted": false
           },
           {
             "type": "link",
             "label": "API3 Errors",
             "href": "/api/api-3/api-errors",
-            "docId": "api-3/api-errors"
+            "docId": "api-3/api-errors",
+            "unlisted": false
           }
         ],
         "collapsed": true,
@@ -225,31 +253,36 @@
                 "type": "link",
                 "label": "API6 Standards",
                 "href": "/api/versions/api-6.0/api-standards",
-                "docId": "versions/api-6.0/api-standards"
+                "docId": "versions/api-6.0/api-standards",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API6 XML Methods",
                 "href": "/api/versions/api-6.0/api-xml-methods",
-                "docId": "versions/api-6.0/api-xml-methods"
+                "docId": "versions/api-6.0/api-xml-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API6 JSON Methods",
                 "href": "/api/versions/api-6.0/api-json-methods",
-                "docId": "versions/api-6.0/api-json-methods"
+                "docId": "versions/api-6.0/api-json-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API6 Errors",
                 "href": "/api/versions/api-6.0/api-errors",
-                "docId": "versions/api-6.0/api-errors"
+                "docId": "versions/api-6.0/api-errors",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "advanced_search",
                 "href": "/api/versions/api-6.0/api-advanced-search",
-                "docId": "versions/api-6.0/api-advanced-search"
+                "docId": "versions/api-6.0/api-advanced-search",
+                "unlisted": false
               }
             ],
             "collapsed": true,
@@ -264,31 +297,36 @@
                 "type": "link",
                 "label": "API5.1 Standards",
                 "href": "/api/versions/api-5.1/api-standards",
-                "docId": "versions/api-5.1/api-standards"
+                "docId": "versions/api-5.1/api-standards",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.1 XML Methods",
                 "href": "/api/versions/api-5.1/api-xml-methods",
-                "docId": "versions/api-5.1/api-xml-methods"
+                "docId": "versions/api-5.1/api-xml-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.1 JSON Methods",
                 "href": "/api/versions/api-5.1/api-json-methods",
-                "docId": "versions/api-5.1/api-json-methods"
+                "docId": "versions/api-5.1/api-json-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.1 Errors",
                 "href": "/api/versions/api-5.1/api-errors",
-                "docId": "versions/api-5.1/api-errors"
+                "docId": "versions/api-5.1/api-errors",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.1 advanced_search",
                 "href": "/api/versions/api-5.1/api-advanced-search",
-                "docId": "versions/api-5.1/api-advanced-search"
+                "docId": "versions/api-5.1/api-advanced-search",
+                "unlisted": false
               }
             ],
             "collapsed": true,
@@ -303,31 +341,36 @@
                 "type": "link",
                 "label": "API5.0 Standards",
                 "href": "/api/versions/api-5.0/api-standards",
-                "docId": "versions/api-5.0/api-standards"
+                "docId": "versions/api-5.0/api-standards",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.0 XML Methods",
                 "href": "/api/versions/api-5.0/api-xml-methods",
-                "docId": "versions/api-5.0/api-xml-methods"
+                "docId": "versions/api-5.0/api-xml-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.0 JSON Methods",
                 "href": "/api/versions/api-5.0/api-json-methods",
-                "docId": "versions/api-5.0/api-json-methods"
+                "docId": "versions/api-5.0/api-json-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.0 Errors",
                 "href": "/api/versions/api-5.0/api-errors",
-                "docId": "versions/api-5.0/api-errors"
+                "docId": "versions/api-5.0/api-errors",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "API5.0 advanced_search",
                 "href": "/api/versions/api-5.0/api-advanced-search",
-                "docId": "versions/api-5.0/api-advanced-search"
+                "docId": "versions/api-5.0/api-advanced-search",
+                "unlisted": false
               }
             ],
             "collapsed": true,
@@ -342,25 +385,29 @@
                 "type": "link",
                 "label": "XML 4.3",
                 "href": "/api/versions/api-4.3/api-xml-methods",
-                "docId": "versions/api-4.3/api-xml-methods"
+                "docId": "versions/api-4.3/api-xml-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "JSON 4.3",
                 "href": "/api/versions/api-4.3/api-json-methods",
-                "docId": "versions/api-4.3/api-json-methods"
+                "docId": "versions/api-4.3/api-json-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "Errors 4.3",
                 "href": "/api/versions/api-4.3/api-errors",
-                "docId": "versions/api-4.3/api-errors"
+                "docId": "versions/api-4.3/api-errors",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "advanced_search 4.3",
                 "href": "/api/versions/api-4.3/api-advanced-search",
-                "docId": "versions/api-4.3/api-advanced-search"
+                "docId": "versions/api-4.3/api-advanced-search",
+                "unlisted": false
               }
             ],
             "collapsed": true,
@@ -375,25 +422,29 @@
                 "type": "link",
                 "label": "XML 4.2",
                 "href": "/api/versions/api-4.2/api-xml-methods",
-                "docId": "versions/api-4.2/api-xml-methods"
+                "docId": "versions/api-4.2/api-xml-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "JSON 4.2",
                 "href": "/api/versions/api-4.2/api-json-methods",
-                "docId": "versions/api-4.2/api-json-methods"
+                "docId": "versions/api-4.2/api-json-methods",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "Errors 4.2",
                 "href": "/api/versions/api-4.2/api-errors",
-                "docId": "versions/api-4.2/api-errors"
+                "docId": "versions/api-4.2/api-errors",
+                "unlisted": false
               },
               {
                 "type": "link",
                 "label": "advanced_search 4.2",
                 "href": "/api/versions/api-4.2/api-advanced-search",
-                "docId": "versions/api-4.2/api-advanced-search"
+                "docId": "versions/api-4.2/api-advanced-search",
+                "unlisted": false
               }
             ],
             "collapsed": true,
@@ -408,7 +459,8 @@
                 "type": "link",
                 "label": "XML 4.1",
                 "href": "/api/versions/api-4.1/xml-methods",
-                "docId": "versions/api-4.1/xml-methods"
+                "docId": "versions/api-4.1/xml-methods",
+                "unlisted": false
               }
             ],
             "collapsed": true,

@@ -1,5 +1,4 @@
 {
-  "unversionedId": "versions/versions",
   "id": "versions/versions",
   "title": "Past Releases",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/versions/",
   "permalink": "/api/versions/",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

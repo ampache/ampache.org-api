@@ -1,5 +1,4 @@
 {
-  "unversionedId": "versions/api-6.0/api-standards",
   "id": "versions/api-6.0/api-standards",
   "title": "API6 Standards",
   "description": "API documentation",
@@ -8,6 +7,7 @@
   "slug": "/versions/api-6.0/api-standards",
   "permalink": "/api/versions/api-6.0/api-standards",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {

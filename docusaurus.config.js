@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ampache API',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'For the love of music',
   url: 'https://ampache.org/',
   baseUrl: '/api/',
   onBrokenLinks: 'throw',

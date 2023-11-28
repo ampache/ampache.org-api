@@ -22,10 +22,8 @@ If you have any questions or requests for this API please submit a [Feature Requ
 ### Added
 
 * JSON API now available!
-  * Call xml as normal:
-    * [<http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000>]
-  * Call the JSON server:
-    * [<http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000>]
+  * Call xml as normal: `http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000`
+  * Call the JSON server: `http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000`
   * Example XML and JSON responses available [here](https://github.com/ampache/python3-ampache/tree/master/docs)
 * NEW API functions
   * get_similar: send artist or song id to get related objects from last.fm

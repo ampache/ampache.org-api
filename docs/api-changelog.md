@@ -205,6 +205,7 @@ Stream token's will let you design permalinked streams and allow users to stream
 * API5
   * Fix lots of Runtime Error's on missing optional data
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+  * bookmark_edit, bookmark_create: Missing user in the object data
 
 ## API 5.6.3
 
@@ -674,10 +675,8 @@ API 5.0.0-release will be the first Ampache release to match the release string.
 ### Added
 
 * JSON API now available!
-  * Call xml as normal:
-    * [<http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000>]
-  * Call the JSON server:
-    * [<http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000>]
+  * Call xml as normal: `http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000`
+  * Call the JSON server: `http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000`
   * Example XML and JSON responses available [here](https://github.com/ampache/python3-ampache/tree/master/docs)
 * NEW API functions
   * get_similar: send artist or song id to get related objects from last.fm
@@ -749,7 +748,7 @@ Bump API version to 400003 (4.0.0 build 003)
 
 ### Added
 
-* user_numeric searches also available in the API. ([<https://ampache.org/api/api-xml-methods>])
+* user_numeric searches also available in the API. ([https://ampache.org/api/api-xml-methods])
 
 ### Changed
 
@@ -775,7 +774,7 @@ Bump API version to 400003 (4.0.0 build 003)
 
 ### Added
 
-* Documented the Ampache API [<https://ampache.org/api/api-xml-methods>]
+* Documented the Ampache API [https://ampache.org/api/api-xml-methods]
 * Include smartlists in the API playlist calls.
 * Authentication: allow sha256 encrypted apikey for auth
   * You must send an encrypted api key in the following fashion. (Hash key joined with username)
