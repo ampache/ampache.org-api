@@ -4,6 +4,31 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.2.0
+
+### Added
+
+* API: Allow non-expiring user sessions when using a header token
+* Allow endless api sessions. (You should start using http header auth to hide these)
+
+### Changed
+
+* Set default API version to 6 (was 5)
+* Allow raising and lowering response version on ping to **any** version
+* API6
+  * Return error on handshake version failure
+
+### Fixed
+
+* ALL
+  * UrlToSong couldn't handle encoded urls
+* API3
+  * Video data would get an incorrect stream url
+* API5
+  * bookmark_create: type is mandatory
+* API6
+  * bookmark_create: type is mandatory
+
 ## API 6.1.0
 
 Two new methods have been added
