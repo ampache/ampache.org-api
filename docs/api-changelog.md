@@ -4,6 +4,33 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.3.0
+
+### Added
+
+* API6
+  * New Method: user_playlists (return user playlists and does not include smartlists)
+  * New Method: user_smartlists (return user smartlists (searches) and does not include playlists)
+  * New Method: playlist_add (add songs to a playlist, allowing different song parent types)
+  * Add `has_art` parameter to any object with an `art_url`
+
+### Changed
+
+* API6
+  * playlist_add_song is depreciated and will be removed in **API7** (Use playlist_add)
+
+### Fixed
+
+* ALL
+  * Userflag wasn't sending bool when cached in the database
+* API4
+  * playlists method not respecting like for smartlists
+* API5
+  * playlists method not respecting like for smartlists
+* API6
+  * playlists method not respecting like for smartlists
+  * playlist_edit method will decode html `,` separators
+
 ## API 6.2.0
 
 ### Added
@@ -192,7 +219,7 @@ Stream token's will let you design permalinked streams and allow users to stream
   * For data responses id is the only attribute and everything else is an element
   * Name was not set as an attribute OR an element so now it's always an element
   * Return original XML output (that may be malformed) when loadxml fails.
-* Api6::get_indexes: This method is depreciated and will be removed in Ampache 7.0.0 (Use Api6::list instead)
+* Api6::get_indexes: This method is depreciated and will be removed in **API7** (Use list instead)
 
 ### Removed
 
