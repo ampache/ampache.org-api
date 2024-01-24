@@ -12,6 +12,7 @@ description: "API Changelog"
   * New Method: user_playlists (return user playlists and does not include smartlists)
   * New Method: user_smartlists (return user smartlists (searches) and does not include playlists)
   * New Method: playlist_add (add songs to a playlist, allowing different song parent types)
+  * New Method: index (replaces get_indexes with a much simpler list of id's. children can be included)
   * Add `has_art` parameter to any object with an `art_url`
 
 ### Changed
