@@ -4,27 +4,34 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+
 ## API 6.3.0
 
 ### Added
 
 * API6
+  * New Method: search_group (return multiple object types from a single set of search rules)
+  * New Method: search (alias for advanced_search)
   * New Method: user_playlists (return user playlists and does not include smartlists)
   * New Method: user_smartlists (return user smartlists (searches) and does not include playlists)
   * New Method: playlist_add (add songs to a playlist, allowing different song parent types)
   * New Method: index (replaces get_indexes with a simpler list of id's. children can be included)
-  * Add `has_art` parameter to any object with an `art_url`
+  * Add `has_art` parameter to any object with an `art` url
+  * Add avatar url to user objects
 
 ### Changed
 
 * API6
-  * playlist_add_song is depreciated and will be removed in **API7** (Use playlist_add)
-  * share_create add more valid types ('playlist', 'podcast', 'podcast_episode', 'video')
+  * playlist_add_song: depreciated and will be removed in **API7** (Use playlist_add)
+  * share_create: add more valid types ('playlist', 'podcast', 'podcast_episode', 'video')
+  * user: make username optional
 
 ### Fixed
 
 * ALL
   * Userflag wasn't sending bool when cached in the database
+  * Admin would always get everyones playlists when filtering
+  * Stream methods would not send the bitrate correctly
 * API4
   * playlists method not respecting like for smartlists
 * API5
