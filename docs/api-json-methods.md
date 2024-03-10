@@ -2284,6 +2284,54 @@ Search for a song using text info and then record a play if found. This allows o
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/json-responses/scrobble.json)
 
+### search_group
+
+Perform an group search given passed rules. This works in a similar way to the web/UI search pages.
+You can pass multiple rules as well as joins to create in depth search results
+
+Rules must be sent in groups of 3 using an int (starting from 1) to designate which rules are combined.
+Use operator ('and', 'or') to choose whether to join or separate each rule when searching.
+
+Refer to the [Advanced Search](https://ampache.org/api/api-advanced-search) page for details about creating searches.
+
+**NOTE** the rules part can be confusing but essentially you can include as many 'arrays' of rules as you want.
+Just add 1 to the rule value to create a new group of rules.
+
+* Mandatory Rule Values
+  * rule_1
+  * rule_1_operator
+  * rule_1_input
+* Optional (Metadata searches **only**)
+  * rule_1_subtype
+
+| Input    | Type    | Description                                                                                            | Optional |
+|----------|---------|--------------------------------------------------------------------------------------------------------|---------:|
+| operator | string  | and, or (whether to match one rule or all)                                                             |       NO |
+| rule_*   | array   | [`rule_1`, `rule_1_operator`, `rule_1_input`]                                                          |       NO |
+| rule_*   | array   | [`rule_2`, `rule_2_operator`, `rule_2_input`], [etc]                                                   |      YES |
+| type     | string  | `song`, `album`, `artist`, `label`, `playlist`, `podcast`, `podcast_episode`, `genre`, `user`, `video` |       NO |
+| random   | boolean | `0`, `1` (random order of results; default to 0)                                                       |      YES |
+| 'offset' | integer | Return results starting from this index position                                                       |      YES |
+| 'limit'  | integer | Maximum number of results to return                                                                    |      YES |
+
+* return array
+
+```JSON
+"song": []|"album": []|"artist": []|"playlist": []|"label": []|"user": []|"video": []
+```
+
+* throws object
+
+```JSON
+"error": ""
+```
+
+SONG [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/json-responses/advanced_search%20\(song\).json)
+
+ARTIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/json-responses/advanced_search%20\(artist\).json)
+
+ALBUM [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/json-responses/advanced_search%20\(album\).json)
+
 ### search_songs
 
 This searches the songs and returns... songs
