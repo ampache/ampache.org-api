@@ -70,9 +70,9 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | anywhere                 | Any searchable text                     | text              |                                 song                                  |
 | title                    | Title / Name                            | text              | song, album, artist, playlist, label, podcast, podcast_episode, genre |
 | name                     | (*Alias of title)                       |                   |                                                                       |
-| song                     | Song Title                              | text              |                             album, artist                             |
+| song                     | Song Title                              | text              |                          song, album, artist                          |
 | song_title               | (*Alias of song)                        |                   |                                                                       |
-| album                    | Album Title                             | text              |                             song, artist                              |
+| album                    | Album Title                             | text              |                          song, album, artist                          |
 | album_title              | (*Alias of album)                       |                   |                                                                       |
 | artist                   | Artist                                  | text              |                          song, album, artist                          |
 | artist_title             | (*Alias of artist)                      |                   |                                                                       |
@@ -82,7 +82,7 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | podcast_episode_title    | (*Alias of podcast_episode)             |                   |                                                                       |
 | album_artist             | Album Artist                            | text              |                              song, album                              |
 | album_artist_title       | (*Alias of album_artist)                |                   |                                                                       |
-| song_artist              | Song Artist                             | text              |                                 album                                 |
+| song_artist              | Song Artist                             | text              |                              song, album                              |
 | song_artist_title        | (*Alias of song_artist)                 |                   |                                                                       |
 | composer                 | Composer                                | text              |                                 song                                  |
 | track                    | Track                                   | numeric           |                                 song                                  |
@@ -95,6 +95,9 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | release_status           | Release Status                          | text              |                                 album                                 |
 | barcode                  | Barcode                                 | text              |                                 album                                 |
 | catalog_number           | Catalog Number                          | text              |                                 album                                 |
+| version                  | Release Version                         | text              |                                 album                                 |
+| release_comment          | (*Alias of version)                     |                   |                                                                       |
+| subtitle                 | (*Alias of version)                     |                   |                                                                       |
 | myrating                 | My Rating                               | numeric           |                          song, album, artist                          |
 | rating                   | Rating (Average)                        | numeric           |                          song, album, artist                          |
 | songrating               | My Rating (Song)                        | numeric           |                             album, artist                             |
@@ -121,7 +124,7 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | song_tag                 | (*Alias of song_genre)                  |                   |                                                                       |
 | album_genre              | Album Genre                             | tags              |                              song, album                              |
 | album_tag                | (*Alias of album_genre)                 |                   |                                                                       |
-| artist_genre             | Artist Genre                            | tags              |                                 song                                  |
+| artist_genre             | Artist Genre                            | tags              |                             song, artist                              |
 | artist_tag               | (*Alias of artist_genre)                |                   |                                                                       |
 | no_genre                 | No Genre                                | is_true           |                          song, album, artist                          |
 | no_tag                   | (*Alias of no_genre)                    |                   |                                                                       |

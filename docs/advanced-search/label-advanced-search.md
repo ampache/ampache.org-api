@@ -12,11 +12,11 @@ Refer to the main [Advanced Search](https://ampache.org/api/api-advanced-search)
 
 Select the type of search based on the type of data you are searching for. (songs, playlists, etc)
 
-| rule_1                   | Title                     | Operator Type     |
-|--------------------------|---------------------------|-------------------|
-| title                    | Title / Name              | text              |
-| name                     | (*Alias of title)         |                   |
-| category                 | Category                  | text              |
+| rule_1   | Title             | Operator Type |
+|----------|-------------------|---------------|
+| title    | Title / Name      | text          |
+| name     | (*Alias of title) |               |
+| category | Category          | text          |
 
 ### Available operator values
 

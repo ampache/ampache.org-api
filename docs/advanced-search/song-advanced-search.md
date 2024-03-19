@@ -17,14 +17,22 @@ Select the type of search based on the type of data you are searching for. (song
 | anywhere                 | Any searchable text       | text              |
 | title                    | Title / Name              | text              |
 | name                     | (*Alias of title)         |                   |
+| song                     | Song Title                | text              |
+| song_title               | (*Alias of song)          |                   |
 | album                    | Album Title               | text              |
+| album_title              | (*Alias of album)         |                   |
 | artist                   | Artist                    | text              |
+| artist_title             | (*Alias of artist)        |                   |
 | album_artist             | Album Artist              | text              |
+| album_artist_title       | (*Alias of album_artist)  |                   |
+| song_artist              | Song Artist               | text              |
+| song_artist_title        | (*Alias of song_artist)   |                   |
 | composer                 | Composer                  | text              |
 | track                    | Track                     | numeric           |
 | year                     | Year                      | numeric           |
 | myrating                 | My Rating                 | numeric           |
 | rating                   | Rating (Average)          | numeric           |
+| songrating               | My Rating (Song)          | numeric           |
 | albumrating              | My Rating (Album)         | numeric           |
 | artistrating             | My Rating (Artist)        | numeric           |
 | favorite                 | Favorites                 | text              |
@@ -34,6 +42,7 @@ Select the type of search based on the type of data you are searching for. (song
 | skipped_times            | # Skipped                 | numeric           |
 | play_skip_ratio          | Played/Skipped ratio      | numeric           |
 | last_play                | My Last Play              | days              |
+| last_play_or_skip        | My Last Play OR skip      | days              |
 | played                   | Played                    | boolean           |
 | myplayed                 | Played by Me              | boolean           |
 | myplayedalbum            | Played by Me (Album)      | boolean           |
@@ -41,6 +50,8 @@ Select the type of search based on the type of data you are searching for. (song
 | time                     | Length (in minutes)       | numeric           |
 | genre                    | Genre                     | tags              |
 | tag                      | (*Alias of genre)         |                   |
+| song_genre               | Song Genre                | tags              |
+| song_tag                 | (*Alias of song_genre)    |                   |
 | album_genre              | Album Genre               | tags              |
 | album_tag                | (*Alias of album_genre)   |                   |
 | artist_genre             | Artist Genre              | tags              |
@@ -66,11 +77,12 @@ Select the type of search based on the type of data you are searching for. (song
 | recent_updated           | Recently Updated          | numeric_limit     |
 | catalog                  | Catalog                   | boolean_numeric   |
 | mbid                     | MusicBrainz ID            | text              |
-| mbid_song                | (*Alias of mbid)          |                   |
 | mbid_album               | MusicBrainz ID (Album)    | text              |
 | mbid_artist              | MusicBrainz ID (Artist)   | text              |
+| mbid_song                | MusicBrainz ID (Song)     | text              |
 | metadata                 | Metadata                  | metadata (mixed)  |
 | possible_duplicate       | Possible Duplicate        | is_true           |
+| possible_duplicate_album | Possible Duplicate Albums | is_true           |
 
 ### Available operator values
 

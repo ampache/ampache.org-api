@@ -12,50 +12,55 @@ Refer to the main [Advanced Search](https://ampache.org/api/api-advanced-search)
 
 Select the type of search based on the type of data you are searching for. (songs, playlists, etc)
 
-| rule_1                   | Title                     | Operator Type     |
-|--------------------------|---------------------------|-------------------|
-| title                    | Title / Name              | text              |
-| name                     | (*Alias of title)         |                   |
-| album                    | Album Title               | text              |
-| album_title              | (*Alias of album)         |                   |
-| artist                   | Artist                    | text              |
-| song                     | Song Title                | text              |
-| song_title               | (*Alias of song)          |                   |
-| summary                  | Summary                   | text              |
-| yearformed               | Year Formed               | numeric           |
-| placeformed              | Place Formed              | text              |
-| myrating                 | My Rating                 | numeric           |
-| rating                   | Rating (Average)          | numeric           |
-| songrating               | My Rating (Song)          | numeric           |
-| albumrating              | My Rating (Album)         | numeric           |
-| favorite                 | Favorites                 | text              |
-| played_times             | # Played                  | numeric           |
-| last_play                | My Last Play              | days              |
-| myplayed                 | Played by Me              | boolean           |
-| album_count              | Album Count               | numeric           |
-| song_count               | Song Count                | numeric           |
-| time                     | Length (in minutes)       | numeric           |
-| genre                    | Genre                     | tags              |
-| tag                      | (*Alias of genre)         |                   |
-| song_genre               | Song Genre                | tags              |
-| song_tag                 | (*Alias of song_genre)    |                   |
-| no_genre                 | No Genre                  | is_true           |
-| no_tag                   | (*Alias of no_genre)      |                   |
-| other_user               | Another User              | user_numeric      |
-| playlist                 | Playlist                  | boolean_numeric   |
-| playlist_name            | Playlist Name             | text              |
-| file                     | Filename                  | text              |
-| recent_played            | Recently Played           | numeric_limit     |
-| catalog                  | Catalog                   | boolean_numeric   |
-| mbid                     | MusicBrainz ID            | text              |
-| mbid_artist              | (*Alias of mbid)          |                   |
-| mbid_song                | MusicBrainz ID (Song)     |                   |
-| mbid_album               | MusicBrainz ID (Album)    | text              |
-| has_image                | Local Image               | boolean           |
-| image_height             | Image Height              | numeric           |
-| image_width              | Image Width               | numeric           |
-| possible_duplicate       | Possible Duplicate        | is_true           |
-| possible_duplicate_album | Possible Duplicate Albums | is_true           |
+| rule_1                   | Title                     | Operator Type   |
+|--------------------------|---------------------------|-----------------|
+| title                    | Title / Name              | text            |
+| name                     | (*Alias of title)         |                 |
+| song                     | Song Title                | text            |
+| song_title               | (*Alias of song)          |                 |
+| album                    | Album Title               | text            |
+| album_title              | (*Alias of album)         |                 |
+| artist                   | Artist                    | text            |
+| artist_title             | (*Alias of artist)        |                 |
+| summary                  | Summary                   | text            |
+| yearformed               | Year Formed               | numeric         |
+| placeformed              | Place Formed              | text            |
+| myrating                 | My Rating                 | numeric         |
+| rating                   | Rating (Average)          | numeric         |
+| songrating               | My Rating (Song)          | numeric         |
+| albumrating              | My Rating (Album)         | numeric         |
+| favorite                 | Favorites                 | text            |
+| played_times             | # Played                  | numeric         |
+| last_play                | My Last Play              | days            |
+| last_play_or_skip        | My Last Play OR skip      | days            |
+| played                   | Played                    | boolean         |
+| myplayed                 | Played by Me              | boolean         |
+| album_count              | Album Count               | numeric         |
+| song_count               | Song Count                | numeric         |
+| time                     | Length (in minutes)       | numeric         |
+| genre                    | Genre                     | tags            |
+| tag                      | (*Alias of genre)         |                 |
+| song_genre               | Song Genre                | tags            |
+| song_tag                 | (*Alias of song_genre)    |                 |
+| artist_genre             | Artist Genre              | tags            |
+| artist_tag               | (*Alias of artist_genre)  |                 |
+| no_genre                 | No Genre                  | is_true         |
+| no_tag                   | (*Alias of no_genre)      |                 |
+| other_user               | Another User              | user_numeric    |
+| playlist                 | Playlist                  | boolean_numeric |
+| playlist_name            | Playlist Name             | text            |
+| file                     | Filename                  | text            |
+| recent_played            | Recently Played           | numeric_limit   |
+| catalog                  | Catalog                   | boolean_numeric |
+| mbid                     | MusicBrainz ID            | text            |
+| mbid_album               | MusicBrainz ID (Album)    | text            |
+| mbid_artist              | MusicBrainz ID (Artist)   | text            |
+| mbid_song                | MusicBrainz ID (Song)     | text            |
+| has_image                | Local Image               | boolean         |
+| image_height             | Image Height              | numeric         |
+| image_width              | Image Width               | numeric         |
+| possible_duplicate       | Possible Duplicate        | is_true         |
+| possible_duplicate_album | Possible Duplicate Albums | is_true         |
 
 ### Available operator values
 
