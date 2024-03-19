@@ -17,8 +17,8 @@ Select the type of search based on the type of data you are searching for. (song
 | anywhere                 | Any searchable text       | text              |
 | title                    | Title / Name              | text              |
 | name                     | (*Alias of title)         |                   |
-| song                     | Song Title                | text              |
-| song_title               | (*Alias of song)          |                   |
+| song                     | (*Alias of title)         |                   |
+| song_title               | (*Alias of title)         |                   |
 | album                    | Album Title               | text              |
 | album_title              | (*Alias of album)         |                   |
 | artist                   | Artist                    | text              |
@@ -50,8 +50,8 @@ Select the type of search based on the type of data you are searching for. (song
 | time                     | Length (in minutes)       | numeric           |
 | genre                    | Genre                     | tags              |
 | tag                      | (*Alias of genre)         |                   |
-| song_genre               | Song Genre                | tags              |
-| song_tag                 | (*Alias of song_genre)    |                   |
+| song_genre               | (*Alias of genre)         |                   |
+| song_tag                 | (*Alias of genre)         |                   |
 | album_genre              | Album Genre               | tags              |
 | album_tag                | (*Alias of album_genre)   |                   |
 | artist_genre             | Artist Genre              | tags              |

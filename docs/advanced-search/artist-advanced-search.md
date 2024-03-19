@@ -16,12 +16,12 @@ Select the type of search based on the type of data you are searching for. (song
 |--------------------------|---------------------------|-----------------|
 | title                    | Title / Name              | text            |
 | name                     | (*Alias of title)         |                 |
+| artist                   | (*Alias of title)         |                 |
+| artist_title             | (*Alias of title)         |                 |
 | song                     | Song Title                | text            |
 | song_title               | (*Alias of song)          |                 |
 | album                    | Album Title               | text            |
 | album_title              | (*Alias of album)         |                 |
-| artist                   | Artist                    | text            |
-| artist_title             | (*Alias of artist)        |                 |
 | summary                  | Summary                   | text            |
 | yearformed               | Year Formed               | numeric         |
 | placeformed              | Place Formed              | text            |
@@ -40,10 +40,10 @@ Select the type of search based on the type of data you are searching for. (song
 | time                     | Length (in minutes)       | numeric         |
 | genre                    | Genre                     | tags            |
 | tag                      | (*Alias of genre)         |                 |
+| artist_genre             | (*Alias of genre)         | tags            |
+| artist_tag               | (*Alias of genre)         |                 |
 | song_genre               | Song Genre                | tags            |
 | song_tag                 | (*Alias of song_genre)    |                 |
-| artist_genre             | Artist Genre              | tags            |
-| artist_tag               | (*Alias of artist_genre)  |                 |
 | no_genre                 | No Genre                  | is_true         |
 | no_tag                   | (*Alias of no_genre)      |                 |
 | other_user               | Another User              | user_numeric    |
@@ -53,8 +53,8 @@ Select the type of search based on the type of data you are searching for. (song
 | recent_played            | Recently Played           | numeric_limit   |
 | catalog                  | Catalog                   | boolean_numeric |
 | mbid                     | MusicBrainz ID            | text            |
+| mbid_artist              | (*Alias of mbid)          | text            |
 | mbid_album               | MusicBrainz ID (Album)    | text            |
-| mbid_artist              | MusicBrainz ID (Artist)   | text            |
 | mbid_song                | MusicBrainz ID (Song)     | text            |
 | has_image                | Local Image               | boolean         |
 | image_height             | Image Height              | numeric         |
