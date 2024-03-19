@@ -80,7 +80,7 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | podcast_title            | (*Alias of podcast)                     |                   |                                                                       |
 | podcast_episode          | Podcast Episode                         | text              |                                podcast                                |
 | podcast_episode_title    | (*Alias of podcast_episode)             |                   |                                                                       |
-| album_artist             | Album Artist                            | text              |                                 song                                  |
+| album_artist             | Album Artist                            | text              |                              song, album                              |
 | album_artist_title       | (*Alias of album_artist)                |                   |                                                                       |
 | song_artist              | Song Artist                             | text              |                                 album                                 |
 | song_artist_title        | (*Alias of song_artist)                 |                   |                                                                       |
@@ -103,11 +103,12 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | favorite                 | Favorites                               | text              |                          song, album, artist                          |
 | favorite_album           | Favorites (Album)                       | text              |                                 song                                  |
 | favorite_artist          | Favorites (Artist)                      | text              |                                 song                                  |
-| played_times             | # Played                                | numeric           |                          song, album, artist                          |
-| skipped_times            | # Skipped                               | numeric           |                                 song                                  |
-| play_skip_ratio          | Played/Skipped ratio                    | numeric           |                                 song                                  |
-| last_play                | My Last Play                            | days              |                          song, album, artist                          |
-| played                   | Played                                  | boolean           |                                 song                                  |
+| played_times             | # Played                                | numeric           |             song, album, artist, podcast, podcast_episode             |
+| skipped_times            | # Skipped                               | numeric           |                    song, podcast, podcast_episode                     |
+| play_skip_ratio          | Played/Skipped ratio                    | numeric           |                    song, podcast, podcast_episode                     |
+| last_play                | My Last Play                            | days              |             song, album, artist, podcast, podcast_episode             |
+| last_play_or_skip        | My Last Play OR skip                    | days              |             song, album, artist, podcast, podcast_episode             |
+| played                   | Played                                  | boolean           |             song, album, artist, podcast, podcast_episode             |
 | myplayed                 | Played by Me                            | boolean           |             song, album, artist, podcast, podcast_episode             |
 | myplayedalbum            | Played by Me (Album)                    | boolean           |                                 song                                  |
 | myplayedartist           | Played by Me (Artist)                   | boolean           |                              song, album                              |
@@ -130,13 +131,14 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | label                    | Label                                   | text              |                                 song                                  |
 | license                  | Music License                           | boolean_numeric   |                                 song                                  |
 | playlist                 | Playlist                                | boolean_numeric   |                          song, album, artist                          |
-| smartplaylist            | Smart Playlist                          | boolean_subsearch |                                 song                                  |
+| smartplaylist            | Smart Playlist                          | boolean_subsearch |                              song, album                              |
 | playlist_name            | Playlist Name                           | text              |                          song, album, artist                          |
-| type                     | Playlist Type (private, public)         | text              |                               playlist                                |
+| type                     | Playlist Type (private, public)         | boolean_numeric   |                               playlist                                |
 | comment                  | Comment                                 | text              |                                 song                                  |
 | lyrics                   | Lyrics                                  | text              |                                 song                                  |
 | file                     | Filename                                | text              |         song, album, artist, video, podcast, podcast_episode          |
 | state                    | File state (completed, pending skipped) | boolean_numeric   |                       podcast, podcast_episode                        |
+| status                   | (*Alias of state)                       |                   |                                                                       |
 | bitrate                  | Bitrate                                 | numeric           |                                 song                                  |
 | added                    | Added                                   | date              |                    song, podcast, podcast_episode                     |
 | updated                  | Updated                                 | date              |                                 song                                  |
@@ -156,7 +158,7 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | possible_duplicate       | Possible Duplicate                      | is_true           |                          song, album, artist                          |
 | possible_duplicate_album | Possible Duplicate Albums               | is_true           |                          song, album, artist                          |
 | username                 | Username                                | text              |                                 user                                  |
-| category                 | Category                                | text              |                                 label                                 |
+| category                 | Category                                | text              |                              label, genre                             |
 
 ### Available operator values
 

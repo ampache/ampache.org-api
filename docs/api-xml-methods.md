@@ -1323,7 +1323,7 @@ Return similar artist id's or similar song ids compared to the input filter
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/get_similar.xml)
 
-### indexes
+### index
 
 This takes a collection of inputs and returns ID + name for the object type
 
@@ -2413,7 +2413,7 @@ Search for a song using text info and then record a play if found. This allows o
 
 ### search_group
 
-Perform an group search given passed rules. This function will return multiple object types if the rule names match the object type.
+Perform a group search given passed rules. This function will return multiple object types if the rule names match the object type.
 You can pass multiple rules as well as joins to create in depth search results.
 
 Limit and offset are applied per object type. Meaning with a limit of 10 you will return 10 objects of each type not 10 results total.
