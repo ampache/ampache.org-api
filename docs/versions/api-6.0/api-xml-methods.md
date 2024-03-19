@@ -1188,7 +1188,7 @@ Get the bookmark from it's object_id and object_type.
 
 This takes a collection of inputs and returns ID + name for the object type
 
-**DEVELOP** This method is depreciated and will be removed in Ampache 7.0.0 (Use list)
+**NOTE** This method is depreciated and will be removed in Ampache 7.0.0 (Use list)
 
 | Input         | Type       | Description                                                                                        | Optional |
 |---------------|------------|----------------------------------------------------------------------------------------------------|---------:|

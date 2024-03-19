@@ -1258,7 +1258,7 @@ By default; get only the most recent bookmark. Use `all` to retrieve all media b
 
 This takes a collection of inputs and returns ID + name for the object type
 
-**DEVELOP** This method is depreciated and will be removed in **API7** (Use list)
+**NOTE** This method is depreciated and will be removed in **API7** (Use list)
 
 | Input         | Type       | Description                                                                                        | Optional |
 |---------------|------------|----------------------------------------------------------------------------------------------------|---------:|
@@ -1787,7 +1787,7 @@ This returns a single playlist
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/playlist.xml)
 
-### playlist_add_song
+### playlist_add
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 
@@ -1817,7 +1817,7 @@ This adds a song to a playlist. setting check=1 will not add duplicates to the p
 
 This adds a song to a playlist. setting check=1 will not add duplicates to the playlist
 
-**DEVELOP** This method is depreciated and will be removed in **API7** (Use playlist_add)
+**NOTE** This method is depreciated and will be removed in **API7** (Use playlist_add)
 
 | Input    | Type    | Description                                                   | Optional |
 |----------|---------|---------------------------------------------------------------|---------:|
