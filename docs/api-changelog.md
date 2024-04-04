@@ -4,6 +4,28 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.3.2
+
+### Added
+
+* API6
+  * download: add bitrate parameter
+
+### Fixed
+
+* ALL
+  * Download method format parameter didn't have a fallback value
+* API6
+  * Playlists objects would not return duplicates items if allowed
+  * has_art property missing from songs and albums
+  * playlist_add: couldn't add a single item
+
+## API 6.3.1
+
+### Added
+
+* API6
+  * New Method: now_playing (Get what is currently being played by all users.)
 
 ## API 6.3.0
 

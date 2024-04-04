@@ -1730,6 +1730,26 @@ Edit a live_stream (radio station) object.
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/live_stream_edit.xml)
 
+### now_playing
+
+Get what is currently being played by all users.
+
+* return
+
+```XML
+<root>
+    <now_playing>
+</root>
+```
+
+* throws
+
+```XML
+<root><error></root>
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/now_playing.xml)
+
 ### playlists
 
 This returns playlists based on the specified filter
@@ -3282,11 +3302,12 @@ Downloads a given media file. set format=raw to download the full file
 
 **NOTE** search and playlist will only download a random object from the list
 
-| Input    | Type    | Description                                                | Optional |
-|----------|---------|------------------------------------------------------------|---------:|
-| 'id'     | integer | $object_id                                                 |       NO |
-| 'type'   | string  | `song`, `podcast_episode`, `search`, `playlist`            |       NO |
-| 'format' | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
+| Input     | Type    | Description                                                | Optional |
+|-----------|---------|------------------------------------------------------------|---------:|
+| 'id'      | integer | $object_id                                                 |       NO |
+| 'type'    | string  | `song`, `podcast_episode`, `search`, `playlist`            |       NO |
+| 'bitrate' | integer | max bitrate for transcoding                                |      YES |
+| 'format'  | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format) |      YES |
 
 * return file (HTTP 200 OK)
 * throws (HTTP 400 Bad Request)
