@@ -4,6 +4,33 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.4.0
+
+### Added
+
+* API6
+  * Downgrade any API7 calls to API6 [wiki](https://github.com/ampache/ampache/wiki/ampache7-for-admins#there-is-no-api7-only-api6-and-5-4-and-3-too)
+  * New Method: player (Inform the server about the state of your client player)
+    * Returns `now_playing` state on completion
+  * download: add `bitrate` parameter
+
+### Fixed
+
+* ALL
+  * Download method format parameter didn't have a fallback value
+* API4
+  * playlist: error check for missing/deleted playlists
+  * playlist_songs: error check for missing/deleted playlists
+* API6
+  * Playlists objects would not return duplicates items if allowed
+  * has_art property missing from songs and albums
+  * playlist_add: couldn't add a single item
+
+### Removed
+
+* API6
+  * Do not translate API `errorMessage` strings [ampache.org](https://ampache.org/api/api-errors)
+
 ## API 6.3.2
 
 ### Added
