@@ -1,6 +1,6 @@
 {
   "id": "api-errors",
-  "title": "API6 Errors",
+  "title": "Errors",
   "description": "API documentation",
   "source": "@site/docs/api-errors.md",
   "sourceDirName": ".",
@@ -11,13 +11,13 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API6 Errors",
-    "metaTitle": "API6 Errors",
+    "title": "Errors",
+    "metaTitle": "Errors",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "API6 Media Methods",
+    "title": "Media Methods",
     "permalink": "/api/api-media-methods"
   },
   "next": {

@@ -1,6 +1,6 @@
 {
   "id": "api-standards",
-  "title": "API6 Standards",
+  "title": "Standards",
   "description": "API documentation",
   "source": "@site/docs/api-standards.md",
   "sourceDirName": ".",
@@ -11,8 +11,8 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API6 Standards",
-    "metaTitle": "API6 Standards",
+    "title": "Standards",
+    "metaTitle": "Standards",
     "description": "API documentation"
   },
   "sidebar": "api",
@@ -21,7 +21,7 @@
     "permalink": "/api/"
   },
   "next": {
-    "title": "API6 XML Methods",
+    "title": "XML Methods",
     "permalink": "/api/api-xml-methods"
   }
 }

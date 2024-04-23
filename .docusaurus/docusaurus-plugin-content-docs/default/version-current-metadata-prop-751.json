@@ -18,35 +18,35 @@
       },
       {
         "type": "link",
-        "label": "API6 Standards",
+        "label": "Standards",
         "href": "/api/api-standards",
         "docId": "api-standards",
         "unlisted": false
       },
       {
         "type": "link",
-        "label": "API6 XML Methods",
+        "label": "XML Methods",
         "href": "/api/api-xml-methods",
         "docId": "api-xml-methods",
         "unlisted": false
       },
       {
         "type": "link",
-        "label": "API6 JSON Methods",
+        "label": "JSON Methods",
         "href": "/api/api-json-methods",
         "docId": "api-json-methods",
         "unlisted": false
       },
       {
         "type": "link",
-        "label": "API6 Media Methods",
+        "label": "Media Methods",
         "href": "/api/api-media-methods",
         "docId": "api-media-methods",
         "unlisted": false
       },
       {
         "type": "link",
-        "label": "API6 Errors",
+        "label": "Errors",
         "href": "/api/api-errors",
         "docId": "api-errors",
         "unlisted": false
@@ -639,7 +639,7 @@
     },
     "api-errors": {
       "id": "api-errors",
-      "title": "API6 Errors",
+      "title": "Errors",
       "description": "API documentation",
       "sidebar": "api"
     },
@@ -651,25 +651,25 @@
     },
     "api-json-methods": {
       "id": "api-json-methods",
-      "title": "API6 JSON Methods",
+      "title": "JSON Methods",
       "description": "API documentation",
       "sidebar": "api"
     },
     "api-media-methods": {
       "id": "api-media-methods",
-      "title": "API6 Media Methods",
+      "title": "Media Methods",
       "description": "API documentation",
       "sidebar": "api"
     },
     "api-standards": {
       "id": "api-standards",
-      "title": "API6 Standards",
+      "title": "Standards",
       "description": "API documentation",
       "sidebar": "api"
     },
     "api-xml-methods": {
       "id": "api-xml-methods",
-      "title": "API6 XML Methods",
+      "title": "XML Methods",
       "description": "API documentation",
       "sidebar": "api"
     },

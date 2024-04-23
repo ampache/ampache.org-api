@@ -1,6 +1,6 @@
 {
   "id": "api-json-methods",
-  "title": "API6 JSON Methods",
+  "title": "JSON Methods",
   "description": "API documentation",
   "source": "@site/docs/api-json-methods.md",
   "sourceDirName": ".",
@@ -11,17 +11,17 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API6 JSON Methods",
-    "metaTitle": "API6 JSON Methods",
+    "title": "JSON Methods",
+    "metaTitle": "JSON Methods",
     "description": "API documentation"
   },
   "sidebar": "api",
   "previous": {
-    "title": "API6 XML Methods",
+    "title": "XML Methods",
     "permalink": "/api/api-xml-methods"
   },
   "next": {
-    "title": "API6 Media Methods",
+    "title": "Media Methods",
     "permalink": "/api/api-media-methods"
   }
 }
