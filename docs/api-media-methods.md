@@ -55,7 +55,7 @@ When you `download` a song:
 
 Download is used for caching files without the server thinking you've played 40 songs in 3 minutes.
 
-Use the helper functions when playing downloads so you can informa the server when you actually play the files you download.
+Use the helper functions when playing downloads so you can inform the server when you actually play the files you download.
 
 ## The Ampache media playback process
 
@@ -89,9 +89,11 @@ The `skip_timer` setting is what the server uses to decide whether the new play 
 Example, when using the default settings:
 
 * You stream TRACK1
-* You start to stream TRACK2 within the 10 seconds after TRACK1 started
-* TRACK1 will change to a skip
-* TRACK2 will be marked as your current `now_playing` track.
+* TRACK1 is recorded as a 'stream'
+* You start to stream TRACK2 10 seconds after TRACK1 started
+* The 'stream' for TRACK1 will change to a 'skip'
+* TRACK2 is now recorded as a 'stream'
+* TRACK2 is recorded as your current `now_playing` track.
 
 ## Explaining scrobble
 
