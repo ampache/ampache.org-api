@@ -15,7 +15,7 @@ pass offset as an additional parameter.
 If you have any questions or requests for this API please submit a [Feature Request](https://github.com/ampache/ampache/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature+Request%5D).
 All dates in the API calls should be passed as [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) dates.
 
-## Changelog API develop
+## API Changelog
 
 Take a look at the [API Changelog](https://ampache.org/api/api-changelog) to keep an eye on changes between versions
 

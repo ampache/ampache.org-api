@@ -31,7 +31,7 @@ After each release, a documentation page will be created to allow pruning old fe
 
 Ampache supports the last major release of each API version. You can also check out the [past releases](https://ampache.org/api/versions/) page for some historical detail but **DO NOT** use these pages as a guide for API development.
 
-## Changelog API develop
+## API Changelog
 
 Take a look at the [API Changelog](https://ampache.org/api/api-changelog) to keep an eye on changes between versions
 
