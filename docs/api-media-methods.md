@@ -10,14 +10,14 @@ This page will document a few things about how playback works and what a client 
 
 There are 2 binary data methods used for basic playback function:
 
-* stream [json](https://ampache.org/api/api-json-methods#stream) and [xml](https://ampache.org/api/api-xml-methods#stream)
-* download [json](https://ampache.org/api/api-json-methods#download) and [xml](https://ampache.org/api/api-xml-methods#download)
+* stream ([json](https://ampache.org/api/api-json-methods#stream) and [xml](https://ampache.org/api/api-xml-methods#stream))
+* download ([json](https://ampache.org/api/api-json-methods#download) and [xml](https://ampache.org/api/api-xml-methods#download))
 
 And there are 3 helper functions which allow you to manage playback history and state but do not return media.
 
-* scrobble [json](https://ampache.org/api/api-json-methods#scrobble) and [xml](https://ampache.org/api/api-xml-methods#scrobble)
-* record_play [json](https://ampache.org/api/api-json-methods#record_play) and [xml](https://ampache.org/api/api-xml-methods#record_play)
-* player (Ampache 6.4.0+) [json](https://ampache.org/api/api-json-methods#player) and [xml](https://ampache.org/api/api-xml-methods#player)
+* scrobble ([json](https://ampache.org/api/api-json-methods#scrobble) and [xml](https://ampache.org/api/api-xml-methods#scrobble))
+* record_play ([json](https://ampache.org/api/api-json-methods#record_play) and [xml](https://ampache.org/api/api-xml-methods#record_play))
+* player (Ampache 6.4.0+) ([json](https://ampache.org/api/api-json-methods#player) and [xml](https://ampache.org/api/api-xml-methods#player))
 
 Finally, you can also call the function now_playing to get details about what your user is currently stremaing. ([json](https://ampache.org/api/api-json-methods#now_playing) and [xml](https://ampache.org/api/api-xml-methods#now_playing))
 
@@ -125,7 +125,7 @@ Example:
 
 ## Explaining player
 
-There is a new method for Ampache 6.4.0+ called player. [json](https://ampache.org/api/api-json-methods#player) and [xml](https://ampache.org/api/api-xml-methods#player)
+There is a new method for Ampache 6.4.0+ called player. ([json](https://ampache.org/api/api-json-methods#player) and [xml](https://ampache.org/api/api-xml-methods#player))
 
 Player is all about giving the server an active status of what the client is doing.
 
