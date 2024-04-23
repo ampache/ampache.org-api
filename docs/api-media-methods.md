@@ -129,8 +129,6 @@ There is a new method for Ampache 6.4.0+ called player. [json](https://ampache.o
 
 Player is all about giving the server an active status of what the client is doing.
 
-![image](https://github.com/ampache/ampache/assets/1305249/e91257a1-5640-4685-a56e-039a3b3dc2b9)
-
 Player does a bit more than scrobble and record_play allowing me to do a few more things
 
 * Support for more media types. (`podcast_episode` and `video` objects instead of just songs)
