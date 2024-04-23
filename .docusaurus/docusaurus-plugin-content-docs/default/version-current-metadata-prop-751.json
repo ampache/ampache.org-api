@@ -39,6 +39,13 @@
       },
       {
         "type": "link",
+        "label": "API Media Methods",
+        "href": "/api/api-media-methods",
+        "docId": "api-media-methods",
+        "unlisted": false
+      },
+      {
+        "type": "link",
         "label": "API6 Errors",
         "href": "/api/api-errors",
         "docId": "api-errors",
@@ -645,6 +652,12 @@
     "api-json-methods": {
       "id": "api-json-methods",
       "title": "API6 JSON Methods",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "api-media-methods": {
+      "id": "api-media-methods",
+      "title": "API Media Methods",
       "description": "API documentation",
       "sidebar": "api"
     },

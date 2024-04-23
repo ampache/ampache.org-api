@@ -155,6 +155,11 @@
               "sidebar": "api"
             },
             {
+              "id": "api-media-methods",
+              "path": "/api/api-media-methods",
+              "sidebar": "api"
+            },
+            {
               "id": "api-standards",
               "path": "/api/api-standards",
               "sidebar": "api"

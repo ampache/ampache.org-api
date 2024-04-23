@@ -13,6 +13,12 @@ description: "API Changelog"
   * New Method: player (Inform the server about the state of your client player)
     * Returns `now_playing` state on completion
   * download: add `bitrate` parameter
+  * playlists: add `include` parameter (**note** this can be massive and slow when searches are included)
+
+### Changed
+
+* API6
+  * Do not translate API `errorMessage` strings [ampache.org](https://ampache.org/api/api-errors)
 
 ### Fixed
 
@@ -21,27 +27,6 @@ description: "API Changelog"
 * API4
   * playlist: error check for missing/deleted playlists
   * playlist_songs: error check for missing/deleted playlists
-* API6
-  * Playlists objects would not return duplicates items if allowed
-  * has_art property missing from songs and albums
-  * playlist_add: couldn't add a single item
-
-### Removed
-
-* API6
-  * Do not translate API `errorMessage` strings [ampache.org](https://ampache.org/api/api-errors)
-
-## API 6.3.2
-
-### Added
-
-* API6
-  * download: add bitrate parameter
-
-### Fixed
-
-* ALL
-  * Download method format parameter didn't have a fallback value
 * API6
   * Playlists objects would not return duplicates items if allowed
   * has_art property missing from songs and albums

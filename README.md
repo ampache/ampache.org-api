@@ -15,4 +15,3 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 * Copy the /build folder to the /api folder in [ampache.github.io](https://github.com/ampache/ampache.github.io)
   * ```cp -rfv ./build/* ../ampache.github.io/api/```
 * Commit to this repo and ampache.github.io after changes
-
