@@ -141,6 +141,7 @@ This takes a collection of inputs and returns artist objects.
 | 'offset'  | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'   | integer    | Maximum number of results to return                                                                |      YES |
 | 'include' | string     | `albums`, `songs` (include child objects in the response)                                          |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artists.json)
 
 ## artist
@@ -163,6 +164,7 @@ This returns the albums of an artist
 | 'filter' | integer | UID of Artist, returns Album JSON                |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artist_albums.json)
 
 ## artist_songs
@@ -174,6 +176,7 @@ This returns the songs of the specified artist
 | 'filter' | integer | UID of Artist, returns Song JSON                 |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/artist_songs.json)
 
 ## albums
@@ -189,6 +192,7 @@ This returns albums based on the provided search filters
 | 'offset'  | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'   | integer    | Maximum number of results to return                                                                |      YES |
 | 'include' | string     | `albums`, `songs` (include child objects in the response)                                          |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/albums.json)
 
 ## album
@@ -199,6 +203,7 @@ This returns a single album based on the UID provided
 |-----------|---------------------------------------------------------|----------------------------------|---------:|
 | 'filter'  | integer                                                 | UID of Album, returns album JSON |       NO |
 | 'include' | string  `songs` (include child objects in the response) | YES                              |          |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/album.json)
 
 ## album_songs
@@ -210,6 +215,7 @@ This returns the songs of a specified album
 | 'filter' | integer | UID of Album, returns song JSON                  |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/album_songs.json)
 
 ## tags
@@ -283,6 +289,7 @@ Returns songs based on the specified filter
 | 'exact'  | boolean    | if true filter is exact rather then fuzzy                                                          |       NO |
 | 'offset' | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'  | integer    | Maximum number of results to return                                                                |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/songs.json)
 
 ## song
@@ -292,6 +299,7 @@ returns a single song
 | Input    | Type    | Description                    | Optional |
 |----------|---------|--------------------------------|---------:|
 | 'filter' | integer | UID of Song, returns song JSON |       NO |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/song.json)
 
 ## playlists
@@ -307,6 +315,7 @@ This returns playlists based on the specified filter
 | 'offset'      | integer    | Return results starting from this index position                                                   |      YES |
 | 'limit'       | integer    | Maximum number of results to return                                                                |      YES |
 | 'hide_search' | integer    | `0`, `1` (if true do not include searches/smartlists in the result)                                |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlists.json)
 
 ## playlist
@@ -316,6 +325,7 @@ This returns a single playlist
 | Input    | Type   | Description                            | Optional |
 |----------|--------|----------------------------------------|---------:|
 | 'filter' | string | UID of playlist, returns playlist JSON |       NO |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist.json)
 
 ## playlist_songs
@@ -327,6 +337,7 @@ This returns the songs for a playlist
 | 'filter' | string  | UID of Playlist, returns song JSON               |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/playlist_songs.json)
 
 ## playlist_create
@@ -516,6 +527,7 @@ This searches the songs and returns... songs
 | 'filter' | string  | Value is Alpha Match for Song Title, Artist Name, Album Name, Genre Name returns song JSON |       NO |
 | 'offset' | integer | Return results starting from this index position                                           |      YES |
 | 'limit'  | integer | Maximum number of results to return                                                        |      YES |
+
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/search_songs.json)
 
 ## videos
@@ -697,7 +709,7 @@ Create a new user. (Requires the username, password and email.)
 |------------|---------|---------------------------|---------:|
 | 'username' | string  | $username                 |       NO |
 | 'password' | string  | hash('sha256', $password) |       NO |
-| 'email'    | string  | e.g. user@gmail.com       |       NO |
+| 'email'    | string  | e.g.`user@gmail.com`      |       NO |
 | 'fullname' | string  |                           |      YES |
 | 'disable'  | boolean | `0`, `1`                  |      YES |
 
@@ -711,7 +723,7 @@ Update an existing user.
 |--------------|---------|---------------------------|---------:|
 | 'username'   | string  | $username                 |       NO |
 | 'password'   | string  | hash('sha256', $password) |      YES |
-| 'email'      | string  | e.g. user@gmail.com       |      YES |
+| 'email'      | string  | e.g.`user@gmail.com`      |      YES |
 | 'fullname'   | string  |                           |      YES |
 | 'website'    | string  |                           |      YES |
 | 'state'      | string  |                           |      YES |

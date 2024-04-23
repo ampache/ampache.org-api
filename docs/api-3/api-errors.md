@@ -28,4 +28,3 @@ All error codes are accompanied by a string value for the error and derived from
   * The API could not find the requested object
 * **405**
   * This is a fatal error, the service requested a method that the API does not implement
-

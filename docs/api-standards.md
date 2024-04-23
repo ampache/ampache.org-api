@@ -41,7 +41,6 @@ The message is also not an element.
 <error code="400"><![CDATA[User does not have access to this function]]></error>
 ```
 
-
 ## Rules regarding dates
 
 There are 2 date formats used in the API:

@@ -18,6 +18,7 @@ const sidebars = {
     'api-standards',
     'api-xml-methods',
     'api-json-methods',
+    'api-media-methods',
     'api-errors',
     'api-examples',
     'api-changelog',

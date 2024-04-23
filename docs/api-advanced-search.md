@@ -161,7 +161,7 @@ Searching 'anywhere' searches song title, song filename, song genre, album title
 | possible_duplicate       | Possible Duplicate                      | is_true           |                          song, album, artist                          |
 | possible_duplicate_album | Possible Duplicate Albums               | is_true           |                          song, album, artist                          |
 | username                 | Username                                | text              |                                 user                                  |
-| category                 | Category                                | text              |                              label, genre                             |
+| category                 | Category                                | text              |                             label, genre                              |
 
 ### Available operator values
 

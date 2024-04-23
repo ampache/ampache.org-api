@@ -413,6 +413,7 @@ This returns the albums associated with the tag in question
 | 'filter' | integer | UID of tag, returns album XML                    |       NO |
 | 'offset' | integer | Return results starting from this index position |      YES |
 | 'limit'  | integer | Maximum number of results to return              |      YES |
+
 [api-json-methods.md](..%2Fapi-4%2Fapi-json-methods.md)
 [api-xml-methods.md](..%2Fapi-4%2Fapi-xml-methods.md)
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/tag_albums.xml)
@@ -531,4 +532,3 @@ This is for controlling localplay
 ```
 
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api3/docs/xml-responses/localplay.xml)
-

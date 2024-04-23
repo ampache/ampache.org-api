@@ -952,7 +952,7 @@ Create a new user. (Requires the username, password and email.)
 |------------|---------|---------------------------|---------:|
 | 'username' | string  | $username                 |       NO |
 | 'password' | string  | hash('sha256', $password) |       NO |
-| 'email'    | string  | e.g. user@gmail.com       |       NO |
+| 'email'    | string  | e.g.`user@gmail.com`      |       NO |
 | 'fullname' | string  |                           |      YES |
 | 'disable'  | boolean | `0`, `1`                  |      YES |
 
@@ -966,7 +966,7 @@ Update an existing user.
 |--------------|---------|---------------------------|---------:|
 | 'username'   | string  | $username                 |       NO |
 | 'password'   | string  | hash('sha256', $password) |      YES |
-| 'email'      | string  | e.g. user@gmail.com       |      YES |
+| 'email'      | string  | e.g.`user@gmail.com`      |      YES |
 | 'fullname'   | string  |                           |      YES |
 | 'website'    | string  |                           |      YES |
 | 'state'      | string  |                           |      YES |

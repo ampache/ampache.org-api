@@ -654,7 +654,7 @@ Take a song_id and update the object_count and user_activity table with a play. 
 | 'client' | string         | $agent                |      YES |
 | 'date'   | string         | UNIXTIME()            |      YES |
 
-[Example]https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/record_play.json)
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api4/docs/json-responses/record_play.json)
 
 ### scrobble
 
@@ -953,7 +953,7 @@ Create a new user. (Requires the username, password and email.)
 |------------|---------|---------------------------|---------:|
 | 'username' | string  | $username                 |       NO |
 | 'password' | string  | hash('sha256', $password) |       NO |
-| 'email'    | string  | e.g. user@gmail.com       |       NO |
+| 'email'    | string  | e.g. `user@gmail.com`     |       NO |
 | 'fullname' | string  |                           |      YES |
 | 'disable'  | boolean | `0`, `1`                  |      YES |
 
@@ -967,7 +967,7 @@ Update an existing user.
 |--------------|---------|---------------------------|---------:|
 | 'username'   | string  | $username                 |       NO |
 | 'password'   | string  | hash('sha256', $password) |      YES |
-| 'email'      | string  | e.g. user@gmail.com       |      YES |
+| 'email'      | string  | e.g. `user@gmail.com`     |      YES |
 | 'fullname'   | string  |                           |      YES |
 | 'website'    | string  |                           |      YES |
 | 'state'      | string  |                           |      YES |

@@ -349,11 +349,15 @@ All Data methods return HTTP 200 responses
 
 All binary methods will not return XML/JSON responses. they will either return the requested file/data or an HTTP error code.
 
+For information about about how playback works and what a client can expect from Ampache check out [API Media Methods](https://ampache.org/api/api-media-methods)
+
 @return (HTTP 200 OK)
 
 @throws (HTTP 400 Bad Request)
 
 @throws (HTTP 404 Not Found)
+
+@throws (HTTP 416 Range Not Satisfiable)
 
 * download
 * get_art
