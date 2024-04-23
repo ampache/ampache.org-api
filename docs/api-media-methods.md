@@ -57,7 +57,7 @@ Download is used for caching files without the server thinking you've played 40 
 
 Use the helper functions when playing downloads so you can informa the server when you actually play the files you download.
 
-## Playback process
+## The Ampache media playback process
 
 Stat checks happen every time you call a `stream` or `download` **URL** (including part stream content-range calls)
 
@@ -93,7 +93,7 @@ Example, when using the default settings:
 * TRACK1 will change to a skip
 * TRACK2 will be marked as your current now_playing track.
 
-## Scrobble
+## Explaining scrobble
 
 The `scrobble` and `record_play` methods are used for recording plays from saved information/data.
 
@@ -107,7 +107,7 @@ Scrobble is useful for plugins in different music players as an alternative to L
 
 Example streaming plugin for rhythmbox written a few years ago. [rhythmbox-ampache-fm](https://github.com/lachlan-00/rhythmbox-ampache-fm)
 
-## record_play
+## Explaining record_play
 
 `record_play` does the same thing as `scrobble` but only requires the object id of the song instead of searching by string data.
 
@@ -123,9 +123,9 @@ Example:
 * I play the mp3 that was saved in my file cache
 * That mp3 play isn't a stream so I use record_play to set the stream in the database
 
-## player
+## Explaining player
 
-There is a new method for Ampache 6.4.0+ called player.  [json](https://ampache.org/api/api-json-methods#player) and [xml](https://ampache.org/api/api-xml-methods#player)
+There is a new method for Ampache 6.4.0+ called player. [json](https://ampache.org/api/api-json-methods#player) and [xml](https://ampache.org/api/api-xml-methods#player)
 
 Player is all about giving the server an active status of what the client is doing.
 
@@ -137,16 +137,16 @@ Player does a bit more than scrobble and record_play allowing me to do a few mor
 * Update `now_playing` data (remove on stop add it back on play)
 * Shift last item play time on resumption of playback. (e.g. i pause a song at 20 seconds for a day and restart the song. the item will shift to NOW - 20 seconds as i haven't played any other song.)
 
-it's similar to scrobble/record_play but the play/stop parameter gives me a bit more information about what you're doing
+It's similar to `scrobble`/`record_play` but the play/stop parameter gives me a bit more information about what you're doing
 
-## cleanup
+## Final thoughts
 
-sorry for dumping all this in a pretty long text. does that answer everything?
+Hopefully that helps you understand what happens when you are streaming or downloiading form Ampache servers.
 
 The idea is that you shouldn't have to think about anything when you stream. The server will do all the checks and updates for you.
 
-When you download, you need to tell the server that you're playing a cached file so use scrobble/record_play/player.
+When you download, you need to tell the server that you're playing a cached file.
 
-Once you tell the server that you're playing with stream/scrobble/record_play/player methods the server is able to update the play status/history depending on your data.
+Use `scrobble`/`record_play`/`player` to tell the server what you're doing.
 
-I could probably put this kind of info into the .org api site too as well so if you want me to expand on this with a new page or expand the method documentation i can do either/both depending on the info you need.
+Once you tell the server that you're playing with `stream`/`scrobble`/`record_play`/`player` methods the server will update the play status/history depending on your your data and current playback status.
