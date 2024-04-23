@@ -1,6 +1,6 @@
 ---
-title: "API Media Methods"
-metaTitle: "API Media Methods"
+title: "API6 Media Methods"
+metaTitle: "API6 Media Methods"
 description: "API documentation"
 ---
 

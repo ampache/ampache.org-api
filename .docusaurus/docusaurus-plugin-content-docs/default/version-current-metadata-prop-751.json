@@ -39,7 +39,7 @@
       },
       {
         "type": "link",
-        "label": "API Media Methods",
+        "label": "API6 Media Methods",
         "href": "/api/api-media-methods",
         "docId": "api-media-methods",
         "unlisted": false
@@ -657,7 +657,7 @@
     },
     "api-media-methods": {
       "id": "api-media-methods",
-      "title": "API Media Methods",
+      "title": "API6 Media Methods",
       "description": "API documentation",
       "sidebar": "api"
     },

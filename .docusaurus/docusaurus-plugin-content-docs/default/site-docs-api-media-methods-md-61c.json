@@ -1,6 +1,6 @@
 {
   "id": "api-media-methods",
-  "title": "API Media Methods",
+  "title": "API6 Media Methods",
   "description": "API documentation",
   "source": "@site/docs/api-media-methods.md",
   "sourceDirName": ".",
@@ -11,8 +11,8 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "API Media Methods",
-    "metaTitle": "API Media Methods",
+    "title": "API6 Media Methods",
+    "metaTitle": "API6 Media Methods",
     "description": "API documentation"
   },
   "sidebar": "api",
