@@ -1705,13 +1705,13 @@ Inform the server about the state of your client. (Song you are playing, Play/Pa
 
 Return the `now_playing` state when completed
 
-| Input    | Type    | Description                                      | Optional |
-|----------|---------|--------------------------------------------------|---------:|
-| 'filter' | string  | $object_id currently playing/stopping            |       NO |
-| 'type'   | string  | `song`, `video`, `podcast_episode` (object_type) |       NO |
-| 'state'  | string  | `play`, `stop` (Default: `play`)                 |      YES |
-| 'time'   | integer | current play time in whole seconds (Default: 0)  |      YES |
-| 'client' | string  | agent/client name                                |      YES |
+| Input    | Type    | Description                                          | Optional |
+|----------|---------|------------------------------------------------------|---------:|
+| 'filter' | string  | $object_id currently playing/stopping                |       NO |
+| 'type'   | string  | `song`, `video`, `podcast_episode` (Default: `song`) |      YES |
+| 'state'  | string  | `play`, `stop` (Default: `play`)                     |      YES |
+| 'time'   | integer | current play time in whole seconds (Default: 0)      |      YES |
+| 'client' | string  | agent/client name                                    |      YES |
 
 * return array
 

@@ -95,21 +95,21 @@ Example, when using the default settings:
 
 ## Scrobble
 
-Scrobble and record play are used for recording plays from saved information/data.
+The `scrobble` and `record_play` methods are used for recording plays from saved information/data.
 
 They're generally not used during playback as the stream action manages that process.
 
-Scrobble uses parameters similar to Last.fm (which is why it's called scrobble.)
+Scrobble uses parameters similar to how the Last.fm API works. (Which is why it's called scrobble.)
 
 The idea is that if you are using a different player where you aren't able to get the object id you can scrobble to your Ampache server.
 
-Example uses for scrobble are for plugins in different music players as an alternative to Last.fm or Libre.fm clients.
+Scrobble is useful for plugins in different music players as an alternative to Last.fm or Libre.fm clients.
 
-[rhythmbox-ampache-fm](https://github.com/lachlan-00/rhythmbox-ampache-fm)
+Example streaming plugin for rhythmbox written a few years ago. [rhythmbox-ampache-fm](https://github.com/lachlan-00/rhythmbox-ampache-fm)
 
 ## record_play
 
-Record_play does the same thing as scrobble but only requires the object id of the song
+`record_play` does the same thing as `scrobble` but only requires the object id of the song instead of searching by string data.
 
 This is useful with playing cached/downloaded songs from an API client that has access to the id.
 
@@ -133,8 +133,9 @@ Player is all about giving the server an active status of what the client is doi
 
 Player does a bit more than scrobble and record_play allowing me to do a few more things
 
-* Update now_playing data (remove on stop add it back on play)
-* Shift last item play time on resumption of playback (e.g. i pause a song at 20 seconds for a day and restart the song. the item will shift to NOW - 20 seconds as i haven't played any other song.)
+* Support for more media types. (`podcast_episode` and `video` objects instead of just songs)
+* Update `now_playing` data (remove on stop add it back on play)
+* Shift last item play time on resumption of playback. (e.g. i pause a song at 20 seconds for a day and restart the song. the item will shift to NOW - 20 seconds as i haven't played any other song.)
 
 it's similar to scrobble/record_play but the play/stop parameter gives me a bit more information about what you're doing
 
