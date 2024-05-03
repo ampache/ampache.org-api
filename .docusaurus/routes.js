@@ -4,7 +4,7 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/api/',
-    component: ComponentCreator('/api/', 'dc7'),
+    component: ComponentCreator('/api/', 'f57'),
     routes: [
       {
         path: '/api/',
