@@ -20,7 +20,7 @@ The exception to this is a `playlist_search` browse which is a combination of `p
 
 This has been used primarily by the API to combine these objects into single calls.
 
-To allow this; all searches are prefixed with 'smart_' meaning that the search 2256 will return as smart_2256.
+To allow this; all searches are prefixed with 'smart_' meaning that the search `2256` will return as `smart_2256`.
 
 * [Album Browses](https://ampache.org/api/browse/album-browse) browses
   * albums
