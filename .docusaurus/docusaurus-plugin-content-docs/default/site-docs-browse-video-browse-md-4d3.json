@@ -1,0 +1,27 @@
+{
+  "id": "browse/video-browse",
+  "title": "Video Browse",
+  "description": "API documentation",
+  "source": "@site/docs/browse/video-browse.md",
+  "sourceDirName": "browse",
+  "slug": "/browse/video-browse",
+  "permalink": "/api/browse/video-browse",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Video Browse",
+    "metaTitle": "Video Browse",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "User Browse",
+    "permalink": "/api/browse/user-browse"
+  },
+  "next": {
+    "title": "Errors",
+    "permalink": "/api/api-errors"
+  }
+}

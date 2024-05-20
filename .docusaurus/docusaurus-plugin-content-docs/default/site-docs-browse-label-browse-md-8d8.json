@@ -1,0 +1,27 @@
+{
+  "id": "browse/label-browse",
+  "title": "Label Browse",
+  "description": "API documentation",
+  "source": "@site/docs/browse/label-browse.md",
+  "sourceDirName": "browse",
+  "slug": "/browse/label-browse",
+  "permalink": "/api/browse/label-browse",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Label Browse",
+    "metaTitle": "Label Browse",
+    "description": "API documentation"
+  },
+  "sidebar": "api",
+  "previous": {
+    "title": "Genre Browse",
+    "permalink": "/api/browse/genre-browse"
+  },
+  "next": {
+    "title": "License Browse",
+    "permalink": "/api/browse/license-browse"
+  }
+}

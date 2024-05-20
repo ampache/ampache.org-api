@@ -1,20 +1,16 @@
 {
-  "/api/-f57": {
+  "/api/-7d9": {
     "__comp": "5e95c892",
     "__context": {
-      "plugin": "237bcb03"
+      "plugin": "aba21aa0"
     }
   },
-  "/api/-869": {
+  "/api/-ed0": {
     "__comp": "a7bd4aaa",
-    "version": "935f2afb"
+    "__props": "603c2766"
   },
-  "/api/-882": {
+  "/api/-819": {
     "__comp": "a94703ab"
-  },
-  "/api/-681": {
-    "__comp": "17896441",
-    "content": "c377a04b"
   },
   "/api/advanced-search/album-advanced-search-f23": {
     "__comp": "17896441",
@@ -116,6 +112,10 @@
     "__comp": "17896441",
     "content": "6b98cdf5"
   },
+  "/api/api-browse-363": {
+    "__comp": "17896441",
+    "content": "dec88586"
+  },
   "/api/api-changelog-507": {
     "__comp": "17896441",
     "content": "d263a616"
@@ -143,6 +143,66 @@
   "/api/api-xml-methods-d90": {
     "__comp": "17896441",
     "content": "dabe12fe"
+  },
+  "/api/browse/album-browse-96a": {
+    "__comp": "17896441",
+    "content": "6f8c85c1"
+  },
+  "/api/browse/artist-browse-fa7": {
+    "__comp": "17896441",
+    "content": "57ed6a03"
+  },
+  "/api/browse/catalog-browse-34a": {
+    "__comp": "17896441",
+    "content": "ecff10aa"
+  },
+  "/api/browse/follower-browse-bc6": {
+    "__comp": "17896441",
+    "content": "96c9ab32"
+  },
+  "/api/browse/genre-browse-e56": {
+    "__comp": "17896441",
+    "content": "f5888d8d"
+  },
+  "/api/browse/label-browse-276": {
+    "__comp": "17896441",
+    "content": "8d8c0509"
+  },
+  "/api/browse/license-browse-cd7": {
+    "__comp": "17896441",
+    "content": "bcf35e24"
+  },
+  "/api/browse/live_stream-browse-552": {
+    "__comp": "17896441",
+    "content": "3124bd78"
+  },
+  "/api/browse/playlist-browse-a3c": {
+    "__comp": "17896441",
+    "content": "f8cdcf3a"
+  },
+  "/api/browse/podcast_episode-browse-4dd": {
+    "__comp": "17896441",
+    "content": "3566af9d"
+  },
+  "/api/browse/podcast-browse-f28": {
+    "__comp": "17896441",
+    "content": "75a2a462"
+  },
+  "/api/browse/share-browse-894": {
+    "__comp": "17896441",
+    "content": "9adb8c8e"
+  },
+  "/api/browse/song-browse-449": {
+    "__comp": "17896441",
+    "content": "2bfa15ce"
+  },
+  "/api/browse/user-browse-606": {
+    "__comp": "17896441",
+    "content": "5ffdd1a2"
+  },
+  "/api/browse/video-browse-d55": {
+    "__comp": "17896441",
+    "content": "4d3f8808"
   },
   "/api/subsonic-dbe": {
     "__comp": "17896441",
@@ -271,5 +331,9 @@
   "/api/versions/api-6.0/api-xml-methods-d07": {
     "__comp": "17896441",
     "content": "ddc2c0f1"
+  },
+  "/api/-681": {
+    "__comp": "17896441",
+    "content": "c377a04b"
   }
 }

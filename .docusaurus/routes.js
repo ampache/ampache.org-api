@@ -4,22 +4,16 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/api/',
-    component: ComponentCreator('/api/', 'f57'),
+    component: ComponentCreator('/api/', '7d9'),
     routes: [
       {
         path: '/api/',
-        component: ComponentCreator('/api/', '869'),
+        component: ComponentCreator('/api/', 'ed0'),
         routes: [
           {
             path: '/api/',
-            component: ComponentCreator('/api/', '882'),
+            component: ComponentCreator('/api/', '819'),
             routes: [
-              {
-                path: '/api/',
-                component: ComponentCreator('/api/', '681'),
-                exact: true,
-                sidebar: "api"
-              },
               {
                 path: '/api/advanced-search/album-advanced-search',
                 component: ComponentCreator('/api/advanced-search/album-advanced-search', 'f23'),
@@ -170,6 +164,12 @@ export default [
                 sidebar: "api"
               },
               {
+                path: '/api/api-browse',
+                component: ComponentCreator('/api/api-browse', '363'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
                 path: '/api/api-changelog',
                 component: ComponentCreator('/api/api-changelog', '507'),
                 exact: true,
@@ -208,6 +208,96 @@ export default [
               {
                 path: '/api/api-xml-methods',
                 component: ComponentCreator('/api/api-xml-methods', 'd90'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/album-browse',
+                component: ComponentCreator('/api/browse/album-browse', '96a'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/artist-browse',
+                component: ComponentCreator('/api/browse/artist-browse', 'fa7'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/catalog-browse',
+                component: ComponentCreator('/api/browse/catalog-browse', '34a'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/follower-browse',
+                component: ComponentCreator('/api/browse/follower-browse', 'bc6'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/genre-browse',
+                component: ComponentCreator('/api/browse/genre-browse', 'e56'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/label-browse',
+                component: ComponentCreator('/api/browse/label-browse', '276'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/license-browse',
+                component: ComponentCreator('/api/browse/license-browse', 'cd7'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/live_stream-browse',
+                component: ComponentCreator('/api/browse/live_stream-browse', '552'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/playlist-browse',
+                component: ComponentCreator('/api/browse/playlist-browse', 'a3c'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/podcast_episode-browse',
+                component: ComponentCreator('/api/browse/podcast_episode-browse', '4dd'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/podcast-browse',
+                component: ComponentCreator('/api/browse/podcast-browse', 'f28'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/share-browse',
+                component: ComponentCreator('/api/browse/share-browse', '894'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/song-browse',
+                component: ComponentCreator('/api/browse/song-browse', '449'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/user-browse',
+                component: ComponentCreator('/api/browse/user-browse', '606'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/browse/video-browse',
+                component: ComponentCreator('/api/browse/video-browse', 'd55'),
                 exact: true,
                 sidebar: "api"
               },
@@ -400,6 +490,12 @@ export default [
               {
                 path: '/api/versions/api-6.0/api-xml-methods',
                 component: ComponentCreator('/api/versions/api-6.0/api-xml-methods', 'd07'),
+                exact: true,
+                sidebar: "api"
+              },
+              {
+                path: '/api/',
+                component: ComponentCreator('/api/', '681'),
                 exact: true,
                 sidebar: "api"
               }

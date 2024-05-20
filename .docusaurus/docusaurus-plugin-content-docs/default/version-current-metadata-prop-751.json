@@ -45,6 +45,120 @@
         "unlisted": false
       },
       {
+        "type": "category",
+        "label": "browse",
+        "items": [
+          {
+            "type": "link",
+            "label": "Album Browse",
+            "href": "/api/browse/album-browse",
+            "docId": "browse/album-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Artist Browse",
+            "href": "/api/browse/artist-browse",
+            "docId": "browse/artist-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Catalog Browse",
+            "href": "/api/browse/catalog-browse",
+            "docId": "browse/catalog-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Follower Browse",
+            "href": "/api/browse/follower-browse",
+            "docId": "browse/follower-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Genre Browse",
+            "href": "/api/browse/genre-browse",
+            "docId": "browse/genre-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Label Browse",
+            "href": "/api/browse/label-browse",
+            "docId": "browse/label-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "License Browse",
+            "href": "/api/browse/license-browse",
+            "docId": "browse/license-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Live Stream Browse",
+            "href": "/api/browse/live_stream-browse",
+            "docId": "browse/live_stream-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Playlist Browse",
+            "href": "/api/browse/playlist-browse",
+            "docId": "browse/playlist-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Podcast Browse",
+            "href": "/api/browse/podcast_episode-browse",
+            "docId": "browse/podcast_episode-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Podcast Browse",
+            "href": "/api/browse/podcast-browse",
+            "docId": "browse/podcast-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Share Browse",
+            "href": "/api/browse/share-browse",
+            "docId": "browse/share-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Song Browse",
+            "href": "/api/browse/song-browse",
+            "docId": "browse/song-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "User Browse",
+            "href": "/api/browse/user-browse",
+            "docId": "browse/user-browse",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Video Browse",
+            "href": "/api/browse/video-browse",
+            "docId": "browse/video-browse",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/api/api-browse"
+      },
+      {
         "type": "link",
         "label": "Errors",
         "href": "/api/api-errors",
@@ -631,6 +745,12 @@
       "description": "API documentation",
       "sidebar": "api"
     },
+    "api-browse": {
+      "id": "api-browse",
+      "title": "API Browse methods",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
     "api-changelog": {
       "id": "api-changelog",
       "title": "API Changelog",
@@ -670,6 +790,96 @@
     "api-xml-methods": {
       "id": "api-xml-methods",
       "title": "XML Methods",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/album-browse": {
+      "id": "browse/album-browse",
+      "title": "Album Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/artist-browse": {
+      "id": "browse/artist-browse",
+      "title": "Artist Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/catalog-browse": {
+      "id": "browse/catalog-browse",
+      "title": "Catalog Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/follower-browse": {
+      "id": "browse/follower-browse",
+      "title": "Follower Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/genre-browse": {
+      "id": "browse/genre-browse",
+      "title": "Genre Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/label-browse": {
+      "id": "browse/label-browse",
+      "title": "Label Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/license-browse": {
+      "id": "browse/license-browse",
+      "title": "License Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/live_stream-browse": {
+      "id": "browse/live_stream-browse",
+      "title": "Live Stream Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/playlist-browse": {
+      "id": "browse/playlist-browse",
+      "title": "Playlist Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/podcast_episode-browse": {
+      "id": "browse/podcast_episode-browse",
+      "title": "Podcast Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/podcast-browse": {
+      "id": "browse/podcast-browse",
+      "title": "Podcast Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/share-browse": {
+      "id": "browse/share-browse",
+      "title": "Share Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/song-browse": {
+      "id": "browse/song-browse",
+      "title": "Song Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/user-browse": {
+      "id": "browse/user-browse",
+      "title": "User Browse",
+      "description": "API documentation",
+      "sidebar": "api"
+    },
+    "browse/video-browse": {
+      "id": "browse/video-browse",
+      "title": "Video Browse",
       "description": "API documentation",
       "sidebar": "api"
     },

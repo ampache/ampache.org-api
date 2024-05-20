@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Media Methods",
-    "permalink": "/api/api-media-methods"
+    "title": "Video Browse",
+    "permalink": "/api/browse/video-browse"
   },
   "next": {
     "title": "API Examples",

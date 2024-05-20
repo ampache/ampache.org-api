@@ -21,7 +21,7 @@ const sidebars = {
     'api-media-methods',
     {
       type: 'category',
-      label: 'browse',
+      label: 'Browse Methods',
       link: {type: 'doc', id: 'api-browse'},
       items: [
         'browse/album-browse',

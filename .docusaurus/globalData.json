@@ -135,6 +135,11 @@
               "sidebar": "api"
             },
             {
+              "id": "api-browse",
+              "path": "/api/api-browse",
+              "sidebar": "api"
+            },
+            {
               "id": "api-changelog",
               "path": "/api/api-changelog",
               "sidebar": "api"
@@ -167,6 +172,81 @@
             {
               "id": "api-xml-methods",
               "path": "/api/api-xml-methods",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/album-browse",
+              "path": "/api/browse/album-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/artist-browse",
+              "path": "/api/browse/artist-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/catalog-browse",
+              "path": "/api/browse/catalog-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/follower-browse",
+              "path": "/api/browse/follower-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/genre-browse",
+              "path": "/api/browse/genre-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/label-browse",
+              "path": "/api/browse/label-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/license-browse",
+              "path": "/api/browse/license-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/live_stream-browse",
+              "path": "/api/browse/live_stream-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/playlist-browse",
+              "path": "/api/browse/playlist-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/podcast_episode-browse",
+              "path": "/api/browse/podcast_episode-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/podcast-browse",
+              "path": "/api/browse/podcast-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/share-browse",
+              "path": "/api/browse/share-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/song-browse",
+              "path": "/api/browse/song-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/user-browse",
+              "path": "/api/browse/user-browse",
+              "sidebar": "api"
+            },
+            {
+              "id": "browse/video-browse",
+              "path": "/api/browse/video-browse",
               "sidebar": "api"
             },
             {
