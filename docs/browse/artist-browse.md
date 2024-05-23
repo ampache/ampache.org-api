@@ -23,7 +23,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'regex_match',
         'regex_not_match',
         'starts_with',
-        'tag',
+        'genre',
         'unplayed',
         'update_gt',
         'update_lt',

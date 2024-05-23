@@ -17,13 +17,13 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'object_type',
         'regex_match',
         'regex_not_match',
-        'tag'
+        'genre'
     );
 
 ### Available browse sorts
 
     protected array $sorts = array(
         'rand',
-        'tag',
+        'genre',
         'name'
     );

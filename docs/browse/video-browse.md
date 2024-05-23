@@ -19,7 +19,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'regex_not_match',
         'starts_with',
         'catalog',
-        'tag',
+        'genre',
         'update_gt',
         'update_lt'
     );

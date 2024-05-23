@@ -4,23 +4,72 @@ metaTitle: "API Browse methods"
 description: "API documentation"
 ---
 
-Starting in Amapche 6.5.0; API6 has added many additional sorting and filtering options to browse methods.
+Starting in Amapche 6.5.0, API6 has added additional sorting and filtering options to browse methods.
+
+A browse method is used for actions that return many items that can be filtered further.
+
+Example:
+
+* The `artists` method is used to show many artists and is a browse action.
+* The `artist` method is used to show details for a single artist.
 
 These methods utilize the Ampache Browse class to allow more advanced queries without having to use searches or post-processing by the client.
 
 The browse can be filtered and sorted based on the output type.
 
-e.g. A song browse will return `songs`. You can filter by `genre` and return all songs that have that genre.
+### Additional browse parameters
+
+Each method now has 2 additional parameters.
+
+#### cond
+
+Apply a filter to the objects.
+
+Add comma separated filter and value pairs, use `;` to split additional filters.
+
+`&cond=artist,1240;catalog,2`
+
+Conditions that don't require a value can be sent with a null value. (`&cond=unplayed,;catalog,2`)
+
+Example:
+
+* The `songs` method uses a song browse to return `song` objects.
+* You can filter this browse by `genre` and return all songs that have that genre.
+
+```
+https://music.com.au/server/json.server.php?action=songs&auth=eeb9f1b6056246a7d563f479f518bb34&cond=genre,111
+```
+
+#### sort
+
+Apply a different sort for the output repsonse.
+
+**NOTE** There can only be one sort applied to each browse.
+
+The default sort is (usually) `name`. This is the name of the returned objects sorted ascending.
+
+The sort parameter docstring on each browse method will tell you the default sort and link to available sorts.
+
+Example:
+
+* The `users` method uses a user browse to return `user` objects in order of id number.
+* You can filter this browse by `username` and return all users in alphabetical order.
+
+```
+https://music.com.au/server/json.server.php?action=users&auth=f57766d256df0ad5e5ec163d35f05a21&sort=username,desc
+```
 
 ### Browse types and available methods
 
-When you create a browse you are querying a database table and will return a single type of object.
+When you create a browse you are querying a database table and to return an object from that table.
 
-The exception to this is a `playlist_search` browse which is a combination of `playlist` and `search` objects.
+The exception to this is a `playlist_search` browse which is a combination of `playlist` and `search` tables.
 
-This has been used primarily by the API to combine these objects into single calls.
+The API generally treats playlists as a single object so it may be a bit confusing to see that these are two separate objects.
 
 To allow this; all searches are prefixed with 'smart_' meaning that the search `2256` will return as `smart_2256`.
+
+The following pages will list the available conditions and sort options for each browse type.
 
 * [Album Browses](https://ampache.org/api/browse/album-browse) browses
   * albums
@@ -71,30 +120,6 @@ To allow this; all searches are prefixed with 'smart_' meaning that the search `
     * index
     * list
 
-### Additional browse parameters
-
-Each method now has 2 additional parameters.
-
-#### cond
-
-Apply a filter to the objects.
-
-Add comma separated filter and value pairs, use `;` to split additional filters.
-
-`&cond=artist,1240;catalog,2`
-
-Conditions that don't require a value can be sent with a null value. (`&cond=unplayed,;catalog,2`)
-
-#### sort
-
-Apply a different sort for the output repsonse.
-
-**NOTE** There can only be one sort applied to each browse.
-
-The default sort is (usually) `name`. This is the name of the returned objects sorted ascending.
-
-The sort parameter docstring on each browse method will tell you the default sort and link to available sorts.
-
 ### Available cond filters
 
 Allowed conditional filters are derived from the output type.
@@ -113,46 +138,60 @@ For example genre_artists uses the `tag` filter to identify the tag and return a
 
 When you add a conditional parameter you are overwriting any default filter applied by the method.
 
-| rule_1_operator | Object Types                      |
-|:---------------:|-----------------------------------|
-|        0        | contains                          |
-|        1        | does not contain                  |
-|        2        | starts with                       |
-|        3        | ends with                         |
-|        4        | is                                |
-|        5        | is not                            |
-|  6 (Text Only)  | sounds like                       |
-|  7 (Text Only)  | does not sound like               |
-|  8 (Text Only)  | matches regular expression        |
-|  9 (Text Only)  | does not match regular expression |
-|       10        | is greater than or equal to       |
-|       11        | is less than or equal to          |
-|       12        | is                                |
-|       13        | is not                            |
-|       14        | is greater than                   |
-|       15        | is less than                      |
+|      Condition      | Browse Types                                                                                  |
+| :-----------------: | --------------------------------------------------------------------------------------------- |
+|     alpha_match     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
+|     exact_match     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
+|     regex_match     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
+|   regex_not_match   | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
+|     starts_with     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
+|       add_gt        | album,artist,podcast_episode,song,video                                                       |
+|       add_lt        | album,artist,podcast_episode,song,video                                                       |
+|    album_artist     | artist                                                                                        |
+|     song_artist     | artist                                                                                        |
+|       artist        | album,song                                                                                    |
+|    album_artist     | album                                                                                         |
+|     song_artist     | album                                                                                         |
+|       catalog       | album,artist,live_stream,podcast_episode,podcast,song,video                                   |
+|   catalog_enabled   | album,artist,live_stream,song                                                                 |
+|        label        | artist                                                                                        |
+|        genre        | album,artist,genre,song,video                                                                 |
+|      unplayed       | album,artist,podcast_episode,podcast,song                                                     |
+|      update_gt      | album,artist,song,video                                                                       |
+|      update_lt      | album,artist,song,video                                                                       |
+|       enabled       | catalog,song                                                                                  |
+|     gather_type     | catalog                                                                                       |
+|    gather_types     | catalog                                                                                       |
+|        user         | catalog,follower,share                                                                        |
+|       to_user       | follower                                                                                      |
+|       hidden        | genre                                                                                         |
+|     object_type     | genre                                                                                         |
+|      not_like       | playlist                                                                                      |
+|   not_starts_with   | genre,playlist                                                                                |
+|    playlist_open    | playlist                                                                                      |
+|    playlist_type    | playlist                                                                                      |
+|    playlist_user    | playlist                                                                                      |
+| hide_dupe_smartlist | playlist_search                                                                               |
+|      smartlist      | playlist_search                                                                               |
+|       podcast       | podcast_episode                                                                               |
+|       object        | share                                                                                         |
+|     object_type     | share                                                                                         |
+|    creation_date    | share                                                                                         |
+|   lastvisit_date    | share                                                                                         |
+|       counter       | share                                                                                         |
+|     max_counter     | share                                                                                         |
+|    allow_stream     | share                                                                                         |
+|   allow_download    | share                                                                                         |
+|       expire        | share                                                                                         |
+|        album        | song                                                                                          |
+|     album_disk      | song                                                                                          |
+|        disk         | song                                                                                          |
+|       license       | song                                                                                          |
+|        top50        | song                                                                                          |
+|    user_catalog     | song                                                                                          |
+|       access        | user                                                                                          |
+|      disabled       | user                                                                                          |
 
 ### Available sort... sorts
 
-Select your operator (integer only!) based on the type or your selected search
-
-**NOTE** with the numeric_limit and is_true operators the operator is ignored, but still required
-
-| rule_1_operator | Object Types                      |
-|:---------------:|-----------------------------------|
-|        0        | contains                          |
-|        1        | does not contain                  |
-|        2        | starts with                       |
-|        3        | ends with                         |
-|        4        | is                                |
-|        5        | is not                            |
-|  6 (Text Only)  | sounds like                       |
-|  7 (Text Only)  | does not sound like               |
-|  8 (Text Only)  | matches regular expression        |
-|  9 (Text Only)  | does not match regular expression |
-|       10        | is greater than or equal to       |
-|       11        | is less than or equal to          |
-|       12        | is                                |
-|       13        | is not                            |
-|       14        | is greater than                   |
-|       15        | is less than                      |
+Check out the object pages for available sorts and filters

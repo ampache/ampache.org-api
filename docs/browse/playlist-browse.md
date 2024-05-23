@@ -19,34 +19,12 @@ There are options to ignore, hide or filter searches from your playlist calls bu
 ```
     // playlist_search
     public const FILTERS = array(
-        'alpha_match',
-        'exact_match',
         'hide_dupe_smartlist',
-        'not_like',
-        'playlist_open',
-        'playlist_type',
-        'playlist_user',
-        'regex_match',
-        'regex_not_match',
         'smartlist',
-        'starts_with',
-        'not_starts_with'
-    );
-
-    // playlist
-    public const FILTERS = array(
-        'alpha_match',
-        'exact_match',
-        'not_like',
-        'playlist_type',
-        'playlist_user',
-        'regex_match',
-        'regex_not_match',
-        'starts_with',
-        'not_starts_with'
     );
 
     // smartplaylist
+    // playlist
     public const FILTERS = array(
         'alpha_match',
         'exact_match',

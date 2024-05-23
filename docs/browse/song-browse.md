@@ -26,7 +26,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'regex_match',
         'regex_not_match',
         'starts_with',
-        'tag',
+        'genre',
         'top50',
         'unplayed',
         'update_gt',
