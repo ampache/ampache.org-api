@@ -10,6 +10,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse filters
 
+```PHP
     public const FILTERS = array(
         'alpha_match',
         'catalog',
@@ -22,6 +23,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse sorts
 
+```PHP
     protected array $sorts = array(
         'title',
         'name',
@@ -32,3 +34,4 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'genre',
         'catalog',
     );
+```

@@ -36,9 +36,7 @@ Example:
 * The `songs` method uses a song browse to return `song` objects.
 * You can filter this browse by `genre` and return all songs that have that genre.
 
-```
-https://music.com.au/server/json.server.php?action=songs&auth=eeb9f1b6056246a7d563f479f518bb34&cond=genre,111
-```
+`https://music.com.au/server/json.server.php?action=songs&auth=eeb9f1b6056246a7d563f479f518bb34&cond=genre,111`
 
 #### sort
 
@@ -55,9 +53,7 @@ Example:
 * The `users` method uses a user browse to return `user` objects in order of id number.
 * You can filter this browse by `username` and return all users in alphabetical order.
 
-```
-https://music.com.au/server/json.server.php?action=users&auth=f57766d256df0ad5e5ec163d35f05a21&sort=username,desc
-```
+`https://music.com.au/server/json.server.php?action=users&auth=f57766d256df0ad5e5ec163d35f05a21&sort=username,desc`
 
 ### Browse types and available methods
 

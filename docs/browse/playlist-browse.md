@@ -16,7 +16,7 @@ There are options to ignore, hide or filter searches from your playlist calls bu
 
 ### Available browse filters
 
-```
+```PHP
     // playlist_search
     public const FILTERS = array(
         'hide_dupe_smartlist',
@@ -41,7 +41,7 @@ There are options to ignore, hide or filter searches from your playlist calls bu
 
 ### Available browse sorts
 
-```
+```PHP
     // playlist_search
     protected array $sorts = array(
         'rand',
@@ -89,4 +89,3 @@ There are options to ignore, hide or filter searches from your playlist calls bu
         'user_flag'
     );
 ```
-

@@ -10,6 +10,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse filters
 
+```PHP
     public const FILTERS = array(
         'alpha_match',
         'exact_match',
@@ -17,11 +18,14 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'regex_not_match',
         'starts_with'
     );
+```
 
 ### Available browse sorts
 
+```PHP
     protected array $sorts = array(
         'title',
         'name',
         'external_link',
     );
+```

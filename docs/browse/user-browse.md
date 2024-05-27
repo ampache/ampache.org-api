@@ -10,14 +10,17 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse filters
 
+```PHP
     public const FILTERS = array(
         'access',
         'disabled',
         'starts_with',
     );
+```
 
 ### Available browse sorts
 
+```PHP
     protected array $sorts = array(
         'rand',
         'id',
@@ -33,3 +36,4 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'city',
         'fullname_public',
     );
+```

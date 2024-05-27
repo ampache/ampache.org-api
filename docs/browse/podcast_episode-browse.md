@@ -10,6 +10,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse filters
 
+```PHP
     public const FILTERS = array(
         'podcast',
         'catalog',
@@ -22,9 +23,11 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'starts_with',
         'unplayed'
     );
+```
 
 ### Available browse sorts
 
+```PHP
     protected array $sorts = array(
         'podcast',
         'title',
@@ -42,3 +45,4 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'rating',
         'user_flag',
     );
+```

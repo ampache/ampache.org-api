@@ -10,6 +10,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse filters
 
+```PHP
     public const FILTERS = array(
         'add_gt',
         'add_lt',
@@ -23,9 +24,11 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'update_gt',
         'update_lt'
     );
+```
 
 ### Available browse sorts
 
+```PHP
     protected array $sorts = array(
         'title',
         'name',
@@ -41,3 +44,4 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'rating',
         'user_flag'
     );
+```

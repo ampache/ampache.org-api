@@ -10,15 +10,19 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ### Available browse filters
 
+```PHP
     public const FILTERS = array(
         'to_user',
         'user'
     );
+```
 
 ### Available browse sorts
 
+```PHP
     protected array $sorts = array(
         'user',
         'follow_user',
         'follow_date'
     );
+```
