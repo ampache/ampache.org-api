@@ -46,6 +46,7 @@ There are options to ignore, hide or filter searches from your playlist calls bu
     protected array $sorts = array(
         'rand',
         'date',
+        'last_count',
         'last_update',
         'title',
         'name',
@@ -60,6 +61,7 @@ There are options to ignore, hide or filter searches from your playlist calls bu
     protected array $sorts = array(
         'rand',
         'date',
+        'last_count',
         'last_update',
         'title',
         'name',
@@ -73,6 +75,7 @@ There are options to ignore, hide or filter searches from your playlist calls bu
     // smartplaylist
     protected array $sorts = array(
         'date',
+        'last_count',
         'last_update',
         'title',
         'name',
