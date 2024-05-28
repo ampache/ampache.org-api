@@ -8,7 +8,7 @@ This page focuses on a single object type.
 
 Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page for further information regarding the other Browse types method.
 
-### Available browse filters
+## Available browse filters
 
 ```PHP
     public const FILTERS = array(
@@ -17,7 +17,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
     );
 ```
 
-### Available browse sorts
+## Available browse sorts
 
 ```PHP
     protected array $sorts = array(

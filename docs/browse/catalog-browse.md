@@ -8,7 +8,20 @@ This page focuses on a single object type.
 
 Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page for further information regarding the other Browse types method.
 
-### Available browse filters
+## Available browse filters
+
+You can filter responses by the object name using the following conditions.
+
+e.g. `cond=like,unplayed+tracks`
+
+* Name/Title string filters
+  * like
+  * not_like
+  * equal
+  * regex_match
+  * regex_not_match
+  * starts_with
+  * not_starts_with
 
     public const FILTERS = array(
         'enabled',
@@ -17,7 +30,7 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
         'user'
     );
 
-### Available browse sorts
+## Available browse sorts
 
     protected array $sorts = array(
         'title',

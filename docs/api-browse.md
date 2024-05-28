@@ -17,11 +17,11 @@ These methods utilize the Ampache Browse class to allow more advanced queries wi
 
 The browse can be filtered and sorted based on the output type.
 
-### Additional browse parameters
+## Additional browse parameters
 
 Each method now has 2 additional parameters.
 
-#### cond
+### cond
 
 Apply a filter to the objects.
 
@@ -38,7 +38,7 @@ Example:
 
 `https://music.com.au/server/json.server.php?action=songs&auth=eeb9f1b6056246a7d563f479f518bb34&cond=genre,111`
 
-#### sort
+### sort
 
 Apply a different sort for the output repsonse.
 
@@ -55,7 +55,7 @@ Example:
 
 `https://music.com.au/server/json.server.php?action=users&auth=f57766d256df0ad5e5ec163d35f05a21&sort=username,desc`
 
-### Browse types and available methods
+## Browse types and available methods
 
 When you create a browse you are querying a database table and to return an object from that table.
 
@@ -116,7 +116,7 @@ The following pages will list the available conditions and sort options for each
     * index
     * list
 
-### Available cond filters
+## Available cond filters
 
 Allowed conditional filters are derived from the output type.
 
@@ -134,60 +134,61 @@ For example genre_artists uses the `tag` filter to identify the tag and return a
 
 When you add a conditional parameter you are overwriting any default filter applied by the method.
 
-|      Condition      | Browse Types                                                                                  |
-| :-----------------: | --------------------------------------------------------------------------------------------- |
-|     alpha_match     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
-|     exact_match     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
-|     regex_match     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
-|   regex_not_match   | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
-|     starts_with     | album,artist,genre,label,license,live_stream,playlist,podcast_episode,podcast,song,user,video |
-|       add_gt        | album,artist,podcast_episode,song,video                                                       |
-|       add_lt        | album,artist,podcast_episode,song,video                                                       |
-|    album_artist     | artist                                                                                        |
-|     song_artist     | artist                                                                                        |
-|       artist        | album,song                                                                                    |
-|    album_artist     | album                                                                                         |
-|     song_artist     | album                                                                                         |
-|       catalog       | album,artist,live_stream,podcast_episode,podcast,song,video                                   |
-|   catalog_enabled   | album,artist,live_stream,song                                                                 |
-|        label        | artist                                                                                        |
-|        genre        | album,artist,genre,song,video                                                                 |
-|      unplayed       | album,artist,podcast_episode,podcast,song                                                     |
-|      update_gt      | album,artist,song,video                                                                       |
-|      update_lt      | album,artist,song,video                                                                       |
-|       enabled       | catalog,song                                                                                  |
-|     gather_type     | catalog                                                                                       |
-|    gather_types     | catalog                                                                                       |
-|        user         | catalog,follower,share                                                                        |
-|       to_user       | follower                                                                                      |
-|       hidden        | genre                                                                                         |
-|     object_type     | genre                                                                                         |
-|      not_like       | playlist                                                                                      |
-|   not_starts_with   | genre,playlist                                                                                |
-|    playlist_open    | playlist                                                                                      |
-|    playlist_type    | playlist                                                                                      |
-|    playlist_user    | playlist                                                                                      |
-| hide_dupe_smartlist | playlist_search                                                                               |
-|      smartlist      | playlist_search                                                                               |
-|       podcast       | podcast_episode                                                                               |
-|       object        | share                                                                                         |
-|     object_type     | share                                                                                         |
-|    creation_date    | share                                                                                         |
-|   lastvisit_date    | share                                                                                         |
-|       counter       | share                                                                                         |
-|     max_counter     | share                                                                                         |
-|    allow_stream     | share                                                                                         |
-|   allow_download    | share                                                                                         |
-|       expire        | share                                                                                         |
-|        album        | song                                                                                          |
-|     album_disk      | song                                                                                          |
-|        disk         | song                                                                                          |
-|       license       | song                                                                                          |
-|        top50        | song                                                                                          |
-|    user_catalog     | song                                                                                          |
-|       access        | user                                                                                          |
-|      disabled       | user                                                                                          |
+|      Condition      |                        Browse Types                         |
+| :-----------------: | :---------------------------------------------------------: |
+|        like         |             All (excluding `follower` browses)              |
+|      not_like       |             All (excluding `follower` browses)              |
+|        equal        |             All (excluding `follower` browses)              |
+|     regex_match     |             All (excluding `follower` browses)              |
+|   regex_not_match   |             All (excluding `follower` browses)              |
+|     starts_with     |             All (excluding `follower` browses)              |
+|   not_starts_with   |             All (excluding `follower` browses)              |
+|       add_gt        |           album,artist,podcast_episode,song,video           |
+|       add_lt        |           album,artist,podcast_episode,song,video           |
+|    album_artist     |                           artist                            |
+|     song_artist     |                           artist                            |
+|       artist        |                         album,song                          |
+|    album_artist     |                            album                            |
+|     song_artist     |                            album                            |
+|       catalog       | album,artist,live_stream,podcast_episode,podcast,song,video |
+|   catalog_enabled   | album,artist,live_stream,podcast_episode,podcast,song,video |
+|    user_catalog     | album,artist,live_stream,podcast_episode,podcast,song,video |
+|        label        |                           artist                            |
+|        genre        |                album,artist,genre,song,video                |
+|      unplayed       |          album,artist,podcast_episode,podcast,song          |
+|      update_gt      |                   album,artist,song,video                   |
+|      update_lt      |                   album,artist,song,video                   |
+|       enabled       |                        catalog,song                         |
+|     gather_type     |                           catalog                           |
+|    gather_types     |                           catalog                           |
+|        user         |                   catalog,follower,share                    |
+|       to_user       |                          follower                           |
+|       hidden        |                            genre                            |
+|     object_type     |                            genre                            |
+|   not_starts_with   |                       genre,playlist                        |
+|    playlist_open    |                          playlist                           |
+|    playlist_type    |                          playlist                           |
+|    playlist_user    |                          playlist                           |
+| hide_dupe_smartlist |                       playlist_search                       |
+|      smartlist      |                       playlist_search                       |
+|       podcast       |                       podcast_episode                       |
+|       object        |                            share                            |
+|     object_type     |                            share                            |
+|    creation_date    |                            share                            |
+|   lastvisit_date    |                            share                            |
+|       counter       |                            share                            |
+|     max_counter     |                            share                            |
+|    allow_stream     |                            share                            |
+|   allow_download    |                            share                            |
+|       expire        |                            share                            |
+|        album        |                            song                             |
+|     album_disk      |                            song                             |
+|        disk         |                            song                             |
+|       license       |                            song                             |
+|        top50        |                            song                             |
+|       access        |                            user                             |
+|      disabled       |                            user                             |
 
-### Available sort... sorts
+## Available sort... sorts
 
 Check out the object pages for available sorts and filters

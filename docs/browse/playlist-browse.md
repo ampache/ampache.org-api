@@ -10,82 +10,54 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 In the Ampache API a playlist is actually a combined object of static playlists and dynamic searches.
 
+Smartlists are prefixes with `smart_` to ensure ID values don't clash with playlists
+
 This allows you to list these objects together in a single call.
 
 There are options to ignore, hide or filter searches from your playlist calls but playlist calls will return both types of object.
 
-### Available browse filters
+## Available browse filters
 
-```PHP
-    // playlist_search
-    public const FILTERS = array(
-        'hide_dupe_smartlist',
-        'smartlist',
-    );
+You can filter responses by the object name using the following conditions.
 
-    // smartplaylist
-    // playlist
-    public const FILTERS = array(
-        'alpha_match',
-        'exact_match',
-        'not_like',
-        'playlist_open',
-        'playlist_type',
-        'playlist_user',
-        'regex_match',
-        'regex_not_match',
-        'starts_with',
-        'not_starts_with'
-    );
-```
+e.g. `cond=like,unplayed+tracks`
 
-### Available browse sorts
+* Name/Title string filters
+  * like
+  * not_like
+  * equal
+  * regex_match
+  * regex_not_match
+  * starts_with
+  * not_starts_with
 
-```PHP
-    // playlist_search
-    protected array $sorts = array(
-        'rand',
-        'date',
-        'last_count',
-        'last_update',
-        'title',
-        'name',
-        'rating',
-        'type',
-        'user',
-        'username',
-        'user_flag'
-    );
+When returning combined playlists and smartlists in a single response you can use the following extra filters.
 
-    // playlist
-    protected array $sorts = array(
-        'rand',
-        'date',
-        'last_count',
-        'last_update',
-        'title',
-        'name',
-        'rating',
-        'type',
-        'user',
-        'username',
-        'user_flag'
-    );
+* hide_dupe_smartlist: Hide smartlists from the reesponse when there is already a playlist with the same name
+* smartlist: return smartlists only
 
-    // smartplaylist
-    protected array $sorts = array(
-        'date',
-        'last_count',
-        'last_update',
-        'title',
-        'name',
-        'limit',
-        'rand',
-        'random',
-        'rating',
-        'type',
-        'user',
-        'username',
-        'user_flag'
-    );
-```
+Finally these conditions are playlist specific and not commonly shared between browse types.
+
+* playlist_open: filter by user accessible playlists (public playlists and owner = you)
+* playlist_user: filter for playlists you own
+
+## Available browse sorts
+
+Sorts are applied with an optional order. (`asc` or `desc` depending on the method)
+
+When you apply a sort you will overwrite the default sort order.
+
+* rand: Random sort order
+* date: Creation date
+* last_count: Item count
+* last_update: Modification date
+* name: Object name
+* rating: Object rating
+* type: Public / private
+* user: Owner id
+* username: Owner username
+* user_flag: Loved flag
+
+* Additional sorts for smartlist browses
+  * limit: Smartlist item limit
+  * random: Smartlist has random sort enabled
