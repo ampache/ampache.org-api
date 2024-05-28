@@ -27,16 +27,18 @@ Apply a filter to the objects.
 
 Add comma separated filter and value pairs, use `;` to split additional filters.
 
-`&cond=artist,1240;catalog,2`
+e.g. `&cond=artist,1240;catalog,2`
 
-Conditions that don't require a value can be sent with a null value. (`&cond=unplayed,;catalog,2`)
+Conditions that don't require a value can be sent with a null value.
+
+e.g. `&cond=unplayed,;catalog,2`
 
 Example:
 
 * The `songs` method uses a song browse to return `song` objects.
 * You can filter this browse by `genre` and return all songs that have that genre.
 
-`https://music.com.au/server/json.server.php?action=songs&auth=eeb9f1b6056246a7d563f479f518bb34&cond=genre,111`
+e.g. `https://music.com.au/server/json.server.php?action=songs&auth=eeb9f1b6056246a7d563f479f518bb34&cond=genre,111`
 
 ### sort
 
@@ -51,9 +53,9 @@ The sort parameter docstring on each browse method will tell you the default sor
 Example:
 
 * The `users` method uses a user browse to return `user` objects in order of id number.
-* You can filter this browse by `username` and return all users in alphabetical order.
+* You can sort this browse by `username` and return all users in alphabetical order.
 
-`https://music.com.au/server/json.server.php?action=users&auth=f57766d256df0ad5e5ec163d35f05a21&sort=username,desc`
+e.g. `https://music.com.au/server/json.server.php?action=users&auth=f57766d256df0ad5e5ec163d35f05a21&sort=username,desc`
 
 ## Browse types and available methods
 

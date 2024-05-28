@@ -14,7 +14,7 @@ Smartlists are prefixes with `smart_` to ensure ID values don't clash with playl
 
 This allows you to list these objects together in a single call.
 
-There are options to ignore, hide or filter searches from your playlist calls but playlist calls will return both types of object.
+There are options to ignore, hide or filter searches from your playlist calls but playlist calls can return both types of object.
 
 ## Available browse filters
 
@@ -47,17 +47,19 @@ Sorts are applied with an optional order. (`asc` or `desc` depending on the meth
 
 When you apply a sort you will overwrite the default sort order.
 
-* rand: Random sort order
-* date: Creation date
-* last_count: Item count
-* last_update: Modification date
-* name: Object name
-* rating: Object rating
-* type: Public / private
-* user: Owner id
-* username: Owner username
-* user_flag: Loved flag
+* rand: random sort order using SQL RAND()
+* date: creation date
+* last_count: item count
+* last_update: modification date
+* name: object name
+* rating: object rating
+* type: public / private
+* user: owner id
+* username: owner username
+* user_flag: object loved flag
+
+Smartlist specific sorts will not affect playlist/combined results.
 
 * Additional sorts for smartlist browses
-  * limit: Smartlist item limit
-  * random: Smartlist has random sort enabled
+  * limit: smartlist item limit
+  * random: smartlist has random sort enabled
