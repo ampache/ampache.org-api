@@ -20,8 +20,6 @@ There are options to ignore, hide or filter searches from your playlist calls bu
 
 You can filter responses by the object name using the following conditions.
 
-e.g. `cond=like,unplayed+tracks`
-
 * Name/Title string filters
   * like
   * not_like
@@ -31,13 +29,12 @@ e.g. `cond=like,unplayed+tracks`
   * starts_with
   * not_starts_with
 
+e.g. `cond=like,unplayed+tracks`
+
 When returning combined playlists and smartlists in a single response you can use the following extra filters.
 
-* hide_dupe_smartlist: Hide smartlists from the reesponse when there is already a playlist with the same name
+* hide_dupe_smartlist: Hide smartlists from the response when there is already a playlist with the same name
 * smartlist: return smartlists only
-
-Finally these conditions are playlist specific and not commonly shared between browse types.
-
 * playlist_open: filter by user accessible playlists (public playlists and owner = you)
 * playlist_user: filter for playlists you own
 
