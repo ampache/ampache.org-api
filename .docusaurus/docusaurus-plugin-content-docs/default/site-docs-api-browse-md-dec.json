@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Media Methods",
-    "permalink": "/api/api-media-methods"
+    "title": "Video Search",
+    "permalink": "/api/advanced-search/video-advanced-search"
   },
   "next": {
     "title": "Album Browse",
