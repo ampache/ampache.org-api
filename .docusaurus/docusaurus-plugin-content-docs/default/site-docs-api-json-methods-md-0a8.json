@@ -21,7 +21,7 @@
     "permalink": "/api/api-xml-methods"
   },
   "next": {
-    "title": "Media Methods",
-    "permalink": "/api/api-media-methods"
+    "title": "Errors",
+    "permalink": "/api/api-errors"
   }
 }

@@ -17,11 +17,11 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "JSON Methods",
-    "permalink": "/api/api-json-methods"
+    "title": "Access Control Lists",
+    "permalink": "/api/api-acls"
   },
   "next": {
-    "title": "Errors",
-    "permalink": "/api/api-errors"
+    "title": "API Browse methods",
+    "permalink": "/api/api-browse"
   }
 }

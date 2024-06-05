@@ -280,6 +280,13 @@ export default {
     }
   },
   "baseUrlIssueBanner": true,
+  "future": {
+    "experimental_storage": {
+      "type": "localStorage",
+      "namespace": false
+    },
+    "experimental_router": "browser"
+  },
   "onBrokenAnchors": "warn",
   "onDuplicateRoutes": "warn",
   "staticDirectories": [

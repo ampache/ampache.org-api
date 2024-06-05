@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Media Methods",
-    "permalink": "/api/api-media-methods"
+    "title": "JSON Methods",
+    "permalink": "/api/api-json-methods"
   },
   "next": {
     "title": "API Examples",

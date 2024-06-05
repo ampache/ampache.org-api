@@ -4,11 +4,11 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/api/',
-    component: ComponentCreator('/api/', '7d9'),
+    component: ComponentCreator('/api/', 'c4a'),
     routes: [
       {
         path: '/api/',
-        component: ComponentCreator('/api/', 'ed0'),
+        component: ComponentCreator('/api/', '020'),
         routes: [
           {
             path: '/api/',

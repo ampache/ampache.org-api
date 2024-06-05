@@ -17,8 +17,8 @@
   },
   "sidebar": "api",
   "previous": {
-    "title": "Access Control Lists",
-    "permalink": "/api/api-acls"
+    "title": "Video Browse",
+    "permalink": "/api/browse/video-browse"
   },
   "next": {
     "title": "Song Search",
