@@ -58,6 +58,7 @@ e.g. `cond=like,unplayed+tracks`
         'rand',
         'rating',
         'time',
-        'user_flag'
+        'user_flag',
+        'user_flag_rating',
     );
 ```

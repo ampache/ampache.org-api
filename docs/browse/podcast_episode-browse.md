@@ -54,5 +54,6 @@ e.g. `cond=like,unplayed+tracks`
         'total_skip',
         'rating',
         'user_flag',
+        'user_flag_rating',
     );
 ```

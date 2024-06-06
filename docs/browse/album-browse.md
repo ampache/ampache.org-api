@@ -66,6 +66,7 @@ e.g. `cond=like,unplayed+tracks`
         'version',
         'year',
         'rating',
-        'user_flag'
+        'user_flag',
+        'user_flag_rating',
     );
 ```

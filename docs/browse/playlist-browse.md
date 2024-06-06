@@ -54,6 +54,7 @@ When you apply a sort you will overwrite the default sort order.
 * user: owner id
 * username: owner username
 * user_flag: object loved flag
+* user_flag_rating: sort flagged status then rating
 
 Smartlist specific sorts will not affect playlist/combined results.
 
