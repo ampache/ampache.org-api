@@ -12,8 +12,8 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ```PHP
     public const FILTERS = array(
-        'to_user',
-        'user'
+        'follow_user',
+        'user',
     );
 ```
 
@@ -21,8 +21,8 @@ Refer to the main [Api Browse methods](https://ampache.org/api/api-browse) page 
 
 ```PHP
     protected array $sorts = array(
-        'user',
         'follow_user',
-        'follow_date'
+        'follow_date',
+        'user',
     );
 ```
