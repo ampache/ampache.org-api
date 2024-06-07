@@ -40,6 +40,7 @@ e.g. `cond=like,unplayed+tracks`
 
 ```PHP
     protected array $sorts = array(
+        'id',
         'title',
         'name',
         'catalog',

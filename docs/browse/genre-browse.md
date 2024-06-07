@@ -30,7 +30,10 @@ e.g. `cond=like,unplayed+tracks`
         'object_type',
         'regex_match',
         'regex_not_match',
-        'genre'
+        'genre',
+        'rating',
+        'user_flag',
+        'user_flag_rating',
     );
 ```
 
@@ -38,6 +41,7 @@ e.g. `cond=like,unplayed+tracks`
 
 ```PHP
     protected array $sorts = array(
+        'id',
         'rand',
         'genre',
         'name'

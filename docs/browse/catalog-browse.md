@@ -33,6 +33,7 @@ e.g. `cond=like,unplayed+tracks`
 ## Available browse sorts
 
     protected array $sorts = array(
+        'id',
         'title',
         'name',
         'catalog_type',
@@ -42,5 +43,8 @@ e.g. `cond=like,unplayed+tracks`
         'enabled',
         'rename_pattern',
         'sort_pattern',
-        'gather_types',
+        'gather_types'
+        'rating',
+        'user_flag',
+        'user_flag_rating',
     );

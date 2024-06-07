@@ -32,6 +32,7 @@ e.g. `cond=like,unplayed+tracks`
 
 ```PHP
     protected array $sorts = array(
+        'id',
         'object',
         'object_type',
         'user',

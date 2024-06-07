@@ -37,8 +37,8 @@ Filters for the User browse check the username **OR** fullname for the string.
 
 ```PHP
     protected array $sorts = array(
-        'rand',
         'id',
+        'rand',
         'username',
         'fullname',
         'email',

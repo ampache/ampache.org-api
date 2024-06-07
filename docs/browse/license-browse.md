@@ -25,6 +25,7 @@ e.g. `cond=like,unplayed+tracks`
 
 ```PHP
     public const FILTERS = array(
+        'id',
         'exact_match',
         'regex_match',
         'regex_not_match',

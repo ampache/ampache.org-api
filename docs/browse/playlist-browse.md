@@ -44,6 +44,7 @@ Sorts are applied with an optional order. (`asc` or `desc` depending on the meth
 
 When you apply a sort you will overwrite the default sort order.
 
+* id: object id
 * rand: random sort order using SQL RAND()
 * date: creation date
 * last_count: item count

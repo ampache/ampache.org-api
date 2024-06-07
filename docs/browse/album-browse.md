@@ -44,6 +44,7 @@ e.g. `cond=like,unplayed+tracks`
 
 ```PHP
     protected array $sorts = array(
+        'id',
         'album_artist',
         'artist',
         'barcode',

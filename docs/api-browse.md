@@ -138,6 +138,7 @@ When you add a conditional parameter you are overwriting any default filter appl
 
 |      Condition      |                        Browse Types                         |
 | :-----------------: | :---------------------------------------------------------: |
+|         id          |             All (excluding `follower` browses)              |
 |        like         |             All (excluding `follower` browses)              |
 |      not_like       |             All (excluding `follower` browses)              |
 |        equal        |             All (excluding `follower` browses)              |

@@ -38,6 +38,7 @@ e.g. `cond=like,unplayed+tracks`
 
 ```PHP
     protected array $sorts = array(
+        'id',
         'title',
         'name',
         'catalog',
@@ -45,5 +46,8 @@ e.g. `cond=like,unplayed+tracks`
         'site_url',
         'url',
         'genre',
+        'rating',
+        'user_flag',
+        'user_flag_rating',
     );
 ```
