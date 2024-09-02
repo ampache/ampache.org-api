@@ -1,0 +1,18 @@
+{
+  "id": "versions/api-4.1/api-errors",
+  "title": "Errors 4.2",
+  "description": "API documentation",
+  "source": "@site/docs/versions/api-4.1/api-errors.md",
+  "sourceDirName": "versions/api-4.1",
+  "slug": "/versions/api-4.1/api-errors",
+  "permalink": "/api/versions/api-4.1/api-errors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Errors 4.2",
+    "metaTitle": "Errors 4.2",
+    "description": "API documentation"
+  }
+}

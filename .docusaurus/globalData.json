@@ -265,6 +265,10 @@
               "sidebar": "api"
             },
             {
+              "id": "versions/api-4.1/api-errors",
+              "path": "/api/versions/api-4.1/api-errors"
+            },
+            {
               "id": "versions/api-4.1/xml-methods",
               "path": "/api/versions/api-4.1/xml-methods",
               "sidebar": "api"

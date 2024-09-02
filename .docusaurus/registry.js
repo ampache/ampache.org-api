@@ -43,6 +43,7 @@ export default {
   "6f8c85c1": [() => import(/* webpackChunkName: "6f8c85c1" */ "@site/docs/browse/album-browse.md"), "@site/docs/browse/album-browse.md", require.resolveWeak("@site/docs/browse/album-browse.md")],
   "702d5c70": [() => import(/* webpackChunkName: "702d5c70" */ "@site/docs/advanced-search/label-advanced-search.md"), "@site/docs/advanced-search/label-advanced-search.md", require.resolveWeak("@site/docs/advanced-search/label-advanced-search.md")],
   "70625dc2": [() => import(/* webpackChunkName: "70625dc2" */ "@site/docs/versions/api-5.1/api-standards.md"), "@site/docs/versions/api-5.1/api-standards.md", require.resolveWeak("@site/docs/versions/api-5.1/api-standards.md")],
+  "7272f1a3": [() => import(/* webpackChunkName: "7272f1a3" */ "@site/docs/versions/api-4.1/api-errors.md"), "@site/docs/versions/api-4.1/api-errors.md", require.resolveWeak("@site/docs/versions/api-4.1/api-errors.md")],
   "75a2a462": [() => import(/* webpackChunkName: "75a2a462" */ "@site/docs/browse/podcast-browse.md"), "@site/docs/browse/podcast-browse.md", require.resolveWeak("@site/docs/browse/podcast-browse.md")],
   "7753c0b9": [() => import(/* webpackChunkName: "7753c0b9" */ "@site/docs/versions/api-6.0/api-json-methods.md"), "@site/docs/versions/api-6.0/api-json-methods.md", require.resolveWeak("@site/docs/versions/api-6.0/api-json-methods.md")],
   "7928baae": [() => import(/* webpackChunkName: "7928baae" */ "@site/docs/api-3/api-xml-methods.md"), "@site/docs/api-3/api-xml-methods.md", require.resolveWeak("@site/docs/api-3/api-xml-methods.md")],
