@@ -476,7 +476,7 @@ This returns the albums of an artist
 * return array
 
 ```JSON
-album": []
+"album": []
 ```
 
 * throws object

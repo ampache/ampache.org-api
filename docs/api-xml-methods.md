@@ -668,14 +668,14 @@ Delete an existing bookmark. (if it exists)
 
 Edit a placeholder for the current media that you can return to later.
 
-| Input      | Type    | Description                                      | Optional |
-|------------|---------|--------------------------------------------------|---------:|
-| 'filter'   | string  | $object_id to find                               |       NO |
-| 'type'     | string  | `song`, `video`, `podcast_episode` (object_type) |       NO |
-| 'position' | integer | current track time in seconds                    |       NO |
-| 'client'   | string  | Agent string.                                    |      YES |
-| 'date'     | integer | update time (Default: UNIXTIME())                |      YES |
-| 'include'  | integer | 0,1, if true include the object in the bookmark  |      YES |
+| Input      | Type    | Description                                                  | Optional |
+|------------|---------|--------------------------------------------------------------|---------:|
+| 'filter'   | string  | $object_id to find                                           |       NO |
+| 'type'     | string  | `bookmark`, `song`, `video`, `podcast_episode` (object_type) |       NO |
+| 'position' | integer | current track time in seconds                                |       NO |
+| 'client'   | string  | Agent string.                                                |      YES |
+| 'date'     | integer | update time (Default: UNIXTIME())                            |      YES |
+| 'include'  | integer | 0,1, if true include the object in the bookmark              |      YES |
 
 * return
 
@@ -2644,7 +2644,7 @@ Each type is a grouping of object types so allow single search calls to be made
   * song
   * album
   * album_artist
-  
+
 * podcast
   * podcast
   * podcast_episode
