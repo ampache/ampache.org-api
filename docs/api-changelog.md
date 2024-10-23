@@ -4,6 +4,77 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.6.4
+
+Merge update from Ampache7.
+
+This update has counting updates to allow faster responses on larger results
+
+### Added
+
+* API6
+  * Use set_count function on data classes to speed up counting response totals
+  * Validate `website` for `user_edit`
+  * Use split search for search methods
+    * advanced_search / search
+    * search_songs
+    * user_update
+    * playlist_generate
+* API5
+  * Use split search for search methods
+    * advanced_search
+    * search_songs
+    * user_update
+    * playlist_generate
+* API4
+  * Use split search for search methods
+    * advanced_search
+    * search_songs
+    * user_update
+    * playlist_generate
+* API3
+  * Use split search for search methods
+    * advanced_search
+    * search_songs
+
+### Changed
+
+* Rename API-CHANGELOG.md => CHANGELOG-API.md
+
+## API 6.6.3
+
+**NO CHANGE**
+
+## API 6.6.2
+
+### Added
+
+* API6
+  * Add `stats` parameter to stream and download methods (If false disable stat recording when playing the object)
+  * Respect `api_always_download` in stream and download methods
+  * Add sorting to stats calls
+  * add `user` object to playlist responses (owner of the playlist)
+
+### Fixed
+
+* ALL
+  * index: Artist index not showing albums
+
+## API 6.6.1
+
+This release keeps parity between Ampache7 releases by backporting the updated code.
+
+### Added
+
+* API6
+  * Add maximum ID properties to `handshake` and `ping` (with auth) responses for media types
+    * `max_song`, `max_album`, `max_artist`, `max_video`, `max_podcast`, `max_podcast_episode`
+  * flag: add `date` as a parameter (set the time for your flag)
+
+### Changed
+
+* lost_password: deny access in simple_user_mode
+
 ## API 6.6.0
 
 Like with `total_count`, we've added an md5sum of the results (called `md5`) in responses
