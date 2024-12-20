@@ -63,6 +63,7 @@ Select the type of search based on the type of data you are searching for. (song
 | other_user_artist        | Another User (Artist)     | user_numeric      |
 | label                    | Label                     | text              |
 | license                  | Music License             | boolean_numeric   |
+| no_license               | No License                | is_true           |
 | playlist                 | Playlist                  | boolean_numeric   |
 | smartplaylist            | Smart Playlist            | boolean_subsearch |
 | playlist_name            | Playlist Name             | text              |

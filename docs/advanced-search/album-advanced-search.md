@@ -47,6 +47,7 @@ Select the type of search based on the type of data you are searching for. (song
 | myplayed                 | Played by Me                   | boolean           |
 | myplayedartist           | Played by Me (Artist)          | boolean           |
 | song_count               | Song Count                     | numeric           |
+| disk_count               | Disk Count                     | numeric           |
 | time                     | Length (in minutes)            | numeric           |
 | genre                    | Genre                          | tags              |
 | tag                      | (*Alias of genre)              |                   |
