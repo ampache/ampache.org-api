@@ -14,26 +14,30 @@ Refer to the main [Advanced Search](https://ampache.org/api/api-advanced-search)
 
 Select the type of search based on the type of data you are searching for. (songs, playlists, etc)
 
-| rule_1            | Title                                   | Operator Type   |
-|-------------------|-----------------------------------------|-----------------|
-| title             | Title / Name                            | text            |
-| name              | (*Alias of title)                       |                 |
-| podcast           | Podcast                                 | text            |
-| podcast_title     | (*Alias of podcast)                     |                 |
-| played_times      | # Played                                | numeric         |
-| skipped_times     | # Skipped                               | numeric         |
-| play_skip_ratio   | Played/Skipped ratio                    | numeric         |
-| last_play         | My Last Play                            | days            |
-| last_play_or_skip | My Last Play OR skip                    | days            |
-| played            | Played                                  | boolean         |
-| myplayed          | Played by Me                            | boolean         |
-| time              | Length (in minutes)                     | numeric         |
-| file              | Filename                                | text            |
-| state             | File state (completed, pending skipped) | boolean_numeric |
-| status            | (*Alias of state)                       |                 |
-| added             | Added                                   | date            |
-| updated           | Updated                                 | date            |
-| pubdate           | Publication Date                        | date            |
+| rule_1                    | Title                                   | Operator Type   |
+|---------------------------|-----------------------------------------|-----------------|
+| title                     | Title / Name                            | text            |
+| name                      | (*Alias of title)                       |                 |
+| podcast                   | Podcast                                 | text            |
+| podcast_title             | (*Alias of podcast)                     |                 |
+| played_times              | # Played                                | numeric         |
+| skipped_times             | # Skipped                               | numeric         |
+| played_or_skipped_times   | # Played or Skipped                     | numeric         |
+| myplayed_times            | # Played by Me                          | numeric         |
+| myskipped_times           | # Skipped by Me                         | numeric         |
+| myplayed_or_skipped_times | # Played or Skipped by Me               | numeric         |
+| play_skip_ratio           | Played/Skipped ratio                    | numeric         |
+| last_play                 | My Last Play                            | days            |
+| last_play_or_skip         | My Last Play OR skip                    | days            |
+| played                    | Played                                  | boolean         |
+| myplayed                  | Played by Me                            | boolean         |
+| time                      | Length (in minutes)                     | numeric         |
+| file                      | Filename                                | text            |
+| state                     | File state (completed, pending skipped) | boolean_numeric |
+| status                    | (*Alias of state)                       |                 |
+| added                     | Added                                   | date            |
+| updated                   | Updated                                 | date            |
+| pubdate                   | Publication Date                        | date            |
 
 ### Available operator values
 
