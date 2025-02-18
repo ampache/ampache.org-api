@@ -4,6 +4,22 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.6.7
+
+### Changed
+
+* ALL
+  * stats: Allow `limit` -1 for no limit. (0 falls back to `popular_threshold` value)
+
+## API 6.6.6
+
+Merge update from Ampache7.
+
+### Fixed
+
+* ALL
+  * Not checking auth on User lookup
+
 ## API 6.6.5
 
 Merge update from Ampache7.
