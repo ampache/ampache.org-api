@@ -62,7 +62,7 @@ export default {
     "footer": {
       "style": "dark",
       "links": [],
-      "copyright": "Copyright © 2001 - 2024 Ampache.org"
+      "copyright": "Copyright © 2001 - 2025 Ampache.org"
     },
     "prism": {
       "theme": {
