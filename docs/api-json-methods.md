@@ -3428,7 +3428,7 @@ Downloads a given media file. set format=raw to download the full file
 
 | Input     | Type    | Description                                                                    | Optional |
 |-----------|---------|--------------------------------------------------------------------------------|---------:|
-| 'id'      | integer | $object_id                                                                     |       NO |
+| 'id'      | string  | $object_id                                                                     |       NO |
 | 'type'    | string  | `song`, `podcast_episode`, `search`, `playlist`                                |       NO |
 | 'bitrate' | integer | max bitrate for transcoding in bytes (e.g 192000=192Kb)                        |      YES |
 | 'format'  | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format)                     |      YES |
@@ -3444,7 +3444,7 @@ Get an art image.
 
 | Input  | Type    | Description                                                | Optional |
 |--------|---------|------------------------------------------------------------|---------:|
-| 'id'   | integer | $object_id                                                 |       NO |
+| 'id'   | string  | $object_id                                                 |       NO |
 | 'type' | string  | `song`, `artist`, `album`, `playlist`, `search`, `podcast` |       NO |
 
 * return image (HTTP 200 OK)
@@ -3459,7 +3459,7 @@ Streams a given media file. Takes the file id in parameter with optional max bit
 
 | Input     | Type    | Description                                                                    | Optional |
 |-----------|---------|--------------------------------------------------------------------------------|---------:|
-| 'id'      | integer | $object_id                                                                     |       NO |
+| 'id'      | string  | $object_id                                                                     |       NO |
 | 'type'    | string  | `song`, `podcast_episode`, `search`, `playlist`                                |       NO |
 | 'bitrate' | integer | max bitrate for transcoding in bytes (e.g 192000=192Kb)                        |      YES |
 | 'format'  | string  | `mp3`, `ogg`, `raw`, etc (raw returns the original format)                     |      YES |
