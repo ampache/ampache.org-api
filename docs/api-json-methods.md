@@ -1180,7 +1180,7 @@ This returns the albums associated with the genre in question
 
 | Input    | Type    | Description                                                                   | Optional |
 |----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns album JSON                                              |      YES |
+| 'filter' | string  | UID of genre, returns album JSON                                              |       NO |
 | 'offset' | integer | Return results starting from this index position                              |      YES |
 | 'limit'  | integer | Maximum number of results to return                                           |      YES |
 | 'cond'   | string  | Apply additional filters to the browse using `;` separated comma string pairs |      YES |
@@ -1208,7 +1208,7 @@ This returns the artists associated with the genre in question as defined by the
 
 | Input    | Type    | Description                                                                   | Optional |
 |----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns artist JSON                                             |      YES |
+| 'filter' | string  | UID of genre, returns artist JSON                                             |       NO |
 | 'offset' | integer | Return results starting from this index position                              |      YES |
 | 'limit'  | integer | Maximum number of results to return                                           |      YES |
 | 'cond'   | string  | Apply additional filters to the browse using `;` separated comma string pairs |      YES |
@@ -1236,7 +1236,7 @@ returns the songs for this genre
 
 | Input    | Type    | Description                                                                   | Optional |
 |----------|---------|-------------------------------------------------------------------------------|---------:|
-| 'filter' | string  | UID of genre, returns song JSON                                               |      YES |
+| 'filter' | string  | UID of genre, returns song JSON                                               |       NO |
 | 'offset' | integer | Return results starting from this index position                              |      YES |
 | 'limit'  | integer | Maximum number of results to return                                           |      YES |
 | 'cond'   | string  | Apply additional filters to the browse using `;` separated comma string pairs |      YES |
