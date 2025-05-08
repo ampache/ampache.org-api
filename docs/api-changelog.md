@@ -4,16 +4,83 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.7.0
+
+This version is being released for Ampache7 **only**
+
+### Added
+
+* API6
+  * New Method: song_tags (Read and return all file and enabled plugin tags for the song)
+
+### Changed
+
+* ALL
+  * localplay will not clear mpd playlists when stopped if `clear=0`
+  * Ensure lowercase parameters are set on localplay calls
+
+### Fixed
+
+* API6
+  * catalog_add: typing for adding beets catalog
+
+## API 6.6.8
+
+This version is being released for Ampache7 **only**
+
+This is a massive update to the code typing and backend quality without changing function.
+
+### Changed
+
+* ALL
+  * Typed parameters, properties and arrays for all API versions
+  * Ensure nullable input is allowed to be null in the code
+  * Make sure size dimensions for `get_art` calls are valid and split correctly
+* API6
+  * Empty results on `list` calls will send an empty response
+* API5
+  * `playlist_generate` with `flag` not checking value
+  * `catalog_file` catch exception on add_file error
+
+### Fixed
+
+* ALL
+  * Democratic methods vote array not correct in all cases
+
 ## API 6.6.7
+
+This version is being released for Ampache7 **only**
+
+### Added
+
+* API6
+  * get_external_metadata: Get metadata from external plugins. (Useful for scripting)
+  * Add `is_hidden` status and `merge` genres into genre data objects
 
 ### Changed
 
 * ALL
   * stats: Allow `limit` -1 for no limit. (0 falls back to `popular_threshold` value)
+* API6
+  * user_preference
+    * Add `has_access` to show whether you can change the preference
+    * Add `values` to the response for all `special` preferences
+  * user_preferences
+    * Add `has_access` to show whether you can change the preference
+    * Add `values` to the response for all `special` preferences
+  * system_preference
+    * Add `has_access` to show whether you can change the preference
+    * Add `values` to the response for all `special` preferences
+  * system_preferences
+    * Add `has_access` to show whether you can change the preference
+    * Add `values` to the response for all `special` preferences
+
+### Fixed
+
+* XML
+  * Index keyed_array data on int indexed arrays
 
 ## API 6.6.6
-
-Merge update from Ampache7.
 
 ### Fixed
 
@@ -33,6 +100,7 @@ Merge update from Ampache7.
 ### Fixed
 
 * API6
+  * handshake: Downgrade version 7 calls to 6
   * get_indexes: Respect 'api_hidden_playlists'
   * index: Respect 'api_hidden_playlists'
   * list: Respect 'api_hidden_playlists'
@@ -133,6 +201,7 @@ Inconsistency with the return of object arrays and single items have been fixed 
   * Add `has_access` property to playlist objects. (Can edit the playlist if true)
   * Add `has_collaborate` property to playlist objects. (Can add and remove songs to the playlist if true)
   * Add `last_update` property to playlist objects. (Time a playlist changed. Smartplaylists do not change based on returned songs)
+  * Add `object_type` and `object_id` property to shout objects
 
 ### Changed
 
@@ -146,6 +215,7 @@ Inconsistency with the return of object arrays and single items have been fixed 
 * ALL
   * User preferences were not initiated and the server preferences would overwrite differences
   * Api::set_user_id function sending an int instead of a user
+  * Some responses that include users not checking the user is valid
 * API6
   * JSON: Send empty array for missing single item methods
   * lost_password: function name incorrect
@@ -153,6 +223,90 @@ Inconsistency with the return of object arrays and single items have been fixed 
   * rate: id smartplaylists correctly
   * albums: Browse user may not be set
   * podcast_episodes: Browse user may not be set
+
+## API 6.5.0
+
+### Added
+
+* API6
+  * Add `songartists` to all album data responses. (In an album `artists`=album_artists, `songartists`=song_artists)
+  * artist_albums: add `album_artist` as an optional parameter
+  * get_indexes: add `catalog`, `album_artist` and `song_artist` as possible `type` values
+  * list: add `catalog` and `song_artist` as possible `type` values
+  * Add `cond` and `sort` parameters to browse methods
+    * album_songs
+    * albums
+    * artist_albums
+    * artist_songs
+    * artists
+    * browse
+    * catalogs
+    * followers
+    * genre_albums
+    * genre_artists
+    * genre_songs
+    * genres
+    * get_indexes
+    * index
+    * label_artists
+    * labels
+    * license_songs
+    * licenses
+    * list
+    * live_streams
+    * playlists
+    * podcasts
+    * podcast_episodes
+    * shares
+    * songs
+    * user_playlists
+    * user_smartlists
+
+### Changed
+
+* Reset any existing browse when calling Api::getBrowse()
+* Filter duplicate search names outside of the data classes and filter on browses
+* API6 methods converted to Browse
+  * artist_albums
+  * artist_songs
+  * browse (`catalog` types)
+  * catalogs
+  * followers
+  * genre_albums
+  * genre_artists
+  * genre_songs
+  * get_indexes (`catalog` and `playlist` types)
+  * index (`catalog` and `playlist` types)
+  * label_artists
+  * license_songs
+  * list (`playlist` types)
+  * playlists
+  * podcast_episodes
+  * stats (random `playlist` types)
+  * user_playlists
+  * user_smartlists
+* API5 methods converted to Browse
+  * get_indexes (`playlist` types)
+  * playlists
+  * stats (random `playlist` types)
+* API4 methods converted to Browse
+  * get_indexes (`playlist` types)
+  * playlists
+
+### Fixed
+
+* ALL
+  * html_entity_decode `include`, `items` and `tracks` parameter for applicable methods
+  * Rating and flag data for smartlists was using incorrect id
+  * playlist_edit: track insert broken by removing table constraint
+  * playlist_edit: workaround sending owner username instead of ID
+  * playlist_add_song: When using `unique_playlist` don't grab the whole playlist
+* API6
+  * list: sorting was by `id` instead of `name`
+  * browse: sorting was by `id` instead of `name`
+  * download: The API can use searches as playlists so check for the `smart_` prefix
+  * stream: The API can use searches as playlists so check for the `smart_` prefix
+  * Respect album sort preferences in all album object responses
 
 ## API 6.4.0
 
@@ -224,6 +378,10 @@ Inconsistency with the return of object arrays and single items have been fixed 
   * playlists method not respecting like for smartlists
   * playlist_edit method will decode html `,` separators
 
+## API 6.2.1
+
+**NO CHANGE**
+
 ## API 6.2.0
 
 ### Added
@@ -294,6 +452,7 @@ Finally the issues with setting your auth token in the http header have been fix
 ### Fixed
 
 * ALL
+  * Some JSON methods with empty results would not show `total_count` in results
   * handshake: auth failure with header token
   * playlist_generate: Don't error when optional `mode` and `format` are not set
   * advanced_search: runtime error on empty data type
@@ -301,14 +460,20 @@ Finally the issues with setting your auth token in the http header have been fix
   * Fix lots of Runtime Error's on missing optional data
 * API5
   * Fix lots of Runtime Error's on missing optional data
+  * video: error type was song instead of filter
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+  * download: random search/playlist didn't use the `id` parameter
+  * stream: random search/playlist didn't use the `id` parameter
   * bookmark_edit
     * Missing user id in data array
     * Not able to edit all bookmarks
 * API6
   * Fix lots of Runtime Error's on missing optional data
+  * video: error type was song instead of filter
   * catalog_folder didn't get the group of items correctly
   * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
+  * download: random search/playlist didn't use the `id` parameter
+  * stream: random search/playlist didn't use the `id` parameter
   * bookmark_edit
     * Missing user id in data array
     * Not able to edit all bookmarks
@@ -322,6 +487,7 @@ Finally the issues with setting your auth token in the http header have been fix
 ### Fixed
 
 * ALL
+  * Fixed Bearer token auth on all methods
   * handshake: runtime errors with bad username
   * handshake: Don't error on empty data counts
   * ping: Don't error on empty data counts
@@ -350,16 +516,18 @@ Finally the issues with setting your auth token in the http header have been fix
 
 ## API 6.0.0
 
-Stream token's will let you design permalinked streams and allow users to stream iwhtout re authenticating to the server. [wiki](https://github.com/ampache/ampache/wiki/ampache6-details#allow-permalink-user-streams)
+Stream token's will let you design permalinked streams and allow users to stream without re authenticating to the server. [wiki](https://github.com/ampache/ampache/wiki/ampache6-details#allow-permalink-user-streams)
 
 ### Added
 
 * API5::playlist_songs: Add `random` to get random objects filtered by limit
 * API6 (Based on API5)
+  * Added podcast id and name to `podcast_episode` objects
   * API6::browse: List server contents in a directory-style listing (Music, Podcast and Video catalogs)
   * API6::list: Replace get_indexes with a faster lookup and similar parameters returning `id`, `name`, `prefix` and `basename`
   * API6::catalog_add: Create a catalog (Require: 75)
   * API6::catalog_delete: Delete a catalog (Require: 75)
+  * API6::catalog_folder: Perform actions on local catalog folders. (catalog_file but for folders) (Require: 50)
   * API6::live_stream_create: Create a new live stream (radio station)
   * API6::live_stream_edit: Edit a live stream
   * API6::live_stream_delete: Delete a stream by ID
@@ -399,7 +567,7 @@ Stream token's will let you design permalinked streams and allow users to stream
 ### Changed
 
 * Api6
-  * Renamed `user_update` to `user_edit` (user_update still works and will be depreciated in API7)
+  * Renamed `user_update` to `user_edit` (user_update still works and will be removed in **API7**)
 * Api5
   * Add backwards compatible `user_edit` method to point to `user_update`
 * ALL
@@ -412,7 +580,7 @@ Stream token's will let you design permalinked streams and allow users to stream
   * For data responses id is the only attribute and everything else is an element
   * Name was not set as an attribute OR an element so now it's always an element
   * Return original XML output (that may be malformed) when loadxml fails.
-* Api6::get_indexes: This method is depreciated and will be removed in **API7** (Use list instead)
+* Api6::get_indexes: This method is depreciated and will be removed in Ampache **API7** (Use list instead)
 
 ### Removed
 
@@ -433,42 +601,16 @@ Stream token's will let you design permalinked streams and allow users to stream
 
 * ALL
   * advanced_search methods were breaking with various offset and limits
-* Api6 JSON
-  * Share and Bookmark object id's were not strings
-* Api3
-  * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
-  * Artists method parameters were incorrect
-
-## API 5.6.4
-
-### Fixed
-
-* ALL
-  * Fixed Bearer token auth on all methods
-* API4
-  * Fix lots of Runtime Error's on missing optional data
-* API5
-  * Fix lots of Runtime Error's on missing optional data
-  * genre_artists, genre_albums, genre_songs: Parameter `filter` runtime errors
-  * bookmark_edit, bookmark_create: Missing user in the object data
-
-## API 5.6.3
-
-### Added
-
-* API5::playlist_songs: Add `random` to get random objects filtered by limit
-
-### Fixed
-
-* ALL
-  * handshake: runtime errors with bad username
-  * handshake: Don't error on empty data counts
-  * ping: Don't error on empty data counts
 * API4
   * share_create: null `expires` fall back to `share_expire` or 7 days
 * API5
   * share_create: null `expires` fall back to `share_expire` or 7 days
   * preference_edit: Could apply to the wrong user
+* Api6 JSON
+  * Share and Bookmark object id's were not strings
+* Api3
+  * Never send 0 ratings. They should always be null (e.g. `<rating/>`)
+  * Artists method parameters were incorrect
 
 ## API 5.6.2
 
@@ -492,6 +634,12 @@ Stream token's will let you design permalinked streams and allow users to stream
 * Api5
   * update_art hardcoded url to artist
   * Typo in song bitrate xml
+
+## API 5.5.7
+
+### Changed
+
+* Keep the original mime and bitrate on song objects instead of the transcoded value
 
 ## API 5.5.6
 
@@ -527,6 +675,10 @@ Fix various runtime errors and incorrect parameters for responses.
   * `artist_albums` return an empty response with a bad artist id
   * Calls to `songs` with user ID instead of user object
 
+## API 5.5.5
+
+**NO CHANGE**
+
 ## API 5.5.4
 
 ### Fixed
@@ -561,6 +713,8 @@ Fix various runtime errors and incorrect parameters for responses.
 
 ## API 5.5.0
 
+This will likely be the last 5.x API release. API6 will be a continuation of API5 and not be a significant change like the 4->5 transition.
+
 ### Added
 
 * Api::stream add new types `playlist` and `search` (Streams a random object from these lists)
@@ -592,7 +746,7 @@ Fix various runtime errors and incorrect parameters for responses.
 * advanced_search
   * Added missing `song` (was `song_title`) to album searches
 
-## API  5.4.1
+## API 5.4.1
 
 ### Added
 
@@ -617,6 +771,11 @@ Fix various runtime errors and incorrect parameters for responses.
   * Add `song_title` to album search
   * Add `album_title` and `song_title` to artist search
   * Add `orphaned_album` to song search
+
+### Fixed
+
+* Api4::record_play had the `user` as mandatory again
+* After catalog actions; verify songs with an orphaned album which you won't be able to find in the ui
 
 ## API 5.3.2
 
@@ -644,6 +803,11 @@ Fix various runtime errors and incorrect parameters for responses.
 
 ## API 5.2.1
 
+### Added
+
+* API5
+  * The docs for errors have been extended for the type when returned
+
 ### Changed
 
 * API5
@@ -651,6 +815,8 @@ Fix various runtime errors and incorrect parameters for responses.
 
 ### Fixed
 
+* API5
+  * Some errors were returning the value and not the parameter on error
 * API4
   * update_from_tags: type case error
   * rate: Object type to class mapping
@@ -673,12 +839,23 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 
 * Support for API3, API4 and API5 responses including PHP8 support (keeps original tag calls)
 * API5
-  * playlists: sql for searches wasn't filtering
-  * playlists: add parameter 'show_dupes' if true ignore 'api_hide_dupe_searches' setting
+  * playlists: add parameter `show_dupes` if true ignore 'api_hide_dupe_searches' setting
+  * get_art: add parameter `fallback` if true return default art ('blankalbum.png') instead of an error
 * API4
-  * playlists: add parameter 'show_dupes' if true ignore 'api_hide_dupe_searches' setting
+  * playlists: add parameter `show_dupes` if true ignore 'api_hide_dupe_searches' setting
 * API3
   * Added genre calls as an alias to tag functions to match API4 and API5
+
+### Fixed
+
+* Session and user id identification and errors from that
+* API5
+  * playlists: sql for searches wasn't filtering
+  * Art URL for searches was malformed
+* API4
+  * Art URL for searches was malformed
+* API3
+  * democratic: This method was broken in API3 and never worked correctly
 
 ## API 5.1.1
 
@@ -695,7 +872,7 @@ Check out the docs for multi API support at [ampache.org](https://ampache.org/ap
 * NEW API functions
   * Api::live_stream (get a radio stream by id)
   * Api::live_streams
-* Api::stream Added type 'podcast_episode' ('podcast' to be removed in Ampache 6.0.0)
+* Api::stream Added type 'podcast_episode' ('podcast' to be removed in Ampache6)
 * Add 'time' and 'size' to all podcast_episode responses
 
 ### Changed
@@ -772,7 +949,7 @@ This version of the API is the first semantic version. "5.0.0"
 * Return empty objects when the request was correct but the results were empty
 * Don't transcode podcast_episodes
 * localplay
-  * added 'track' parameter used by 'skip' commands to go to the playlist track (playlist starts at 1)
+  * Added 'track' parameter used by 'skip' commands to go to the playlist track (playlist starts at 1)
 * system_update: update the database if required as well
 * playlist_edit: added 'owner' as an optional parameter (Change playlist owner to the user id)
 * catalog_file: Allow comma-separate task values. (good for API inotify scripts)
@@ -782,6 +959,10 @@ This version of the API is the first semantic version. "5.0.0"
 ### Fixed
 
 * catalog_file: Couldn't add files
+
+## API 4.4.3
+
+**NO CHANGE**
 
 ## API 4.4.2
 
@@ -917,11 +1098,13 @@ No functional changes from 4.2.0
 **API versions will follow release version and no longer use builds in the integer versions (e.g. 420000)**
 API 5.0.0-release will be the first Ampache release to match the release string.
 
-### Added
+#### Added
 
 * JSON API now available!
-  * Call xml as normal: `http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000`
-  * Call the JSON server: `http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000`
+  * Call xml as normal:
+    * [<http://music.com.au/server/xml.server.php?action=handshake&auth=APIKEY&version=420000>]
+  * Call the JSON server:
+    * [<http://music.com.au/server/json.server.php?action=handshake&auth=APIKEY&version=420000>]
   * Example XML and JSON responses available [here](https://github.com/ampache/python3-ampache/tree/master/docs)
 * NEW API functions
   * get_similar: send artist or song id to get related objects from last.fm
@@ -945,7 +1128,7 @@ API 5.0.0-release will be the first Ampache release to match the release string.
   * catalog: get a catalog by id
   * catalog_file: clean, add, verify using the file path (good for scripting)
 
-### Changed
+#### Changed
 
 * Bump API version to 420000 (4.2.0)
 * All calls that return songs now include ```<playlisttrack>``` which can be used to identify track order.
@@ -963,12 +1146,12 @@ API 5.0.0-release will be the first Ampache release to match the release string.
 * API Build number is depreciated (the last 3 digits of the api version)
   * API 5.0.0 will be released with a string version ("5.0.0-release")
   * All future 4.x.x API versions will follow the main Ampache version. (420000, 421000, 422000)
-* ~~total_count in the XML API is depreciated and will be removed in API 5.0.0.~~
+* total_count in the XML API is depreciated and will be removed in API 5.0.0.
   * XML can count objects the same was as a JSON array [https://www.php.net/manual/en/simplexmlelement.count.php]
-* ~~Genre in songs is depreciated and will be removed in API 5.0.0.~~
+* Genre in songs is depreciated and will be removed in API 5.0.0.
   * Use tag instead of genre, tag provides a genre ID as well as the name.
 
-### Fixed
+#### Fixed
 
 * Extra text in catalog API calls
 * Don't fail the API calls when the database needs updating
@@ -977,11 +1160,11 @@ API 5.0.0-release will be the first Ampache release to match the release string.
 
 Bump API version to 400004 (4.0.0 build 004)
 
-### Added
+#### Added
 
 * Add Api::check_access to warn when you can't access a function
 
-### Fixed
+#### Fixed
 
 * Fix parameters using 0
 * Get the correct total_count in xml when you set a limit
@@ -991,11 +1174,11 @@ Bump API version to 400004 (4.0.0 build 004)
 
 Bump API version to 400003 (4.0.0 build 003)
 
-### Added
+#### Added
 
-* user_numeric searches also available in the API. ([https://ampache.org/api/api-xml-methods])
+* user_numeric searches also available in the API. ([<http://ampache.org/api/api-xml-methods>])
 
-### Changed
+#### Changed
 
 * Api::playlist - filter mandatory
 * Api::playlist_edit - filter mandatory. name and type now optional
@@ -1004,11 +1187,11 @@ Bump API version to 400003 (4.0.0 build 003)
 * Do not limit smartlists based on item count (return everything you can access)
 * Api/Database - Add last_count for search table to speed up access in API
 
-### Removed
+#### Removed
 
 * Artist::check - Remove MBID from Various Artist objects
 
-### Fixed
+#### Fixed
 
 * Fix Song::update_song for label
 * Fix Api issues relating to playlist access
@@ -1017,9 +1200,9 @@ Bump API version to 400003 (4.0.0 build 003)
 
 * Bump API version to 400002 (4.0.0 build 001)
 
-### Added
+#### Added
 
-* Documented the Ampache API [https://ampache.org/api/api-xml-methods]
+* Documented the Ampache API [<http://ampache.org/api/api-xml-methods>]
 * Include smartlists in the API playlist calls.
 * Authentication: allow sha256 encrypted apikey for auth
   * You must send an encrypted api key in the following fashion. (Hash key joined with username)
@@ -1043,7 +1226,7 @@ Bump API version to 400003 (4.0.0 build 003)
 * update_artist_info: Update artist information and fetch similar artists from last.fm
 * playlist_generate: Get a list of song xml, indexes or id's based on some simple search criteria. care of @4phun
 
-### Changed
+#### Changed
 
 * Authentication: Require a handshake and generate unique sessions at all times
 * advanced_search
