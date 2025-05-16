@@ -3481,6 +3481,7 @@ Get an art image.
 |--------|---------|------------------------------------------------------------|---------:|
 | 'id'   | string  | $object_id                                                 |       NO |
 | 'type' | string  | `song`, `artist`, `album`, `playlist`, `search`, `podcast` |       NO |
+| 'size' | string  | width x height ('640x480')                                 |      YES |
 
 * return image (HTTP 200 OK)
 * throws (HTTP 400 Bad Request)
