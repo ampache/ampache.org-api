@@ -12,6 +12,7 @@ This version is being released for Ampache7 **only**
 
 * API6
   * New Method: song_tags (Read and return all file and enabled plugin tags for the song)
+  * get_art: return error 404 on bad size dimensions
 
 ### Changed
 
@@ -21,6 +22,8 @@ This version is being released for Ampache7 **only**
 
 ### Fixed
 
+* ALL
+  * get_art: Correctly size and scale art responses
 * API6
   * catalog_add: typing for adding beets catalog
 
