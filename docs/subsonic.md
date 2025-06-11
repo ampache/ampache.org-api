@@ -40,12 +40,25 @@ Then call the following URL (Where localhost/ampache is the location of your Amp
 http://localhost/ampache/rest/ping.view?apiKey=API_KEY&v=1.2.0&c=DSub&f=json
 ```
 
-If you are using Ampache 4.0.0 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
+**NOTE** Do not send a user (u) parameter or auth will be rejected.
+
+The key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
 
 ```PHP
 $user = 'username';
 $key = hash('sha256', 'myapikey');
 $passphrase = hash('sha256', $user . $key);
+```
+
+#### HTTP Header Authentication
+
+Ampache supports sending your apiKey parameter to the server using a Bearer Token.
+
+The `apiKey` parameter does not need to be sent with your URL. We will check your header for a token first
+
+```Text
+GET http://localhost/ampache/rest/ping.view?v=1.2.0&c=DSub&f=jsonHTTP/1.1
+Authorization: Bearer 000111112233334444455556667777788888899aaaaabbbbcccccdddeeeeeeff
 ```
 
 ### Endpoint extension
