@@ -24,9 +24,29 @@ Ampache Subsonic support is being extended to support these changes
 
 ### Extensions
 
+* [API Key Authentication](https://opensubsonic.netlify.app/docs/extensions/apikeyauth/)
 * Expanded [subsonic-response](https://opensubsonic.netlify.app/docs/responses/subsonic-response/)
+* Expanded [subsonic-response error](https://opensubsonic.netlify.app/docs/responses/error/)
 * Support [HTTP form POST](https://opensubsonic.netlify.app/docs/extensions/formpost/)
 * Tentatively supported [Transcode Offset](https://opensubsonic.netlify.app/docs/extensions/transcodeoffset/) (Parameter is supported but untested)
+
+#### Api Key authentication
+
+The key that must be passed to Ampache is the API Key generated for a specific user (none by default, only the administrator can generate one).
+
+Then call the following URL (Where localhost/ampache is the location of your Ampache installation):
+
+```URL
+http://localhost/ampache/rest/ping.view?apiKey=API_KEY&v=1.2.0&c=DSub&f=json
+```
+
+If you are using Ampache 4.0.0 and higher; the key can be passed to Ampache using `SHA256(USER+KEY)` where `KEY` is `SHA256('APIKEY')`. Below is a PHP example
+
+```PHP
+$user = 'username';
+$key = hash('sha256', 'myapikey');
+$passphrase = hash('sha256', $user . $key);
+```
 
 ### Endpoint extension
 
