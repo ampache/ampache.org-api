@@ -4,6 +4,20 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.9.0
+
+This version is being released for Ampache7 **only**
+
+### Added
+
+* ALL
+  * Support POST requests for all methods
+
+### Fixed
+
+* ALL
+  * Localplay methods might not complete when pulling status from missing controllers
+
 ## API 6.8.0
 
 This version is being released for Ampache7 **only**
