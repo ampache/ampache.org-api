@@ -1298,6 +1298,31 @@ By default; get only the most recent bookmark. Use `all` to retrieve all media b
 [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/json-responses/get_bookmark.json)
 [Example (with include)](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/get_bookmark%20\(with%20include\).json)
 
+### get_external_metadata
+
+Return External plugin metadata searching by object id and type
+
+| Input     | Type    | Description                                      | Optional |
+|-----------|---------|--------------------------------------------------|---------:|
+| 'filter'  | string  | $object_id to find                               |       NO |
+| 'type'    | string  | `song`, `album`, `artist`, `label` (object_type) |       NO |
+
+* return array
+
+```JSON
+"object_id": "",
+"object_type": "",
+"plugin": []
+```
+
+* throws object
+
+```JSON
+"error": ""
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/json-responses/get_external_metadata.json)
+
 ### get_indexes
 
 This takes a collection of inputs and returns ID + name for the object type
