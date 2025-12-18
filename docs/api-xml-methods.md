@@ -1383,6 +1383,30 @@ PLAYLIST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api
 
 PODCAST [Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/get_indexes%20\(podcast\).xml)
 
+### get_lyrics
+
+Return Database lyrics or search with plugins by Song id
+
+| Input      | Type    | Description                                           | Optional |
+|------------|---------|-------------------------------------------------------|---------:|
+| 'filter'   | string  | $song_id to find                                      |       NO |
+| 'plugins'  | string  | `0`, `1`, if false disable plugin lookup (default: 1) |       NO |
+
+* return
+
+```XML
+<root>
+</root>
+```
+
+* throws
+
+```XML
+<root><error></root>
+```
+
+[Example](https://raw.githubusercontent.com/ampache/python3-ampache/api6/docs/xml-responses/get_lyrics.xml)
+
 ### get_similar
 
 Return similar artist id's or similar song ids compared to the input filter

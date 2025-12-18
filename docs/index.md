@@ -271,6 +271,7 @@ All Data methods return HTTP 200 responses
 * get_bookmark
 * get_external_metadata
 * get_indexes
+* get_lyrics
 * get_similar
 * index **Ampache 6.3.0+**
 * labels
