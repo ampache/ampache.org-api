@@ -9,7 +9,6 @@ export default {
   "url": "https://ampache.org",
   "baseUrl": "/api/",
   "onBrokenLinks": "throw",
-  "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
   "organizationName": "ampache",
   "projectName": "ampache",
@@ -20,6 +19,23 @@ export default {
     ],
     "path": "i18n",
     "localeConfigs": {}
+  },
+  "markdown": {
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
+    },
+    "format": "mdx",
+    "mermaid": false,
+    "emoji": true,
+    "mdx1Compat": {
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
+    },
+    "anchors": {
+      "maintainCase": false
+    }
   },
   "presets": [
     [
@@ -62,7 +78,7 @@ export default {
     "footer": {
       "style": "dark",
       "links": [],
-      "copyright": "Copyright © 2001 - 2025 Ampache.org"
+      "copyright": "Copyright © 2001 - 2026 Ampache.org"
     },
     "prism": {
       "theme": {
@@ -319,17 +335,5 @@ export default {
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "format": "mdx",
-    "mermaid": false,
-    "mdx1Compat": {
-      "comments": true,
-      "admonitions": true,
-      "headingIds": true
-    },
-    "anchors": {
-      "maintainCase": false
-    }
-  }
+  "noIndex": false
 };
