@@ -4,6 +4,50 @@ metaTitle: "API Changelog"
 description: "API Changelog"
 ---
 
+## API 6.9.1 Build 11
+
+This version is being released for Ampache7 **only**
+
+To ensure that there are no issues with clients checking for single int versions
+we will keep on 6.9.x and resume build number versioning until Ampache 8
+
+### Added
+
+* API6
+  * handshake: Add `streamtoken` to responses
+  * ping: Add `streamtoken` to responses
+  * url_to_song: Add `filter` as an alias of `url`
+  * catalog_action: Add `filter` as an alias of `catalog`
+  * catalog_file: Add `filter` as an alias of `catalog`
+  * catalog_folder: Add `filter` as an alias of `catalog`
+  * flag: Add `filter` as an alias of `id`
+  * record_play: Add `filter` as an alias of `id`
+  * update_art: Add `filter` as an alias of `id`
+  * update_artist_info: Add `filter` as an alias of `id`
+  * update_from_tags: Add `filter` as an alias of `id`
+  * update_podcast: Add `id` as an alias of `filter`
+  * download: Add `filter` as an alias of `id`
+  * get_art: Add `filter` as an alias of `id`
+  * stream: Add `filter` as an alias of `id`
+  * localplay: Add `filter` as an alias of `oid`
+
+### Fixed
+
+* ALL
+  * podcast_update documentation incorrect so add a fallback for the id parameter
+
+## API 6.9.0 Build 10
+
+This version is being released for Ampache7 **only**
+
+To ensure that there are no issues with clients checking for single int versions
+we will keep on 6.9.x and resume build number versioning until Ampache 8
+
+### Added
+
+* API6
+  * New Method: get_lyrics (Return Database lyrics or search with plugins by Song id)
+
 ## API 6.9.0
 
 This version is being released for Ampache7 **only**
